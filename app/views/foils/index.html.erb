@@ -1,0 +1,31 @@
+<h1>Listing foils</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Length</th>
+    <th>Msi</th>
+    <th>Type</th>
+    <th>Width</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foils.each do |foil| %>
+  <tr>
+    <td><%= foil.description %></td>
+    <td><%= foil.length %></td>
+    <td><%= foil.msi %></td>
+    <td><%= foil.type %></td>
+    <td><%= foil.width %></td>
+    <td><%= link_to 'Show', foil %></td>
+    <td><%= link_to 'Edit', edit_foil_path(foil) %></td>
+    <td><%= link_to 'Destroy', foil, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foil', new_foil_path %>

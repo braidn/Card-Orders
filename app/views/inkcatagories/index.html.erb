@@ -1,0 +1,23 @@
+<h1>Listing inkcatagories</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inkcatagories.each do |inkcatagory| %>
+  <tr>
+    <td><%= inkcatagory.description %></td>
+    <td><%= link_to 'Show', inkcatagory %></td>
+    <td><%= link_to 'Edit', edit_inkcatagory_path(inkcatagory) %></td>
+    <td><%= link_to 'Destroy', inkcatagory, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inkcatagory', new_inkcatagory_path %>

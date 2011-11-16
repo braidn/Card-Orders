@@ -1,0 +1,37 @@
+<h1>Listing dies</h1>
+
+<table>
+  <tr>
+    <th>Diecatagory</th>
+    <th>Costpercard</th>
+    <th>Costspertooth</th>
+    <th>Description</th>
+    <th>Initialcost</th>
+    <th>Initiallife</th>
+    <th>Retoolcost</th>
+    <th>Retoollife</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dies.each do |dy| %>
+  <tr>
+    <td><%= dy.dieCatagory %></td>
+    <td><%= dy.costpercard %></td>
+    <td><%= dy.costspertooth %></td>
+    <td><%= dy.description %></td>
+    <td><%= dy.initialCost %></td>
+    <td><%= dy.initialLife %></td>
+    <td><%= dy.retoolCost %></td>
+    <td><%= dy.retoolLife %></td>
+    <td><%= link_to 'Show', dy %></td>
+    <td><%= link_to 'Edit', edit_dy_path(dy) %></td>
+    <td><%= link_to 'Destroy', dy, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Die', new_dy_path %>

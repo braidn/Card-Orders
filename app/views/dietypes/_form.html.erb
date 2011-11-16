@@ -1,0 +1,21 @@
+<%= form_for(@dietype) do |f| %>
+  <% if @dietype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dietype.errors.count, "error") %> prohibited this dietype from being saved:</h2>
+
+      <ul>
+      <% @dietype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dieDescription %><br />
+    <%= f.text_area :dieDescription %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

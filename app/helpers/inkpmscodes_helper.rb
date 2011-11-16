@@ -1,0 +1,2 @@
+module InkpmscodesHelper
+end

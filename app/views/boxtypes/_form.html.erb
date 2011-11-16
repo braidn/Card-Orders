@@ -1,0 +1,25 @@
+<%= form_for(@boxtype) do |f| %>
+  <% if @boxtype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boxtype.errors.count, "error") %> prohibited this boxtype from being saved:</h2>
+
+      <ul>
+      <% @boxtype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :boxid %><br />
+    <%= f.number_field :boxid %>
+  </div>
+  <div class="field">
+    <%= f.label :boxtype %><br />
+    <%= f.text_field :boxtype %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

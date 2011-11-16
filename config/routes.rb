@@ -1,4 +1,32 @@
 EstOrders::Application.routes.draw do
+  resources :inksignatures
+
+  resources :inkpmscodes
+
+  resources :inkcatagories
+
+  resources :foiltypes
+
+  resources :foils
+
+  resources :encodingstandards
+
+  resources :dietypes
+
+  resources :dies
+
+  resources :coretypes
+
+  resources :cores
+
+  resources :contacts
+
+  resources :companies
+
+  resources :commissions
+
+  resources :boxtypes
+
   resources :boxes
 
   resources :binderyspecs

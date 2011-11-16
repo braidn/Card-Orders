@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vendorpartnumber:</b>
+  <%= @inksignature.vendorpartnumber %>
+</p>
+
+<p>
+  <b>Vendor:</b>
+  <%= @inksignature.vendor %>
+</p>
+
+<p>
+  <b>Magtype:</b>
+  <%= @inksignature.magtype %>
+</p>
+
+<p>
+  <b>Inktype:</b>
+  <%= @inksignature.inktype %>
+</p>
+
+<p>
+  <b>Inkmsiperpound:</b>
+  <%= @inksignature.inkmsiperpound %>
+</p>
+
+<p>
+  <b>Inkcostperpound:</b>
+  <%= @inksignature.inkcostperpound %>
+</p>
+
+
+<%= link_to 'Edit', edit_inksignature_path(@inksignature) %> |
+<%= link_to 'Back', inksignatures_path %>

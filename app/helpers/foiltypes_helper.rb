@@ -1,0 +1,2 @@
+module FoiltypesHelper
+end

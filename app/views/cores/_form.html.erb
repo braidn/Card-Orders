@@ -1,0 +1,49 @@
+<%= form_for(@core) do |f| %>
+  <% if @core.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@core.errors.count, "error") %> prohibited this core from being saved:</h2>
+
+      <ul>
+      <% @core.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :generalName %><br />
+    <%= f.text_field :generalName %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br />
+    <%= f.number_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :innerDiameter %><br />
+    <%= f.number_field :innerDiameter %>
+  </div>
+  <div class="field">
+    <%= f.label :outerDiameter %><br />
+    <%= f.number_field :outerDiameter %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :wallThickness %><br />
+    <%= f.number_field :wallThickness %>
+  </div>
+  <div class="field">
+    <%= f.label :width %><br />
+    <%= f.number_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :internalName %><br />
+    <%= f.text_field :internalName %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

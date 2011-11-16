@@ -1,0 +1,65 @@
+<%= form_for(@encodingstandard) do |f| %>
+  <% if @encodingstandard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@encodingstandard.errors.count, "error") %> prohibited this encodingstandard from being saved:</h2>
+
+      <ul>
+      <% @encodingstandard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mchDescription %><br />
+    <%= f.text_area :mchDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :bagging %><br />
+    <%= f.number_field :bagging %>
+  </div>
+  <div class="field">
+    <%= f.label :barcode %><br />
+    <%= f.number_field :barcode %>
+  </div>
+  <div class="field">
+    <%= f.label :hico %><br />
+    <%= f.number_field :hico %>
+  </div>
+  <div class="field">
+    <%= f.label :inchespersecond %><br />
+    <%= f.number_field :inchespersecond %>
+  </div>
+  <div class="field">
+    <%= f.label :labor %><br />
+    <%= f.number_field :labor %>
+  </div>
+  <div class="field">
+    <%= f.label :machineName %><br />
+    <%= f.text_field :machineName %>
+  </div>
+  <div class="field">
+    <%= f.label :multiplepass %><br />
+    <%= f.text_field :multiplepass %>
+  </div>
+  <div class="field">
+    <%= f.label :overhead %><br />
+    <%= f.number_field :overhead %>
+  </div>
+  <div class="field">
+    <%= f.label :runwaste %><br />
+    <%= f.number_field :runwaste %>
+  </div>
+  <div class="field">
+    <%= f.label :variabledata %><br />
+    <%= f.number_field :variabledata %>
+  </div>
+  <div class="field">
+    <%= f.label :secondsperhour %><br />
+    <%= f.number_field :secondsperhour %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

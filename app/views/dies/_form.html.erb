@@ -1,0 +1,49 @@
+<%= form_for(@dy) do |f| %>
+  <% if @dy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dy.errors.count, "error") %> prohibited this dy from being saved:</h2>
+
+      <ul>
+      <% @dy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dieCatagory %><br />
+    <%= f.text_field :dieCatagory %>
+  </div>
+  <div class="field">
+    <%= f.label :costpercard %><br />
+    <%= f.number_field :costpercard %>
+  </div>
+  <div class="field">
+    <%= f.label :costspertooth %><br />
+    <%= f.number_field :costspertooth %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :initialCost %><br />
+    <%= f.number_field :initialCost %>
+  </div>
+  <div class="field">
+    <%= f.label :initialLife %><br />
+    <%= f.number_field :initialLife %>
+  </div>
+  <div class="field">
+    <%= f.label :retoolCost %><br />
+    <%= f.number_field :retoolCost %>
+  </div>
+  <div class="field">
+    <%= f.label :retoolLife %><br />
+    <%= f.number_field :retoolLife %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

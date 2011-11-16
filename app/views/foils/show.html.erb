@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @foil.description %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @foil.length %>
+</p>
+
+<p>
+  <b>Msi:</b>
+  <%= @foil.msi %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @foil.type %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @foil.width %>
+</p>
+
+
+<%= link_to 'Edit', edit_foil_path(@foil) %> |
+<%= link_to 'Back', foils_path %>

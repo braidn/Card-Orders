@@ -1,0 +1,25 @@
+<%= form_for(@coretype) do |f| %>
+  <% if @coretype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coretype.errors.count, "error") %> prohibited this coretype from being saved:</h2>
+
+      <ul>
+      <% @coretype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :matDescription %><br />
+    <%= f.text_field :matDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br />
+    <%= f.text_field :material %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
