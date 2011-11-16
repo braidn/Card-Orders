@@ -1,4 +1,12 @@
 EstOrders::Application.routes.draw do
+  resources :boxes
+
+  resources :binderyspecs
+
+  resources :binderies
+
+  resources :adhesives
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,61 @@
+<%= form_for(@binderyspec) do |f| %>
+  <% if @binderyspec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@binderyspec.errors.count, "error") %> prohibited this binderyspec from being saved:</h2>
+
+      <ul>
+      <% @binderyspec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cardsperunit %><br />
+    <%= f.number_field :cardsperunit %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :numberofpersons %><br />
+    <%= f.number_field :numberofpersons %>
+  </div>
+  <div class="field">
+    <%= f.label :quantityperhour %><br />
+    <%= f.number_field :quantityperhour %>
+  </div>
+  <div class="field">
+    <%= f.label :unitmaterialcost %><br />
+    <%= f.number_field :unitmaterialcost %>
+  </div>
+  <div class="field">
+    <%= f.label :jobnumber %><br />
+    <%= f.text_field :jobnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :newboxrequired %><br />
+    <%= f.text_field :newboxrequired %>
+  </div>
+  <div class="field">
+    <%= f.label :packageamoritizequantity %><br />
+    <%= f.number_field :packageamoritizequantity %>
+  </div>
+  <div class="field">
+    <%= f.label :packagecomment %><br />
+    <%= f.text_area :packagecomment %>
+  </div>
+  <div class="field">
+    <%= f.label :packageinnerboxid %><br />
+    <%= f.text_field :packageinnerboxid %>
+  </div>
+  <div class="field">
+    <%= f.label :packageouterboxid %><br />
+    <%= f.text_field :packageouterboxid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

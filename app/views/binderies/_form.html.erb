@@ -1,0 +1,29 @@
+<%= form_for(@bindery) do |f| %>
+  <% if @bindery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bindery.errors.count, "error") %> prohibited this bindery from being saved:</h2>
+
+      <ul>
+      <% @bindery.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :opdescription %><br />
+    <%= f.text_field :opdescription %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+  </div>
+  <div class="field">
+    <%= f.label :unitcost %><br />
+    <%= f.number_field :unitcost %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>Listing adhesives</h1>
+
+<table>
+  <tr>
+    <th>Adhesivedescription</th>
+    <th>Costperlb</th>
+    <th>Msiperlb</th>
+    <th>Partnumber</th>
+    <th>Primaryuse</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @adhesives.each do |adhesife| %>
+  <tr>
+    <td><%= adhesife.adhesivedescription %></td>
+    <td><%= adhesife.costperlb %></td>
+    <td><%= adhesife.msiperlb %></td>
+    <td><%= adhesife.partnumber %></td>
+    <td><%= adhesife.primaryuse %></td>
+    <td><%= link_to 'Show', adhesife %></td>
+    <td><%= link_to 'Edit', edit_adhesife_path(adhesife) %></td>
+    <td><%= link_to 'Destroy', adhesife, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Adhesive', new_adhesife_path %>

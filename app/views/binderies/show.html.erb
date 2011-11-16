@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Opdescription:</b>
+  <%= @bindery.opdescription %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @bindery.unit %>
+</p>
+
+<p>
+  <b>Unitcost:</b>
+  <%= @bindery.unitcost %>
+</p>
+
+
+<%= link_to 'Edit', edit_bindery_path(@bindery) %> |
+<%= link_to 'Back', binderies_path %>
