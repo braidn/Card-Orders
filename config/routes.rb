@@ -1,4 +1,42 @@
 EstOrders::Application.routes.draw do
+  resources :skids
+
+  resources :security_specs
+
+  resources :sales_terms
+
+  resources :sales_reps
+
+  resources :rfid_inlays
+
+  resources :rfid_inlay_categories
+
+  resources :registration_levels
+
+  resources :proof_costs
+
+  resources :product_formats
+
+  resources :plate_costs
+
+  resources :mat_categories
+
+  resources :materials
+
+  resources :mag_tapes
+
+  resources :mag_ink_types
+
+  resources :machine_stripe_standards
+
+  resources :machine_id_standards
+
+  resources :press_standards
+
+  resources :laminates
+
+  resources :ink_varnishes
+
   resources :inksignatures
 
   resources :inkpmscodes

@@ -1,0 +1,2 @@
+module PlateCostsHelper
+end

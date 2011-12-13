@@ -1,0 +1,73 @@
+<%= form_for(@security_spec) do |f| %>
+  <% if @security_spec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@security_spec.errors.count, "error") %> prohibited this security_spec from being saved:</h2>
+
+      <ul>
+      <% @security_spec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :changsMaterRecombine %><br />
+    <%= f.text_field :changsMaterRecombine %>
+  </div>
+  <div class="field">
+    <%= f.label :coldFoilId %><br />
+    <%= f.number_field :coldFoilId %>
+  </div>
+  <div class="field">
+    <%= f.label :coldFoilWidth %><br />
+    <%= f.number_field :coldFoilWidth %>
+  </div>
+  <div class="field">
+    <%= f.label :customFoilAmortizeQty %><br />
+    <%= f.number_field :customFoilAmortizeQty %>
+  </div>
+  <div class="field">
+    <%= f.label :hotComplexTool %><br />
+    <%= f.number_field :hotComplexTool %>
+  </div>
+  <div class="field">
+    <%= f.label :hotFoilWidth %><br />
+    <%= f.number_field :hotFoilWidth %>
+  </div>
+  <div class="field">
+    <%= f.label :hotMediumTool %><br />
+    <%= f.number_field :hotMediumTool %>
+  </div>
+  <div class="field">
+    <%= f.label :hotSimpleTool %><br />
+    <%= f.number_field :hotSimpleTool %>
+  </div>
+  <div class="field">
+    <%= f.label :hotStampFoilId %><br />
+    <%= f.number_field :hotStampFoilId %>
+  </div>
+  <div class="field">
+    <%= f.label :jobNumber %><br />
+    <%= f.text_field :jobNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :laminationId %><br />
+    <%= f.number_field :laminationId %>
+  </div>
+  <div class="field">
+    <%= f.label :laminationWidth %><br />
+    <%= f.number_field :laminationWidth %>
+  </div>
+  <div class="field">
+    <%= f.label :securityComment %><br />
+    <%= f.text_field :securityComment %>
+  </div>
+  <div class="field">
+    <%= f.label :securitySpecId %><br />
+    <%= f.number_field :securitySpecId %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

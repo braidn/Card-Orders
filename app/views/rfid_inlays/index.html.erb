@@ -1,0 +1,53 @@
+<h1>Listing rfid_inlays</h1>
+
+<table>
+  <tr>
+    <th>Break1</th>
+    <th>Break1price</th>
+    <th>Break2</th>
+    <th>Break2price</th>
+    <th>Break3</th>
+    <th>Break3price</th>
+    <th>Break4</th>
+    <th>Break4price</th>
+    <th>Break5</th>
+    <th>Break5price</th>
+    <th>Inlaydescription</th>
+    <th>Inlayid</th>
+    <th>Inlaytypeid</th>
+    <th>Price</th>
+    <th>Vendor</th>
+    <th>Vendorpartnumb</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rfid_inlays.each do |rfid_inlay| %>
+  <tr>
+    <td><%= rfid_inlay.break1 %></td>
+    <td><%= rfid_inlay.break1Price %></td>
+    <td><%= rfid_inlay.break2 %></td>
+    <td><%= rfid_inlay.break2Price %></td>
+    <td><%= rfid_inlay.break3 %></td>
+    <td><%= rfid_inlay.break3Price %></td>
+    <td><%= rfid_inlay.break4 %></td>
+    <td><%= rfid_inlay.break4Price %></td>
+    <td><%= rfid_inlay.break5 %></td>
+    <td><%= rfid_inlay.break5Price %></td>
+    <td><%= rfid_inlay.inlayDescription %></td>
+    <td><%= rfid_inlay.inlayId %></td>
+    <td><%= rfid_inlay.inlayTypeId %></td>
+    <td><%= rfid_inlay.price %></td>
+    <td><%= rfid_inlay.vendor %></td>
+    <td><%= rfid_inlay.vendorPartNumb %></td>
+    <td><%= link_to 'Show', rfid_inlay %></td>
+    <td><%= link_to 'Edit', edit_rfid_inlay_path(rfid_inlay) %></td>
+    <td><%= link_to 'Destroy', rfid_inlay, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rfid inlay', new_rfid_inlay_path %>

@@ -1,0 +1,2 @@
+module SalesTermsHelper
+end

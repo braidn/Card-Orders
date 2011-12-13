@@ -1,0 +1,53 @@
+<%= form_for(@skid) do |f| %>
+  <% if @skid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@skid.errors.count, "error") %> prohibited this skid from being saved:</h2>
+
+      <ul>
+      <% @skid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quantityPerSkid %><br />
+    <%= f.number_field :quantityPerSkid %>
+  </div>
+  <div class="field">
+    <%= f.label :skidCost %><br />
+    <%= f.number_field :skidCost %>
+  </div>
+  <div class="field">
+    <%= f.label :skidDescription %><br />
+    <%= f.text_field :skidDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :skidEntryPoints %><br />
+    <%= f.text_field :skidEntryPoints %>
+  </div>
+  <div class="field">
+    <%= f.label :skidHeight %><br />
+    <%= f.number_field :skidHeight %>
+  </div>
+  <div class="field">
+    <%= f.label :skidId %><br />
+    <%= f.number_field :skidId %>
+  </div>
+  <div class="field">
+    <%= f.label :skidLength %><br />
+    <%= f.number_field :skidLength %>
+  </div>
+  <div class="field">
+    <%= f.label :skidMat %><br />
+    <%= f.text_field :skidMat %>
+  </div>
+  <div class="field">
+    <%= f.label :skidWidth %><br />
+    <%= f.number_field :skidWidth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

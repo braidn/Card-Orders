@@ -1,0 +1,29 @@
+<%= form_for(@mag_ink_type) do |f| %>
+  <% if @mag_ink_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mag_ink_type.errors.count, "error") %> prohibited this mag_ink_type from being saved:</h2>
+
+      <ul>
+      <% @mag_ink_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :gallonCost %><br />
+    <%= f.number_field :gallonCost %>
+  </div>
+  <div class="field">
+    <%= f.label :inkType %><br />
+    <%= f.text_field :inkType %>
+  </div>
+  <div class="field">
+    <%= f.label :inkTypeId %><br />
+    <%= f.number_field :inkTypeId %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,53 @@
+<%= form_for(@plate_cost) do |f| %>
+  <% if @plate_cost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plate_cost.errors.count, "error") %> prohibited this plate_cost from being saved:</h2>
+
+      <ul>
+      <% @plate_cost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :digital %><br />
+    <%= f.number_field :digital %>
+  </div>
+  <div class="field">
+    <%= f.label :filmcost %><br />
+    <%= f.number_field :filmcost %>
+  </div>
+  <div class="field">
+    <%= f.label :filmSquareInch %><br />
+    <%= f.number_field :filmSquareInch %>
+  </div>
+  <div class="field">
+    <%= f.label :laborCost %><br />
+    <%= f.number_field :laborCost %>
+  </div>
+  <div class="field">
+    <%= f.label :machineName %><br />
+    <%= f.number_field :machineName %>
+  </div>
+  <div class="field">
+    <%= f.label :processTime %><br />
+    <%= f.text_field :processTime %>
+  </div>
+  <div class="field">
+    <%= f.label :sheetCost %><br />
+    <%= f.number_field :sheetCost %>
+  </div>
+  <div class="field">
+    <%= f.label :sheetsPerCycle %><br />
+    <%= f.number_field :sheetsPerCycle %>
+  </div>
+  <div class="field">
+    <%= f.label :squareInchPerSheet %><br />
+    <%= f.number_field :squareInchPerSheet %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

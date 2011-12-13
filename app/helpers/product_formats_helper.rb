@@ -1,0 +1,2 @@
+module ProductFormatsHelper
+end

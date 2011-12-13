@@ -1,0 +1,49 @@
+<%= form_for(@mag_tape) do |f| %>
+  <% if @mag_tape.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mag_tape.errors.count, "error") %> prohibited this mag_tape from being saved:</h2>
+
+      <ul>
+      <% @mag_tape.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :costPerMsi %><br />
+    <%= f.number_field :costPerMsi %>
+  </div>
+  <div class="field">
+    <%= f.label :costPerRoll %><br />
+    <%= f.number_field :costPerRoll %>
+  </div>
+  <div class="field">
+    <%= f.label :typeCate %><br />
+    <%= f.number_field :typeCate %>
+  </div>
+  <div class="field">
+    <%= f.label :tapeDescription %><br />
+    <%= f.text_field :tapeDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :tapeId %><br />
+    <%= f.number_field :tapeId %>
+  </div>
+  <div class="field">
+    <%= f.label :tapeLength %><br />
+    <%= f.number_field :tapeLength %>
+  </div>
+  <div class="field">
+    <%= f.label :tapeType %><br />
+    <%= f.text_field :tapeType %>
+  </div>
+  <div class="field">
+    <%= f.label :tapeWidth %><br />
+    <%= f.number_field :tapeWidth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

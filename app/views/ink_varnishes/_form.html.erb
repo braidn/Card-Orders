@@ -1,0 +1,33 @@
+<%= form_for(@ink_varnish) do |f| %>
+  <% if @ink_varnish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ink_varnish.errors.count, "error") %> prohibited this ink_varnish from being saved:</h2>
+
+      <ul>
+      <% @ink_varnish.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :inkCostPerPound %><br />
+    <%= f.number_field :inkCostPerPound %>
+  </div>
+  <div class="field">
+    <%= f.label :inkMsiPerPound %><br />
+    <%= f.number_field :inkMsiPerPound %>
+  </div>
+  <div class="field">
+    <%= f.label :vendor %><br />
+    <%= f.text_field :vendor %>
+  </div>
+  <div class="field">
+    <%= f.label :vendorPartNumber %><br />
+    <%= f.text_field :vendorPartNumber %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

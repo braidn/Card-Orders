@@ -1,0 +1,49 @@
+<h1>Listing materials</h1>
+
+<table>
+  <tr>
+    <th>Materialcatid</th>
+    <th>Bluefeetperminute</th>
+    <th>Bluelength</th>
+    <th>Coredod</th>
+    <th>Eganfeetperminute</th>
+    <th>Eganlength</th>
+    <th>Materialdescription</th>
+    <th>Materialmsicost</th>
+    <th>Materialprestripe</th>
+    <th>Materialrolllengthmaster</th>
+    <th>Materialrollwidth</th>
+    <th>Materialthickness</th>
+    <th>Vendor</th>
+    <th>Vendorpartnum</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @materials.each do |material| %>
+  <tr>
+    <td><%= material.materialCatId %></td>
+    <td><%= material.blueFeetPerMinute %></td>
+    <td><%= material.blueLength %></td>
+    <td><%= material.coredOd %></td>
+    <td><%= material.eganFeetPerMinute %></td>
+    <td><%= material.eganLength %></td>
+    <td><%= material.materialDescription %></td>
+    <td><%= material.materialMsiCost %></td>
+    <td><%= material.materialPreStripe %></td>
+    <td><%= material.materialRollLengthMaster %></td>
+    <td><%= material.materialRollWidth %></td>
+    <td><%= material.materialThickness %></td>
+    <td><%= material.vendor %></td>
+    <td><%= material.vendorPartNum %></td>
+    <td><%= link_to 'Show', material %></td>
+    <td><%= link_to 'Edit', edit_material_path(material) %></td>
+    <td><%= link_to 'Destroy', material, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Material', new_material_path %>

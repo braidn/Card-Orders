@@ -1,0 +1,39 @@
+<h1>Listing skids</h1>
+
+<table>
+  <tr>
+    <th>Quantityperskid</th>
+    <th>Skidcost</th>
+    <th>Skiddescription</th>
+    <th>Skidentrypoints</th>
+    <th>Skidheight</th>
+    <th>Skidid</th>
+    <th>Skidlength</th>
+    <th>Skidmat</th>
+    <th>Skidwidth</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @skids.each do |skid| %>
+  <tr>
+    <td><%= skid.quantityPerSkid %></td>
+    <td><%= skid.skidCost %></td>
+    <td><%= skid.skidDescription %></td>
+    <td><%= skid.skidEntryPoints %></td>
+    <td><%= skid.skidHeight %></td>
+    <td><%= skid.skidId %></td>
+    <td><%= skid.skidLength %></td>
+    <td><%= skid.skidMat %></td>
+    <td><%= skid.skidWidth %></td>
+    <td><%= link_to 'Show', skid %></td>
+    <td><%= link_to 'Edit', edit_skid_path(skid) %></td>
+    <td><%= link_to 'Destroy', skid, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Skid', new_skid_path %>

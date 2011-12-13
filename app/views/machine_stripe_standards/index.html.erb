@@ -1,0 +1,69 @@
+<h1>Listing machine_stripe_standards</h1>
+
+<table>
+  <tr>
+    <th>Ampmaterial</th>
+    <th>Amptime</th>
+    <th>Headmaterial</th>
+    <th>Headtime</th>
+    <th>Inkmat</th>
+    <th>Inktime</th>
+    <th>Machinename</th>
+    <th>Machineid</th>
+    <th>Machinelabor</th>
+    <th>Machineoverhead</th>
+    <th>Machinespeed</th>
+    <th>Machinetype</th>
+    <th>Machinewidth</th>
+    <th>Rollchangemat</th>
+    <th>Rollchangetime</th>
+    <th>Slitmat</th>
+    <th>Slitspeed</th>
+    <th>Slittime</th>
+    <th>Slitwaste</th>
+    <th>Trim</th>
+    <th>Turretmat</th>
+    <th>Turretspeed</th>
+    <th>Turrettime</th>
+    <th>Turretwaste</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @machine_stripe_standards.each do |machine_stripe_standard| %>
+  <tr>
+    <td><%= machine_stripe_standard.ampMaterial %></td>
+    <td><%= machine_stripe_standard.ampTime %></td>
+    <td><%= machine_stripe_standard.headMaterial %></td>
+    <td><%= machine_stripe_standard.headTime %></td>
+    <td><%= machine_stripe_standard.inkMat %></td>
+    <td><%= machine_stripe_standard.inkTime %></td>
+    <td><%= machine_stripe_standard.machineName %></td>
+    <td><%= machine_stripe_standard.machineId %></td>
+    <td><%= machine_stripe_standard.machineLabor %></td>
+    <td><%= machine_stripe_standard.machineOverhead %></td>
+    <td><%= machine_stripe_standard.machineSpeed %></td>
+    <td><%= machine_stripe_standard.machineType %></td>
+    <td><%= machine_stripe_standard.machineWidth %></td>
+    <td><%= machine_stripe_standard.rollChangeMat %></td>
+    <td><%= machine_stripe_standard.rollChangeTime %></td>
+    <td><%= machine_stripe_standard.slitMat %></td>
+    <td><%= machine_stripe_standard.slitSpeed %></td>
+    <td><%= machine_stripe_standard.slitTime %></td>
+    <td><%= machine_stripe_standard.slitWaste %></td>
+    <td><%= machine_stripe_standard.trim %></td>
+    <td><%= machine_stripe_standard.turretMat %></td>
+    <td><%= machine_stripe_standard.turretSpeed %></td>
+    <td><%= machine_stripe_standard.turretTime %></td>
+    <td><%= machine_stripe_standard.turretWaste %></td>
+    <td><%= link_to 'Show', machine_stripe_standard %></td>
+    <td><%= link_to 'Edit', edit_machine_stripe_standard_path(machine_stripe_standard) %></td>
+    <td><%= link_to 'Destroy', machine_stripe_standard, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Machine stripe standard', new_machine_stripe_standard_path %>

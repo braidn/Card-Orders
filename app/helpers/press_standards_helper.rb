@@ -1,0 +1,2 @@
+module PressStandardsHelper
+end

@@ -1,0 +1,141 @@
+<%= form_for(@machine_id_standard) do |f| %>
+  <% if @machine_id_standard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@machine_id_standard.errors.count, "error") %> prohibited this machine_id_standard from being saved:</h2>
+
+      <ul>
+      <% @machine_id_standard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dieMaterial %><br />
+    <%= f.number_field :dieMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :dieSpeed %><br />
+    <%= f.number_field :dieSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :dieTime %><br />
+    <%= f.number_field :dieTime %>
+  </div>
+  <div class="field">
+    <%= f.label :dieWaste %><br />
+    <%= f.number_field :dieWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :folderMaterial %><br />
+    <%= f.number_field :folderMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :folderSpeed %><br />
+    <%= f.number_field :folderSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :folderTime %><br />
+    <%= f.number_field :folderTime %>
+  </div>
+  <div class="field">
+    <%= f.label :folderWaste %><br />
+    <%= f.number_field :folderWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :insertionMaterial %><br />
+    <%= f.number_field :insertionMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :insertionSpeed %><br />
+    <%= f.number_field :insertionSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :insertionTime %><br />
+    <%= f.number_field :insertionTime %>
+  </div>
+  <div class="field">
+    <%= f.label :machineName %><br />
+    <%= f.text_field :machineName %>
+  </div>
+  <div class="field">
+    <%= f.label :machineId %><br />
+    <%= f.number_field :machineId %>
+  </div>
+  <div class="field">
+    <%= f.label :machineLabor %><br />
+    <%= f.number_field :machineLabor %>
+  </div>
+  <div class="field">
+    <%= f.label :machineOverhead %><br />
+    <%= f.number_field :machineOverhead %>
+  </div>
+  <div class="field">
+    <%= f.label :machinePitch %><br />
+    <%= f.number_field :machinePitch %>
+  </div>
+  <div class="field">
+    <%= f.label :machineSpeed %><br />
+    <%= f.number_field :machineSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :machineType %><br />
+    <%= f.text_field :machineType %>
+  </div>
+  <div class="field">
+    <%= f.label :machineWidth %><br />
+    <%= f.number_field :machineWidth %>
+  </div>
+  <div class="field">
+    <%= f.label :numMat %><br />
+    <%= f.number_field :numMat %>
+  </div>
+  <div class="field">
+    <%= f.label :numSpeed %><br />
+    <%= f.number_field :numSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :numbTime %><br />
+    <%= f.number_field :numbTime %>
+  </div>
+  <div class="field">
+    <%= f.label :numWaste %><br />
+    <%= f.number_field :numWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :rollChangeMat %><br />
+    <%= f.number_field :rollChangeMat %>
+  </div>
+  <div class="field">
+    <%= f.label :rollChangeTime %><br />
+    <%= f.number_field :rollChangeTime %>
+  </div>
+  <div class="field">
+    <%= f.label :rollChangeWaste %><br />
+    <%= f.number_field :rollChangeWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :slitMat %><br />
+    <%= f.number_field :slitMat %>
+  </div>
+  <div class="field">
+    <%= f.label :slitSpeed %><br />
+    <%= f.number_field :slitSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :slitTime %><br />
+    <%= f.number_field :slitTime %>
+  </div>
+  <div class="field">
+    <%= f.label :slitWaste %><br />
+    <%= f.number_field :slitWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :trim %><br />
+    <%= f.number_field :trim %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

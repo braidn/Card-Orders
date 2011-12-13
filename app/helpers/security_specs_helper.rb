@@ -1,0 +1,2 @@
+module SecuritySpecsHelper
+end

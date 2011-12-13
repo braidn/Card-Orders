@@ -1,0 +1,81 @@
+<%= form_for(@rfid_inlay) do |f| %>
+  <% if @rfid_inlay.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rfid_inlay.errors.count, "error") %> prohibited this rfid_inlay from being saved:</h2>
+
+      <ul>
+      <% @rfid_inlay.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :break1 %><br />
+    <%= f.number_field :break1 %>
+  </div>
+  <div class="field">
+    <%= f.label :break1Price %><br />
+    <%= f.number_field :break1Price %>
+  </div>
+  <div class="field">
+    <%= f.label :break2 %><br />
+    <%= f.number_field :break2 %>
+  </div>
+  <div class="field">
+    <%= f.label :break2Price %><br />
+    <%= f.number_field :break2Price %>
+  </div>
+  <div class="field">
+    <%= f.label :break3 %><br />
+    <%= f.number_field :break3 %>
+  </div>
+  <div class="field">
+    <%= f.label :break3Price %><br />
+    <%= f.number_field :break3Price %>
+  </div>
+  <div class="field">
+    <%= f.label :break4 %><br />
+    <%= f.number_field :break4 %>
+  </div>
+  <div class="field">
+    <%= f.label :break4Price %><br />
+    <%= f.number_field :break4Price %>
+  </div>
+  <div class="field">
+    <%= f.label :break5 %><br />
+    <%= f.number_field :break5 %>
+  </div>
+  <div class="field">
+    <%= f.label :break5Price %><br />
+    <%= f.number_field :break5Price %>
+  </div>
+  <div class="field">
+    <%= f.label :inlayDescription %><br />
+    <%= f.text_field :inlayDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :inlayId %><br />
+    <%= f.number_field :inlayId %>
+  </div>
+  <div class="field">
+    <%= f.label :inlayTypeId %><br />
+    <%= f.number_field :inlayTypeId %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :vendor %><br />
+    <%= f.text_field :vendor %>
+  </div>
+  <div class="field">
+    <%= f.label :vendorPartNumb %><br />
+    <%= f.text_field :vendorPartNumb %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

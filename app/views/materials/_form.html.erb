@@ -1,0 +1,73 @@
+<%= form_for(@material) do |f| %>
+  <% if @material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@material.errors.count, "error") %> prohibited this material from being saved:</h2>
+
+      <ul>
+      <% @material.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :materialCatId %><br />
+    <%= f.number_field :materialCatId %>
+  </div>
+  <div class="field">
+    <%= f.label :blueFeetPerMinute %><br />
+    <%= f.number_field :blueFeetPerMinute %>
+  </div>
+  <div class="field">
+    <%= f.label :blueLength %><br />
+    <%= f.number_field :blueLength %>
+  </div>
+  <div class="field">
+    <%= f.label :coredOd %><br />
+    <%= f.number_field :coredOd %>
+  </div>
+  <div class="field">
+    <%= f.label :eganFeetPerMinute %><br />
+    <%= f.number_field :eganFeetPerMinute %>
+  </div>
+  <div class="field">
+    <%= f.label :eganLength %><br />
+    <%= f.number_field :eganLength %>
+  </div>
+  <div class="field">
+    <%= f.label :materialDescription %><br />
+    <%= f.text_field :materialDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :materialMsiCost %><br />
+    <%= f.number_field :materialMsiCost %>
+  </div>
+  <div class="field">
+    <%= f.label :materialPreStripe %><br />
+    <%= f.text_field :materialPreStripe %>
+  </div>
+  <div class="field">
+    <%= f.label :materialRollLengthMaster %><br />
+    <%= f.number_field :materialRollLengthMaster %>
+  </div>
+  <div class="field">
+    <%= f.label :materialRollWidth %><br />
+    <%= f.number_field :materialRollWidth %>
+  </div>
+  <div class="field">
+    <%= f.label :materialThickness %><br />
+    <%= f.number_field :materialThickness %>
+  </div>
+  <div class="field">
+    <%= f.label :vendor %><br />
+    <%= f.text_field :vendor %>
+  </div>
+  <div class="field">
+    <%= f.label :vendorPartNum %><br />
+    <%= f.text_field :vendorPartNum %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

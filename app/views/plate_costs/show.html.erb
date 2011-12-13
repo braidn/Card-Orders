@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Digital:</b>
+  <%= @plate_cost.digital %>
+</p>
+
+<p>
+  <b>Filmcost:</b>
+  <%= @plate_cost.filmcost %>
+</p>
+
+<p>
+  <b>Filmsquareinch:</b>
+  <%= @plate_cost.filmSquareInch %>
+</p>
+
+<p>
+  <b>Laborcost:</b>
+  <%= @plate_cost.laborCost %>
+</p>
+
+<p>
+  <b>Machinename:</b>
+  <%= @plate_cost.machineName %>
+</p>
+
+<p>
+  <b>Processtime:</b>
+  <%= @plate_cost.processTime %>
+</p>
+
+<p>
+  <b>Sheetcost:</b>
+  <%= @plate_cost.sheetCost %>
+</p>
+
+<p>
+  <b>Sheetspercycle:</b>
+  <%= @plate_cost.sheetsPerCycle %>
+</p>
+
+<p>
+  <b>Squareinchpersheet:</b>
+  <%= @plate_cost.squareInchPerSheet %>
+</p>
+
+
+<%= link_to 'Edit', edit_plate_cost_path(@plate_cost) %> |
+<%= link_to 'Back', plate_costs_path %>

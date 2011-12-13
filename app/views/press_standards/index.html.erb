@@ -1,0 +1,151 @@
+<h1>Listing press_standards</h1>
+
+<table>
+  <tr>
+    <th>Ampmaterial</th>
+    <th>Amptime</th>
+    <th>Colormaterial</th>
+    <th>Colortime</th>
+    <th>Colorwaste</th>
+    <th>Diematerial</th>
+    <th>Diespeed</th>
+    <th>Dietime</th>
+    <th>Diewaste</th>
+    <th>Foldermaterial</th>
+    <th>Folderspeed</th>
+    <th>Foldertime</th>
+    <th>Folderwaste</th>
+    <th>Headmaterial</th>
+    <th>Headtime</th>
+    <th>Hotstampmaterial</th>
+    <th>Hotstampspeed</th>
+    <th>Hotstamptime</th>
+    <th>Hotstampwaste</th>
+    <th>Inktype</th>
+    <th>Inktypesig</th>
+    <th>Inktypevarnish</th>
+    <th>Inkmaterial</th>
+    <th>Inktime</th>
+    <th>Inlinematerial</th>
+    <th>Inlinespeed</th>
+    <th>Inlinetime</th>
+    <th>Inlinewaste</th>
+    <th>Insertionmaterial</th>
+    <th>Insertionspeed</th>
+    <th>Insertiontime</th>
+    <th>Laminationmaterial</th>
+    <th>Laminationspeed</th>
+    <th>Laminationtime</th>
+    <th>Laminationwaste</th>
+    <th>Machinename</th>
+    <th>Machineid</th>
+    <th>Machinelabor</th>
+    <th>Machineoverhead</th>
+    <th>Machinepitch</th>
+    <th>Machinespeed</th>
+    <th>Machinetype</th>
+    <th>Machinewidth</th>
+    <th>Numbermaterial</th>
+    <th>Numberspeed</th>
+    <th>Numbertime</th>
+    <th>Numberwaste</th>
+    <th>Platechangewaste</th>
+    <th>Platechangematerial</th>
+    <th>Platechangetime</th>
+    <th>Presssetupmaterial</th>
+    <th>Presssetuptime</th>
+    <th>Printstations</th>
+    <th>Rollchangematerial</th>
+    <th>Rollchangetime</th>
+    <th>Rollchangewaste</th>
+    <th>Slitmaterial</th>
+    <th>Slitspeed</th>
+    <th>Slittime</th>
+    <th>Slitwaste</th>
+    <th>Trim</th>
+    <th>Turretmaterial</th>
+    <th>Turretspeed</th>
+    <th>Turrettime</th>
+    <th>Turretwaste</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @press_standards.each do |press_standard| %>
+  <tr>
+    <td><%= press_standard.ampMaterial %></td>
+    <td><%= press_standard.ampTime %></td>
+    <td><%= press_standard.colorMaterial %></td>
+    <td><%= press_standard.colorTime %></td>
+    <td><%= press_standard.colorWaste %></td>
+    <td><%= press_standard.dieMaterial %></td>
+    <td><%= press_standard.dieSpeed %></td>
+    <td><%= press_standard.dieTime %></td>
+    <td><%= press_standard.dieWaste %></td>
+    <td><%= press_standard.folderMaterial %></td>
+    <td><%= press_standard.folderSpeed %></td>
+    <td><%= press_standard.folderTime %></td>
+    <td><%= press_standard.folderWaste %></td>
+    <td><%= press_standard.headMaterial %></td>
+    <td><%= press_standard.headTime %></td>
+    <td><%= press_standard.hotStampMaterial %></td>
+    <td><%= press_standard.hotStampSpeed %></td>
+    <td><%= press_standard.hotStampTime %></td>
+    <td><%= press_standard.hotStampWaste %></td>
+    <td><%= press_standard.inkType %></td>
+    <td><%= press_standard.inkTypeSig %></td>
+    <td><%= press_standard.inkTypeVarnish %></td>
+    <td><%= press_standard.inkMaterial %></td>
+    <td><%= press_standard.inkTime %></td>
+    <td><%= press_standard.inlineMaterial %></td>
+    <td><%= press_standard.inlineSpeed %></td>
+    <td><%= press_standard.inlineTime %></td>
+    <td><%= press_standard.inlineWaste %></td>
+    <td><%= press_standard.insertionMaterial %></td>
+    <td><%= press_standard.insertionSpeed %></td>
+    <td><%= press_standard.insertionTime %></td>
+    <td><%= press_standard.laminationMaterial %></td>
+    <td><%= press_standard.laminationSpeed %></td>
+    <td><%= press_standard.laminationTime %></td>
+    <td><%= press_standard.laminationWaste %></td>
+    <td><%= press_standard.machineName %></td>
+    <td><%= press_standard.machineID %></td>
+    <td><%= press_standard.machineLabor %></td>
+    <td><%= press_standard.machineOverhead %></td>
+    <td><%= press_standard.machinePitch %></td>
+    <td><%= press_standard.machineSpeed %></td>
+    <td><%= press_standard.machineType %></td>
+    <td><%= press_standard.machineWidth %></td>
+    <td><%= press_standard.numberMaterial %></td>
+    <td><%= press_standard.numberSpeed %></td>
+    <td><%= press_standard.numberTime %></td>
+    <td><%= press_standard.numberWaste %></td>
+    <td><%= press_standard.plateChangeWaste %></td>
+    <td><%= press_standard.plateChangeMaterial %></td>
+    <td><%= press_standard.plateChangeTime %></td>
+    <td><%= press_standard.pressSetupMaterial %></td>
+    <td><%= press_standard.pressSetupTime %></td>
+    <td><%= press_standard.printStations %></td>
+    <td><%= press_standard.rollChangeMaterial %></td>
+    <td><%= press_standard.rollChangeTime %></td>
+    <td><%= press_standard.rollChangeWaste %></td>
+    <td><%= press_standard.slitMaterial %></td>
+    <td><%= press_standard.slitSpeed %></td>
+    <td><%= press_standard.slitTime %></td>
+    <td><%= press_standard.slitWaste %></td>
+    <td><%= press_standard.trim %></td>
+    <td><%= press_standard.turretMaterial %></td>
+    <td><%= press_standard.turretSpeed %></td>
+    <td><%= press_standard.turretTime %></td>
+    <td><%= press_standard.turretWaste %></td>
+    <td><%= link_to 'Show', press_standard %></td>
+    <td><%= link_to 'Edit', edit_press_standard_path(press_standard) %></td>
+    <td><%= link_to 'Destroy', press_standard, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Press standard', new_press_standard_path %>

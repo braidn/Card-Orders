@@ -1,0 +1,277 @@
+<%= form_for(@press_standard) do |f| %>
+  <% if @press_standard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@press_standard.errors.count, "error") %> prohibited this press_standard from being saved:</h2>
+
+      <ul>
+      <% @press_standard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ampMaterial %><br />
+    <%= f.number_field :ampMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :ampTime %><br />
+    <%= f.number_field :ampTime %>
+  </div>
+  <div class="field">
+    <%= f.label :colorMaterial %><br />
+    <%= f.number_field :colorMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :colorTime %><br />
+    <%= f.number_field :colorTime %>
+  </div>
+  <div class="field">
+    <%= f.label :colorWaste %><br />
+    <%= f.number_field :colorWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :dieMaterial %><br />
+    <%= f.number_field :dieMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :dieSpeed %><br />
+    <%= f.number_field :dieSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :dieTime %><br />
+    <%= f.number_field :dieTime %>
+  </div>
+  <div class="field">
+    <%= f.label :dieWaste %><br />
+    <%= f.number_field :dieWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :folderMaterial %><br />
+    <%= f.number_field :folderMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :folderSpeed %><br />
+    <%= f.number_field :folderSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :folderTime %><br />
+    <%= f.number_field :folderTime %>
+  </div>
+  <div class="field">
+    <%= f.label :folderWaste %><br />
+    <%= f.number_field :folderWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :headMaterial %><br />
+    <%= f.number_field :headMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :headTime %><br />
+    <%= f.number_field :headTime %>
+  </div>
+  <div class="field">
+    <%= f.label :hotStampMaterial %><br />
+    <%= f.number_field :hotStampMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :hotStampSpeed %><br />
+    <%= f.number_field :hotStampSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :hotStampTime %><br />
+    <%= f.number_field :hotStampTime %>
+  </div>
+  <div class="field">
+    <%= f.label :hotStampWaste %><br />
+    <%= f.number_field :hotStampWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :inkType %><br />
+    <%= f.text_field :inkType %>
+  </div>
+  <div class="field">
+    <%= f.label :inkTypeSig %><br />
+    <%= f.text_field :inkTypeSig %>
+  </div>
+  <div class="field">
+    <%= f.label :inkTypeVarnish %><br />
+    <%= f.text_field :inkTypeVarnish %>
+  </div>
+  <div class="field">
+    <%= f.label :inkMaterial %><br />
+    <%= f.number_field :inkMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :inkTime %><br />
+    <%= f.number_field :inkTime %>
+  </div>
+  <div class="field">
+    <%= f.label :inlineMaterial %><br />
+    <%= f.number_field :inlineMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :inlineSpeed %><br />
+    <%= f.number_field :inlineSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :inlineTime %><br />
+    <%= f.number_field :inlineTime %>
+  </div>
+  <div class="field">
+    <%= f.label :inlineWaste %><br />
+    <%= f.number_field :inlineWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :insertionMaterial %><br />
+    <%= f.number_field :insertionMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :insertionSpeed %><br />
+    <%= f.number_field :insertionSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :insertionTime %><br />
+    <%= f.number_field :insertionTime %>
+  </div>
+  <div class="field">
+    <%= f.label :laminationMaterial %><br />
+    <%= f.number_field :laminationMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :laminationSpeed %><br />
+    <%= f.number_field :laminationSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :laminationTime %><br />
+    <%= f.number_field :laminationTime %>
+  </div>
+  <div class="field">
+    <%= f.label :laminationWaste %><br />
+    <%= f.number_field :laminationWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :machineName %><br />
+    <%= f.text_field :machineName %>
+  </div>
+  <div class="field">
+    <%= f.label :machineID %><br />
+    <%= f.number_field :machineID %>
+  </div>
+  <div class="field">
+    <%= f.label :machineLabor %><br />
+    <%= f.number_field :machineLabor %>
+  </div>
+  <div class="field">
+    <%= f.label :machineOverhead %><br />
+    <%= f.number_field :machineOverhead %>
+  </div>
+  <div class="field">
+    <%= f.label :machinePitch %><br />
+    <%= f.number_field :machinePitch %>
+  </div>
+  <div class="field">
+    <%= f.label :machineSpeed %><br />
+    <%= f.number_field :machineSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :machineType %><br />
+    <%= f.text_field :machineType %>
+  </div>
+  <div class="field">
+    <%= f.label :machineWidth %><br />
+    <%= f.number_field :machineWidth %>
+  </div>
+  <div class="field">
+    <%= f.label :numberMaterial %><br />
+    <%= f.number_field :numberMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :numberSpeed %><br />
+    <%= f.number_field :numberSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :numberTime %><br />
+    <%= f.number_field :numberTime %>
+  </div>
+  <div class="field">
+    <%= f.label :numberWaste %><br />
+    <%= f.number_field :numberWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :plateChangeWaste %><br />
+    <%= f.number_field :plateChangeWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :plateChangeMaterial %><br />
+    <%= f.number_field :plateChangeMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :plateChangeTime %><br />
+    <%= f.number_field :plateChangeTime %>
+  </div>
+  <div class="field">
+    <%= f.label :pressSetupMaterial %><br />
+    <%= f.number_field :pressSetupMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :pressSetupTime %><br />
+    <%= f.number_field :pressSetupTime %>
+  </div>
+  <div class="field">
+    <%= f.label :printStations %><br />
+    <%= f.number_field :printStations %>
+  </div>
+  <div class="field">
+    <%= f.label :rollChangeMaterial %><br />
+    <%= f.number_field :rollChangeMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :rollChangeTime %><br />
+    <%= f.number_field :rollChangeTime %>
+  </div>
+  <div class="field">
+    <%= f.label :rollChangeWaste %><br />
+    <%= f.number_field :rollChangeWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :slitMaterial %><br />
+    <%= f.number_field :slitMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :slitSpeed %><br />
+    <%= f.number_field :slitSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :slitTime %><br />
+    <%= f.number_field :slitTime %>
+  </div>
+  <div class="field">
+    <%= f.label :slitWaste %><br />
+    <%= f.number_field :slitWaste %>
+  </div>
+  <div class="field">
+    <%= f.label :trim %><br />
+    <%= f.number_field :trim %>
+  </div>
+  <div class="field">
+    <%= f.label :turretMaterial %><br />
+    <%= f.number_field :turretMaterial %>
+  </div>
+  <div class="field">
+    <%= f.label :turretSpeed %><br />
+    <%= f.number_field :turretSpeed %>
+  </div>
+  <div class="field">
+    <%= f.label :turretTime %><br />
+    <%= f.number_field :turretTime %>
+  </div>
+  <div class="field">
+    <%= f.label :turretWaste %><br />
+    <%= f.number_field :turretWaste %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
