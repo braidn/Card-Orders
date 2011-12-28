@@ -1,0 +1,69 @@
+<%= form_for(@tooling_specification) do |f| %>
+  <% if @tooling_specification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tooling_specification.errors.count, "error") %> prohibited this tooling_specification from being saved:</h2>
+
+      <ul>
+      <% @tooling_specification.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :addAmortizeQuantity %><br />
+    <%= f.number_field :addAmortizeQuantity %>
+  </div>
+  <div class="field">
+    <%= f.label :addToolingCost %><br />
+    <%= f.number_field :addToolingCost %>
+  </div>
+  <div class="field">
+    <%= f.label :designBy %><br />
+    <%= f.text_field :designBy %>
+  </div>
+  <div class="field">
+    <%= f.label :designRevDate %><br />
+    <%= f.datetime_select :designRevDate %>
+  </div>
+  <div class="field">
+    <%= f.label :dieAround %><br />
+    <%= f.number_field :dieAround %>
+  </div>
+  <div class="field">
+    <%= f.label :dieId %><br />
+    <%= f.number_field :dieId %>
+  </div>
+  <div class="field">
+    <%= f.label :dieSc %><br />
+    <%= f.text_field :dieSc %>
+  </div>
+  <div class="field">
+    <%= f.label :imageFile %><br />
+    <%= f.text_field :imageFile %>
+  </div>
+  <div class="field">
+    <%= f.label :jobNumber %><br />
+    <%= f.number_field :jobNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :newDieRequired %><br />
+    <%= f.text_field :newDieRequired %>
+  </div>
+  <div class="field">
+    <%= f.label :toolingComment %><br />
+    <%= f.text_area :toolingComment %>
+  </div>
+  <div class="field">
+    <%= f.label :toolSc %><br />
+    <%= f.text_field :toolSc %>
+  </div>
+  <div class="field">
+    <%= f.label :toolSpecificationId %><br />
+    <%= f.text_field :toolSpecificationId %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Addresstype:</b>
+  <%= @billing.addressType %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @billing.city %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @billing.country %>
+</p>
+
+<p>
+  <b>Customerid:</b>
+  <%= @billing.customerId %>
+</p>
+
+<p>
+  <b>Postalcode:</b>
+  <%= @billing.postalCode %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @billing.state %>
+</p>
+
+<p>
+  <b>Street1:</b>
+  <%= @billing.street1 %>
+</p>
+
+<p>
+  <b>Street1a:</b>
+  <%= @billing.street1a %>
+</p>
+
+<p>
+  <b>Street2:</b>
+  <%= @billing.street2 %>
+</p>
+
+<p>
+  <b>Street2a:</b>
+  <%= @billing.street2a %>
+</p>
+
+
+<%= link_to 'Edit', edit_billing_path(@billing) %> |
+<%= link_to 'Back', billings_path %>

@@ -1,0 +1,65 @@
+<h1>Listing customers</h1>
+
+<table>
+  <tr>
+    <th>Traverseacct</th>
+    <th>Addtype</th>
+    <th>City1</th>
+    <th>City2</th>
+    <th>Commision</th>
+    <th>Company</th>
+    <th>Country</th>
+    <th>Status</th>
+    <th>Type</th>
+    <th>Po</th>
+    <th>Distributor</th>
+    <th>Invoiceinst</th>
+    <th>Market</th>
+    <th>Phone1</th>
+    <th>Phone2</th>
+    <th>Postalcode</th>
+    <th>Stateprovince</th>
+    <th>Street1</th>
+    <th>Street1a</th>
+    <th>Street2</th>
+    <th>Street2a</th>
+    <th>Website</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.traverseAcct %></td>
+    <td><%= customer.addType %></td>
+    <td><%= customer.city1 %></td>
+    <td><%= customer.city2 %></td>
+    <td><%= customer.commision %></td>
+    <td><%= customer.company %></td>
+    <td><%= customer.country %></td>
+    <td><%= customer.status %></td>
+    <td><%= customer.type %></td>
+    <td><%= customer.po %></td>
+    <td><%= customer.distributor %></td>
+    <td><%= customer.invoiceInst %></td>
+    <td><%= customer.market %></td>
+    <td><%= customer.phone1 %></td>
+    <td><%= customer.phone2 %></td>
+    <td><%= customer.postalCode %></td>
+    <td><%= customer.stateProvince %></td>
+    <td><%= customer.street1 %></td>
+    <td><%= customer.street1a %></td>
+    <td><%= customer.street2 %></td>
+    <td><%= customer.street2a %></td>
+    <td><%= customer.website %></td>
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer', new_customer_path %>

@@ -1,0 +1,47 @@
+<h1>Listing tooling_specifications</h1>
+
+<table>
+  <tr>
+    <th>Addamortizequantity</th>
+    <th>Addtoolingcost</th>
+    <th>Designby</th>
+    <th>Designrevdate</th>
+    <th>Diearound</th>
+    <th>Dieid</th>
+    <th>Diesc</th>
+    <th>Imagefile</th>
+    <th>Jobnumber</th>
+    <th>Newdierequired</th>
+    <th>Toolingcomment</th>
+    <th>Toolsc</th>
+    <th>Toolspecificationid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tooling_specifications.each do |tooling_specification| %>
+  <tr>
+    <td><%= tooling_specification.addAmortizeQuantity %></td>
+    <td><%= tooling_specification.addToolingCost %></td>
+    <td><%= tooling_specification.designBy %></td>
+    <td><%= tooling_specification.designRevDate %></td>
+    <td><%= tooling_specification.dieAround %></td>
+    <td><%= tooling_specification.dieId %></td>
+    <td><%= tooling_specification.dieSc %></td>
+    <td><%= tooling_specification.imageFile %></td>
+    <td><%= tooling_specification.jobNumber %></td>
+    <td><%= tooling_specification.newDieRequired %></td>
+    <td><%= tooling_specification.toolingComment %></td>
+    <td><%= tooling_specification.toolSc %></td>
+    <td><%= tooling_specification.toolSpecificationId %></td>
+    <td><%= link_to 'Show', tooling_specification %></td>
+    <td><%= link_to 'Edit', edit_tooling_specification_path(tooling_specification) %></td>
+    <td><%= link_to 'Destroy', tooling_specification, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tooling specification', new_tooling_specification_path %>

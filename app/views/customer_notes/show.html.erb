@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @customer_note.company %>
+</p>
+
+<p>
+  <b>Noteinfo:</b>
+  <%= @customer_note.noteInfo %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_note_path(@customer_note) %> |
+<%= link_to 'Back', customer_notes_path %>

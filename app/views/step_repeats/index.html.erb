@@ -1,0 +1,71 @@
+<h1>Listing step_repeats</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Dimensionacross</th>
+    <th>Dimensionaround</th>
+    <th>Distortionfactor</th>
+    <th>Flexodistortion</th>
+    <th>Flexolpdist</th>
+    <th>Flexomountingtapethickness</th>
+    <th>Flexoplatebacking</th>
+    <th>Flexoplatethickness</th>
+    <th>Flexosoftthickness</th>
+    <th>Gapacross</th>
+    <th>Gaparound</th>
+    <th>Internalname</th>
+    <th>Letterpressmountingtapethickness</th>
+    <th>Letterpressplatebacking</th>
+    <th>Letterpressplatethickness</th>
+    <th>Letterpresssoftthickness</th>
+    <th>Lpdistortion</th>
+    <th>Offset</th>
+    <th>Offsetamount</th>
+    <th>Presstype</th>
+    <th>Printdiameter</th>
+    <th>Stepacross</th>
+    <th>Steparound</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @step_repeats.each do |step_repeat| %>
+  <tr>
+    <td><%= step_repeat.category %></td>
+    <td><%= step_repeat.description %></td>
+    <td><%= step_repeat.dimensionAcross %></td>
+    <td><%= step_repeat.dimensionAround %></td>
+    <td><%= step_repeat.distortionFactor %></td>
+    <td><%= step_repeat.flexoDistortion %></td>
+    <td><%= step_repeat.flexoLpDist %></td>
+    <td><%= step_repeat.flexoMountingTapeThickness %></td>
+    <td><%= step_repeat.flexoPlateBacking %></td>
+    <td><%= step_repeat.flexoPlateThickness %></td>
+    <td><%= step_repeat.flexoSoftThickness %></td>
+    <td><%= step_repeat.gapAcross %></td>
+    <td><%= step_repeat.gapAround %></td>
+    <td><%= step_repeat.internalName %></td>
+    <td><%= step_repeat.letterpressMountingTapeThickness %></td>
+    <td><%= step_repeat.letterpressPlateBacking %></td>
+    <td><%= step_repeat.letterpressPlateThickness %></td>
+    <td><%= step_repeat.letterpressSoftThickness %></td>
+    <td><%= step_repeat.lpDistortion %></td>
+    <td><%= step_repeat.offset %></td>
+    <td><%= step_repeat.offsetAmount %></td>
+    <td><%= step_repeat.pressType %></td>
+    <td><%= step_repeat.printDiameter %></td>
+    <td><%= step_repeat.stepAcross %></td>
+    <td><%= step_repeat.stepAround %></td>
+    <td><%= link_to 'Show', step_repeat %></td>
+    <td><%= link_to 'Edit', edit_step_repeat_path(step_repeat) %></td>
+    <td><%= link_to 'Destroy', step_repeat, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Step repeat', new_step_repeat_path %>

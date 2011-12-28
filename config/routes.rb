@@ -1,4 +1,18 @@
 EstOrders::Application.routes.draw do
+  resources :shippings
+
+  resources :billings
+
+  resources :customer_notes
+
+  resources :customers
+
+  resources :tooling_specifications
+
+  resources :stripe_specifications
+
+  resources :step_repeats
+
   resources :skids
 
   resources :security_specs

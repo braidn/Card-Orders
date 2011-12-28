@@ -1,0 +1,65 @@
+<h1>Listing shippings</h1>
+
+<table>
+  <tr>
+    <th>Additionalinfo</th>
+    <th>Attention</th>
+    <th>City</th>
+    <th>Country</th>
+    <th>Customerid</th>
+    <th>Freightcollect3rdaddr1</th>
+    <th>Freightcollect3rdaddr2</th>
+    <th>Freightcollect3rdcity</th>
+    <th>Freightcollect3rdcomment</th>
+    <th>Freightcollect3rdname</th>
+    <th>Freightcollect3rdstate</th>
+    <th>Freightcollect3rdzip</th>
+    <th>Freightshippinginst</th>
+    <th>Instructions</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Postalcode</th>
+    <th>State</th>
+    <th>Street1</th>
+    <th>Street1a</th>
+    <th>Street2</th>
+    <th>Street2a</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shippings.each do |shipping| %>
+  <tr>
+    <td><%= shipping.additionalInfo %></td>
+    <td><%= shipping.attention %></td>
+    <td><%= shipping.city %></td>
+    <td><%= shipping.country %></td>
+    <td><%= shipping.customerId %></td>
+    <td><%= shipping.freightCollect3rdAddr1 %></td>
+    <td><%= shipping.freightCollect3rdAddr2 %></td>
+    <td><%= shipping.freightCollect3rdCity %></td>
+    <td><%= shipping.freightCollect3rdComment %></td>
+    <td><%= shipping.freightCollect3rdName %></td>
+    <td><%= shipping.freightCollect3rdState %></td>
+    <td><%= shipping.freightCollect3rdZip %></td>
+    <td><%= shipping.freightShippingInst %></td>
+    <td><%= shipping.instructions %></td>
+    <td><%= shipping.name %></td>
+    <td><%= shipping.phone %></td>
+    <td><%= shipping.postalCode %></td>
+    <td><%= shipping.state %></td>
+    <td><%= shipping.street1 %></td>
+    <td><%= shipping.street1a %></td>
+    <td><%= shipping.street2 %></td>
+    <td><%= shipping.street2a %></td>
+    <td><%= link_to 'Show', shipping %></td>
+    <td><%= link_to 'Edit', edit_shipping_path(shipping) %></td>
+    <td><%= link_to 'Destroy', shipping, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shipping', new_shipping_path %>
