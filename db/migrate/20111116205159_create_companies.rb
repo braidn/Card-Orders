@@ -6,7 +6,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :city
       t.string :commissioned
       t.string :name
-      t.name :country
+      t.string :country
       t.string :market
       t.string :phone
       t.string :salesrep
