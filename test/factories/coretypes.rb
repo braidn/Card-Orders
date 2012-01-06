@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
-
-one:
-  matDescription: MyString
-  material: MyString
-
-two:
-  matDescription: MyString
-  material: MyString
+FactoryGirl.define do
+  factory :coretype do
+    matDescription 'MyString'
+    material 'MyString'
+  end
+end

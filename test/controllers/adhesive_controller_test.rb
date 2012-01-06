@@ -2,7 +2,7 @@ require "minitest_helper"
 
 class AdhesiveControllerTest < MiniTest::Rails::Controller
   setup do
-    @adhesife = adhesives(:one)
+    @adhesife = FactoryGirl.create(:supertacky)
   end
 
   def test_index

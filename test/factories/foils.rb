@@ -1,15 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
-
-one:
-  description: MyText
-  length: 1
-  msi: 1
-  type: 
-  width: 1
-
-two:
-  description: MyText
-  length: 1
-  msi: 1
-  type: 
-  width: 1
+FactoryGirl.define do
+  factory :foil do
+    description 'MyText'
+    length 1
+    msi 1
+    type 'myText'
+    width 1
+  end
+end
