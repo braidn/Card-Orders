@@ -36,6 +36,6 @@ group :test do
 end
 
 group :test, :development do
-  gem 'minitest-rails'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
