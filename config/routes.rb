@@ -1,90 +1,47 @@
 EstOrders::Application.routes.draw do
   resources :shippings
-
   resources :billings
-
   resources :customer_notes
-
   resources :customers
-
   resources :tooling_specifications
-
   resources :stripe_specifications
-
   resources :step_repeats
-
   resources :skids
-
   resources :security_specs
-
   resources :sales_terms
-
   resources :sales_reps
-
   resources :rfid_inlays
-
   resources :rfid_inlay_categories
-
   resources :registration_levels
-
   resources :proof_costs
-
   resources :product_formats
-
   resources :plate_costs
-
   resources :mat_categories
-
   resources :materials
-
   resources :mag_tapes
-
   resources :mag_ink_types
-
   resources :machine_stripe_standards
-
   resources :machine_id_standards
-
   resources :press_standards
-
   resources :laminates
-
   resources :ink_varnishes
-
   resources :inksignatures
-
   resources :inkpmscodes
-
   resources :inkcatagories
-
   resources :foiltypes
-
   resources :foils
-
   resources :encodingstandards
-
   resources :dietypes
-
   resources :dies
-
   resources :coretypes
-
   resources :cores
-
   resources :contacts
-
   resources :companies
-
   resources :commissions
-
   resources :boxtypes
-
   resources :boxes
-
   resources :binderyspecs
-
   resources :binderies
-
   resources :adhesives
 
   # The priority is based upon order of creation:
