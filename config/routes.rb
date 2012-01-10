@@ -1,4 +1,6 @@
 EstOrders::Application.routes.draw do
+  resources :forgotten_users
+
   resources :shippings
   resources :billings
   resources :customer_notes
