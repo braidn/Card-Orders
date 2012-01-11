@@ -1,2 +1,7 @@
-Simple, yet oddly complex test of an Estimate-Orders system.  
-Original came from FileMaker...hopefully this one is better.
+An Estimate and Orders system written in Rails 3.1.x
+
+For now this is a prototype rewrite of a system that was recently
+completed. 
+
+###Getting it going
+rake db:migrate --> all good.
