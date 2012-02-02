@@ -1,3 +1,4 @@
+require 'fileutils'
 class ConvertToHaml
   def initialize
     @from_path = File.join(File.dirname(__FILE__), 'app', 'views')
@@ -5,9 +6,9 @@ class ConvertToHaml
   
   def convert!
     Dir["#{@from_path}/**/*.erb"].each do |file|
-      puts file
+      puts "removing #{file}"
       # for each .erb file in the path, convert it & output to a .haml file
-      `bundle exec html2haml -ex #{file} #{file.gsub(/\.erb$/, '.haml')}`
+      Fileutils.rm(file)
     end
   end
 end
