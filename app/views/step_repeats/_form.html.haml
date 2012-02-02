@@ -1,0 +1,111 @@
+= form_for(@step_repeat) do |f|
+  - if @step_repeat.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@step_repeat.errors.count, "error")
+        prohibited this step_repeat from being saved:
+      %ul
+        - @step_repeat.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :category
+    %br/
+    = f.text_field :category
+  .field
+    = f.label :description
+    %br/
+    = f.text_area :description
+  .field
+    = f.label :dimensionAcross
+    %br/
+    = f.text_field :dimensionAcross
+  .field
+    = f.label :dimensionAround
+    %br/
+    = f.text_field :dimensionAround
+  .field
+    = f.label :distortionFactor
+    %br/
+    = f.text_field :distortionFactor
+  .field
+    = f.label :flexoDistortion
+    %br/
+    = f.text_field :flexoDistortion
+  .field
+    = f.label :flexoLpDist
+    %br/
+    = f.text_field :flexoLpDist
+  .field
+    = f.label :flexoMountingTapeThickness
+    %br/
+    = f.text_field :flexoMountingTapeThickness
+  .field
+    = f.label :flexoPlateBacking
+    %br/
+    = f.text_field :flexoPlateBacking
+  .field
+    = f.label :flexoPlateThickness
+    %br/
+    = f.text_field :flexoPlateThickness
+  .field
+    = f.label :flexoSoftThickness
+    %br/
+    = f.text_field :flexoSoftThickness
+  .field
+    = f.label :gapAcross
+    %br/
+    = f.text_field :gapAcross
+  .field
+    = f.label :gapAround
+    %br/
+    = f.text_field :gapAround
+  .field
+    = f.label :internalName
+    %br/
+    = f.text_field :internalName
+  .field
+    = f.label :letterpressMountingTapeThickness
+    %br/
+    = f.text_field :letterpressMountingTapeThickness
+  .field
+    = f.label :letterpressPlateBacking
+    %br/
+    = f.text_field :letterpressPlateBacking
+  .field
+    = f.label :letterpressPlateThickness
+    %br/
+    = f.text_field :letterpressPlateThickness
+  .field
+    = f.label :letterpressSoftThickness
+    %br/
+    = f.text_field :letterpressSoftThickness
+  .field
+    = f.label :lpDistortion
+    %br/
+    = f.text_field :lpDistortion
+  .field
+    = f.label :offset
+    %br/
+    = f.text_field :offset
+  .field
+    = f.label :offsetAmount
+    %br/
+    = f.text_field :offsetAmount
+  .field
+    = f.label :pressType
+    %br/
+    = f.text_field :pressType
+  .field
+    = f.label :printDiameter
+    %br/
+    = f.text_field :printDiameter
+  .field
+    = f.label :stepAcross
+    %br/
+    = f.number_field :stepAcross
+  .field
+    = f.label :stepAround
+    %br/
+    = f.number_field :stepAround
+  .actions
+    = f.submit

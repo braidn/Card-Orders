@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %b Vendorpartnumber:
+  = @inksignature.vendorpartnumber
+%p
+  %b Vendor:
+  = @inksignature.vendor
+%p
+  %b Magtype:
+  = @inksignature.magtype
+%p
+  %b Inktype:
+  = @inksignature.inktype
+%p
+  %b Inkmsiperpound:
+  = @inksignature.inkmsiperpound
+%p
+  %b Inkcostperpound:
+  = @inksignature.inkcostperpound
+= link_to 'Edit', edit_inksignature_path(@inksignature)
+|
+\#{link_to 'Back', inksignatures_path}

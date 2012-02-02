@@ -1,0 +1,63 @@
+= form_for(@tooling_specification) do |f|
+  - if @tooling_specification.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@tooling_specification.errors.count, "error")
+        prohibited this tooling_specification from being saved:
+      %ul
+        - @tooling_specification.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :addAmortizeQuantity
+    %br/
+    = f.number_field :addAmortizeQuantity
+  .field
+    = f.label :addToolingCost
+    %br/
+    = f.number_field :addToolingCost
+  .field
+    = f.label :designBy
+    %br/
+    = f.text_field :designBy
+  .field
+    = f.label :designRevDate
+    %br/
+    = f.datetime_select :designRevDate
+  .field
+    = f.label :dieAround
+    %br/
+    = f.number_field :dieAround
+  .field
+    = f.label :dieId
+    %br/
+    = f.number_field :dieId
+  .field
+    = f.label :dieSc
+    %br/
+    = f.text_field :dieSc
+  .field
+    = f.label :imageFile
+    %br/
+    = f.text_field :imageFile
+  .field
+    = f.label :jobNumber
+    %br/
+    = f.number_field :jobNumber
+  .field
+    = f.label :newDieRequired
+    %br/
+    = f.text_field :newDieRequired
+  .field
+    = f.label :toolingComment
+    %br/
+    = f.text_area :toolingComment
+  .field
+    = f.label :toolSc
+    %br/
+    = f.text_field :toolSc
+  .field
+    = f.label :toolSpecificationId
+    %br/
+    = f.text_field :toolSpecificationId
+  .actions
+    = f.submit

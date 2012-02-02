@@ -1,0 +1,31 @@
+%h1 Listing plate_costs
+%table
+  %tr
+    %th Digital
+    %th Filmcost
+    %th Filmsquareinch
+    %th Laborcost
+    %th Machinename
+    %th Processtime
+    %th Sheetcost
+    %th Sheetspercycle
+    %th Squareinchpersheet
+    %th
+    %th
+    %th
+  - @plate_costs.each do |plate_cost|
+    %tr
+      %td= plate_cost.digital
+      %td= plate_cost.filmcost
+      %td= plate_cost.filmSquareInch
+      %td= plate_cost.laborCost
+      %td= plate_cost.machineName
+      %td= plate_cost.processTime
+      %td= plate_cost.sheetCost
+      %td= plate_cost.sheetsPerCycle
+      %td= plate_cost.squareInchPerSheet
+      %td= link_to 'Show', plate_cost
+      %td= link_to 'Edit', edit_plate_cost_path(plate_cost)
+      %td= link_to 'Destroy', plate_cost, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Plate cost', new_plate_cost_path

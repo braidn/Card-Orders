@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Matcatdescription:
+  = @mat_category.matCatDescription
+%p
+  %b Matcategory:
+  = @mat_category.matCategory
+= link_to 'Edit', edit_mat_category_path(@mat_category)
+|
+\#{link_to 'Back', mat_categories_path}

@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Commrate:
+  = @commission.commrate
+%p
+  %b Profitrate:
+  = @commission.profitrate
+= link_to 'Edit', edit_commission_path(@commission)
+|
+\#{link_to 'Back', commissions_path}

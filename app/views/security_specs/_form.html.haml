@@ -1,0 +1,67 @@
+= form_for(@security_spec) do |f|
+  - if @security_spec.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@security_spec.errors.count, "error")
+        prohibited this security_spec from being saved:
+      %ul
+        - @security_spec.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :changsMaterRecombine
+    %br/
+    = f.text_field :changsMaterRecombine
+  .field
+    = f.label :coldFoilId
+    %br/
+    = f.number_field :coldFoilId
+  .field
+    = f.label :coldFoilWidth
+    %br/
+    = f.number_field :coldFoilWidth
+  .field
+    = f.label :customFoilAmortizeQty
+    %br/
+    = f.number_field :customFoilAmortizeQty
+  .field
+    = f.label :hotComplexTool
+    %br/
+    = f.number_field :hotComplexTool
+  .field
+    = f.label :hotFoilWidth
+    %br/
+    = f.number_field :hotFoilWidth
+  .field
+    = f.label :hotMediumTool
+    %br/
+    = f.number_field :hotMediumTool
+  .field
+    = f.label :hotSimpleTool
+    %br/
+    = f.number_field :hotSimpleTool
+  .field
+    = f.label :hotStampFoilId
+    %br/
+    = f.number_field :hotStampFoilId
+  .field
+    = f.label :jobNumber
+    %br/
+    = f.text_field :jobNumber
+  .field
+    = f.label :laminationId
+    %br/
+    = f.number_field :laminationId
+  .field
+    = f.label :laminationWidth
+    %br/
+    = f.number_field :laminationWidth
+  .field
+    = f.label :securityComment
+    %br/
+    = f.text_field :securityComment
+  .field
+    = f.label :securitySpecId
+    %br/
+    = f.number_field :securitySpecId
+  .actions
+    = f.submit

@@ -1,0 +1,17 @@
+%h1 Listing boxtypes
+%table
+  %tr
+    %th Boxid
+    %th Boxtype
+    %th
+    %th
+    %th
+  - @boxtypes.each do |boxtype|
+    %tr
+      %td= boxtype.boxid
+      %td= boxtype.boxtype
+      %td= link_to 'Show', boxtype
+      %td= link_to 'Edit', edit_boxtype_path(boxtype)
+      %td= link_to 'Destroy', boxtype, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Boxtype', new_boxtype_path

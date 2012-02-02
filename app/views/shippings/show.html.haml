@@ -1,0 +1,70 @@
+%p#notice= notice
+%p
+  %b Additionalinfo:
+  = @shipping.additionalInfo
+%p
+  %b Attention:
+  = @shipping.attention
+%p
+  %b City:
+  = @shipping.city
+%p
+  %b Country:
+  = @shipping.country
+%p
+  %b Customerid:
+  = @shipping.customerId
+%p
+  %b Freightcollect3rdaddr1:
+  = @shipping.freightCollect3rdAddr1
+%p
+  %b Freightcollect3rdaddr2:
+  = @shipping.freightCollect3rdAddr2
+%p
+  %b Freightcollect3rdcity:
+  = @shipping.freightCollect3rdCity
+%p
+  %b Freightcollect3rdcomment:
+  = @shipping.freightCollect3rdComment
+%p
+  %b Freightcollect3rdname:
+  = @shipping.freightCollect3rdName
+%p
+  %b Freightcollect3rdstate:
+  = @shipping.freightCollect3rdState
+%p
+  %b Freightcollect3rdzip:
+  = @shipping.freightCollect3rdZip
+%p
+  %b Freightshippinginst:
+  = @shipping.freightShippingInst
+%p
+  %b Instructions:
+  = @shipping.instructions
+%p
+  %b Name:
+  = @shipping.name
+%p
+  %b Phone:
+  = @shipping.phone
+%p
+  %b Postalcode:
+  = @shipping.postalCode
+%p
+  %b State:
+  = @shipping.state
+%p
+  %b Street1:
+  = @shipping.street1
+%p
+  %b Street1a:
+  = @shipping.street1a
+%p
+  %b Street2:
+  = @shipping.street2
+%p
+  %b Street2a:
+  = @shipping.street2a
+= link_to 'Edit', edit_shipping_path(@shipping)
+|
+\#{link_to 'Back', shippings_path}

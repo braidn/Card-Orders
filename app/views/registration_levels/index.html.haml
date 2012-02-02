@@ -1,0 +1,21 @@
+%h1 Listing registration_levels
+%table
+  %tr
+    %th Registrationdescription
+    %th Registrationlevelid
+    %th Registrationspeed
+    %th Registrationwaste
+    %th
+    %th
+    %th
+  - @registration_levels.each do |registration_level|
+    %tr
+      %td= registration_level.registrationDescription
+      %td= registration_level.registrationLevelId
+      %td= registration_level.registrationSpeed
+      %td= registration_level.registrationWaste
+      %td= link_to 'Show', registration_level
+      %td= link_to 'Edit', edit_registration_level_path(registration_level)
+      %td= link_to 'Destroy', registration_level, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Registration level', new_registration_level_path

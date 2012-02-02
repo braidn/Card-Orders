@@ -1,0 +1,23 @@
+%h1 Listing foils
+%table
+  %tr
+    %th Description
+    %th Length
+    %th Msi
+    %th Type
+    %th Width
+    %th
+    %th
+    %th
+  - @foils.each do |foil|
+    %tr
+      %td= foil.description
+      %td= foil.length
+      %td= foil.msi
+      %td= foil.type
+      %td= foil.width
+      %td= link_to 'Show', foil
+      %td= link_to 'Edit', edit_foil_path(foil)
+      %td= link_to 'Destroy', foil, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Foil', new_foil_path

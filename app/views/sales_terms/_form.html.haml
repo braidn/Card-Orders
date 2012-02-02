@@ -1,0 +1,31 @@
+= form_for(@sales_term) do |f|
+  - if @sales_term.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@sales_term.errors.count, "error")
+        prohibited this sales_term from being saved:
+      %ul
+        - @sales_term.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :discountDays
+    %br/
+    = f.text_field :discountDays
+  .field
+    = f.label :discountRate
+    %br/
+    = f.number_field :discountRate
+  .field
+    = f.label :payDays
+    %br/
+    = f.text_field :payDays
+  .field
+    = f.label :salesTermDescription
+    %br/
+    = f.text_field :salesTermDescription
+  .field
+    = f.label :salesTermId
+    %br/
+    = f.number_field :salesTermId
+  .actions
+    = f.submit

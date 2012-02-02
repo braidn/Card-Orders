@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %b Vendorpartnumb:
+  = @inkpmscode.vendorpartnumb
+%p
+  %b Vendor:
+  = @inkpmscode.vendor
+%p
+  %b Magtype:
+  = @inkpmscode.magtype
+%p
+  %b Inktype:
+  = @inkpmscode.inktype
+%p
+  %b Inkmsiperpound:
+  = @inkpmscode.inkmsiperpound
+%p
+  %b Inkcostperpound:
+  = @inkpmscode.inkcostperpound
+= link_to 'Edit', edit_inkpmscode_path(@inkpmscode)
+|
+\#{link_to 'Back', inkpmscodes_path}

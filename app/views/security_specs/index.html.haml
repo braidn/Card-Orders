@@ -1,0 +1,41 @@
+%h1 Listing security_specs
+%table
+  %tr
+    %th Changsmaterrecombine
+    %th Coldfoilid
+    %th Coldfoilwidth
+    %th Customfoilamortizeqty
+    %th Hotcomplextool
+    %th Hotfoilwidth
+    %th Hotmediumtool
+    %th Hotsimpletool
+    %th Hotstampfoilid
+    %th Jobnumber
+    %th Laminationid
+    %th Laminationwidth
+    %th Securitycomment
+    %th Securityspecid
+    %th
+    %th
+    %th
+  - @security_specs.each do |security_spec|
+    %tr
+      %td= security_spec.changsMaterRecombine
+      %td= security_spec.coldFoilId
+      %td= security_spec.coldFoilWidth
+      %td= security_spec.customFoilAmortizeQty
+      %td= security_spec.hotComplexTool
+      %td= security_spec.hotFoilWidth
+      %td= security_spec.hotMediumTool
+      %td= security_spec.hotSimpleTool
+      %td= security_spec.hotStampFoilId
+      %td= security_spec.jobNumber
+      %td= security_spec.laminationId
+      %td= security_spec.laminationWidth
+      %td= security_spec.securityComment
+      %td= security_spec.securitySpecId
+      %td= link_to 'Show', security_spec
+      %td= link_to 'Edit', edit_security_spec_path(security_spec)
+      %td= link_to 'Destroy', security_spec, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Security spec', new_security_spec_path

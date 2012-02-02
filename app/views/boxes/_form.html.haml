@@ -1,0 +1,87 @@
+= form_for(@box) do |f|
+  - if @box.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@box.errors.count, "error")
+        prohibited this box from being saved:
+      %ul
+        - @box.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :boxtype
+    %br/
+    = f.text_field :boxtype
+  .field
+    = f.label :boxesperskid
+    %br/
+    = f.number_field :boxesperskid
+  .field
+    = f.label :caliper
+    %br/
+    = f.text_field :caliper
+  .field
+    = f.label :cardsperskid
+    %br/
+    = f.number_field :cardsperskid
+  .field
+    = f.label :concatview
+    %br/
+    = f.text_field :concatview
+  .field
+    = f.label :estimateboxselection
+    %br/
+    = f.number_field :estimateboxselection
+  .field
+    = f.label :height
+    %br/
+    = f.number_field :height
+  .field
+    = f.label :innercost
+    %br/
+    = f.number_field :innercost
+  .field
+    = f.label :innerouter
+    %br/
+    = f.text_field :innerouter
+  .field
+    = f.label :innerquantity
+    %br/
+    = f.number_field :innerquantity
+  .field
+    = f.label :internaldescription
+    %br/
+    = f.text_area :internaldescription
+  .field
+    = f.label :length
+    %br/
+    = f.number_field :length
+  .field
+    = f.label :maincustomer
+    %br/
+    = f.text_field :maincustomer
+  .field
+    = f.label :outercost
+    %br/
+    = f.number_field :outercost
+  .field
+    = f.label :outerquantity
+    %br/
+    = f.number_field :outerquantity
+  .field
+    = f.label :rowshigh
+    %br/
+    = f.number_field :rowshigh
+  .field
+    = f.label :selectskid
+    %br/
+    = f.text_field :selectskid
+  .field
+    = f.label :size
+    %br/
+    = f.text_field :size
+  .field
+    = f.label :width
+    %br/
+    = f.number_field :width
+  .actions
+    = f.submit

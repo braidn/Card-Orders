@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Boxid:
+  = @boxtype.boxid
+%p
+  %b Boxtype:
+  = @boxtype.boxtype
+= link_to 'Edit', edit_boxtype_path(@boxtype)
+|
+\#{link_to 'Back', boxtypes_path}

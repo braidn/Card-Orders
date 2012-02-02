@@ -1,0 +1,51 @@
+%h1 Listing boxes
+%table
+  %tr
+    %th Boxtype
+    %th Boxesperskid
+    %th Caliper
+    %th Cardsperskid
+    %th Concatview
+    %th Estimateboxselection
+    %th Height
+    %th Innercost
+    %th Innerouter
+    %th Innerquantity
+    %th Internaldescription
+    %th Length
+    %th Maincustomer
+    %th Outercost
+    %th Outerquantity
+    %th Rowshigh
+    %th Selectskid
+    %th Size
+    %th Width
+    %th
+    %th
+    %th
+  - @boxes.each do |box|
+    %tr
+      %td= box.boxtype
+      %td= box.boxesperskid
+      %td= box.caliper
+      %td= box.cardsperskid
+      %td= box.concatview
+      %td= box.estimateboxselection
+      %td= box.height
+      %td= box.innercost
+      %td= box.innerouter
+      %td= box.innerquantity
+      %td= box.internaldescription
+      %td= box.length
+      %td= box.maincustomer
+      %td= box.outercost
+      %td= box.outerquantity
+      %td= box.rowshigh
+      %td= box.selectskid
+      %td= box.size
+      %td= box.width
+      %td= link_to 'Show', box
+      %td= link_to 'Edit', edit_box_path(box)
+      %td= link_to 'Destroy', box, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Box', new_box_path

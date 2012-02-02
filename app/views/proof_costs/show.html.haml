@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Proofcastid:
+  = @proof_cost.proofCastId
+%p
+  %b Proofcost:
+  = @proof_cost.proofCost
+%p
+  %b Proofdescription:
+  = @proof_cost.proofDescription
+= link_to 'Edit', edit_proof_cost_path(@proof_cost)
+|
+\#{link_to 'Back', proof_costs_path}

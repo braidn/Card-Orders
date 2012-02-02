@@ -1,0 +1,39 @@
+%h1 Listing tooling_specifications
+%table
+  %tr
+    %th Addamortizequantity
+    %th Addtoolingcost
+    %th Designby
+    %th Designrevdate
+    %th Diearound
+    %th Dieid
+    %th Diesc
+    %th Imagefile
+    %th Jobnumber
+    %th Newdierequired
+    %th Toolingcomment
+    %th Toolsc
+    %th Toolspecificationid
+    %th
+    %th
+    %th
+  - @tooling_specifications.each do |tooling_specification|
+    %tr
+      %td= tooling_specification.addAmortizeQuantity
+      %td= tooling_specification.addToolingCost
+      %td= tooling_specification.designBy
+      %td= tooling_specification.designRevDate
+      %td= tooling_specification.dieAround
+      %td= tooling_specification.dieId
+      %td= tooling_specification.dieSc
+      %td= tooling_specification.imageFile
+      %td= tooling_specification.jobNumber
+      %td= tooling_specification.newDieRequired
+      %td= tooling_specification.toolingComment
+      %td= tooling_specification.toolSc
+      %td= tooling_specification.toolSpecificationId
+      %td= link_to 'Show', tooling_specification
+      %td= link_to 'Edit', edit_tooling_specification_path(tooling_specification)
+      %td= link_to 'Destroy', tooling_specification, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Tooling specification', new_tooling_specification_path

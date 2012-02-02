@@ -1,0 +1,29 @@
+%h1 Listing dies
+%table
+  %tr
+    %th Diecatagory
+    %th Costpercard
+    %th Costspertooth
+    %th Description
+    %th Initialcost
+    %th Initiallife
+    %th Retoolcost
+    %th Retoollife
+    %th
+    %th
+    %th
+  - @dies.each do |dy|
+    %tr
+      %td= dy.dieCatagory
+      %td= dy.costpercard
+      %td= dy.costspertooth
+      %td= dy.description
+      %td= dy.initialCost
+      %td= dy.initialLife
+      %td= dy.retoolCost
+      %td= dy.retoolLife
+      %td= link_to 'Show', dy
+      %td= link_to 'Edit', edit_dy_path(dy)
+      %td= link_to 'Destroy', dy, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Die', new_dy_path

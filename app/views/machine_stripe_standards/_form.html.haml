@@ -1,0 +1,107 @@
+= form_for(@machine_stripe_standard) do |f|
+  - if @machine_stripe_standard.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@machine_stripe_standard.errors.count, "error")
+        prohibited this machine_stripe_standard from being saved:
+      %ul
+        - @machine_stripe_standard.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :ampMaterial
+    %br/
+    = f.number_field :ampMaterial
+  .field
+    = f.label :ampTime
+    %br/
+    = f.number_field :ampTime
+  .field
+    = f.label :headMaterial
+    %br/
+    = f.number_field :headMaterial
+  .field
+    = f.label :headTime
+    %br/
+    = f.number_field :headTime
+  .field
+    = f.label :inkMat
+    %br/
+    = f.number_field :inkMat
+  .field
+    = f.label :inkTime
+    %br/
+    = f.number_field :inkTime
+  .field
+    = f.label :machineName
+    %br/
+    = f.text_field :machineName
+  .field
+    = f.label :machineId
+    %br/
+    = f.number_field :machineId
+  .field
+    = f.label :machineLabor
+    %br/
+    = f.number_field :machineLabor
+  .field
+    = f.label :machineOverhead
+    %br/
+    = f.number_field :machineOverhead
+  .field
+    = f.label :machineSpeed
+    %br/
+    = f.number_field :machineSpeed
+  .field
+    = f.label :machineType
+    %br/
+    = f.text_field :machineType
+  .field
+    = f.label :machineWidth
+    %br/
+    = f.number_field :machineWidth
+  .field
+    = f.label :rollChangeMat
+    %br/
+    = f.number_field :rollChangeMat
+  .field
+    = f.label :rollChangeTime
+    %br/
+    = f.number_field :rollChangeTime
+  .field
+    = f.label :slitMat
+    %br/
+    = f.number_field :slitMat
+  .field
+    = f.label :slitSpeed
+    %br/
+    = f.number_field :slitSpeed
+  .field
+    = f.label :slitTime
+    %br/
+    = f.number_field :slitTime
+  .field
+    = f.label :slitWaste
+    %br/
+    = f.number_field :slitWaste
+  .field
+    = f.label :trim
+    %br/
+    = f.number_field :trim
+  .field
+    = f.label :turretMat
+    %br/
+    = f.number_field :turretMat
+  .field
+    = f.label :turretSpeed
+    %br/
+    = f.number_field :turretSpeed
+  .field
+    = f.label :turretTime
+    %br/
+    = f.number_field :turretTime
+  .field
+    = f.label :turretWaste
+    %br/
+    = f.number_field :turretWaste
+  .actions
+    = f.submit

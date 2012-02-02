@@ -1,0 +1,19 @@
+%h1 Listing mag_ink_types
+%table
+  %tr
+    %th Galloncost
+    %th Inktype
+    %th Inktypeid
+    %th
+    %th
+    %th
+  - @mag_ink_types.each do |mag_ink_type|
+    %tr
+      %td= mag_ink_type.gallonCost
+      %td= mag_ink_type.inkType
+      %td= mag_ink_type.inkTypeId
+      %td= link_to 'Show', mag_ink_type
+      %td= link_to 'Edit', edit_mag_ink_type_path(mag_ink_type)
+      %td= link_to 'Destroy', mag_ink_type, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Mag ink type', new_mag_ink_type_path

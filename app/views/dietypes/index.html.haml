@@ -1,0 +1,15 @@
+%h1 Listing dietypes
+%table
+  %tr
+    %th Diedescription
+    %th
+    %th
+    %th
+  - @dietypes.each do |dietype|
+    %tr
+      %td= dietype.dieDescription
+      %td= link_to 'Show', dietype
+      %td= link_to 'Edit', edit_dietype_path(dietype)
+      %td= link_to 'Destroy', dietype, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Dietype', new_dietype_path

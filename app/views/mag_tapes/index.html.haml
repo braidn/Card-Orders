@@ -1,0 +1,29 @@
+%h1 Listing mag_tapes
+%table
+  %tr
+    %th Costpermsi
+    %th Costperroll
+    %th Typecate
+    %th Tapedescription
+    %th Tapeid
+    %th Tapelength
+    %th Tapetype
+    %th Tapewidth
+    %th
+    %th
+    %th
+  - @mag_tapes.each do |mag_tape|
+    %tr
+      %td= mag_tape.costPerMsi
+      %td= mag_tape.costPerRoll
+      %td= mag_tape.typeCate
+      %td= mag_tape.tapeDescription
+      %td= mag_tape.tapeId
+      %td= mag_tape.tapeLength
+      %td= mag_tape.tapeType
+      %td= mag_tape.tapeWidth
+      %td= link_to 'Show', mag_tape
+      %td= link_to 'Edit', edit_mag_tape_path(mag_tape)
+      %td= link_to 'Destroy', mag_tape, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Mag tape', new_mag_tape_path

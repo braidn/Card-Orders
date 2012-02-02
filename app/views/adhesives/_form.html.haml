@@ -1,0 +1,31 @@
+= form_for(@adhesife) do |f|
+  - if @adhesife.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@adhesife.errors.count, "error")
+        prohibited this adhesife from being saved:
+      %ul
+        - @adhesife.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :adhesivedescription
+    %br/
+    = f.text_field :adhesivedescription
+  .field
+    = f.label :costperlb
+    %br/
+    = f.number_field :costperlb
+  .field
+    = f.label :msiperlb
+    %br/
+    = f.number_field :msiperlb
+  .field
+    = f.label :partnumber
+    %br/
+    = f.text_field :partnumber
+  .field
+    = f.label :primaryuse
+    %br/
+    = f.text_field :primaryuse
+  .actions
+    = f.submit

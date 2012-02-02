@@ -1,0 +1,19 @@
+= form_for(@mat_category) do |f|
+  - if @mat_category.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@mat_category.errors.count, "error")
+        prohibited this mat_category from being saved:
+      %ul
+        - @mat_category.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :matCatDescription
+    %br/
+    = f.text_field :matCatDescription
+  .field
+    = f.label :matCategory
+    %br/
+    = f.text_field :matCategory
+  .actions
+    = f.submit

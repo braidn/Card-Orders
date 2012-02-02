@@ -1,0 +1,99 @@
+= form_for(@shipping) do |f|
+  - if @shipping.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@shipping.errors.count, "error")
+        prohibited this shipping from being saved:
+      %ul
+        - @shipping.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :additionalInfo
+    %br/
+    = f.text_field :additionalInfo
+  .field
+    = f.label :attention
+    %br/
+    = f.text_field :attention
+  .field
+    = f.label :city
+    %br/
+    = f.text_field :city
+  .field
+    = f.label :country
+    %br/
+    = f.text_field :country
+  .field
+    = f.label :customerId
+    %br/
+    = f.text_field :customerId
+  .field
+    = f.label :freightCollect3rdAddr1
+    %br/
+    = f.text_field :freightCollect3rdAddr1
+  .field
+    = f.label :freightCollect3rdAddr2
+    %br/
+    = f.text_field :freightCollect3rdAddr2
+  .field
+    = f.label :freightCollect3rdCity
+    %br/
+    = f.text_field :freightCollect3rdCity
+  .field
+    = f.label :freightCollect3rdComment
+    %br/
+    = f.text_field :freightCollect3rdComment
+  .field
+    = f.label :freightCollect3rdName
+    %br/
+    = f.text_field :freightCollect3rdName
+  .field
+    = f.label :freightCollect3rdState
+    %br/
+    = f.text_field :freightCollect3rdState
+  .field
+    = f.label :freightCollect3rdZip
+    %br/
+    = f.text_field :freightCollect3rdZip
+  .field
+    = f.label :freightShippingInst
+    %br/
+    = f.text_field :freightShippingInst
+  .field
+    = f.label :instructions
+    %br/
+    = f.text_field :instructions
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :phone
+    %br/
+    = f.text_field :phone
+  .field
+    = f.label :postalCode
+    %br/
+    = f.text_field :postalCode
+  .field
+    = f.label :state
+    %br/
+    = f.text_field :state
+  .field
+    = f.label :street1
+    %br/
+    = f.text_field :street1
+  .field
+    = f.label :street1a
+    %br/
+    = f.text_field :street1a
+  .field
+    = f.label :street2
+    %br/
+    = f.text_field :street2
+  .field
+    = f.label :street2a
+    %br/
+    = f.text_field :street2a
+  .actions
+    = f.submit

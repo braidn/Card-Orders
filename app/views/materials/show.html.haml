@@ -1,0 +1,46 @@
+%p#notice= notice
+%p
+  %b Materialcatid:
+  = @material.materialCatId
+%p
+  %b Bluefeetperminute:
+  = @material.blueFeetPerMinute
+%p
+  %b Bluelength:
+  = @material.blueLength
+%p
+  %b Coredod:
+  = @material.coredOd
+%p
+  %b Eganfeetperminute:
+  = @material.eganFeetPerMinute
+%p
+  %b Eganlength:
+  = @material.eganLength
+%p
+  %b Materialdescription:
+  = @material.materialDescription
+%p
+  %b Materialmsicost:
+  = @material.materialMsiCost
+%p
+  %b Materialprestripe:
+  = @material.materialPreStripe
+%p
+  %b Materialrolllengthmaster:
+  = @material.materialRollLengthMaster
+%p
+  %b Materialrollwidth:
+  = @material.materialRollWidth
+%p
+  %b Materialthickness:
+  = @material.materialThickness
+%p
+  %b Vendor:
+  = @material.vendor
+%p
+  %b Vendorpartnum:
+  = @material.vendorPartNum
+= link_to 'Edit', edit_material_path(@material)
+|
+\#{link_to 'Back', materials_path}

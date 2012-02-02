@@ -1,0 +1,25 @@
+%h1 Listing inkpmscodes
+%table
+  %tr
+    %th Vendorpartnumb
+    %th Vendor
+    %th Magtype
+    %th Inktype
+    %th Inkmsiperpound
+    %th Inkcostperpound
+    %th
+    %th
+    %th
+  - @inkpmscodes.each do |inkpmscode|
+    %tr
+      %td= inkpmscode.vendorpartnumb
+      %td= inkpmscode.vendor
+      %td= inkpmscode.magtype
+      %td= inkpmscode.inktype
+      %td= inkpmscode.inkmsiperpound
+      %td= inkpmscode.inkcostperpound
+      %td= link_to 'Show', inkpmscode
+      %td= link_to 'Edit', edit_inkpmscode_path(inkpmscode)
+      %td= link_to 'Destroy', inkpmscode, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Inkpmscode', new_inkpmscode_path

@@ -1,0 +1,23 @@
+= form_for(@mag_ink_type) do |f|
+  - if @mag_ink_type.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@mag_ink_type.errors.count, "error")
+        prohibited this mag_ink_type from being saved:
+      %ul
+        - @mag_ink_type.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :gallonCost
+    %br/
+    = f.number_field :gallonCost
+  .field
+    = f.label :inkType
+    %br/
+    = f.text_field :inkType
+  .field
+    = f.label :inkTypeId
+    %br/
+    = f.number_field :inkTypeId
+  .actions
+    = f.submit

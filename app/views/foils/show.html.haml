@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %b Description:
+  = @foil.description
+%p
+  %b Length:
+  = @foil.length
+%p
+  %b Msi:
+  = @foil.msi
+%p
+  %b Type:
+  = @foil.type
+%p
+  %b Width:
+  = @foil.width
+= link_to 'Edit', edit_foil_path(@foil)
+|
+\#{link_to 'Back', foils_path}

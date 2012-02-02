@@ -1,0 +1,76 @@
+%p#notice= notice
+%p
+  %b Designby:
+  = @stripe_specification.designBy
+%p
+  %b Designrevdate:
+  = @stripe_specification.designRevDate
+%p
+  %b Htmagtypeid:
+  = @stripe_specification.htMagTypeId
+%p
+  %b Imagefile:
+  = @stripe_specification.imageFile
+%p
+  %b Jobnumber:
+  = @stripe_specification.jobNumber
+%p
+  %b Magneticstripecomment:
+  = @stripe_specification.magneticStripeComment
+%p
+  %b Magneticstripeid:
+  = @stripe_specification.magneticStripeId
+%p
+  %b Sidetostripe:
+  = @stripe_specification.sideToStripe
+%p
+  %b Signaliso:
+  = @stripe_specification.signalISO
+%p
+  %b Signalmax:
+  = @stripe_specification.signalMax
+%p
+  %b Signalmin:
+  = @stripe_specification.signalMin
+%p
+  %b Specnumber:
+  = @stripe_specification.specNumber
+%p
+  %b Stripeacross:
+  = @stripe_specification.stripeAcross
+%p
+  %b Stripemachineid:
+  = @stripe_specification.stripeMachineId
+%p
+  %b Stripeposition:
+  = @stripe_specification.stripePosition
+%p
+  %b Stripepositionmax:
+  = @stripe_specification.stripePositionMax
+%p
+  %b Stripepositionmin:
+  = @stripe_specification.stripePositionMin
+%p
+  %b Stripespecificationid:
+  = @stripe_specification.stripeSpecificationId
+%p
+  %b Stripespeed:
+  = @stripe_specification.stripeSpeed
+%p
+  %b Stripetypemin:
+  = @stripe_specification.stripeTypeMin
+%p
+  %b Stripetypemax:
+  = @stripe_specification.stripeTypeMax
+%p
+  %b Stripewidth:
+  = @stripe_specification.stripeWidth
+%p
+  %b Stripewidthmin:
+  = @stripe_specification.stripeWidthMin
+%p
+  %b Stripewidthmax:
+  = @stripe_specification.stripeWidthMax
+= link_to 'Edit', edit_stripe_specification_path(@stripe_specification)
+|
+\#{link_to 'Back', stripe_specifications_path}

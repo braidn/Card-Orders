@@ -1,0 +1,75 @@
+= form_for(@rfid_inlay) do |f|
+  - if @rfid_inlay.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@rfid_inlay.errors.count, "error")
+        prohibited this rfid_inlay from being saved:
+      %ul
+        - @rfid_inlay.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :break1
+    %br/
+    = f.number_field :break1
+  .field
+    = f.label :break1Price
+    %br/
+    = f.number_field :break1Price
+  .field
+    = f.label :break2
+    %br/
+    = f.number_field :break2
+  .field
+    = f.label :break2Price
+    %br/
+    = f.number_field :break2Price
+  .field
+    = f.label :break3
+    %br/
+    = f.number_field :break3
+  .field
+    = f.label :break3Price
+    %br/
+    = f.number_field :break3Price
+  .field
+    = f.label :break4
+    %br/
+    = f.number_field :break4
+  .field
+    = f.label :break4Price
+    %br/
+    = f.number_field :break4Price
+  .field
+    = f.label :break5
+    %br/
+    = f.number_field :break5
+  .field
+    = f.label :break5Price
+    %br/
+    = f.number_field :break5Price
+  .field
+    = f.label :inlayDescription
+    %br/
+    = f.text_field :inlayDescription
+  .field
+    = f.label :inlayId
+    %br/
+    = f.number_field :inlayId
+  .field
+    = f.label :inlayTypeId
+    %br/
+    = f.number_field :inlayTypeId
+  .field
+    = f.label :price
+    %br/
+    = f.number_field :price
+  .field
+    = f.label :vendor
+    %br/
+    = f.text_field :vendor
+  .field
+    = f.label :vendorPartNumb
+    %br/
+    = f.text_field :vendorPartNumb
+  .actions
+    = f.submit

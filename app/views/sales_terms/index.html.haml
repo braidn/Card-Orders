@@ -1,0 +1,23 @@
+%h1 Listing sales_terms
+%table
+  %tr
+    %th Discountdays
+    %th Discountrate
+    %th Paydays
+    %th Salestermdescription
+    %th Salestermid
+    %th
+    %th
+    %th
+  - @sales_terms.each do |sales_term|
+    %tr
+      %td= sales_term.discountDays
+      %td= sales_term.discountRate
+      %td= sales_term.payDays
+      %td= sales_term.salesTermDescription
+      %td= sales_term.salesTermId
+      %td= link_to 'Show', sales_term
+      %td= link_to 'Edit', edit_sales_term_path(sales_term)
+      %td= link_to 'Destroy', sales_term, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Sales term', new_sales_term_path

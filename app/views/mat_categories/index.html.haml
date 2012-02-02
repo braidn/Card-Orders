@@ -1,0 +1,17 @@
+%h1 Listing mat_categories
+%table
+  %tr
+    %th Matcatdescription
+    %th Matcategory
+    %th
+    %th
+    %th
+  - @mat_categories.each do |mat_category|
+    %tr
+      %td= mat_category.matCatDescription
+      %td= mat_category.matCategory
+      %td= link_to 'Show', mat_category
+      %td= link_to 'Edit', edit_mat_category_path(mat_category)
+      %td= link_to 'Destroy', mat_category, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Mat category', new_mat_category_path

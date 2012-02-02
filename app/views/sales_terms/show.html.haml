@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %b Discountdays:
+  = @sales_term.discountDays
+%p
+  %b Discountrate:
+  = @sales_term.discountRate
+%p
+  %b Paydays:
+  = @sales_term.payDays
+%p
+  %b Salestermdescription:
+  = @sales_term.salesTermDescription
+%p
+  %b Salestermid:
+  = @sales_term.salesTermId
+= link_to 'Edit', edit_sales_term_path(@sales_term)
+|
+\#{link_to 'Back', sales_terms_path}

@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %b Lamadhesive:
+  = @laminate.lamAdhesive
+%p
+  %b Lamdescription:
+  = @laminate.lamDescription
+%p
+  %b Lamlength:
+  = @laminate.lamLength
+%p
+  %b Lammsi:
+  = @laminate.lamMsi
+%p
+  %b Lamtype:
+  = @laminate.lamType
+%p
+  %b Lamwidth:
+  = @laminate.lamWidth
+= link_to 'Edit', edit_laminate_path(@laminate)
+|
+\#{link_to 'Back', laminates_path}

@@ -1,0 +1,21 @@
+%h1 Listing ink_varnishes
+%table
+  %tr
+    %th Inkcostperpound
+    %th Inkmsiperpound
+    %th Vendor
+    %th Vendorpartnumber
+    %th
+    %th
+    %th
+  - @ink_varnishes.each do |ink_varnish|
+    %tr
+      %td= ink_varnish.inkCostPerPound
+      %td= ink_varnish.inkMsiPerPound
+      %td= ink_varnish.vendor
+      %td= ink_varnish.vendorPartNumber
+      %td= link_to 'Show', ink_varnish
+      %td= link_to 'Edit', edit_ink_varnish_path(ink_varnish)
+      %td= link_to 'Destroy', ink_varnish, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Ink varnish', new_ink_varnish_path

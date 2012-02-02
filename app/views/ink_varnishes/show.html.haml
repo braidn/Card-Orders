@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Inkcostperpound:
+  = @ink_varnish.inkCostPerPound
+%p
+  %b Inkmsiperpound:
+  = @ink_varnish.inkMsiPerPound
+%p
+  %b Vendor:
+  = @ink_varnish.vendor
+%p
+  %b Vendorpartnumber:
+  = @ink_varnish.vendorPartNumber
+= link_to 'Edit', edit_ink_varnish_path(@ink_varnish)
+|
+\#{link_to 'Back', ink_varnishes_path}

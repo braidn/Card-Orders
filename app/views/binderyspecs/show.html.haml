@@ -1,0 +1,37 @@
+%p#notice= notice
+%p
+  %b Cardsperunit:
+  = @binderyspec.cardsperunit
+%p
+  %b Comment:
+  = @binderyspec.comment
+%p
+  %b Numberofpersons:
+  = @binderyspec.numberofpersons
+%p
+  %b Quantityperhour:
+  = @binderyspec.quantityperhour
+%p
+  %b Unitmaterialcost:
+  = @binderyspec.unitmaterialcost
+%p
+  %b Jobnumber:
+  = @binderyspec.jobnumber
+%p
+  %b Newboxrequired:
+  = @binderyspec.newboxrequired
+%p
+  %b Packageamoritizequantity:
+  = @binderyspec.packageamoritizequantity
+%p
+  %b Packagecomment:
+  = @binderyspec.packagecomment
+%p
+  %b Packageinnerboxid:
+  = @binderyspec.packageinnerboxid
+%p
+  %b Packageouterboxid:
+  = @binderyspec.packageouterboxid
+= link_to 'Edit', edit_binderyspec_path(@binderyspec)
+|
+\#{link_to 'Back', binderyspecs_path}

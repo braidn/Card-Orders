@@ -1,0 +1,135 @@
+= form_for(@machine_id_standard) do |f|
+  - if @machine_id_standard.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@machine_id_standard.errors.count, "error")
+        prohibited this machine_id_standard from being saved:
+      %ul
+        - @machine_id_standard.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :dieMaterial
+    %br/
+    = f.number_field :dieMaterial
+  .field
+    = f.label :dieSpeed
+    %br/
+    = f.number_field :dieSpeed
+  .field
+    = f.label :dieTime
+    %br/
+    = f.number_field :dieTime
+  .field
+    = f.label :dieWaste
+    %br/
+    = f.number_field :dieWaste
+  .field
+    = f.label :folderMaterial
+    %br/
+    = f.number_field :folderMaterial
+  .field
+    = f.label :folderSpeed
+    %br/
+    = f.number_field :folderSpeed
+  .field
+    = f.label :folderTime
+    %br/
+    = f.number_field :folderTime
+  .field
+    = f.label :folderWaste
+    %br/
+    = f.number_field :folderWaste
+  .field
+    = f.label :insertionMaterial
+    %br/
+    = f.number_field :insertionMaterial
+  .field
+    = f.label :insertionSpeed
+    %br/
+    = f.number_field :insertionSpeed
+  .field
+    = f.label :insertionTime
+    %br/
+    = f.number_field :insertionTime
+  .field
+    = f.label :machineName
+    %br/
+    = f.text_field :machineName
+  .field
+    = f.label :machineId
+    %br/
+    = f.number_field :machineId
+  .field
+    = f.label :machineLabor
+    %br/
+    = f.number_field :machineLabor
+  .field
+    = f.label :machineOverhead
+    %br/
+    = f.number_field :machineOverhead
+  .field
+    = f.label :machinePitch
+    %br/
+    = f.number_field :machinePitch
+  .field
+    = f.label :machineSpeed
+    %br/
+    = f.number_field :machineSpeed
+  .field
+    = f.label :machineType
+    %br/
+    = f.text_field :machineType
+  .field
+    = f.label :machineWidth
+    %br/
+    = f.number_field :machineWidth
+  .field
+    = f.label :numMat
+    %br/
+    = f.number_field :numMat
+  .field
+    = f.label :numSpeed
+    %br/
+    = f.number_field :numSpeed
+  .field
+    = f.label :numbTime
+    %br/
+    = f.number_field :numbTime
+  .field
+    = f.label :numWaste
+    %br/
+    = f.number_field :numWaste
+  .field
+    = f.label :rollChangeMat
+    %br/
+    = f.number_field :rollChangeMat
+  .field
+    = f.label :rollChangeTime
+    %br/
+    = f.number_field :rollChangeTime
+  .field
+    = f.label :rollChangeWaste
+    %br/
+    = f.number_field :rollChangeWaste
+  .field
+    = f.label :slitMat
+    %br/
+    = f.number_field :slitMat
+  .field
+    = f.label :slitSpeed
+    %br/
+    = f.number_field :slitSpeed
+  .field
+    = f.label :slitTime
+    %br/
+    = f.number_field :slitTime
+  .field
+    = f.label :slitWaste
+    %br/
+    = f.number_field :slitWaste
+  .field
+    = f.label :trim
+    %br/
+    = f.number_field :trim
+  .actions
+    = f.submit

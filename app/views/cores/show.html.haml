@@ -1,0 +1,28 @@
+%p#notice= notice
+%p
+  %b Generalname:
+  = @core.generalName
+%p
+  %b Cost:
+  = @core.cost
+%p
+  %b Innerdiameter:
+  = @core.innerDiameter
+%p
+  %b Outerdiameter:
+  = @core.outerDiameter
+%p
+  %b Type:
+  = @core.type
+%p
+  %b Wallthickness:
+  = @core.wallThickness
+%p
+  %b Width:
+  = @core.width
+%p
+  %b Internalname:
+  = @core.internalName
+= link_to 'Edit', edit_core_path(@core)
+|
+\#{link_to 'Back', cores_path}

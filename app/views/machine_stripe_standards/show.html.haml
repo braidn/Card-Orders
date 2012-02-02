@@ -1,0 +1,76 @@
+%p#notice= notice
+%p
+  %b Ampmaterial:
+  = @machine_stripe_standard.ampMaterial
+%p
+  %b Amptime:
+  = @machine_stripe_standard.ampTime
+%p
+  %b Headmaterial:
+  = @machine_stripe_standard.headMaterial
+%p
+  %b Headtime:
+  = @machine_stripe_standard.headTime
+%p
+  %b Inkmat:
+  = @machine_stripe_standard.inkMat
+%p
+  %b Inktime:
+  = @machine_stripe_standard.inkTime
+%p
+  %b Machinename:
+  = @machine_stripe_standard.machineName
+%p
+  %b Machineid:
+  = @machine_stripe_standard.machineId
+%p
+  %b Machinelabor:
+  = @machine_stripe_standard.machineLabor
+%p
+  %b Machineoverhead:
+  = @machine_stripe_standard.machineOverhead
+%p
+  %b Machinespeed:
+  = @machine_stripe_standard.machineSpeed
+%p
+  %b Machinetype:
+  = @machine_stripe_standard.machineType
+%p
+  %b Machinewidth:
+  = @machine_stripe_standard.machineWidth
+%p
+  %b Rollchangemat:
+  = @machine_stripe_standard.rollChangeMat
+%p
+  %b Rollchangetime:
+  = @machine_stripe_standard.rollChangeTime
+%p
+  %b Slitmat:
+  = @machine_stripe_standard.slitMat
+%p
+  %b Slitspeed:
+  = @machine_stripe_standard.slitSpeed
+%p
+  %b Slittime:
+  = @machine_stripe_standard.slitTime
+%p
+  %b Slitwaste:
+  = @machine_stripe_standard.slitWaste
+%p
+  %b Trim:
+  = @machine_stripe_standard.trim
+%p
+  %b Turretmat:
+  = @machine_stripe_standard.turretMat
+%p
+  %b Turretspeed:
+  = @machine_stripe_standard.turretSpeed
+%p
+  %b Turrettime:
+  = @machine_stripe_standard.turretTime
+%p
+  %b Turretwaste:
+  = @machine_stripe_standard.turretWaste
+= link_to 'Edit', edit_machine_stripe_standard_path(@machine_stripe_standard)
+|
+\#{link_to 'Back', machine_stripe_standards_path}

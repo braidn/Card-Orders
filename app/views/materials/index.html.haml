@@ -1,0 +1,41 @@
+%h1 Listing materials
+%table
+  %tr
+    %th Materialcatid
+    %th Bluefeetperminute
+    %th Bluelength
+    %th Coredod
+    %th Eganfeetperminute
+    %th Eganlength
+    %th Materialdescription
+    %th Materialmsicost
+    %th Materialprestripe
+    %th Materialrolllengthmaster
+    %th Materialrollwidth
+    %th Materialthickness
+    %th Vendor
+    %th Vendorpartnum
+    %th
+    %th
+    %th
+  - @materials.each do |material|
+    %tr
+      %td= material.materialCatId
+      %td= material.blueFeetPerMinute
+      %td= material.blueLength
+      %td= material.coredOd
+      %td= material.eganFeetPerMinute
+      %td= material.eganLength
+      %td= material.materialDescription
+      %td= material.materialMsiCost
+      %td= material.materialPreStripe
+      %td= material.materialRollLengthMaster
+      %td= material.materialRollWidth
+      %td= material.materialThickness
+      %td= material.vendor
+      %td= material.vendorPartNum
+      %td= link_to 'Show', material
+      %td= link_to 'Edit', edit_material_path(material)
+      %td= link_to 'Destroy', material, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Material', new_material_path

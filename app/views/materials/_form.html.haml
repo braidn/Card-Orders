@@ -1,0 +1,67 @@
+= form_for(@material) do |f|
+  - if @material.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@material.errors.count, "error")
+        prohibited this material from being saved:
+      %ul
+        - @material.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :materialCatId
+    %br/
+    = f.number_field :materialCatId
+  .field
+    = f.label :blueFeetPerMinute
+    %br/
+    = f.number_field :blueFeetPerMinute
+  .field
+    = f.label :blueLength
+    %br/
+    = f.number_field :blueLength
+  .field
+    = f.label :coredOd
+    %br/
+    = f.number_field :coredOd
+  .field
+    = f.label :eganFeetPerMinute
+    %br/
+    = f.number_field :eganFeetPerMinute
+  .field
+    = f.label :eganLength
+    %br/
+    = f.number_field :eganLength
+  .field
+    = f.label :materialDescription
+    %br/
+    = f.text_field :materialDescription
+  .field
+    = f.label :materialMsiCost
+    %br/
+    = f.number_field :materialMsiCost
+  .field
+    = f.label :materialPreStripe
+    %br/
+    = f.text_field :materialPreStripe
+  .field
+    = f.label :materialRollLengthMaster
+    %br/
+    = f.number_field :materialRollLengthMaster
+  .field
+    = f.label :materialRollWidth
+    %br/
+    = f.number_field :materialRollWidth
+  .field
+    = f.label :materialThickness
+    %br/
+    = f.number_field :materialThickness
+  .field
+    = f.label :vendor
+    %br/
+    = f.text_field :vendor
+  .field
+    = f.label :vendorPartNum
+    %br/
+    = f.text_field :vendorPartNum
+  .actions
+    = f.submit

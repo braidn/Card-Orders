@@ -1,0 +1,271 @@
+= form_for(@press_standard) do |f|
+  - if @press_standard.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@press_standard.errors.count, "error")
+        prohibited this press_standard from being saved:
+      %ul
+        - @press_standard.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :ampMaterial
+    %br/
+    = f.number_field :ampMaterial
+  .field
+    = f.label :ampTime
+    %br/
+    = f.number_field :ampTime
+  .field
+    = f.label :colorMaterial
+    %br/
+    = f.number_field :colorMaterial
+  .field
+    = f.label :colorTime
+    %br/
+    = f.number_field :colorTime
+  .field
+    = f.label :colorWaste
+    %br/
+    = f.number_field :colorWaste
+  .field
+    = f.label :dieMaterial
+    %br/
+    = f.number_field :dieMaterial
+  .field
+    = f.label :dieSpeed
+    %br/
+    = f.number_field :dieSpeed
+  .field
+    = f.label :dieTime
+    %br/
+    = f.number_field :dieTime
+  .field
+    = f.label :dieWaste
+    %br/
+    = f.number_field :dieWaste
+  .field
+    = f.label :folderMaterial
+    %br/
+    = f.number_field :folderMaterial
+  .field
+    = f.label :folderSpeed
+    %br/
+    = f.number_field :folderSpeed
+  .field
+    = f.label :folderTime
+    %br/
+    = f.number_field :folderTime
+  .field
+    = f.label :folderWaste
+    %br/
+    = f.number_field :folderWaste
+  .field
+    = f.label :headMaterial
+    %br/
+    = f.number_field :headMaterial
+  .field
+    = f.label :headTime
+    %br/
+    = f.number_field :headTime
+  .field
+    = f.label :hotStampMaterial
+    %br/
+    = f.number_field :hotStampMaterial
+  .field
+    = f.label :hotStampSpeed
+    %br/
+    = f.number_field :hotStampSpeed
+  .field
+    = f.label :hotStampTime
+    %br/
+    = f.number_field :hotStampTime
+  .field
+    = f.label :hotStampWaste
+    %br/
+    = f.number_field :hotStampWaste
+  .field
+    = f.label :inkType
+    %br/
+    = f.text_field :inkType
+  .field
+    = f.label :inkTypeSig
+    %br/
+    = f.text_field :inkTypeSig
+  .field
+    = f.label :inkTypeVarnish
+    %br/
+    = f.text_field :inkTypeVarnish
+  .field
+    = f.label :inkMaterial
+    %br/
+    = f.number_field :inkMaterial
+  .field
+    = f.label :inkTime
+    %br/
+    = f.number_field :inkTime
+  .field
+    = f.label :inlineMaterial
+    %br/
+    = f.number_field :inlineMaterial
+  .field
+    = f.label :inlineSpeed
+    %br/
+    = f.number_field :inlineSpeed
+  .field
+    = f.label :inlineTime
+    %br/
+    = f.number_field :inlineTime
+  .field
+    = f.label :inlineWaste
+    %br/
+    = f.number_field :inlineWaste
+  .field
+    = f.label :insertionMaterial
+    %br/
+    = f.number_field :insertionMaterial
+  .field
+    = f.label :insertionSpeed
+    %br/
+    = f.number_field :insertionSpeed
+  .field
+    = f.label :insertionTime
+    %br/
+    = f.number_field :insertionTime
+  .field
+    = f.label :laminationMaterial
+    %br/
+    = f.number_field :laminationMaterial
+  .field
+    = f.label :laminationSpeed
+    %br/
+    = f.number_field :laminationSpeed
+  .field
+    = f.label :laminationTime
+    %br/
+    = f.number_field :laminationTime
+  .field
+    = f.label :laminationWaste
+    %br/
+    = f.number_field :laminationWaste
+  .field
+    = f.label :machineName
+    %br/
+    = f.text_field :machineName
+  .field
+    = f.label :machineID
+    %br/
+    = f.number_field :machineID
+  .field
+    = f.label :machineLabor
+    %br/
+    = f.number_field :machineLabor
+  .field
+    = f.label :machineOverhead
+    %br/
+    = f.number_field :machineOverhead
+  .field
+    = f.label :machinePitch
+    %br/
+    = f.number_field :machinePitch
+  .field
+    = f.label :machineSpeed
+    %br/
+    = f.number_field :machineSpeed
+  .field
+    = f.label :machineType
+    %br/
+    = f.text_field :machineType
+  .field
+    = f.label :machineWidth
+    %br/
+    = f.number_field :machineWidth
+  .field
+    = f.label :numberMaterial
+    %br/
+    = f.number_field :numberMaterial
+  .field
+    = f.label :numberSpeed
+    %br/
+    = f.number_field :numberSpeed
+  .field
+    = f.label :numberTime
+    %br/
+    = f.number_field :numberTime
+  .field
+    = f.label :numberWaste
+    %br/
+    = f.number_field :numberWaste
+  .field
+    = f.label :plateChangeWaste
+    %br/
+    = f.number_field :plateChangeWaste
+  .field
+    = f.label :plateChangeMaterial
+    %br/
+    = f.number_field :plateChangeMaterial
+  .field
+    = f.label :plateChangeTime
+    %br/
+    = f.number_field :plateChangeTime
+  .field
+    = f.label :pressSetupMaterial
+    %br/
+    = f.number_field :pressSetupMaterial
+  .field
+    = f.label :pressSetupTime
+    %br/
+    = f.number_field :pressSetupTime
+  .field
+    = f.label :printStations
+    %br/
+    = f.number_field :printStations
+  .field
+    = f.label :rollChangeMaterial
+    %br/
+    = f.number_field :rollChangeMaterial
+  .field
+    = f.label :rollChangeTime
+    %br/
+    = f.number_field :rollChangeTime
+  .field
+    = f.label :rollChangeWaste
+    %br/
+    = f.number_field :rollChangeWaste
+  .field
+    = f.label :slitMaterial
+    %br/
+    = f.number_field :slitMaterial
+  .field
+    = f.label :slitSpeed
+    %br/
+    = f.number_field :slitSpeed
+  .field
+    = f.label :slitTime
+    %br/
+    = f.number_field :slitTime
+  .field
+    = f.label :slitWaste
+    %br/
+    = f.number_field :slitWaste
+  .field
+    = f.label :trim
+    %br/
+    = f.number_field :trim
+  .field
+    = f.label :turretMaterial
+    %br/
+    = f.number_field :turretMaterial
+  .field
+    = f.label :turretSpeed
+    %br/
+    = f.number_field :turretSpeed
+  .field
+    = f.label :turretTime
+    %br/
+    = f.number_field :turretTime
+  .field
+    = f.label :turretWaste
+    %br/
+    = f.number_field :turretWaste
+  .actions
+    = f.submit

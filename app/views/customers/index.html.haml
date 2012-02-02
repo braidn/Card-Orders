@@ -1,0 +1,57 @@
+%h1 Listing customers
+%table
+  %tr
+    %th Traverseacct
+    %th Addtype
+    %th City1
+    %th City2
+    %th Commision
+    %th Company
+    %th Country
+    %th Status
+    %th Type
+    %th Po
+    %th Distributor
+    %th Invoiceinst
+    %th Market
+    %th Phone1
+    %th Phone2
+    %th Postalcode
+    %th Stateprovince
+    %th Street1
+    %th Street1a
+    %th Street2
+    %th Street2a
+    %th Website
+    %th
+    %th
+    %th
+  - @customers.each do |customer|
+    %tr
+      %td= customer.traverseAcct
+      %td= customer.addType
+      %td= customer.city1
+      %td= customer.city2
+      %td= customer.commision
+      %td= customer.company
+      %td= customer.country
+      %td= customer.status
+      %td= customer.type
+      %td= customer.po
+      %td= customer.distributor
+      %td= customer.invoiceInst
+      %td= customer.market
+      %td= customer.phone1
+      %td= customer.phone2
+      %td= customer.postalCode
+      %td= customer.stateProvince
+      %td= customer.street1
+      %td= customer.street1a
+      %td= customer.street2
+      %td= customer.street2a
+      %td= customer.website
+      %td= link_to 'Show', customer
+      %td= link_to 'Edit', edit_customer_path(customer)
+      %td= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Customer', new_customer_path

@@ -1,0 +1,19 @@
+%h1 Listing proof_costs
+%table
+  %tr
+    %th Proofcastid
+    %th Proofcost
+    %th Proofdescription
+    %th
+    %th
+    %th
+  - @proof_costs.each do |proof_cost|
+    %tr
+      %td= proof_cost.proofCastId
+      %td= proof_cost.proofCost
+      %td= proof_cost.proofDescription
+      %td= link_to 'Show', proof_cost
+      %td= link_to 'Edit', edit_proof_cost_path(proof_cost)
+      %td= link_to 'Destroy', proof_cost, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Proof cost', new_proof_cost_path

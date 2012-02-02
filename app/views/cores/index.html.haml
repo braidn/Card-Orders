@@ -1,0 +1,29 @@
+%h1 Listing cores
+%table
+  %tr
+    %th Generalname
+    %th Cost
+    %th Innerdiameter
+    %th Outerdiameter
+    %th Type
+    %th Wallthickness
+    %th Width
+    %th Internalname
+    %th
+    %th
+    %th
+  - @cores.each do |core|
+    %tr
+      %td= core.generalName
+      %td= core.cost
+      %td= core.innerDiameter
+      %td= core.outerDiameter
+      %td= core.type
+      %td= core.wallThickness
+      %td= core.width
+      %td= core.internalName
+      %td= link_to 'Show', core
+      %td= link_to 'Edit', edit_core_path(core)
+      %td= link_to 'Destroy', core, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Core', new_core_path

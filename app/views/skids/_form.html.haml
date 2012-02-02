@@ -1,0 +1,47 @@
+= form_for(@skid) do |f|
+  - if @skid.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@skid.errors.count, "error")
+        prohibited this skid from being saved:
+      %ul
+        - @skid.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :quantityPerSkid
+    %br/
+    = f.number_field :quantityPerSkid
+  .field
+    = f.label :skidCost
+    %br/
+    = f.number_field :skidCost
+  .field
+    = f.label :skidDescription
+    %br/
+    = f.text_field :skidDescription
+  .field
+    = f.label :skidEntryPoints
+    %br/
+    = f.text_field :skidEntryPoints
+  .field
+    = f.label :skidHeight
+    %br/
+    = f.number_field :skidHeight
+  .field
+    = f.label :skidId
+    %br/
+    = f.number_field :skidId
+  .field
+    = f.label :skidLength
+    %br/
+    = f.number_field :skidLength
+  .field
+    = f.label :skidMat
+    %br/
+    = f.text_field :skidMat
+  .field
+    = f.label :skidWidth
+    %br/
+    = f.number_field :skidWidth
+  .actions
+    = f.submit

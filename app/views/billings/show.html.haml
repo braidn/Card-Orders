@@ -1,0 +1,34 @@
+%p#notice= notice
+%p
+  %b Addresstype:
+  = @billing.addressType
+%p
+  %b City:
+  = @billing.city
+%p
+  %b Country:
+  = @billing.country
+%p
+  %b Customerid:
+  = @billing.customerId
+%p
+  %b Postalcode:
+  = @billing.postalCode
+%p
+  %b State:
+  = @billing.state
+%p
+  %b Street1:
+  = @billing.street1
+%p
+  %b Street1a:
+  = @billing.street1a
+%p
+  %b Street2:
+  = @billing.street2
+%p
+  %b Street2a:
+  = @billing.street2a
+= link_to 'Edit', edit_billing_path(@billing)
+|
+\#{link_to 'Back', billings_path}

@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Registrationdescription:
+  = @registration_level.registrationDescription
+%p
+  %b Registrationlevelid:
+  = @registration_level.registrationLevelId
+%p
+  %b Registrationspeed:
+  = @registration_level.registrationSpeed
+%p
+  %b Registrationwaste:
+  = @registration_level.registrationWaste
+= link_to 'Edit', edit_registration_level_path(@registration_level)
+|
+\#{link_to 'Back', registration_levels_path}

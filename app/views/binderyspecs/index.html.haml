@@ -1,0 +1,35 @@
+%h1 Listing binderyspecs
+%table
+  %tr
+    %th Cardsperunit
+    %th Comment
+    %th Numberofpersons
+    %th Quantityperhour
+    %th Unitmaterialcost
+    %th Jobnumber
+    %th Newboxrequired
+    %th Packageamoritizequantity
+    %th Packagecomment
+    %th Packageinnerboxid
+    %th Packageouterboxid
+    %th
+    %th
+    %th
+  - @binderyspecs.each do |binderyspec|
+    %tr
+      %td= binderyspec.cardsperunit
+      %td= binderyspec.comment
+      %td= binderyspec.numberofpersons
+      %td= binderyspec.quantityperhour
+      %td= binderyspec.unitmaterialcost
+      %td= binderyspec.jobnumber
+      %td= binderyspec.newboxrequired
+      %td= binderyspec.packageamoritizequantity
+      %td= binderyspec.packagecomment
+      %td= binderyspec.packageinnerboxid
+      %td= binderyspec.packageouterboxid
+      %td= link_to 'Show', binderyspec
+      %td= link_to 'Edit', edit_binderyspec_path(binderyspec)
+      %td= link_to 'Destroy', binderyspec, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Binderyspec', new_binderyspec_path

@@ -1,0 +1,25 @@
+%h1 Listing inksignatures
+%table
+  %tr
+    %th Vendorpartnumber
+    %th Vendor
+    %th Magtype
+    %th Inktype
+    %th Inkmsiperpound
+    %th Inkcostperpound
+    %th
+    %th
+    %th
+  - @inksignatures.each do |inksignature|
+    %tr
+      %td= inksignature.vendorpartnumber
+      %td= inksignature.vendor
+      %td= inksignature.magtype
+      %td= inksignature.inktype
+      %td= inksignature.inkmsiperpound
+      %td= inksignature.inkcostperpound
+      %td= link_to 'Show', inksignature
+      %td= link_to 'Edit', edit_inksignature_path(inksignature)
+      %td= link_to 'Destroy', inksignature, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Inksignature', new_inksignature_path

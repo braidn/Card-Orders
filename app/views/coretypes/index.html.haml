@@ -1,0 +1,17 @@
+%h1 Listing coretypes
+%table
+  %tr
+    %th Matdescription
+    %th Material
+    %th
+    %th
+    %th
+  - @coretypes.each do |coretype|
+    %tr
+      %td= coretype.matDescription
+      %td= coretype.material
+      %td= link_to 'Show', coretype
+      %td= link_to 'Edit', edit_coretype_path(coretype)
+      %td= link_to 'Destroy', coretype, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Coretype', new_coretype_path

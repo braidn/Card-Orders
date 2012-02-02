@@ -1,0 +1,47 @@
+= form_for(@plate_cost) do |f|
+  - if @plate_cost.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@plate_cost.errors.count, "error")
+        prohibited this plate_cost from being saved:
+      %ul
+        - @plate_cost.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :digital
+    %br/
+    = f.number_field :digital
+  .field
+    = f.label :filmcost
+    %br/
+    = f.number_field :filmcost
+  .field
+    = f.label :filmSquareInch
+    %br/
+    = f.number_field :filmSquareInch
+  .field
+    = f.label :laborCost
+    %br/
+    = f.number_field :laborCost
+  .field
+    = f.label :machineName
+    %br/
+    = f.number_field :machineName
+  .field
+    = f.label :processTime
+    %br/
+    = f.text_field :processTime
+  .field
+    = f.label :sheetCost
+    %br/
+    = f.number_field :sheetCost
+  .field
+    = f.label :sheetsPerCycle
+    %br/
+    = f.number_field :sheetsPerCycle
+  .field
+    = f.label :squareInchPerSheet
+    %br/
+    = f.number_field :squareInchPerSheet
+  .actions
+    = f.submit

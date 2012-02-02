@@ -1,0 +1,17 @@
+%h1 Listing forgotten_users
+%table
+  %tr
+    %th Username
+    %th Hash
+    %th
+    %th
+    %th
+  - @forgotten_users.each do |forgotten_user|
+    %tr
+      %td= forgotten_user.username
+      %td= forgotten_user.hash
+      %td= link_to 'Show', forgotten_user
+      %td= link_to 'Edit', edit_forgotten_user_path(forgotten_user)
+      %td= link_to 'Destroy', forgotten_user, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Forgotten user', new_forgotten_user_path

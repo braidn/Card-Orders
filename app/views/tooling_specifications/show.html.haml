@@ -1,0 +1,43 @@
+%p#notice= notice
+%p
+  %b Addamortizequantity:
+  = @tooling_specification.addAmortizeQuantity
+%p
+  %b Addtoolingcost:
+  = @tooling_specification.addToolingCost
+%p
+  %b Designby:
+  = @tooling_specification.designBy
+%p
+  %b Designrevdate:
+  = @tooling_specification.designRevDate
+%p
+  %b Diearound:
+  = @tooling_specification.dieAround
+%p
+  %b Dieid:
+  = @tooling_specification.dieId
+%p
+  %b Diesc:
+  = @tooling_specification.dieSc
+%p
+  %b Imagefile:
+  = @tooling_specification.imageFile
+%p
+  %b Jobnumber:
+  = @tooling_specification.jobNumber
+%p
+  %b Newdierequired:
+  = @tooling_specification.newDieRequired
+%p
+  %b Toolingcomment:
+  = @tooling_specification.toolingComment
+%p
+  %b Toolsc:
+  = @tooling_specification.toolSc
+%p
+  %b Toolspecificationid:
+  = @tooling_specification.toolSpecificationId
+= link_to 'Edit', edit_tooling_specification_path(@tooling_specification)
+|
+\#{link_to 'Back', tooling_specifications_path}

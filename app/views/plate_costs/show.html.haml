@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %b Digital:
+  = @plate_cost.digital
+%p
+  %b Filmcost:
+  = @plate_cost.filmcost
+%p
+  %b Filmsquareinch:
+  = @plate_cost.filmSquareInch
+%p
+  %b Laborcost:
+  = @plate_cost.laborCost
+%p
+  %b Machinename:
+  = @plate_cost.machineName
+%p
+  %b Processtime:
+  = @plate_cost.processTime
+%p
+  %b Sheetcost:
+  = @plate_cost.sheetCost
+%p
+  %b Sheetspercycle:
+  = @plate_cost.sheetsPerCycle
+%p
+  %b Squareinchpersheet:
+  = @plate_cost.squareInchPerSheet
+= link_to 'Edit', edit_plate_cost_path(@plate_cost)
+|
+\#{link_to 'Back', plate_costs_path}

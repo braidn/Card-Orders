@@ -1,0 +1,17 @@
+%h1 Listing commissions
+%table
+  %tr
+    %th Commrate
+    %th Profitrate
+    %th
+    %th
+    %th
+  - @commissions.each do |commission|
+    %tr
+      %td= commission.commrate
+      %td= commission.profitrate
+      %td= link_to 'Show', commission
+      %td= link_to 'Edit', edit_commission_path(commission)
+      %td= link_to 'Destroy', commission, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Commission', new_commission_path

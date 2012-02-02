@@ -1,0 +1,52 @@
+%p#notice= notice
+%p
+  %b Break1:
+  = @rfid_inlay.break1
+%p
+  %b Break1price:
+  = @rfid_inlay.break1Price
+%p
+  %b Break2:
+  = @rfid_inlay.break2
+%p
+  %b Break2price:
+  = @rfid_inlay.break2Price
+%p
+  %b Break3:
+  = @rfid_inlay.break3
+%p
+  %b Break3price:
+  = @rfid_inlay.break3Price
+%p
+  %b Break4:
+  = @rfid_inlay.break4
+%p
+  %b Break4price:
+  = @rfid_inlay.break4Price
+%p
+  %b Break5:
+  = @rfid_inlay.break5
+%p
+  %b Break5price:
+  = @rfid_inlay.break5Price
+%p
+  %b Inlaydescription:
+  = @rfid_inlay.inlayDescription
+%p
+  %b Inlayid:
+  = @rfid_inlay.inlayId
+%p
+  %b Inlaytypeid:
+  = @rfid_inlay.inlayTypeId
+%p
+  %b Price:
+  = @rfid_inlay.price
+%p
+  %b Vendor:
+  = @rfid_inlay.vendor
+%p
+  %b Vendorpartnumb:
+  = @rfid_inlay.vendorPartNumb
+= link_to 'Edit', edit_rfid_inlay_path(@rfid_inlay)
+|
+\#{link_to 'Back', rfid_inlays_path}

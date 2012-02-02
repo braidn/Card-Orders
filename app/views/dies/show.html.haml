@@ -1,0 +1,28 @@
+%p#notice= notice
+%p
+  %b Diecatagory:
+  = @dy.dieCatagory
+%p
+  %b Costpercard:
+  = @dy.costpercard
+%p
+  %b Costspertooth:
+  = @dy.costspertooth
+%p
+  %b Description:
+  = @dy.description
+%p
+  %b Initialcost:
+  = @dy.initialCost
+%p
+  %b Initiallife:
+  = @dy.initialLife
+%p
+  %b Retoolcost:
+  = @dy.retoolCost
+%p
+  %b Retoollife:
+  = @dy.retoolLife
+= link_to 'Edit', edit_dy_path(@dy)
+|
+\#{link_to 'Back', dies_path}

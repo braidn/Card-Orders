@@ -1,0 +1,40 @@
+%p#notice= notice
+%p
+  %b Mchdescription:
+  = @encodingstandard.mchDescription
+%p
+  %b Bagging:
+  = @encodingstandard.bagging
+%p
+  %b Barcode:
+  = @encodingstandard.barcode
+%p
+  %b Hico:
+  = @encodingstandard.hico
+%p
+  %b Inchespersecond:
+  = @encodingstandard.inchespersecond
+%p
+  %b Labor:
+  = @encodingstandard.labor
+%p
+  %b Machinename:
+  = @encodingstandard.machineName
+%p
+  %b Multiplepass:
+  = @encodingstandard.multiplepass
+%p
+  %b Overhead:
+  = @encodingstandard.overhead
+%p
+  %b Runwaste:
+  = @encodingstandard.runwaste
+%p
+  %b Variabledata:
+  = @encodingstandard.variabledata
+%p
+  %b Secondsperhour:
+  = @encodingstandard.secondsperhour
+= link_to 'Edit', edit_encodingstandard_path(@encodingstandard)
+|
+\#{link_to 'Back', encodingstandards_path}

@@ -1,0 +1,17 @@
+%h1 Listing customer_notes
+%table
+  %tr
+    %th Company
+    %th Noteinfo
+    %th
+    %th
+    %th
+  - @customer_notes.each do |customer_note|
+    %tr
+      %td= customer_note.company
+      %td= customer_note.noteInfo
+      %td= link_to 'Show', customer_note
+      %td= link_to 'Edit', edit_customer_note_path(customer_note)
+      %td= link_to 'Destroy', customer_note, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Customer note', new_customer_note_path

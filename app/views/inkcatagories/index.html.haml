@@ -1,0 +1,15 @@
+%h1 Listing inkcatagories
+%table
+  %tr
+    %th Description
+    %th
+    %th
+    %th
+  - @inkcatagories.each do |inkcatagory|
+    %tr
+      %td= inkcatagory.description
+      %td= link_to 'Show', inkcatagory
+      %td= link_to 'Edit', edit_inkcatagory_path(inkcatagory)
+      %td= link_to 'Destroy', inkcatagory, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Inkcatagory', new_inkcatagory_path

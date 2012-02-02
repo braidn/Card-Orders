@@ -1,0 +1,23 @@
+%h1 Listing adhesives
+%table
+  %tr
+    %th Adhesivedescription
+    %th Costperlb
+    %th Msiperlb
+    %th Partnumber
+    %th Primaryuse
+    %th
+    %th
+    %th
+  - @adhesives.each do |adhesife|
+    %tr
+      %td= adhesife.adhesivedescription
+      %td= adhesife.costperlb
+      %td= adhesife.msiperlb
+      %td= adhesife.partnumber
+      %td= adhesife.primaryuse
+      %td= link_to 'Show', adhesife
+      %td= link_to 'Edit', edit_adhesife_path(adhesife)
+      %td= link_to 'Destroy', adhesife, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Adhesive', new_adhesife_path

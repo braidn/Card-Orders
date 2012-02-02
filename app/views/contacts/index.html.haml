@@ -1,0 +1,39 @@
+%h1 Listing contacts
+%table
+  %tr
+    %th Address1
+    %th Address2
+    %th City
+    %th Company
+    %th Email
+    %th Fax
+    %th Firstname
+    %th Lastname
+    %th Cell
+    %th Mainphone
+    %th State
+    %th Url
+    %th Zip
+    %th
+    %th
+    %th
+  - @contacts.each do |contact|
+    %tr
+      %td= contact.address1
+      %td= contact.address2
+      %td= contact.city
+      %td= contact.company
+      %td= contact.email
+      %td= contact.fax
+      %td= contact.firstName
+      %td= contact.lastName
+      %td= contact.cell
+      %td= contact.mainPhone
+      %td= contact.state
+      %td= contact.url
+      %td= contact.zip
+      %td= link_to 'Show', contact
+      %td= link_to 'Edit', edit_contact_path(contact)
+      %td= link_to 'Destroy', contact, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Contact', new_contact_path

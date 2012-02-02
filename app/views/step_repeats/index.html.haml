@@ -1,0 +1,63 @@
+%h1 Listing step_repeats
+%table
+  %tr
+    %th Category
+    %th Description
+    %th Dimensionacross
+    %th Dimensionaround
+    %th Distortionfactor
+    %th Flexodistortion
+    %th Flexolpdist
+    %th Flexomountingtapethickness
+    %th Flexoplatebacking
+    %th Flexoplatethickness
+    %th Flexosoftthickness
+    %th Gapacross
+    %th Gaparound
+    %th Internalname
+    %th Letterpressmountingtapethickness
+    %th Letterpressplatebacking
+    %th Letterpressplatethickness
+    %th Letterpresssoftthickness
+    %th Lpdistortion
+    %th Offset
+    %th Offsetamount
+    %th Presstype
+    %th Printdiameter
+    %th Stepacross
+    %th Steparound
+    %th
+    %th
+    %th
+  - @step_repeats.each do |step_repeat|
+    %tr
+      %td= step_repeat.category
+      %td= step_repeat.description
+      %td= step_repeat.dimensionAcross
+      %td= step_repeat.dimensionAround
+      %td= step_repeat.distortionFactor
+      %td= step_repeat.flexoDistortion
+      %td= step_repeat.flexoLpDist
+      %td= step_repeat.flexoMountingTapeThickness
+      %td= step_repeat.flexoPlateBacking
+      %td= step_repeat.flexoPlateThickness
+      %td= step_repeat.flexoSoftThickness
+      %td= step_repeat.gapAcross
+      %td= step_repeat.gapAround
+      %td= step_repeat.internalName
+      %td= step_repeat.letterpressMountingTapeThickness
+      %td= step_repeat.letterpressPlateBacking
+      %td= step_repeat.letterpressPlateThickness
+      %td= step_repeat.letterpressSoftThickness
+      %td= step_repeat.lpDistortion
+      %td= step_repeat.offset
+      %td= step_repeat.offsetAmount
+      %td= step_repeat.pressType
+      %td= step_repeat.printDiameter
+      %td= step_repeat.stepAcross
+      %td= step_repeat.stepAround
+      %td= link_to 'Show', step_repeat
+      %td= link_to 'Edit', edit_step_repeat_path(step_repeat)
+      %td= link_to 'Destroy', step_repeat, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Step repeat', new_step_repeat_path

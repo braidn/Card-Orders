@@ -1,0 +1,61 @@
+%p#notice= notice
+%p
+  %b Boxtype:
+  = @box.boxtype
+%p
+  %b Boxesperskid:
+  = @box.boxesperskid
+%p
+  %b Caliper:
+  = @box.caliper
+%p
+  %b Cardsperskid:
+  = @box.cardsperskid
+%p
+  %b Concatview:
+  = @box.concatview
+%p
+  %b Estimateboxselection:
+  = @box.estimateboxselection
+%p
+  %b Height:
+  = @box.height
+%p
+  %b Innercost:
+  = @box.innercost
+%p
+  %b Innerouter:
+  = @box.innerouter
+%p
+  %b Innerquantity:
+  = @box.innerquantity
+%p
+  %b Internaldescription:
+  = @box.internaldescription
+%p
+  %b Length:
+  = @box.length
+%p
+  %b Maincustomer:
+  = @box.maincustomer
+%p
+  %b Outercost:
+  = @box.outercost
+%p
+  %b Outerquantity:
+  = @box.outerquantity
+%p
+  %b Rowshigh:
+  = @box.rowshigh
+%p
+  %b Selectskid:
+  = @box.selectskid
+%p
+  %b Size:
+  = @box.size
+%p
+  %b Width:
+  = @box.width
+= link_to 'Edit', edit_box_path(@box)
+|
+\#{link_to 'Back', boxes_path}

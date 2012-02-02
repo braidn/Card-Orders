@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %b Quantityperskid:
+  = @skid.quantityPerSkid
+%p
+  %b Skidcost:
+  = @skid.skidCost
+%p
+  %b Skiddescription:
+  = @skid.skidDescription
+%p
+  %b Skidentrypoints:
+  = @skid.skidEntryPoints
+%p
+  %b Skidheight:
+  = @skid.skidHeight
+%p
+  %b Skidid:
+  = @skid.skidId
+%p
+  %b Skidlength:
+  = @skid.skidLength
+%p
+  %b Skidmat:
+  = @skid.skidMat
+%p
+  %b Skidwidth:
+  = @skid.skidWidth
+= link_to 'Edit', edit_skid_path(@skid)
+|
+\#{link_to 'Back', skids_path}

@@ -1,0 +1,7 @@
+%p#notice= notice
+%p
+  %b Diedescription:
+  = @dietype.dieDescription
+= link_to 'Edit', edit_dietype_path(@dietype)
+|
+\#{link_to 'Back', dietypes_path}

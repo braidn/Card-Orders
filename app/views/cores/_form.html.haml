@@ -1,0 +1,43 @@
+= form_for(@core) do |f|
+  - if @core.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@core.errors.count, "error")
+        prohibited this core from being saved:
+      %ul
+        - @core.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :generalName
+    %br/
+    = f.text_field :generalName
+  .field
+    = f.label :cost
+    %br/
+    = f.number_field :cost
+  .field
+    = f.label :innerDiameter
+    %br/
+    = f.number_field :innerDiameter
+  .field
+    = f.label :outerDiameter
+    %br/
+    = f.number_field :outerDiameter
+  .field
+    = f.label :type
+    %br/
+    = f.number_field :type
+  .field
+    = f.label :wallThickness
+    %br/
+    = f.number_field :wallThickness
+  .field
+    = f.label :width
+    %br/
+    = f.number_field :width
+  .field
+    = f.label :internalName
+    %br/
+    = f.text_field :internalName
+  .actions
+    = f.submit

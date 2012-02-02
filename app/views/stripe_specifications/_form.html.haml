@@ -1,0 +1,107 @@
+= form_for(@stripe_specification) do |f|
+  - if @stripe_specification.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@stripe_specification.errors.count, "error")
+        prohibited this stripe_specification from being saved:
+      %ul
+        - @stripe_specification.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :designBy
+    %br/
+    = f.number_field :designBy
+  .field
+    = f.label :designRevDate
+    %br/
+    = f.number_field :designRevDate
+  .field
+    = f.label :htMagTypeId
+    %br/
+    = f.number_field :htMagTypeId
+  .field
+    = f.label :imageFile
+    %br/
+    = f.text_field :imageFile
+  .field
+    = f.label :jobNumber
+    %br/
+    = f.text_field :jobNumber
+  .field
+    = f.label :magneticStripeComment
+    %br/
+    = f.text_field :magneticStripeComment
+  .field
+    = f.label :magneticStripeId
+    %br/
+    = f.number_field :magneticStripeId
+  .field
+    = f.label :sideToStripe
+    %br/
+    = f.text_field :sideToStripe
+  .field
+    = f.label :signalISO
+    %br/
+    = f.text_field :signalISO
+  .field
+    = f.label :signalMax
+    %br/
+    = f.number_field :signalMax
+  .field
+    = f.label :signalMin
+    %br/
+    = f.number_field :signalMin
+  .field
+    = f.label :specNumber
+    %br/
+    = f.text_field :specNumber
+  .field
+    = f.label :stripeAcross
+    %br/
+    = f.number_field :stripeAcross
+  .field
+    = f.label :stripeMachineId
+    %br/
+    = f.number_field :stripeMachineId
+  .field
+    = f.label :stripePosition
+    %br/
+    = f.number_field :stripePosition
+  .field
+    = f.label :stripePositionMax
+    %br/
+    = f.number_field :stripePositionMax
+  .field
+    = f.label :stripePositionMin
+    %br/
+    = f.number_field :stripePositionMin
+  .field
+    = f.label :stripeSpecificationId
+    %br/
+    = f.number_field :stripeSpecificationId
+  .field
+    = f.label :stripeSpeed
+    %br/
+    = f.number_field :stripeSpeed
+  .field
+    = f.label :stripeTypeMin
+    %br/
+    = f.number_field :stripeTypeMin
+  .field
+    = f.label :stripeTypeMax
+    %br/
+    = f.number_field :stripeTypeMax
+  .field
+    = f.label :stripeWidth
+    %br/
+    = f.number_field :stripeWidth
+  .field
+    = f.label :stripeWidthMin
+    %br/
+    = f.number_field :stripeWidthMin
+  .field
+    = f.label :stripeWidthMax
+    %br/
+    = f.number_field :stripeWidthMax
+  .actions
+    = f.submit

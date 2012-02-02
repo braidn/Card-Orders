@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %b Adhesivedescription:
+  = @adhesife.adhesivedescription
+%p
+  %b Costperlb:
+  = @adhesife.costperlb
+%p
+  %b Msiperlb:
+  = @adhesife.msiperlb
+%p
+  %b Partnumber:
+  = @adhesife.partnumber
+%p
+  %b Primaryuse:
+  = @adhesife.primaryuse
+= link_to 'Edit', edit_adhesife_path(@adhesife)
+|
+\#{link_to 'Back', adhesives_path}

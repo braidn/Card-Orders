@@ -1,0 +1,70 @@
+%p#notice= notice
+%p
+  %b Traverseacct:
+  = @customer.traverseAcct
+%p
+  %b Addtype:
+  = @customer.addType
+%p
+  %b City1:
+  = @customer.city1
+%p
+  %b City2:
+  = @customer.city2
+%p
+  %b Commision:
+  = @customer.commision
+%p
+  %b Company:
+  = @customer.company
+%p
+  %b Country:
+  = @customer.country
+%p
+  %b Status:
+  = @customer.status
+%p
+  %b Type:
+  = @customer.type
+%p
+  %b Po:
+  = @customer.po
+%p
+  %b Distributor:
+  = @customer.distributor
+%p
+  %b Invoiceinst:
+  = @customer.invoiceInst
+%p
+  %b Market:
+  = @customer.market
+%p
+  %b Phone1:
+  = @customer.phone1
+%p
+  %b Phone2:
+  = @customer.phone2
+%p
+  %b Postalcode:
+  = @customer.postalCode
+%p
+  %b Stateprovince:
+  = @customer.stateProvince
+%p
+  %b Street1:
+  = @customer.street1
+%p
+  %b Street1a:
+  = @customer.street1a
+%p
+  %b Street2:
+  = @customer.street2
+%p
+  %b Street2a:
+  = @customer.street2a
+%p
+  %b Website:
+  = @customer.website
+= link_to 'Edit', edit_customer_path(@customer)
+|
+\#{link_to 'Back', customers_path}

@@ -1,0 +1,7 @@
+%p#notice= notice
+%p
+  %b Type:
+  = @foiltype.type
+= link_to 'Edit', edit_foiltype_path(@foiltype)
+|
+\#{link_to 'Back', foiltypes_path}

@@ -1,0 +1,28 @@
+%p#notice= notice
+%p
+  %b Costpermsi:
+  = @mag_tape.costPerMsi
+%p
+  %b Costperroll:
+  = @mag_tape.costPerRoll
+%p
+  %b Typecate:
+  = @mag_tape.typeCate
+%p
+  %b Tapedescription:
+  = @mag_tape.tapeDescription
+%p
+  %b Tapeid:
+  = @mag_tape.tapeId
+%p
+  %b Tapelength:
+  = @mag_tape.tapeLength
+%p
+  %b Tapetype:
+  = @mag_tape.tapeType
+%p
+  %b Tapewidth:
+  = @mag_tape.tapeWidth
+= link_to 'Edit', edit_mag_tape_path(@mag_tape)
+|
+\#{link_to 'Back', mag_tapes_path}
