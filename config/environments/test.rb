@@ -39,4 +39,9 @@ EstOrders::Application.configure do
 
   #Raise exception on mass assignment protection in AR models
   config.active_record.mass_assignment_sanitizer = :strict
+
+
+  #Devise needs
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
