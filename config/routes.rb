@@ -1,4 +1,7 @@
 EstOrders::Application.routes.draw do
+  devise_for :users
+  root :to => 'devise/sessions#new'
+
   resources :forgotten_users
 
   resources :shippings
