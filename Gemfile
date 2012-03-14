@@ -44,4 +44,5 @@ group :test, :development do
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'devise'
 end
