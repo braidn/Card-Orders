@@ -7,5 +7,5 @@ Feature: Root Page
     Given I am on the root_path
 
   Scenario: I will be greeted with a simple login window
-    Then I should see a "User" login field
+    Then I should see a "Email" login field
     And a "Password" field
