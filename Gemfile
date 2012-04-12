@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'ruby_parser'
 gem 'hpricot'
 gem 'haml-rails'
+gem 'twitter-bootstrap-rails'
 
 
 # Gems used only for assets and not required
