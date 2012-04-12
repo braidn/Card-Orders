@@ -1,33 +1,21 @@
-%h1 Listing billings
-%table
-  %tr
-    %th Addresstype
-    %th City
-    %th Country
-    %th Customerid
-    %th Postalcode
-    %th State
-    %th Street1
-    %th Street1a
-    %th Street2
-    %th Street2a
-    %th
-    %th
-    %th
-  - @billings.each do |billing|
+%h1 Billings
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= billing.addressType
-      %td= billing.city
-      %td= billing.country
-      %td= billing.customerId
-      %td= billing.postalCode
-      %td= billing.state
-      %td= billing.street1
-      %td= billing.street1a
-      %td= billing.street2
-      %td= billing.street2a
-      %td= link_to 'Show', billing
-      %td= link_to 'Edit', edit_billing_path(billing)
-      %td= link_to 'Destroy', billing, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Billing', new_billing_path
+      %th ID
+      %th
+        = t("activerecord.attributes.billing.addressType", :default => t("activerecord.labels.addressType", :default => "Addresstype"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @billings.each do |billing|
+      %tr
+        %td= billing.id
+        %td= link_to billing.addressType, billing_path(billing)
+        %td= billing.created_at
+        %td
+          = link_to "Show", billing_path(billing), :class => 'btn btn-mini'
+          = link_to "Edit", edit_billing_path(billing), :class => 'btn btn-mini'
+          = link_to "Destroy", billing_path(billing), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_billing_path, :class => 'btn btn-primary'

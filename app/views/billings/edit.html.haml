@@ -1,5 +1,2 @@
-%h1 Editing billing
-= render 'form'
-= link_to 'Show', @billing
-%p |
-= link_to 'Back', billings_path
+= form_for @billing, :html => { :class => "edit_billing form-horizontal", :id => "edit_billing" } do |f|
+  = render :partial => "form", :locals => {:f => f}

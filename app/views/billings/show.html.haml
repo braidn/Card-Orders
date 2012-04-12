@@ -1,34 +1,25 @@
-%p#notice= notice
-%p
-  %b Addresstype:
-  = @billing.addressType
-%p
-  %b City:
-  = @billing.city
-%p
-  %b Country:
-  = @billing.country
-%p
-  %b Customerid:
-  = @billing.customerId
-%p
-  %b Postalcode:
-  = @billing.postalCode
-%p
-  %b State:
-  = @billing.state
-%p
-  %b Street1:
-  = @billing.street1
-%p
-  %b Street1a:
-  = @billing.street1a
-%p
-  %b Street2:
-  = @billing.street2
-%p
-  %b Street2a:
-  = @billing.street2a
-= link_to 'Edit', edit_billing_path(@billing)
-%p |
-= link_to 'Back', billings_path
+%label{:class => "label"}= t("activerecord.attributes.billing.addressType", :default => t("activerecord.labels.addressType", :default => "Addresstype")) + ":"
+%p= @billing.addressType
+%label{:class => "label"}= t("activerecord.attributes.billing.city", :default => t("activerecord.labels.city", :default => "City")) + ":"
+%p= @billing.city
+%label{:class => "label"}= t("activerecord.attributes.billing.country", :default => t("activerecord.labels.country", :default => "Country")) + ":"
+%p= @billing.country
+%label{:class => "label"}= t("activerecord.attributes.billing.customerId", :default => t("activerecord.labels.customerId", :default => "Customerid")) + ":"
+%p= @billing.customerId
+%label{:class => "label"}= t("activerecord.attributes.billing.postalCode", :default => t("activerecord.labels.postalCode", :default => "Postalcode")) + ":"
+%p= @billing.postalCode
+%label{:class => "label"}= t("activerecord.attributes.billing.state", :default => t("activerecord.labels.state", :default => "State")) + ":"
+%p= @billing.state
+%label{:class => "label"}= t("activerecord.attributes.billing.street1", :default => t("activerecord.labels.street1", :default => "Street1")) + ":"
+%p= @billing.street1
+%label{:class => "label"}= t("activerecord.attributes.billing.street1a", :default => t("activerecord.labels.street1a", :default => "Street1a")) + ":"
+%p= @billing.street1a
+%label{:class => "label"}= t("activerecord.attributes.billing.street2", :default => t("activerecord.labels.street2", :default => "Street2")) + ":"
+%p= @billing.street2
+%label{:class => "label"}= t("activerecord.attributes.billing.street2a", :default => t("activerecord.labels.street2a", :default => "Street2a")) + ":"
+%p= @billing.street2a
+
+.form-actions
+  = link_to "Back", billings_path, :class => 'btn'
+  = link_to "Edit", edit_billing_path(@billing), :class => 'btn'
+  = link_to "Delete", billing_path(@billing), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
