@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Matcatdescription:
-  = @mat_category.matCatDescription
-%p
-  %b Matcategory:
-  = @mat_category.matCategory
-= link_to 'Edit', edit_mat_category_path(@mat_category)
-%p |
-= link_to 'Back', mat_categories_path
+%label{:class => "label"}= t("activerecord.attributes.mat_category.matCatDescription", :default => t("activerecord.labels.matCatDescription", :default => "Matcatdescription")) + ":"
+%p= @mat_category.matCatDescription
+%label{:class => "label"}= t("activerecord.attributes.mat_category.matCategory", :default => t("activerecord.labels.matCategory", :default => "Matcategory")) + ":"
+%p= @mat_category.matCategory
+
+.form-actions
+  = link_to "Back", mat_categories_path, :class => 'btn'
+  = link_to "Edit", edit_mat_category_path(@mat_category), :class => 'btn'
+  = link_to "Delete", mat_category_path(@mat_category), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

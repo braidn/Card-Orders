@@ -1,5 +1,2 @@
-%h1 Editing mat_category
-= render 'form'
-= link_to 'Show', @mat_category
-%p |
-= link_to 'Back', mat_categories_path
+= form_for @mat_category, :html => { :class => "edit_mat_category form-horizontal", :id => "edit_mat_category" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,17 +1,21 @@
-%h1 Listing mat_categories
-%table
-  %tr
-    %th Matcatdescription
-    %th Matcategory
-    %th
-    %th
-    %th
-  - @mat_categories.each do |mat_category|
+%h1 Mat Categorys
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= mat_category.matCatDescription
-      %td= mat_category.matCategory
-      %td= link_to 'Show', mat_category
-      %td= link_to 'Edit', edit_mat_category_path(mat_category)
-      %td= link_to 'Destroy', mat_category, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Mat category', new_mat_category_path
+      %th ID
+      %th
+        = t("activerecord.attributes.mat_category.matCatDescription", :default => t("activerecord.labels.matCatDescription", :default => "Matcatdescription"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @mat_categories.each do |mat_category|
+      %tr
+        %td= mat_category.id
+        %td= link_to mat_category.matCatDescription, mat_category_path(mat_category)
+        %td= mat_category.created_at
+        %td
+          = link_to "Show", mat_category_path(mat_category), :class => 'btn btn-mini'
+          = link_to "Edit", edit_mat_category_path(mat_category), :class => 'btn btn-mini'
+          = link_to "Destroy", mat_category_path(mat_category), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_mat_category_path, :class => 'btn btn-primary'
