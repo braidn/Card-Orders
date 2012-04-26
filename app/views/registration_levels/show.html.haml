@@ -1,16 +1,13 @@
-%p#notice= notice
-%p
-  %b Registrationdescription:
-  = @registration_level.registrationDescription
-%p
-  %b Registrationlevelid:
-  = @registration_level.registrationLevelId
-%p
-  %b Registrationspeed:
-  = @registration_level.registrationSpeed
-%p
-  %b Registrationwaste:
-  = @registration_level.registrationWaste
-= link_to 'Edit', edit_registration_level_path(@registration_level)
-%p |
-= link_to 'Back', registration_levels_path
+%label{:class => "label"}= t("activerecord.attributes.registration_level.registrationDescription", :default => t("activerecord.labels.registrationDescription", :default => "Registrationdescription")) + ":"
+%p= @registration_level.registrationDescription
+%label{:class => "label"}= t("activerecord.attributes.registration_level.registrationLevelId", :default => t("activerecord.labels.registrationLevelId", :default => "Registrationlevelid")) + ":"
+%p= @registration_level.registrationLevelId
+%label{:class => "label"}= t("activerecord.attributes.registration_level.registrationSpeed", :default => t("activerecord.labels.registrationSpeed", :default => "Registrationspeed")) + ":"
+%p= @registration_level.registrationSpeed
+%label{:class => "label"}= t("activerecord.attributes.registration_level.registrationWaste", :default => t("activerecord.labels.registrationWaste", :default => "Registrationwaste")) + ":"
+%p= @registration_level.registrationWaste
+
+.form-actions
+  = link_to "Back", registration_levels_path, :class => 'btn'
+  = link_to "Edit", edit_registration_level_path(@registration_level), :class => 'btn'
+  = link_to "Delete", registration_level_path(@registration_level), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

@@ -1,5 +1,2 @@
-%h1 Editing registration_level
-= render 'form'
-= link_to 'Show', @registration_level
-%p |
-= link_to 'Back', registration_levels_path
+= form_for @registration_level, :html => { :class => "edit_registration_level form-horizontal", :id => "edit_registration_level" } do |f|
+  = render :partial => "form", :locals => {:f => f}

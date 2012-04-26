@@ -1,3 +1,2 @@
-%h1 New registration_level
-= render 'form'
-= link_to 'Back', registration_levels_path
+= form_for @registration_level, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

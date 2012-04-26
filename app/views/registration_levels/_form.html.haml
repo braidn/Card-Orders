@@ -1,27 +1,23 @@
-= form_for(@registration_level) do |f|
-  - if @registration_level.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@registration_level.errors.count, "error")
-        prohibited this registration_level from being saved:
-      %ul
-        - @registration_level.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :registrationDescription
-    %br/
-    = f.text_area :registrationDescription
-  .field
-    = f.label :registrationLevelId
-    %br/
-    = f.number_field :registrationLevelId
-  .field
-    = f.label :registrationSpeed
-    %br/
-    = f.number_field :registrationSpeed
-  .field
-    = f.label :registrationWaste
-    %br/
-    = f.number_field :registrationWaste
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Registration Level
+  .control-group
+    = f.label :registrationDescription, :class => 'control-label'
+    .controls
+      = f.text_area :registrationDescription, :class => 'text_area'
+  .control-group
+    = f.label :registrationLevelId, :class => 'control-label'
+    .controls
+      = f.number_field :registrationLevelId, :class => 'number_field'
+  .control-group
+    = f.label :registrationSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :registrationSpeed, :class => 'number_field'
+  .control-group
+    = f.label :registrationWaste, :class => 'control-label'
+    .controls
+      = f.number_field :registrationWaste, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", registration_levels_path, :class => 'btn'
