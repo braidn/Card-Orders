@@ -1,41 +1,21 @@
-%h1 Listing materials
-%table
-  %tr
-    %th Materialcatid
-    %th Bluefeetperminute
-    %th Bluelength
-    %th Coredod
-    %th Eganfeetperminute
-    %th Eganlength
-    %th Materialdescription
-    %th Materialmsicost
-    %th Materialprestripe
-    %th Materialrolllengthmaster
-    %th Materialrollwidth
-    %th Materialthickness
-    %th Vendor
-    %th Vendorpartnum
-    %th
-    %th
-    %th
-  - @materials.each do |material|
+%h1 Materials
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= material.materialCatId
-      %td= material.blueFeetPerMinute
-      %td= material.blueLength
-      %td= material.coredOd
-      %td= material.eganFeetPerMinute
-      %td= material.eganLength
-      %td= material.materialDescription
-      %td= material.materialMsiCost
-      %td= material.materialPreStripe
-      %td= material.materialRollLengthMaster
-      %td= material.materialRollWidth
-      %td= material.materialThickness
-      %td= material.vendor
-      %td= material.vendorPartNum
-      %td= link_to 'Show', material
-      %td= link_to 'Edit', edit_material_path(material)
-      %td= link_to 'Destroy', material, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Material', new_material_path
+      %th ID
+      %th
+        = t("activerecord.attributes.material.materialCatId", :default => t("activerecord.labels.materialCatId", :default => "Materialcatid"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @materials.each do |material|
+      %tr
+        %td= material.id
+        %td= link_to material.materialCatId, material_path(material)
+        %td= material.created_at
+        %td
+          = link_to "Show", material_path(material), :class => 'btn btn-mini'
+          = link_to "Edit", edit_material_path(material), :class => 'btn btn-mini'
+          = link_to "Destroy", material_path(material), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_material_path, :class => 'btn btn-primary'

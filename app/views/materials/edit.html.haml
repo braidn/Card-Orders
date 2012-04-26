@@ -1,5 +1,2 @@
-%h1 Editing material
-= render 'form'
-= link_to 'Show', @material
-%p |
-= link_to 'Back', materials_path
+= form_for @material, :html => { :class => "edit_material form-horizontal", :id => "edit_material" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,46 +1,33 @@
-%p#notice= notice
-%p
-  %b Materialcatid:
-  = @material.materialCatId
-%p
-  %b Bluefeetperminute:
-  = @material.blueFeetPerMinute
-%p
-  %b Bluelength:
-  = @material.blueLength
-%p
-  %b Coredod:
-  = @material.coredOd
-%p
-  %b Eganfeetperminute:
-  = @material.eganFeetPerMinute
-%p
-  %b Eganlength:
-  = @material.eganLength
-%p
-  %b Materialdescription:
-  = @material.materialDescription
-%p
-  %b Materialmsicost:
-  = @material.materialMsiCost
-%p
-  %b Materialprestripe:
-  = @material.materialPreStripe
-%p
-  %b Materialrolllengthmaster:
-  = @material.materialRollLengthMaster
-%p
-  %b Materialrollwidth:
-  = @material.materialRollWidth
-%p
-  %b Materialthickness:
-  = @material.materialThickness
-%p
-  %b Vendor:
-  = @material.vendor
-%p
-  %b Vendorpartnum:
-  = @material.vendorPartNum
-= link_to 'Edit', edit_material_path(@material)
-%p |
-= link_to 'Back', materials_path
+%label{:class => "label"}= t("activerecord.attributes.material.materialCatId", :default => t("activerecord.labels.materialCatId", :default => "Materialcatid")) + ":"
+%p= @material.materialCatId
+%label{:class => "label"}= t("activerecord.attributes.material.blueFeetPerMinute", :default => t("activerecord.labels.blueFeetPerMinute", :default => "Bluefeetperminute")) + ":"
+%p= @material.blueFeetPerMinute
+%label{:class => "label"}= t("activerecord.attributes.material.blueLength", :default => t("activerecord.labels.blueLength", :default => "Bluelength")) + ":"
+%p= @material.blueLength
+%label{:class => "label"}= t("activerecord.attributes.material.coredOd", :default => t("activerecord.labels.coredOd", :default => "Coredod")) + ":"
+%p= @material.coredOd
+%label{:class => "label"}= t("activerecord.attributes.material.eganFeetPerMinute", :default => t("activerecord.labels.eganFeetPerMinute", :default => "Eganfeetperminute")) + ":"
+%p= @material.eganFeetPerMinute
+%label{:class => "label"}= t("activerecord.attributes.material.eganLength", :default => t("activerecord.labels.eganLength", :default => "Eganlength")) + ":"
+%p= @material.eganLength
+%label{:class => "label"}= t("activerecord.attributes.material.materialDescription", :default => t("activerecord.labels.materialDescription", :default => "Materialdescription")) + ":"
+%p= @material.materialDescription
+%label{:class => "label"}= t("activerecord.attributes.material.materialMsiCost", :default => t("activerecord.labels.materialMsiCost", :default => "Materialmsicost")) + ":"
+%p= @material.materialMsiCost
+%label{:class => "label"}= t("activerecord.attributes.material.materialPreStripe", :default => t("activerecord.labels.materialPreStripe", :default => "Materialprestripe")) + ":"
+%p= @material.materialPreStripe
+%label{:class => "label"}= t("activerecord.attributes.material.materialRollLengthMaster", :default => t("activerecord.labels.materialRollLengthMaster", :default => "Materialrolllengthmaster")) + ":"
+%p= @material.materialRollLengthMaster
+%label{:class => "label"}= t("activerecord.attributes.material.materialRollWidth", :default => t("activerecord.labels.materialRollWidth", :default => "Materialrollwidth")) + ":"
+%p= @material.materialRollWidth
+%label{:class => "label"}= t("activerecord.attributes.material.materialThickness", :default => t("activerecord.labels.materialThickness", :default => "Materialthickness")) + ":"
+%p= @material.materialThickness
+%label{:class => "label"}= t("activerecord.attributes.material.vendor", :default => t("activerecord.labels.vendor", :default => "Vendor")) + ":"
+%p= @material.vendor
+%label{:class => "label"}= t("activerecord.attributes.material.vendorPartNum", :default => t("activerecord.labels.vendorPartNum", :default => "Vendorpartnum")) + ":"
+%p= @material.vendorPartNum
+
+.form-actions
+  = link_to "Back", materials_path, :class => 'btn'
+  = link_to "Edit", edit_material_path(@material), :class => 'btn'
+  = link_to "Delete", material_path(@material), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
