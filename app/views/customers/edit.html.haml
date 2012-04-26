@@ -1,5 +1,2 @@
-%h1 Editing customer
-= render 'form'
-= link_to 'Show', @customer
-%p |
-= link_to 'Back', customers_path
+= form_for @customer, :html => { :class => "edit_customer form-horizontal", :id => "edit_customer" } do |f|
+  = render :partial => "form", :locals => {:f => f}

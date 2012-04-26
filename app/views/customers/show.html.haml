@@ -1,70 +1,49 @@
-%p#notice= notice
-%p
-  %b Traverseacct:
-  = @customer.traverseAcct
-%p
-  %b Addtype:
-  = @customer.addType
-%p
-  %b City1:
-  = @customer.city1
-%p
-  %b City2:
-  = @customer.city2
-%p
-  %b Commision:
-  = @customer.commision
-%p
-  %b Company:
-  = @customer.company
-%p
-  %b Country:
-  = @customer.country
-%p
-  %b Status:
-  = @customer.status
-%p
-  %b Type:
-  = @customer.type
-%p
-  %b Po:
-  = @customer.po
-%p
-  %b Distributor:
-  = @customer.distributor
-%p
-  %b Invoiceinst:
-  = @customer.invoiceInst
-%p
-  %b Market:
-  = @customer.market
-%p
-  %b Phone1:
-  = @customer.phone1
-%p
-  %b Phone2:
-  = @customer.phone2
-%p
-  %b Postalcode:
-  = @customer.postalCode
-%p
-  %b Stateprovince:
-  = @customer.stateProvince
-%p
-  %b Street1:
-  = @customer.street1
-%p
-  %b Street1a:
-  = @customer.street1a
-%p
-  %b Street2:
-  = @customer.street2
-%p
-  %b Street2a:
-  = @customer.street2a
-%p
-  %b Website:
-  = @customer.website
-= link_to 'Edit', edit_customer_path(@customer)
-%p |
-= link_to 'Back', customers_path
+%label{:class => "label"}= t("activerecord.attributes.customer.traverseAcct", :default => t("activerecord.labels.traverseAcct", :default => "Traverseacct")) + ":"
+%p= @customer.traverseAcct
+%label{:class => "label"}= t("activerecord.attributes.customer.addType", :default => t("activerecord.labels.addType", :default => "Addtype")) + ":"
+%p= @customer.addType
+%label{:class => "label"}= t("activerecord.attributes.customer.city1", :default => t("activerecord.labels.city1", :default => "City1")) + ":"
+%p= @customer.city1
+%label{:class => "label"}= t("activerecord.attributes.customer.city2", :default => t("activerecord.labels.city2", :default => "City2")) + ":"
+%p= @customer.city2
+%label{:class => "label"}= t("activerecord.attributes.customer.commision", :default => t("activerecord.labels.commision", :default => "Commision")) + ":"
+%p= @customer.commision
+%label{:class => "label"}= t("activerecord.attributes.customer.company", :default => t("activerecord.labels.company", :default => "Company")) + ":"
+%p= @customer.company
+%label{:class => "label"}= t("activerecord.attributes.customer.country", :default => t("activerecord.labels.country", :default => "Country")) + ":"
+%p= @customer.country
+%label{:class => "label"}= t("activerecord.attributes.customer.status", :default => t("activerecord.labels.status", :default => "Status")) + ":"
+%p= @customer.status
+%label{:class => "label"}= t("activerecord.attributes.customer.type", :default => t("activerecord.labels.type", :default => "Type")) + ":"
+%p= @customer.type
+%label{:class => "label"}= t("activerecord.attributes.customer.po", :default => t("activerecord.labels.po", :default => "Po")) + ":"
+%p= @customer.po
+%label{:class => "label"}= t("activerecord.attributes.customer.distributor", :default => t("activerecord.labels.distributor", :default => "Distributor")) + ":"
+%p= @customer.distributor
+%label{:class => "label"}= t("activerecord.attributes.customer.invoiceInst", :default => t("activerecord.labels.invoiceInst", :default => "Invoiceinst")) + ":"
+%p= @customer.invoiceInst
+%label{:class => "label"}= t("activerecord.attributes.customer.market", :default => t("activerecord.labels.market", :default => "Market")) + ":"
+%p= @customer.market
+%label{:class => "label"}= t("activerecord.attributes.customer.phone1", :default => t("activerecord.labels.phone1", :default => "Phone1")) + ":"
+%p= @customer.phone1
+%label{:class => "label"}= t("activerecord.attributes.customer.phone2", :default => t("activerecord.labels.phone2", :default => "Phone2")) + ":"
+%p= @customer.phone2
+%label{:class => "label"}= t("activerecord.attributes.customer.postalCode", :default => t("activerecord.labels.postalCode", :default => "Postalcode")) + ":"
+%p= @customer.postalCode
+%label{:class => "label"}= t("activerecord.attributes.customer.stateProvince", :default => t("activerecord.labels.stateProvince", :default => "Stateprovince")) + ":"
+%p= @customer.stateProvince
+%label{:class => "label"}= t("activerecord.attributes.customer.street1", :default => t("activerecord.labels.street1", :default => "Street1")) + ":"
+%p= @customer.street1
+%label{:class => "label"}= t("activerecord.attributes.customer.street1a", :default => t("activerecord.labels.street1a", :default => "Street1a")) + ":"
+%p= @customer.street1a
+%label{:class => "label"}= t("activerecord.attributes.customer.street2", :default => t("activerecord.labels.street2", :default => "Street2")) + ":"
+%p= @customer.street2
+%label{:class => "label"}= t("activerecord.attributes.customer.street2a", :default => t("activerecord.labels.street2a", :default => "Street2a")) + ":"
+%p= @customer.street2a
+%label{:class => "label"}= t("activerecord.attributes.customer.website", :default => t("activerecord.labels.website", :default => "Website")) + ":"
+%p= @customer.website
+
+.form-actions
+  = link_to "Back", customers_path, :class => 'btn'
+  = link_to "Edit", edit_customer_path(@customer), :class => 'btn'
+  = link_to "Delete", customer_path(@customer), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
