@@ -1,29 +1,21 @@
-%h1 Listing cores
-%table
-  %tr
-    %th Generalname
-    %th Cost
-    %th Innerdiameter
-    %th Outerdiameter
-    %th Type
-    %th Wallthickness
-    %th Width
-    %th Internalname
-    %th
-    %th
-    %th
-  - @cores.each do |core|
+%h1 Cores
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= core.generalName
-      %td= core.cost
-      %td= core.innerDiameter
-      %td= core.outerDiameter
-      %td= core.type
-      %td= core.wallThickness
-      %td= core.width
-      %td= core.internalName
-      %td= link_to 'Show', core
-      %td= link_to 'Edit', edit_core_path(core)
-      %td= link_to 'Destroy', core, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Core', new_core_path
+      %th ID
+      %th
+        = t("activerecord.attributes.core.generalName", :default => t("activerecord.labels.generalName", :default => "Generalname"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @cores.each do |core|
+      %tr
+        %td= core.id
+        %td= link_to core.generalName, core_path(core)
+        %td= core.created_at
+        %td
+          = link_to "Show", core_path(core), :class => 'btn btn-mini'
+          = link_to "Edit", edit_core_path(core), :class => 'btn btn-mini'
+          = link_to "Destroy", core_path(core), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_core_path, :class => 'btn btn-primary'

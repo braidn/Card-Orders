@@ -1,28 +1,21 @@
-%p#notice= notice
-%p
-  %b Generalname:
-  = @core.generalName
-%p
-  %b Cost:
-  = @core.cost
-%p
-  %b Innerdiameter:
-  = @core.innerDiameter
-%p
-  %b Outerdiameter:
-  = @core.outerDiameter
-%p
-  %b Type:
-  = @core.type
-%p
-  %b Wallthickness:
-  = @core.wallThickness
-%p
-  %b Width:
-  = @core.width
-%p
-  %b Internalname:
-  = @core.internalName
-= link_to 'Edit', edit_core_path(@core)
-%p |
-= link_to 'Back', cores_path
+%label{:class => "label"}= t("activerecord.attributes.core.generalName", :default => t("activerecord.labels.generalName", :default => "Generalname")) + ":"
+%p= @core.generalName
+%label{:class => "label"}= t("activerecord.attributes.core.cost", :default => t("activerecord.labels.cost", :default => "Cost")) + ":"
+%p= @core.cost
+%label{:class => "label"}= t("activerecord.attributes.core.innerDiameter", :default => t("activerecord.labels.innerDiameter", :default => "Innerdiameter")) + ":"
+%p= @core.innerDiameter
+%label{:class => "label"}= t("activerecord.attributes.core.outerDiameter", :default => t("activerecord.labels.outerDiameter", :default => "Outerdiameter")) + ":"
+%p= @core.outerDiameter
+%label{:class => "label"}= t("activerecord.attributes.core.type", :default => t("activerecord.labels.type", :default => "Type")) + ":"
+%p= @core.type
+%label{:class => "label"}= t("activerecord.attributes.core.wallThickness", :default => t("activerecord.labels.wallThickness", :default => "Wallthickness")) + ":"
+%p= @core.wallThickness
+%label{:class => "label"}= t("activerecord.attributes.core.width", :default => t("activerecord.labels.width", :default => "Width")) + ":"
+%p= @core.width
+%label{:class => "label"}= t("activerecord.attributes.core.internalName", :default => t("activerecord.labels.internalName", :default => "Internalname")) + ":"
+%p= @core.internalName
+
+.form-actions
+  = link_to "Back", cores_path, :class => 'btn'
+  = link_to "Edit", edit_core_path(@core), :class => 'btn'
+  = link_to "Delete", core_path(@core), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

@@ -1,43 +1,39 @@
-= form_for(@core) do |f|
-  - if @core.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@core.errors.count, "error")
-        prohibited this core from being saved:
-      %ul
-        - @core.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :generalName
-    %br/
-    = f.text_field :generalName
-  .field
-    = f.label :cost
-    %br/
-    = f.number_field :cost
-  .field
-    = f.label :innerDiameter
-    %br/
-    = f.number_field :innerDiameter
-  .field
-    = f.label :outerDiameter
-    %br/
-    = f.number_field :outerDiameter
-  .field
-    = f.label :type
-    %br/
-    = f.number_field :type
-  .field
-    = f.label :wallThickness
-    %br/
-    = f.number_field :wallThickness
-  .field
-    = f.label :width
-    %br/
-    = f.number_field :width
-  .field
-    = f.label :internalName
-    %br/
-    = f.text_field :internalName
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Core
+  .control-group
+    = f.label :generalName, :class => 'control-label'
+    .controls
+      = f.text_field :generalName, :class => 'text_field'
+  .control-group
+    = f.label :cost, :class => 'control-label'
+    .controls
+      = f.number_field :cost, :class => 'number_field'
+  .control-group
+    = f.label :innerDiameter, :class => 'control-label'
+    .controls
+      = f.number_field :innerDiameter, :class => 'number_field'
+  .control-group
+    = f.label :outerDiameter, :class => 'control-label'
+    .controls
+      = f.number_field :outerDiameter, :class => 'number_field'
+  .control-group
+    = f.label :type, :class => 'control-label'
+    .controls
+      = f.number_field :type, :class => 'number_field'
+  .control-group
+    = f.label :wallThickness, :class => 'control-label'
+    .controls
+      = f.number_field :wallThickness, :class => 'number_field'
+  .control-group
+    = f.label :width, :class => 'control-label'
+    .controls
+      = f.number_field :width, :class => 'number_field'
+  .control-group
+    = f.label :internalName, :class => 'control-label'
+    .controls
+      = f.text_field :internalName, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", cores_path, :class => 'btn'

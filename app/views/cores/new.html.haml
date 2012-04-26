@@ -1,3 +1,2 @@
-%h1 New core
-= render 'form'
-= link_to 'Back', cores_path
+= form_for @core, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

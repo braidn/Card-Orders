@@ -1,5 +1,2 @@
-%h1 Editing core
-= render 'form'
-= link_to 'Show', @core
-%p |
-= link_to 'Back', cores_path
+= form_for @core, :html => { :class => "edit_core form-horizontal", :id => "edit_core" } do |f|
+  = render :partial => "form", :locals => {:f => f}
