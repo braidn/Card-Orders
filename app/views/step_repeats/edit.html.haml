@@ -1,5 +1,2 @@
-%h1 Editing step_repeat
-= render 'form'
-= link_to 'Show', @step_repeat
-%p |
-= link_to 'Back', step_repeats_path
+= form_for @step_repeat, :html => { :class => "edit_step_repeat form-horizontal", :id => "edit_step_repeat" } do |f|
+  = render :partial => "form", :locals => {:f => f}

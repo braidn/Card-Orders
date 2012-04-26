@@ -1,79 +1,55 @@
-%p#notice= notice
-%p
-  %b Category:
-  = @step_repeat.category
-%p
-  %b Description:
-  = @step_repeat.description
-%p
-  %b Dimensionacross:
-  = @step_repeat.dimensionAcross
-%p
-  %b Dimensionaround:
-  = @step_repeat.dimensionAround
-%p
-  %b Distortionfactor:
-  = @step_repeat.distortionFactor
-%p
-  %b Flexodistortion:
-  = @step_repeat.flexoDistortion
-%p
-  %b Flexolpdist:
-  = @step_repeat.flexoLpDist
-%p
-  %b Flexomountingtapethickness:
-  = @step_repeat.flexoMountingTapeThickness
-%p
-  %b Flexoplatebacking:
-  = @step_repeat.flexoPlateBacking
-%p
-  %b Flexoplatethickness:
-  = @step_repeat.flexoPlateThickness
-%p
-  %b Flexosoftthickness:
-  = @step_repeat.flexoSoftThickness
-%p
-  %b Gapacross:
-  = @step_repeat.gapAcross
-%p
-  %b Gaparound:
-  = @step_repeat.gapAround
-%p
-  %b Internalname:
-  = @step_repeat.internalName
-%p
-  %b Letterpressmountingtapethickness:
-  = @step_repeat.letterpressMountingTapeThickness
-%p
-  %b Letterpressplatebacking:
-  = @step_repeat.letterpressPlateBacking
-%p
-  %b Letterpressplatethickness:
-  = @step_repeat.letterpressPlateThickness
-%p
-  %b Letterpresssoftthickness:
-  = @step_repeat.letterpressSoftThickness
-%p
-  %b Lpdistortion:
-  = @step_repeat.lpDistortion
-%p
-  %b Offset:
-  = @step_repeat.offset
-%p
-  %b Offsetamount:
-  = @step_repeat.offsetAmount
-%p
-  %b Presstype:
-  = @step_repeat.pressType
-%p
-  %b Printdiameter:
-  = @step_repeat.printDiameter
-%p
-  %b Stepacross:
-  = @step_repeat.stepAcross
-%p
-  %b Steparound:
-  = @step_repeat.stepAround
-= link_to 'Edit', edit_step_repeat_path(@step_repeat)
-%p |
-= link_to 'Back', step_repeats_path
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.category", :default => t("activerecord.labels.category", :default => "Category")) + ":"
+%p= @step_repeat.category
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.description", :default => t("activerecord.labels.description", :default => "Description")) + ":"
+%p= @step_repeat.description
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.dimensionAcross", :default => t("activerecord.labels.dimensionAcross", :default => "Dimensionacross")) + ":"
+%p= @step_repeat.dimensionAcross
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.dimensionAround", :default => t("activerecord.labels.dimensionAround", :default => "Dimensionaround")) + ":"
+%p= @step_repeat.dimensionAround
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.distortionFactor", :default => t("activerecord.labels.distortionFactor", :default => "Distortionfactor")) + ":"
+%p= @step_repeat.distortionFactor
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.flexoDistortion", :default => t("activerecord.labels.flexoDistortion", :default => "Flexodistortion")) + ":"
+%p= @step_repeat.flexoDistortion
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.flexoLpDist", :default => t("activerecord.labels.flexoLpDist", :default => "Flexolpdist")) + ":"
+%p= @step_repeat.flexoLpDist
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.flexoMountingTapeThickness", :default => t("activerecord.labels.flexoMountingTapeThickness", :default => "Flexomountingtapethickness")) + ":"
+%p= @step_repeat.flexoMountingTapeThickness
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.flexoPlateBacking", :default => t("activerecord.labels.flexoPlateBacking", :default => "Flexoplatebacking")) + ":"
+%p= @step_repeat.flexoPlateBacking
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.flexoPlateThickness", :default => t("activerecord.labels.flexoPlateThickness", :default => "Flexoplatethickness")) + ":"
+%p= @step_repeat.flexoPlateThickness
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.flexoSoftThickness", :default => t("activerecord.labels.flexoSoftThickness", :default => "Flexosoftthickness")) + ":"
+%p= @step_repeat.flexoSoftThickness
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.gapAcross", :default => t("activerecord.labels.gapAcross", :default => "Gapacross")) + ":"
+%p= @step_repeat.gapAcross
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.gapAround", :default => t("activerecord.labels.gapAround", :default => "Gaparound")) + ":"
+%p= @step_repeat.gapAround
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.internalName", :default => t("activerecord.labels.internalName", :default => "Internalname")) + ":"
+%p= @step_repeat.internalName
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.letterpressMountingTapeThickness", :default => t("activerecord.labels.letterpressMountingTapeThickness", :default => "Letterpressmountingtapethickness")) + ":"
+%p= @step_repeat.letterpressMountingTapeThickness
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.letterpressPlateBacking", :default => t("activerecord.labels.letterpressPlateBacking", :default => "Letterpressplatebacking")) + ":"
+%p= @step_repeat.letterpressPlateBacking
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.letterpressPlateThickness", :default => t("activerecord.labels.letterpressPlateThickness", :default => "Letterpressplatethickness")) + ":"
+%p= @step_repeat.letterpressPlateThickness
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.letterpressSoftThickness", :default => t("activerecord.labels.letterpressSoftThickness", :default => "Letterpresssoftthickness")) + ":"
+%p= @step_repeat.letterpressSoftThickness
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.lpDistortion", :default => t("activerecord.labels.lpDistortion", :default => "Lpdistortion")) + ":"
+%p= @step_repeat.lpDistortion
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.offset", :default => t("activerecord.labels.offset", :default => "Offset")) + ":"
+%p= @step_repeat.offset
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.offsetAmount", :default => t("activerecord.labels.offsetAmount", :default => "Offsetamount")) + ":"
+%p= @step_repeat.offsetAmount
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.pressType", :default => t("activerecord.labels.pressType", :default => "Presstype")) + ":"
+%p= @step_repeat.pressType
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.printDiameter", :default => t("activerecord.labels.printDiameter", :default => "Printdiameter")) + ":"
+%p= @step_repeat.printDiameter
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.stepAcross", :default => t("activerecord.labels.stepAcross", :default => "Stepacross")) + ":"
+%p= @step_repeat.stepAcross
+%label{:class => "label"}= t("activerecord.attributes.step_repeat.stepAround", :default => t("activerecord.labels.stepAround", :default => "Steparound")) + ":"
+%p= @step_repeat.stepAround
+
+.form-actions
+  = link_to "Back", step_repeats_path, :class => 'btn'
+  = link_to "Edit", edit_step_repeat_path(@step_repeat), :class => 'btn'
+  = link_to "Delete", step_repeat_path(@step_repeat), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
