@@ -1,70 +1,49 @@
-%p#notice= notice
-%p
-  %b Additionalinfo:
-  = @shipping.additionalInfo
-%p
-  %b Attention:
-  = @shipping.attention
-%p
-  %b City:
-  = @shipping.city
-%p
-  %b Country:
-  = @shipping.country
-%p
-  %b Customerid:
-  = @shipping.customerId
-%p
-  %b Freightcollect3rdaddr1:
-  = @shipping.freightCollect3rdAddr1
-%p
-  %b Freightcollect3rdaddr2:
-  = @shipping.freightCollect3rdAddr2
-%p
-  %b Freightcollect3rdcity:
-  = @shipping.freightCollect3rdCity
-%p
-  %b Freightcollect3rdcomment:
-  = @shipping.freightCollect3rdComment
-%p
-  %b Freightcollect3rdname:
-  = @shipping.freightCollect3rdName
-%p
-  %b Freightcollect3rdstate:
-  = @shipping.freightCollect3rdState
-%p
-  %b Freightcollect3rdzip:
-  = @shipping.freightCollect3rdZip
-%p
-  %b Freightshippinginst:
-  = @shipping.freightShippingInst
-%p
-  %b Instructions:
-  = @shipping.instructions
-%p
-  %b Name:
-  = @shipping.name
-%p
-  %b Phone:
-  = @shipping.phone
-%p
-  %b Postalcode:
-  = @shipping.postalCode
-%p
-  %b State:
-  = @shipping.state
-%p
-  %b Street1:
-  = @shipping.street1
-%p
-  %b Street1a:
-  = @shipping.street1a
-%p
-  %b Street2:
-  = @shipping.street2
-%p
-  %b Street2a:
-  = @shipping.street2a
-= link_to 'Edit', edit_shipping_path(@shipping)
-%p |
-= link_to 'Back', shippings_path
+%label{:class => "label"}= t("activerecord.attributes.shipping.additionalInfo", :default => t("activerecord.labels.additionalInfo", :default => "Additionalinfo")) + ":"
+%p= @shipping.additionalInfo
+%label{:class => "label"}= t("activerecord.attributes.shipping.attention", :default => t("activerecord.labels.attention", :default => "Attention")) + ":"
+%p= @shipping.attention
+%label{:class => "label"}= t("activerecord.attributes.shipping.city", :default => t("activerecord.labels.city", :default => "City")) + ":"
+%p= @shipping.city
+%label{:class => "label"}= t("activerecord.attributes.shipping.country", :default => t("activerecord.labels.country", :default => "Country")) + ":"
+%p= @shipping.country
+%label{:class => "label"}= t("activerecord.attributes.shipping.customerId", :default => t("activerecord.labels.customerId", :default => "Customerid")) + ":"
+%p= @shipping.customerId
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdAddr1", :default => t("activerecord.labels.freightCollect3rdAddr1", :default => "Freightcollect3rdaddr1")) + ":"
+%p= @shipping.freightCollect3rdAddr1
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdAddr2", :default => t("activerecord.labels.freightCollect3rdAddr2", :default => "Freightcollect3rdaddr2")) + ":"
+%p= @shipping.freightCollect3rdAddr2
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdCity", :default => t("activerecord.labels.freightCollect3rdCity", :default => "Freightcollect3rdcity")) + ":"
+%p= @shipping.freightCollect3rdCity
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdComment", :default => t("activerecord.labels.freightCollect3rdComment", :default => "Freightcollect3rdcomment")) + ":"
+%p= @shipping.freightCollect3rdComment
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdName", :default => t("activerecord.labels.freightCollect3rdName", :default => "Freightcollect3rdname")) + ":"
+%p= @shipping.freightCollect3rdName
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdState", :default => t("activerecord.labels.freightCollect3rdState", :default => "Freightcollect3rdstate")) + ":"
+%p= @shipping.freightCollect3rdState
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightCollect3rdZip", :default => t("activerecord.labels.freightCollect3rdZip", :default => "Freightcollect3rdzip")) + ":"
+%p= @shipping.freightCollect3rdZip
+%label{:class => "label"}= t("activerecord.attributes.shipping.freightShippingInst", :default => t("activerecord.labels.freightShippingInst", :default => "Freightshippinginst")) + ":"
+%p= @shipping.freightShippingInst
+%label{:class => "label"}= t("activerecord.attributes.shipping.instructions", :default => t("activerecord.labels.instructions", :default => "Instructions")) + ":"
+%p= @shipping.instructions
+%label{:class => "label"}= t("activerecord.attributes.shipping.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @shipping.name
+%label{:class => "label"}= t("activerecord.attributes.shipping.phone", :default => t("activerecord.labels.phone", :default => "Phone")) + ":"
+%p= @shipping.phone
+%label{:class => "label"}= t("activerecord.attributes.shipping.postalCode", :default => t("activerecord.labels.postalCode", :default => "Postalcode")) + ":"
+%p= @shipping.postalCode
+%label{:class => "label"}= t("activerecord.attributes.shipping.state", :default => t("activerecord.labels.state", :default => "State")) + ":"
+%p= @shipping.state
+%label{:class => "label"}= t("activerecord.attributes.shipping.street1", :default => t("activerecord.labels.street1", :default => "Street1")) + ":"
+%p= @shipping.street1
+%label{:class => "label"}= t("activerecord.attributes.shipping.street1a", :default => t("activerecord.labels.street1a", :default => "Street1a")) + ":"
+%p= @shipping.street1a
+%label{:class => "label"}= t("activerecord.attributes.shipping.street2", :default => t("activerecord.labels.street2", :default => "Street2")) + ":"
+%p= @shipping.street2
+%label{:class => "label"}= t("activerecord.attributes.shipping.street2a", :default => t("activerecord.labels.street2a", :default => "Street2a")) + ":"
+%p= @shipping.street2a
+
+.form-actions
+  = link_to "Back", shippings_path, :class => 'btn'
+  = link_to "Edit", edit_shipping_path(@shipping), :class => 'btn'
+  = link_to "Delete", shipping_path(@shipping), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

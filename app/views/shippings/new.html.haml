@@ -1,3 +1,2 @@
-%h1 New shipping
-= render 'form'
-= link_to 'Back', shippings_path
+= form_for @shipping, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,99 +1,95 @@
-= form_for(@shipping) do |f|
-  - if @shipping.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@shipping.errors.count, "error")
-        prohibited this shipping from being saved:
-      %ul
-        - @shipping.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :additionalInfo
-    %br/
-    = f.text_field :additionalInfo
-  .field
-    = f.label :attention
-    %br/
-    = f.text_field :attention
-  .field
-    = f.label :city
-    %br/
-    = f.text_field :city
-  .field
-    = f.label :country
-    %br/
-    = f.text_field :country
-  .field
-    = f.label :customerId
-    %br/
-    = f.text_field :customerId
-  .field
-    = f.label :freightCollect3rdAddr1
-    %br/
-    = f.text_field :freightCollect3rdAddr1
-  .field
-    = f.label :freightCollect3rdAddr2
-    %br/
-    = f.text_field :freightCollect3rdAddr2
-  .field
-    = f.label :freightCollect3rdCity
-    %br/
-    = f.text_field :freightCollect3rdCity
-  .field
-    = f.label :freightCollect3rdComment
-    %br/
-    = f.text_field :freightCollect3rdComment
-  .field
-    = f.label :freightCollect3rdName
-    %br/
-    = f.text_field :freightCollect3rdName
-  .field
-    = f.label :freightCollect3rdState
-    %br/
-    = f.text_field :freightCollect3rdState
-  .field
-    = f.label :freightCollect3rdZip
-    %br/
-    = f.text_field :freightCollect3rdZip
-  .field
-    = f.label :freightShippingInst
-    %br/
-    = f.text_field :freightShippingInst
-  .field
-    = f.label :instructions
-    %br/
-    = f.text_field :instructions
-  .field
-    = f.label :name
-    %br/
-    = f.text_field :name
-  .field
-    = f.label :phone
-    %br/
-    = f.text_field :phone
-  .field
-    = f.label :postalCode
-    %br/
-    = f.text_field :postalCode
-  .field
-    = f.label :state
-    %br/
-    = f.text_field :state
-  .field
-    = f.label :street1
-    %br/
-    = f.text_field :street1
-  .field
-    = f.label :street1a
-    %br/
-    = f.text_field :street1a
-  .field
-    = f.label :street2
-    %br/
-    = f.text_field :street2
-  .field
-    = f.label :street2a
-    %br/
-    = f.text_field :street2a
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Shipping
+  .control-group
+    = f.label :additionalInfo, :class => 'control-label'
+    .controls
+      = f.text_field :additionalInfo, :class => 'text_field'
+  .control-group
+    = f.label :attention, :class => 'control-label'
+    .controls
+      = f.text_field :attention, :class => 'text_field'
+  .control-group
+    = f.label :city, :class => 'control-label'
+    .controls
+      = f.text_field :city, :class => 'text_field'
+  .control-group
+    = f.label :country, :class => 'control-label'
+    .controls
+      = f.text_field :country, :class => 'text_field'
+  .control-group
+    = f.label :customerId, :class => 'control-label'
+    .controls
+      = f.text_field :customerId, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdAddr1, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdAddr1, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdAddr2, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdAddr2, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdCity, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdCity, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdComment, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdComment, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdName, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdName, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdState, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdState, :class => 'text_field'
+  .control-group
+    = f.label :freightCollect3rdZip, :class => 'control-label'
+    .controls
+      = f.text_field :freightCollect3rdZip, :class => 'text_field'
+  .control-group
+    = f.label :freightShippingInst, :class => 'control-label'
+    .controls
+      = f.text_field :freightShippingInst, :class => 'text_field'
+  .control-group
+    = f.label :instructions, :class => 'control-label'
+    .controls
+      = f.text_field :instructions, :class => 'text_field'
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :phone, :class => 'control-label'
+    .controls
+      = f.text_field :phone, :class => 'text_field'
+  .control-group
+    = f.label :postalCode, :class => 'control-label'
+    .controls
+      = f.text_field :postalCode, :class => 'text_field'
+  .control-group
+    = f.label :state, :class => 'control-label'
+    .controls
+      = f.text_field :state, :class => 'text_field'
+  .control-group
+    = f.label :street1, :class => 'control-label'
+    .controls
+      = f.text_field :street1, :class => 'text_field'
+  .control-group
+    = f.label :street1a, :class => 'control-label'
+    .controls
+      = f.text_field :street1a, :class => 'text_field'
+  .control-group
+    = f.label :street2, :class => 'control-label'
+    .controls
+      = f.text_field :street2, :class => 'text_field'
+  .control-group
+    = f.label :street2a, :class => 'control-label'
+    .controls
+      = f.text_field :street2a, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", shippings_path, :class => 'btn'

@@ -1,5 +1,2 @@
-%h1 Editing shipping
-= render 'form'
-= link_to 'Show', @shipping
-%p |
-= link_to 'Back', shippings_path
+= form_for @shipping, :html => { :class => "edit_shipping form-horizontal", :id => "edit_shipping" } do |f|
+  = render :partial => "form", :locals => {:f => f}

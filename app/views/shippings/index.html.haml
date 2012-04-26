@@ -1,57 +1,21 @@
-%h1 Listing shippings
-%table
-  %tr
-    %th Additionalinfo
-    %th Attention
-    %th City
-    %th Country
-    %th Customerid
-    %th Freightcollect3rdaddr1
-    %th Freightcollect3rdaddr2
-    %th Freightcollect3rdcity
-    %th Freightcollect3rdcomment
-    %th Freightcollect3rdname
-    %th Freightcollect3rdstate
-    %th Freightcollect3rdzip
-    %th Freightshippinginst
-    %th Instructions
-    %th Name
-    %th Phone
-    %th Postalcode
-    %th State
-    %th Street1
-    %th Street1a
-    %th Street2
-    %th Street2a
-    %th
-    %th
-    %th
-  - @shippings.each do |shipping|
+%h1 Shippings
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= shipping.additionalInfo
-      %td= shipping.attention
-      %td= shipping.city
-      %td= shipping.country
-      %td= shipping.customerId
-      %td= shipping.freightCollect3rdAddr1
-      %td= shipping.freightCollect3rdAddr2
-      %td= shipping.freightCollect3rdCity
-      %td= shipping.freightCollect3rdComment
-      %td= shipping.freightCollect3rdName
-      %td= shipping.freightCollect3rdState
-      %td= shipping.freightCollect3rdZip
-      %td= shipping.freightShippingInst
-      %td= shipping.instructions
-      %td= shipping.name
-      %td= shipping.phone
-      %td= shipping.postalCode
-      %td= shipping.state
-      %td= shipping.street1
-      %td= shipping.street1a
-      %td= shipping.street2
-      %td= shipping.street2a
-      %td= link_to 'Show', shipping
-      %td= link_to 'Edit', edit_shipping_path(shipping)
-      %td= link_to 'Destroy', shipping, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Shipping', new_shipping_path
+      %th ID
+      %th
+        = t("activerecord.attributes.shipping.additionalInfo", :default => t("activerecord.labels.additionalInfo", :default => "Additionalinfo"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @shippings.each do |shipping|
+      %tr
+        %td= shipping.id
+        %td= link_to shipping.additionalInfo, shipping_path(shipping)
+        %td= shipping.created_at
+        %td
+          = link_to "Show", shipping_path(shipping), :class => 'btn btn-mini'
+          = link_to "Edit", edit_shipping_path(shipping), :class => 'btn btn-mini'
+          = link_to "Destroy", shipping_path(shipping), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_shipping_path, :class => 'btn btn-primary'
