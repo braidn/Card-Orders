@@ -1,15 +1,21 @@
-%h1 Listing inkcatagories
-%table
-  %tr
-    %th Description
-    %th
-    %th
-    %th
-  - @inkcatagories.each do |inkcatagory|
+%h1 Inkcatagorys
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= inkcatagory.description
-      %td= link_to 'Show', inkcatagory
-      %td= link_to 'Edit', edit_inkcatagory_path(inkcatagory)
-      %td= link_to 'Destroy', inkcatagory, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Inkcatagory', new_inkcatagory_path
+      %th ID
+      %th
+        = t("activerecord.attributes.inkcatagory.description", :default => t("activerecord.labels.description", :default => "Description"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @inkcatagories.each do |inkcatagory|
+      %tr
+        %td= inkcatagory.id
+        %td= link_to inkcatagory.description, inkcatagory_path(inkcatagory)
+        %td= inkcatagory.created_at
+        %td
+          = link_to "Show", inkcatagory_path(inkcatagory), :class => 'btn btn-mini'
+          = link_to "Edit", edit_inkcatagory_path(inkcatagory), :class => 'btn btn-mini'
+          = link_to "Destroy", inkcatagory_path(inkcatagory), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_inkcatagory_path, :class => 'btn btn-primary'

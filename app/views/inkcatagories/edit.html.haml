@@ -1,5 +1,2 @@
-%h1 Editing inkcatagory
-= render 'form'
-= link_to 'Show', @inkcatagory
-%p |
-= link_to 'Back', inkcatagories_path
+= form_for @inkcatagory, :html => { :class => "edit_inkcatagory form-horizontal", :id => "edit_inkcatagory" } do |f|
+  = render :partial => "form", :locals => {:f => f}
