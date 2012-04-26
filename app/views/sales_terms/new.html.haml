@@ -1,3 +1,2 @@
-%h1 New sales_term
-= render 'form'
-= link_to 'Back', sales_terms_path
+= form_for @sales_term, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,31 +1,27 @@
-= form_for(@sales_term) do |f|
-  - if @sales_term.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@sales_term.errors.count, "error")
-        prohibited this sales_term from being saved:
-      %ul
-        - @sales_term.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :discountDays
-    %br/
-    = f.text_field :discountDays
-  .field
-    = f.label :discountRate
-    %br/
-    = f.number_field :discountRate
-  .field
-    = f.label :payDays
-    %br/
-    = f.text_field :payDays
-  .field
-    = f.label :salesTermDescription
-    %br/
-    = f.text_field :salesTermDescription
-  .field
-    = f.label :salesTermId
-    %br/
-    = f.number_field :salesTermId
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Sales Term
+  .control-group
+    = f.label :discountDays, :class => 'control-label'
+    .controls
+      = f.text_field :discountDays, :class => 'text_field'
+  .control-group
+    = f.label :discountRate, :class => 'control-label'
+    .controls
+      = f.number_field :discountRate, :class => 'number_field'
+  .control-group
+    = f.label :payDays, :class => 'control-label'
+    .controls
+      = f.text_field :payDays, :class => 'text_field'
+  .control-group
+    = f.label :salesTermDescription, :class => 'control-label'
+    .controls
+      = f.text_field :salesTermDescription, :class => 'text_field'
+  .control-group
+    = f.label :salesTermId, :class => 'control-label'
+    .controls
+      = f.number_field :salesTermId, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", sales_terms_path, :class => 'btn'

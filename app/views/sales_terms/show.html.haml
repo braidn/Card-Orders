@@ -1,19 +1,15 @@
-%p#notice= notice
-%p
-  %b Discountdays:
-  = @sales_term.discountDays
-%p
-  %b Discountrate:
-  = @sales_term.discountRate
-%p
-  %b Paydays:
-  = @sales_term.payDays
-%p
-  %b Salestermdescription:
-  = @sales_term.salesTermDescription
-%p
-  %b Salestermid:
-  = @sales_term.salesTermId
-= link_to 'Edit', edit_sales_term_path(@sales_term)
-%p |
-= link_to 'Back', sales_terms_path
+%label{:class => "label"}= t("activerecord.attributes.sales_term.discountDays", :default => t("activerecord.labels.discountDays", :default => "Discountdays")) + ":"
+%p= @sales_term.discountDays
+%label{:class => "label"}= t("activerecord.attributes.sales_term.discountRate", :default => t("activerecord.labels.discountRate", :default => "Discountrate")) + ":"
+%p= @sales_term.discountRate
+%label{:class => "label"}= t("activerecord.attributes.sales_term.payDays", :default => t("activerecord.labels.payDays", :default => "Paydays")) + ":"
+%p= @sales_term.payDays
+%label{:class => "label"}= t("activerecord.attributes.sales_term.salesTermDescription", :default => t("activerecord.labels.salesTermDescription", :default => "Salestermdescription")) + ":"
+%p= @sales_term.salesTermDescription
+%label{:class => "label"}= t("activerecord.attributes.sales_term.salesTermId", :default => t("activerecord.labels.salesTermId", :default => "Salestermid")) + ":"
+%p= @sales_term.salesTermId
+
+.form-actions
+  = link_to "Back", sales_terms_path, :class => 'btn'
+  = link_to "Edit", edit_sales_term_path(@sales_term), :class => 'btn'
+  = link_to "Delete", sales_term_path(@sales_term), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

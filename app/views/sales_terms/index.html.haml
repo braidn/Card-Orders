@@ -1,23 +1,21 @@
-%h1 Listing sales_terms
-%table
-  %tr
-    %th Discountdays
-    %th Discountrate
-    %th Paydays
-    %th Salestermdescription
-    %th Salestermid
-    %th
-    %th
-    %th
-  - @sales_terms.each do |sales_term|
+%h1 Sales Terms
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= sales_term.discountDays
-      %td= sales_term.discountRate
-      %td= sales_term.payDays
-      %td= sales_term.salesTermDescription
-      %td= sales_term.salesTermId
-      %td= link_to 'Show', sales_term
-      %td= link_to 'Edit', edit_sales_term_path(sales_term)
-      %td= link_to 'Destroy', sales_term, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Sales term', new_sales_term_path
+      %th ID
+      %th
+        = t("activerecord.attributes.sales_term.discountDays", :default => t("activerecord.labels.discountDays", :default => "Discountdays"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @sales_terms.each do |sales_term|
+      %tr
+        %td= sales_term.id
+        %td= link_to sales_term.discountDays, sales_term_path(sales_term)
+        %td= sales_term.created_at
+        %td
+          = link_to "Show", sales_term_path(sales_term), :class => 'btn btn-mini'
+          = link_to "Edit", edit_sales_term_path(sales_term), :class => 'btn btn-mini'
+          = link_to "Destroy", sales_term_path(sales_term), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_sales_term_path, :class => 'btn btn-primary'
