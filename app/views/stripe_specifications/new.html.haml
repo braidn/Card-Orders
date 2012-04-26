@@ -1,3 +1,2 @@
-%h1 New stripe_specification
-= render 'form'
-= link_to 'Back', stripe_specifications_path
+= form_for @stripe_specification, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

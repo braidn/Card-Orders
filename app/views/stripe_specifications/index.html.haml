@@ -1,61 +1,21 @@
-%h1 Listing stripe_specifications
-%table
-  %tr
-    %th Designby
-    %th Designrevdate
-    %th Htmagtypeid
-    %th Imagefile
-    %th Jobnumber
-    %th Magneticstripecomment
-    %th Magneticstripeid
-    %th Sidetostripe
-    %th Signaliso
-    %th Signalmax
-    %th Signalmin
-    %th Specnumber
-    %th Stripeacross
-    %th Stripemachineid
-    %th Stripeposition
-    %th Stripepositionmax
-    %th Stripepositionmin
-    %th Stripespecificationid
-    %th Stripespeed
-    %th Stripetypemin
-    %th Stripetypemax
-    %th Stripewidth
-    %th Stripewidthmin
-    %th Stripewidthmax
-    %th
-    %th
-    %th
-  - @stripe_specifications.each do |stripe_specification|
+%h1 Stripe Specifications
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= stripe_specification.designBy
-      %td= stripe_specification.designRevDate
-      %td= stripe_specification.htMagTypeId
-      %td= stripe_specification.imageFile
-      %td= stripe_specification.jobNumber
-      %td= stripe_specification.magneticStripeComment
-      %td= stripe_specification.magneticStripeId
-      %td= stripe_specification.sideToStripe
-      %td= stripe_specification.signalISO
-      %td= stripe_specification.signalMax
-      %td= stripe_specification.signalMin
-      %td= stripe_specification.specNumber
-      %td= stripe_specification.stripeAcross
-      %td= stripe_specification.stripeMachineId
-      %td= stripe_specification.stripePosition
-      %td= stripe_specification.stripePositionMax
-      %td= stripe_specification.stripePositionMin
-      %td= stripe_specification.stripeSpecificationId
-      %td= stripe_specification.stripeSpeed
-      %td= stripe_specification.stripeTypeMin
-      %td= stripe_specification.stripeTypeMax
-      %td= stripe_specification.stripeWidth
-      %td= stripe_specification.stripeWidthMin
-      %td= stripe_specification.stripeWidthMax
-      %td= link_to 'Show', stripe_specification
-      %td= link_to 'Edit', edit_stripe_specification_path(stripe_specification)
-      %td= link_to 'Destroy', stripe_specification, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Stripe specification', new_stripe_specification_path
+      %th ID
+      %th
+        = t("activerecord.attributes.stripe_specification.designBy", :default => t("activerecord.labels.designBy", :default => "Designby"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @stripe_specifications.each do |stripe_specification|
+      %tr
+        %td= stripe_specification.id
+        %td= link_to stripe_specification.designBy, stripe_specification_path(stripe_specification)
+        %td= stripe_specification.created_at
+        %td
+          = link_to "Show", stripe_specification_path(stripe_specification), :class => 'btn btn-mini'
+          = link_to "Edit", edit_stripe_specification_path(stripe_specification), :class => 'btn btn-mini'
+          = link_to "Destroy", stripe_specification_path(stripe_specification), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_stripe_specification_path, :class => 'btn btn-primary'

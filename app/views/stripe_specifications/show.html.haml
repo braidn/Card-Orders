@@ -1,76 +1,53 @@
-%p#notice= notice
-%p
-  %b Designby:
-  = @stripe_specification.designBy
-%p
-  %b Designrevdate:
-  = @stripe_specification.designRevDate
-%p
-  %b Htmagtypeid:
-  = @stripe_specification.htMagTypeId
-%p
-  %b Imagefile:
-  = @stripe_specification.imageFile
-%p
-  %b Jobnumber:
-  = @stripe_specification.jobNumber
-%p
-  %b Magneticstripecomment:
-  = @stripe_specification.magneticStripeComment
-%p
-  %b Magneticstripeid:
-  = @stripe_specification.magneticStripeId
-%p
-  %b Sidetostripe:
-  = @stripe_specification.sideToStripe
-%p
-  %b Signaliso:
-  = @stripe_specification.signalISO
-%p
-  %b Signalmax:
-  = @stripe_specification.signalMax
-%p
-  %b Signalmin:
-  = @stripe_specification.signalMin
-%p
-  %b Specnumber:
-  = @stripe_specification.specNumber
-%p
-  %b Stripeacross:
-  = @stripe_specification.stripeAcross
-%p
-  %b Stripemachineid:
-  = @stripe_specification.stripeMachineId
-%p
-  %b Stripeposition:
-  = @stripe_specification.stripePosition
-%p
-  %b Stripepositionmax:
-  = @stripe_specification.stripePositionMax
-%p
-  %b Stripepositionmin:
-  = @stripe_specification.stripePositionMin
-%p
-  %b Stripespecificationid:
-  = @stripe_specification.stripeSpecificationId
-%p
-  %b Stripespeed:
-  = @stripe_specification.stripeSpeed
-%p
-  %b Stripetypemin:
-  = @stripe_specification.stripeTypeMin
-%p
-  %b Stripetypemax:
-  = @stripe_specification.stripeTypeMax
-%p
-  %b Stripewidth:
-  = @stripe_specification.stripeWidth
-%p
-  %b Stripewidthmin:
-  = @stripe_specification.stripeWidthMin
-%p
-  %b Stripewidthmax:
-  = @stripe_specification.stripeWidthMax
-= link_to 'Edit', edit_stripe_specification_path(@stripe_specification)
-%p |
-= link_to 'Back', stripe_specifications_path
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.designBy", :default => t("activerecord.labels.designBy", :default => "Designby")) + ":"
+%p= @stripe_specification.designBy
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.designRevDate", :default => t("activerecord.labels.designRevDate", :default => "Designrevdate")) + ":"
+%p= @stripe_specification.designRevDate
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.htMagTypeId", :default => t("activerecord.labels.htMagTypeId", :default => "Htmagtypeid")) + ":"
+%p= @stripe_specification.htMagTypeId
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.imageFile", :default => t("activerecord.labels.imageFile", :default => "Imagefile")) + ":"
+%p= @stripe_specification.imageFile
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.jobNumber", :default => t("activerecord.labels.jobNumber", :default => "Jobnumber")) + ":"
+%p= @stripe_specification.jobNumber
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.magneticStripeComment", :default => t("activerecord.labels.magneticStripeComment", :default => "Magneticstripecomment")) + ":"
+%p= @stripe_specification.magneticStripeComment
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.magneticStripeId", :default => t("activerecord.labels.magneticStripeId", :default => "Magneticstripeid")) + ":"
+%p= @stripe_specification.magneticStripeId
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.sideToStripe", :default => t("activerecord.labels.sideToStripe", :default => "Sidetostripe")) + ":"
+%p= @stripe_specification.sideToStripe
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.signalISO", :default => t("activerecord.labels.signalISO", :default => "Signaliso")) + ":"
+%p= @stripe_specification.signalISO
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.signalMax", :default => t("activerecord.labels.signalMax", :default => "Signalmax")) + ":"
+%p= @stripe_specification.signalMax
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.signalMin", :default => t("activerecord.labels.signalMin", :default => "Signalmin")) + ":"
+%p= @stripe_specification.signalMin
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.specNumber", :default => t("activerecord.labels.specNumber", :default => "Specnumber")) + ":"
+%p= @stripe_specification.specNumber
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeAcross", :default => t("activerecord.labels.stripeAcross", :default => "Stripeacross")) + ":"
+%p= @stripe_specification.stripeAcross
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeMachineId", :default => t("activerecord.labels.stripeMachineId", :default => "Stripemachineid")) + ":"
+%p= @stripe_specification.stripeMachineId
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripePosition", :default => t("activerecord.labels.stripePosition", :default => "Stripeposition")) + ":"
+%p= @stripe_specification.stripePosition
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripePositionMax", :default => t("activerecord.labels.stripePositionMax", :default => "Stripepositionmax")) + ":"
+%p= @stripe_specification.stripePositionMax
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripePositionMin", :default => t("activerecord.labels.stripePositionMin", :default => "Stripepositionmin")) + ":"
+%p= @stripe_specification.stripePositionMin
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeSpecificationId", :default => t("activerecord.labels.stripeSpecificationId", :default => "Stripespecificationid")) + ":"
+%p= @stripe_specification.stripeSpecificationId
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeSpeed", :default => t("activerecord.labels.stripeSpeed", :default => "Stripespeed")) + ":"
+%p= @stripe_specification.stripeSpeed
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeTypeMin", :default => t("activerecord.labels.stripeTypeMin", :default => "Stripetypemin")) + ":"
+%p= @stripe_specification.stripeTypeMin
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeTypeMax", :default => t("activerecord.labels.stripeTypeMax", :default => "Stripetypemax")) + ":"
+%p= @stripe_specification.stripeTypeMax
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeWidth", :default => t("activerecord.labels.stripeWidth", :default => "Stripewidth")) + ":"
+%p= @stripe_specification.stripeWidth
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeWidthMin", :default => t("activerecord.labels.stripeWidthMin", :default => "Stripewidthmin")) + ":"
+%p= @stripe_specification.stripeWidthMin
+%label{:class => "label"}= t("activerecord.attributes.stripe_specification.stripeWidthMax", :default => t("activerecord.labels.stripeWidthMax", :default => "Stripewidthmax")) + ":"
+%p= @stripe_specification.stripeWidthMax
+
+.form-actions
+  = link_to "Back", stripe_specifications_path, :class => 'btn'
+  = link_to "Edit", edit_stripe_specification_path(@stripe_specification), :class => 'btn'
+  = link_to "Delete", stripe_specification_path(@stripe_specification), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

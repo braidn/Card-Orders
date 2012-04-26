@@ -1,5 +1,2 @@
-%h1 Editing stripe_specification
-= render 'form'
-= link_to 'Show', @stripe_specification
-%p |
-= link_to 'Back', stripe_specifications_path
+= form_for @stripe_specification, :html => { :class => "edit_stripe_specification form-horizontal", :id => "edit_stripe_specification" } do |f|
+  = render :partial => "form", :locals => {:f => f}
