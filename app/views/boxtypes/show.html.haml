@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Boxid:
-  = @boxtype.boxid
-%p
-  %b Boxtype:
-  = @boxtype.boxtype
-= link_to 'Edit', edit_boxtype_path(@boxtype)
-%p |
-= link_to 'Back', boxtypes_path
+%label{:class => "label"}= t("activerecord.attributes.boxtype.boxid", :default => t("activerecord.labels.boxid", :default => "Boxid")) + ":"
+%p= @boxtype.boxid
+%label{:class => "label"}= t("activerecord.attributes.boxtype.boxtype", :default => t("activerecord.labels.boxtype", :default => "Boxtype")) + ":"
+%p= @boxtype.boxtype
+
+.form-actions
+  = link_to "Back", boxtypes_path, :class => 'btn'
+  = link_to "Edit", edit_boxtype_path(@boxtype), :class => 'btn'
+  = link_to "Delete", boxtype_path(@boxtype), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

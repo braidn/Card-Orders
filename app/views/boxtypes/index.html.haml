@@ -1,17 +1,21 @@
-%h1 Listing boxtypes
-%table
-  %tr
-    %th Boxid
-    %th Boxtype
-    %th
-    %th
-    %th
-  - @boxtypes.each do |boxtype|
+%h1 Boxtypes
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= boxtype.boxid
-      %td= boxtype.boxtype
-      %td= link_to 'Show', boxtype
-      %td= link_to 'Edit', edit_boxtype_path(boxtype)
-      %td= link_to 'Destroy', boxtype, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Boxtype', new_boxtype_path
+      %th ID
+      %th
+        = t("activerecord.attributes.boxtype.boxid", :default => t("activerecord.labels.boxid", :default => "Boxid"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @boxtypes.each do |boxtype|
+      %tr
+        %td= boxtype.id
+        %td= link_to boxtype.boxid, boxtype_path(boxtype)
+        %td= boxtype.created_at
+        %td
+          = link_to "Show", boxtype_path(boxtype), :class => 'btn btn-mini'
+          = link_to "Edit", edit_boxtype_path(boxtype), :class => 'btn btn-mini'
+          = link_to "Destroy", boxtype_path(boxtype), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_boxtype_path, :class => 'btn btn-primary'

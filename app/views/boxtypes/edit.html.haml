@@ -1,5 +1,2 @@
-%h1 Editing boxtype
-= render 'form'
-= link_to 'Show', @boxtype
-%p |
-= link_to 'Back', boxtypes_path
+= form_for @boxtype, :html => { :class => "edit_boxtype form-horizontal", :id => "edit_boxtype" } do |f|
+  = render :partial => "form", :locals => {:f => f}
