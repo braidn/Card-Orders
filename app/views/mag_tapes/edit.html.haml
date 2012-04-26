@@ -1,5 +1,2 @@
-%h1 Editing mag_tape
-= render 'form'
-= link_to 'Show', @mag_tape
-%p |
-= link_to 'Back', mag_tapes_path
+= form_for @mag_tape, :html => { :class => "edit_mag_tape form-horizontal", :id => "edit_mag_tape" } do |f|
+  = render :partial => "form", :locals => {:f => f}

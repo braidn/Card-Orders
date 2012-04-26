@@ -1,28 +1,21 @@
-%p#notice= notice
-%p
-  %b Costpermsi:
-  = @mag_tape.costPerMsi
-%p
-  %b Costperroll:
-  = @mag_tape.costPerRoll
-%p
-  %b Typecate:
-  = @mag_tape.typeCate
-%p
-  %b Tapedescription:
-  = @mag_tape.tapeDescription
-%p
-  %b Tapeid:
-  = @mag_tape.tapeId
-%p
-  %b Tapelength:
-  = @mag_tape.tapeLength
-%p
-  %b Tapetype:
-  = @mag_tape.tapeType
-%p
-  %b Tapewidth:
-  = @mag_tape.tapeWidth
-= link_to 'Edit', edit_mag_tape_path(@mag_tape)
-%p |
-= link_to 'Back', mag_tapes_path
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.costPerMsi", :default => t("activerecord.labels.costPerMsi", :default => "Costpermsi")) + ":"
+%p= @mag_tape.costPerMsi
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.costPerRoll", :default => t("activerecord.labels.costPerRoll", :default => "Costperroll")) + ":"
+%p= @mag_tape.costPerRoll
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.typeCate", :default => t("activerecord.labels.typeCate", :default => "Typecate")) + ":"
+%p= @mag_tape.typeCate
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.tapeDescription", :default => t("activerecord.labels.tapeDescription", :default => "Tapedescription")) + ":"
+%p= @mag_tape.tapeDescription
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.tapeId", :default => t("activerecord.labels.tapeId", :default => "Tapeid")) + ":"
+%p= @mag_tape.tapeId
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.tapeLength", :default => t("activerecord.labels.tapeLength", :default => "Tapelength")) + ":"
+%p= @mag_tape.tapeLength
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.tapeType", :default => t("activerecord.labels.tapeType", :default => "Tapetype")) + ":"
+%p= @mag_tape.tapeType
+%label{:class => "label"}= t("activerecord.attributes.mag_tape.tapeWidth", :default => t("activerecord.labels.tapeWidth", :default => "Tapewidth")) + ":"
+%p= @mag_tape.tapeWidth
+
+.form-actions
+  = link_to "Back", mag_tapes_path, :class => 'btn'
+  = link_to "Edit", edit_mag_tape_path(@mag_tape), :class => 'btn'
+  = link_to "Delete", mag_tape_path(@mag_tape), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

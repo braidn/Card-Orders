@@ -1,3 +1,2 @@
-%h1 New mag_tape
-= render 'form'
-= link_to 'Back', mag_tapes_path
+= form_for @mag_tape, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}
