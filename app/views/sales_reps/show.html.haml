@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Orderid:
-  = @sales_rep.orderId
-%p
-  %b Name:
-  = @sales_rep.name
-= link_to 'Edit', edit_sales_rep_path(@sales_rep)
-%p |
-= link_to 'Back', sales_reps_path
+%label{:class => "label"}= t("activerecord.attributes.sales_rep.orderId", :default => t("activerecord.labels.orderId", :default => "Orderid")) + ":"
+%p= @sales_rep.orderId
+%label{:class => "label"}= t("activerecord.attributes.sales_rep.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @sales_rep.name
+
+.form-actions
+  = link_to "Back", sales_reps_path, :class => 'btn'
+  = link_to "Edit", edit_sales_rep_path(@sales_rep), :class => 'btn'
+  = link_to "Delete", sales_rep_path(@sales_rep), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

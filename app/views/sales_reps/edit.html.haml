@@ -1,5 +1,2 @@
-%h1 Editing sales_rep
-= render 'form'
-= link_to 'Show', @sales_rep
-%p |
-= link_to 'Back', sales_reps_path
+= form_for @sales_rep, :html => { :class => "edit_sales_rep form-horizontal", :id => "edit_sales_rep" } do |f|
+  = render :partial => "form", :locals => {:f => f}

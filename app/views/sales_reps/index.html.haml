@@ -1,17 +1,21 @@
-%h1 Listing sales_reps
-%table
-  %tr
-    %th Orderid
-    %th Name
-    %th
-    %th
-    %th
-  - @sales_reps.each do |sales_rep|
+%h1 Sales Reps
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= sales_rep.orderId
-      %td= sales_rep.name
-      %td= link_to 'Show', sales_rep
-      %td= link_to 'Edit', edit_sales_rep_path(sales_rep)
-      %td= link_to 'Destroy', sales_rep, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Sales rep', new_sales_rep_path
+      %th ID
+      %th
+        = t("activerecord.attributes.sales_rep.orderId", :default => t("activerecord.labels.orderId", :default => "Orderid"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @sales_reps.each do |sales_rep|
+      %tr
+        %td= sales_rep.id
+        %td= link_to sales_rep.orderId, sales_rep_path(sales_rep)
+        %td= sales_rep.created_at
+        %td
+          = link_to "Show", sales_rep_path(sales_rep), :class => 'btn btn-mini'
+          = link_to "Edit", edit_sales_rep_path(sales_rep), :class => 'btn btn-mini'
+          = link_to "Destroy", sales_rep_path(sales_rep), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_sales_rep_path, :class => 'btn btn-primary'
