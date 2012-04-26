@@ -1,43 +1,31 @@
-%p#notice= notice
-%p
-  %b Addamortizequantity:
-  = @tooling_specification.addAmortizeQuantity
-%p
-  %b Addtoolingcost:
-  = @tooling_specification.addToolingCost
-%p
-  %b Designby:
-  = @tooling_specification.designBy
-%p
-  %b Designrevdate:
-  = @tooling_specification.designRevDate
-%p
-  %b Diearound:
-  = @tooling_specification.dieAround
-%p
-  %b Dieid:
-  = @tooling_specification.dieId
-%p
-  %b Diesc:
-  = @tooling_specification.dieSc
-%p
-  %b Imagefile:
-  = @tooling_specification.imageFile
-%p
-  %b Jobnumber:
-  = @tooling_specification.jobNumber
-%p
-  %b Newdierequired:
-  = @tooling_specification.newDieRequired
-%p
-  %b Toolingcomment:
-  = @tooling_specification.toolingComment
-%p
-  %b Toolsc:
-  = @tooling_specification.toolSc
-%p
-  %b Toolspecificationid:
-  = @tooling_specification.toolSpecificationId
-= link_to 'Edit', edit_tooling_specification_path(@tooling_specification)
-%p |
-= link_to 'Back', tooling_specifications_path
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.addAmortizeQuantity", :default => t("activerecord.labels.addAmortizeQuantity", :default => "Addamortizequantity")) + ":"
+%p= @tooling_specification.addAmortizeQuantity
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.addToolingCost", :default => t("activerecord.labels.addToolingCost", :default => "Addtoolingcost")) + ":"
+%p= @tooling_specification.addToolingCost
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.designBy", :default => t("activerecord.labels.designBy", :default => "Designby")) + ":"
+%p= @tooling_specification.designBy
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.designRevDate", :default => t("activerecord.labels.designRevDate", :default => "Designrevdate")) + ":"
+%p= @tooling_specification.designRevDate
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.dieAround", :default => t("activerecord.labels.dieAround", :default => "Diearound")) + ":"
+%p= @tooling_specification.dieAround
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.dieId", :default => t("activerecord.labels.dieId", :default => "Dieid")) + ":"
+%p= @tooling_specification.dieId
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.dieSc", :default => t("activerecord.labels.dieSc", :default => "Diesc")) + ":"
+%p= @tooling_specification.dieSc
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.imageFile", :default => t("activerecord.labels.imageFile", :default => "Imagefile")) + ":"
+%p= @tooling_specification.imageFile
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.jobNumber", :default => t("activerecord.labels.jobNumber", :default => "Jobnumber")) + ":"
+%p= @tooling_specification.jobNumber
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.newDieRequired", :default => t("activerecord.labels.newDieRequired", :default => "Newdierequired")) + ":"
+%p= @tooling_specification.newDieRequired
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.toolingComment", :default => t("activerecord.labels.toolingComment", :default => "Toolingcomment")) + ":"
+%p= @tooling_specification.toolingComment
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.toolSc", :default => t("activerecord.labels.toolSc", :default => "Toolsc")) + ":"
+%p= @tooling_specification.toolSc
+%label{:class => "label"}= t("activerecord.attributes.tooling_specification.toolSpecificationId", :default => t("activerecord.labels.toolSpecificationId", :default => "Toolspecificationid")) + ":"
+%p= @tooling_specification.toolSpecificationId
+
+.form-actions
+  = link_to "Back", tooling_specifications_path, :class => 'btn'
+  = link_to "Edit", edit_tooling_specification_path(@tooling_specification), :class => 'btn'
+  = link_to "Delete", tooling_specification_path(@tooling_specification), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

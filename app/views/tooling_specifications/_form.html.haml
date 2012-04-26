@@ -1,63 +1,59 @@
-= form_for(@tooling_specification) do |f|
-  - if @tooling_specification.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@tooling_specification.errors.count, "error")
-        prohibited this tooling_specification from being saved:
-      %ul
-        - @tooling_specification.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :addAmortizeQuantity
-    %br/
-    = f.number_field :addAmortizeQuantity
-  .field
-    = f.label :addToolingCost
-    %br/
-    = f.number_field :addToolingCost
-  .field
-    = f.label :designBy
-    %br/
-    = f.text_field :designBy
-  .field
-    = f.label :designRevDate
-    %br/
-    = f.datetime_select :designRevDate
-  .field
-    = f.label :dieAround
-    %br/
-    = f.number_field :dieAround
-  .field
-    = f.label :dieId
-    %br/
-    = f.number_field :dieId
-  .field
-    = f.label :dieSc
-    %br/
-    = f.text_field :dieSc
-  .field
-    = f.label :imageFile
-    %br/
-    = f.text_field :imageFile
-  .field
-    = f.label :jobNumber
-    %br/
-    = f.number_field :jobNumber
-  .field
-    = f.label :newDieRequired
-    %br/
-    = f.text_field :newDieRequired
-  .field
-    = f.label :toolingComment
-    %br/
-    = f.text_area :toolingComment
-  .field
-    = f.label :toolSc
-    %br/
-    = f.text_field :toolSc
-  .field
-    = f.label :toolSpecificationId
-    %br/
-    = f.text_field :toolSpecificationId
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Tooling Specification
+  .control-group
+    = f.label :addAmortizeQuantity, :class => 'control-label'
+    .controls
+      = f.number_field :addAmortizeQuantity, :class => 'number_field'
+  .control-group
+    = f.label :addToolingCost, :class => 'control-label'
+    .controls
+      = f.number_field :addToolingCost, :class => 'number_field'
+  .control-group
+    = f.label :designBy, :class => 'control-label'
+    .controls
+      = f.text_field :designBy, :class => 'text_field'
+  .control-group
+    = f.label :designRevDate, :class => 'control-label'
+    .controls
+      = f.datetime_select :designRevDate, :class => 'datetime_select'
+  .control-group
+    = f.label :dieAround, :class => 'control-label'
+    .controls
+      = f.number_field :dieAround, :class => 'number_field'
+  .control-group
+    = f.label :dieId, :class => 'control-label'
+    .controls
+      = f.number_field :dieId, :class => 'number_field'
+  .control-group
+    = f.label :dieSc, :class => 'control-label'
+    .controls
+      = f.text_field :dieSc, :class => 'text_field'
+  .control-group
+    = f.label :imageFile, :class => 'control-label'
+    .controls
+      = f.text_field :imageFile, :class => 'text_field'
+  .control-group
+    = f.label :jobNumber, :class => 'control-label'
+    .controls
+      = f.number_field :jobNumber, :class => 'number_field'
+  .control-group
+    = f.label :newDieRequired, :class => 'control-label'
+    .controls
+      = f.text_field :newDieRequired, :class => 'text_field'
+  .control-group
+    = f.label :toolingComment, :class => 'control-label'
+    .controls
+      = f.text_area :toolingComment, :class => 'text_area'
+  .control-group
+    = f.label :toolSc, :class => 'control-label'
+    .controls
+      = f.text_field :toolSc, :class => 'text_field'
+  .control-group
+    = f.label :toolSpecificationId, :class => 'control-label'
+    .controls
+      = f.text_field :toolSpecificationId, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", tooling_specifications_path, :class => 'btn'

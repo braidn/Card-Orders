@@ -1,5 +1,2 @@
-%h1 Editing tooling_specification
-= render 'form'
-= link_to 'Show', @tooling_specification
-%p |
-= link_to 'Back', tooling_specifications_path
+= form_for @tooling_specification, :html => { :class => "edit_tooling_specification form-horizontal", :id => "edit_tooling_specification" } do |f|
+  = render :partial => "form", :locals => {:f => f}
