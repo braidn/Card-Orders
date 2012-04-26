@@ -1,5 +1,2 @@
-%h1 Editing dietype
-= render 'form'
-= link_to 'Show', @dietype
-%p |
-= link_to 'Back', dietypes_path
+= form_for @dietype, :html => { :class => "edit_dietype form-horizontal", :id => "edit_dietype" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,15 +1,21 @@
-%h1 Listing dietypes
-%table
-  %tr
-    %th Diedescription
-    %th
-    %th
-    %th
-  - @dietypes.each do |dietype|
+%h1 Dietypes
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= dietype.dieDescription
-      %td= link_to 'Show', dietype
-      %td= link_to 'Edit', edit_dietype_path(dietype)
-      %td= link_to 'Destroy', dietype, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Dietype', new_dietype_path
+      %th ID
+      %th
+        = t("activerecord.attributes.dietype.dieDescription", :default => t("activerecord.labels.dieDescription", :default => "Diedescription"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @dietypes.each do |dietype|
+      %tr
+        %td= dietype.id
+        %td= link_to dietype.dieDescription, dietype_path(dietype)
+        %td= dietype.created_at
+        %td
+          = link_to "Show", dietype_path(dietype), :class => 'btn btn-mini'
+          = link_to "Edit", edit_dietype_path(dietype), :class => 'btn btn-mini'
+          = link_to "Destroy", dietype_path(dietype), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_dietype_path, :class => 'btn btn-primary'
