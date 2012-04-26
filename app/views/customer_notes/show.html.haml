@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Company:
-  = @customer_note.company
-%p
-  %b Noteinfo:
-  = @customer_note.noteInfo
-= link_to 'Edit', edit_customer_note_path(@customer_note)
-%p |
-= link_to 'Back', customer_notes_path
+%label{:class => "label"}= t("activerecord.attributes.customer_note.company", :default => t("activerecord.labels.company", :default => "Company")) + ":"
+%p= @customer_note.company
+%label{:class => "label"}= t("activerecord.attributes.customer_note.noteInfo", :default => t("activerecord.labels.noteInfo", :default => "Noteinfo")) + ":"
+%p= @customer_note.noteInfo
+
+.form-actions
+  = link_to "Back", customer_notes_path, :class => 'btn'
+  = link_to "Edit", edit_customer_note_path(@customer_note), :class => 'btn'
+  = link_to "Delete", customer_note_path(@customer_note), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

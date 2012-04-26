@@ -1,17 +1,21 @@
-%h1 Listing customer_notes
-%table
-  %tr
-    %th Company
-    %th Noteinfo
-    %th
-    %th
-    %th
-  - @customer_notes.each do |customer_note|
+%h1 Customer Notes
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= customer_note.company
-      %td= customer_note.noteInfo
-      %td= link_to 'Show', customer_note
-      %td= link_to 'Edit', edit_customer_note_path(customer_note)
-      %td= link_to 'Destroy', customer_note, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Customer note', new_customer_note_path
+      %th ID
+      %th
+        = t("activerecord.attributes.customer_note.company", :default => t("activerecord.labels.company", :default => "Company"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @customer_notes.each do |customer_note|
+      %tr
+        %td= customer_note.id
+        %td= link_to customer_note.company, customer_note_path(customer_note)
+        %td= customer_note.created_at
+        %td
+          = link_to "Show", customer_note_path(customer_note), :class => 'btn btn-mini'
+          = link_to "Edit", edit_customer_note_path(customer_note), :class => 'btn btn-mini'
+          = link_to "Destroy", customer_note_path(customer_note), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_customer_note_path, :class => 'btn btn-primary'

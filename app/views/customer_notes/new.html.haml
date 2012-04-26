@@ -1,3 +1,2 @@
-%h1 New customer_note
-= render 'form'
-= link_to 'Back', customer_notes_path
+= form_for @customer_note, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}
