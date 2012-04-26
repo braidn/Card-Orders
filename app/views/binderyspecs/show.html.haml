@@ -1,37 +1,27 @@
-%p#notice= notice
-%p
-  %b Cardsperunit:
-  = @binderyspec.cardsperunit
-%p
-  %b Comment:
-  = @binderyspec.comment
-%p
-  %b Numberofpersons:
-  = @binderyspec.numberofpersons
-%p
-  %b Quantityperhour:
-  = @binderyspec.quantityperhour
-%p
-  %b Unitmaterialcost:
-  = @binderyspec.unitmaterialcost
-%p
-  %b Jobnumber:
-  = @binderyspec.jobnumber
-%p
-  %b Newboxrequired:
-  = @binderyspec.newboxrequired
-%p
-  %b Packageamoritizequantity:
-  = @binderyspec.packageamoritizequantity
-%p
-  %b Packagecomment:
-  = @binderyspec.packagecomment
-%p
-  %b Packageinnerboxid:
-  = @binderyspec.packageinnerboxid
-%p
-  %b Packageouterboxid:
-  = @binderyspec.packageouterboxid
-= link_to 'Edit', edit_binderyspec_path(@binderyspec)
-%p |
-= link_to 'Back', binderyspecs_path
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.cardsperunit", :default => t("activerecord.labels.cardsperunit", :default => "Cardsperunit")) + ":"
+%p= @binderyspec.cardsperunit
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.comment", :default => t("activerecord.labels.comment", :default => "Comment")) + ":"
+%p= @binderyspec.comment
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.numberofpersons", :default => t("activerecord.labels.numberofpersons", :default => "Numberofpersons")) + ":"
+%p= @binderyspec.numberofpersons
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.quantityperhour", :default => t("activerecord.labels.quantityperhour", :default => "Quantityperhour")) + ":"
+%p= @binderyspec.quantityperhour
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.unitmaterialcost", :default => t("activerecord.labels.unitmaterialcost", :default => "Unitmaterialcost")) + ":"
+%p= @binderyspec.unitmaterialcost
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.jobnumber", :default => t("activerecord.labels.jobnumber", :default => "Jobnumber")) + ":"
+%p= @binderyspec.jobnumber
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.newboxrequired", :default => t("activerecord.labels.newboxrequired", :default => "Newboxrequired")) + ":"
+%p= @binderyspec.newboxrequired
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.packageamoritizequantity", :default => t("activerecord.labels.packageamoritizequantity", :default => "Packageamoritizequantity")) + ":"
+%p= @binderyspec.packageamoritizequantity
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.packagecomment", :default => t("activerecord.labels.packagecomment", :default => "Packagecomment")) + ":"
+%p= @binderyspec.packagecomment
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.packageinnerboxid", :default => t("activerecord.labels.packageinnerboxid", :default => "Packageinnerboxid")) + ":"
+%p= @binderyspec.packageinnerboxid
+%label{:class => "label"}= t("activerecord.attributes.binderyspec.packageouterboxid", :default => t("activerecord.labels.packageouterboxid", :default => "Packageouterboxid")) + ":"
+%p= @binderyspec.packageouterboxid
+
+.form-actions
+  = link_to "Back", binderyspecs_path, :class => 'btn'
+  = link_to "Edit", edit_binderyspec_path(@binderyspec), :class => 'btn'
+  = link_to "Delete", binderyspec_path(@binderyspec), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

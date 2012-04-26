@@ -1,35 +1,21 @@
-%h1 Listing binderyspecs
-%table
-  %tr
-    %th Cardsperunit
-    %th Comment
-    %th Numberofpersons
-    %th Quantityperhour
-    %th Unitmaterialcost
-    %th Jobnumber
-    %th Newboxrequired
-    %th Packageamoritizequantity
-    %th Packagecomment
-    %th Packageinnerboxid
-    %th Packageouterboxid
-    %th
-    %th
-    %th
-  - @binderyspecs.each do |binderyspec|
+%h1 Binderyspecs
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= binderyspec.cardsperunit
-      %td= binderyspec.comment
-      %td= binderyspec.numberofpersons
-      %td= binderyspec.quantityperhour
-      %td= binderyspec.unitmaterialcost
-      %td= binderyspec.jobnumber
-      %td= binderyspec.newboxrequired
-      %td= binderyspec.packageamoritizequantity
-      %td= binderyspec.packagecomment
-      %td= binderyspec.packageinnerboxid
-      %td= binderyspec.packageouterboxid
-      %td= link_to 'Show', binderyspec
-      %td= link_to 'Edit', edit_binderyspec_path(binderyspec)
-      %td= link_to 'Destroy', binderyspec, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Binderyspec', new_binderyspec_path
+      %th ID
+      %th
+        = t("activerecord.attributes.binderyspec.cardsperunit", :default => t("activerecord.labels.cardsperunit", :default => "Cardsperunit"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @binderyspecs.each do |binderyspec|
+      %tr
+        %td= binderyspec.id
+        %td= link_to binderyspec.cardsperunit, binderyspec_path(binderyspec)
+        %td= binderyspec.created_at
+        %td
+          = link_to "Show", binderyspec_path(binderyspec), :class => 'btn btn-mini'
+          = link_to "Edit", edit_binderyspec_path(binderyspec), :class => 'btn btn-mini'
+          = link_to "Destroy", binderyspec_path(binderyspec), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_binderyspec_path, :class => 'btn btn-primary'

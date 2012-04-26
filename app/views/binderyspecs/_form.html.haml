@@ -1,55 +1,51 @@
-= form_for(@binderyspec) do |f|
-  - if @binderyspec.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@binderyspec.errors.count, "error")
-        prohibited this binderyspec from being saved:
-      %ul
-        - @binderyspec.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :cardsperunit
-    %br/
-    = f.number_field :cardsperunit
-  .field
-    = f.label :comment
-    %br/
-    = f.text_area :comment
-  .field
-    = f.label :numberofpersons
-    %br/
-    = f.number_field :numberofpersons
-  .field
-    = f.label :quantityperhour
-    %br/
-    = f.number_field :quantityperhour
-  .field
-    = f.label :unitmaterialcost
-    %br/
-    = f.number_field :unitmaterialcost
-  .field
-    = f.label :jobnumber
-    %br/
-    = f.text_field :jobnumber
-  .field
-    = f.label :newboxrequired
-    %br/
-    = f.text_field :newboxrequired
-  .field
-    = f.label :packageamoritizequantity
-    %br/
-    = f.number_field :packageamoritizequantity
-  .field
-    = f.label :packagecomment
-    %br/
-    = f.text_area :packagecomment
-  .field
-    = f.label :packageinnerboxid
-    %br/
-    = f.text_field :packageinnerboxid
-  .field
-    = f.label :packageouterboxid
-    %br/
-    = f.text_field :packageouterboxid
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Binderyspec
+  .control-group
+    = f.label :cardsperunit, :class => 'control-label'
+    .controls
+      = f.number_field :cardsperunit, :class => 'number_field'
+  .control-group
+    = f.label :comment, :class => 'control-label'
+    .controls
+      = f.text_area :comment, :class => 'text_area'
+  .control-group
+    = f.label :numberofpersons, :class => 'control-label'
+    .controls
+      = f.number_field :numberofpersons, :class => 'number_field'
+  .control-group
+    = f.label :quantityperhour, :class => 'control-label'
+    .controls
+      = f.number_field :quantityperhour, :class => 'number_field'
+  .control-group
+    = f.label :unitmaterialcost, :class => 'control-label'
+    .controls
+      = f.number_field :unitmaterialcost, :class => 'number_field'
+  .control-group
+    = f.label :jobnumber, :class => 'control-label'
+    .controls
+      = f.text_field :jobnumber, :class => 'text_field'
+  .control-group
+    = f.label :newboxrequired, :class => 'control-label'
+    .controls
+      = f.text_field :newboxrequired, :class => 'text_field'
+  .control-group
+    = f.label :packageamoritizequantity, :class => 'control-label'
+    .controls
+      = f.number_field :packageamoritizequantity, :class => 'number_field'
+  .control-group
+    = f.label :packagecomment, :class => 'control-label'
+    .controls
+      = f.text_area :packagecomment, :class => 'text_area'
+  .control-group
+    = f.label :packageinnerboxid, :class => 'control-label'
+    .controls
+      = f.text_field :packageinnerboxid, :class => 'text_field'
+  .control-group
+    = f.label :packageouterboxid, :class => 'control-label'
+    .controls
+      = f.text_field :packageouterboxid, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", binderyspecs_path, :class => 'btn'
