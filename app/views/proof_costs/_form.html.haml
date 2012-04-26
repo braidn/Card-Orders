@@ -1,23 +1,19 @@
-= form_for(@proof_cost) do |f|
-  - if @proof_cost.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@proof_cost.errors.count, "error")
-        prohibited this proof_cost from being saved:
-      %ul
-        - @proof_cost.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :proofCastId
-    %br/
-    = f.number_field :proofCastId
-  .field
-    = f.label :proofCost
-    %br/
-    = f.number_field :proofCost
-  .field
-    = f.label :proofDescription
-    %br/
-    = f.text_field :proofDescription
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Proof Cost
+  .control-group
+    = f.label :proofCastId, :class => 'control-label'
+    .controls
+      = f.number_field :proofCastId, :class => 'number_field'
+  .control-group
+    = f.label :proofCost, :class => 'control-label'
+    .controls
+      = f.number_field :proofCost, :class => 'number_field'
+  .control-group
+    = f.label :proofDescription, :class => 'control-label'
+    .controls
+      = f.text_field :proofDescription, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", proof_costs_path, :class => 'btn'

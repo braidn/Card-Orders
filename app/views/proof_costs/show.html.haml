@@ -1,13 +1,11 @@
-%p#notice= notice
-%p
-  %b Proofcastid:
-  = @proof_cost.proofCastId
-%p
-  %b Proofcost:
-  = @proof_cost.proofCost
-%p
-  %b Proofdescription:
-  = @proof_cost.proofDescription
-= link_to 'Edit', edit_proof_cost_path(@proof_cost)
-%p |
-= link_to 'Back', proof_costs_path
+%label{:class => "label"}= t("activerecord.attributes.proof_cost.proofCastId", :default => t("activerecord.labels.proofCastId", :default => "Proofcastid")) + ":"
+%p= @proof_cost.proofCastId
+%label{:class => "label"}= t("activerecord.attributes.proof_cost.proofCost", :default => t("activerecord.labels.proofCost", :default => "Proofcost")) + ":"
+%p= @proof_cost.proofCost
+%label{:class => "label"}= t("activerecord.attributes.proof_cost.proofDescription", :default => t("activerecord.labels.proofDescription", :default => "Proofdescription")) + ":"
+%p= @proof_cost.proofDescription
+
+.form-actions
+  = link_to "Back", proof_costs_path, :class => 'btn'
+  = link_to "Edit", edit_proof_cost_path(@proof_cost), :class => 'btn'
+  = link_to "Delete", proof_cost_path(@proof_cost), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

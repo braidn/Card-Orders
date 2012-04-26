@@ -1,5 +1,2 @@
-%h1 Editing proof_cost
-= render 'form'
-= link_to 'Show', @proof_cost
-%p |
-= link_to 'Back', proof_costs_path
+= form_for @proof_cost, :html => { :class => "edit_proof_cost form-horizontal", :id => "edit_proof_cost" } do |f|
+  = render :partial => "form", :locals => {:f => f}

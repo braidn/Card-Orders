@@ -1,19 +1,21 @@
-%h1 Listing proof_costs
-%table
-  %tr
-    %th Proofcastid
-    %th Proofcost
-    %th Proofdescription
-    %th
-    %th
-    %th
-  - @proof_costs.each do |proof_cost|
+%h1 Proof Costs
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= proof_cost.proofCastId
-      %td= proof_cost.proofCost
-      %td= proof_cost.proofDescription
-      %td= link_to 'Show', proof_cost
-      %td= link_to 'Edit', edit_proof_cost_path(proof_cost)
-      %td= link_to 'Destroy', proof_cost, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Proof cost', new_proof_cost_path
+      %th ID
+      %th
+        = t("activerecord.attributes.proof_cost.proofCastId", :default => t("activerecord.labels.proofCastId", :default => "Proofcastid"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @proof_costs.each do |proof_cost|
+      %tr
+        %td= proof_cost.id
+        %td= link_to proof_cost.proofCastId, proof_cost_path(proof_cost)
+        %td= proof_cost.created_at
+        %td
+          = link_to "Show", proof_cost_path(proof_cost), :class => 'btn btn-mini'
+          = link_to "Edit", edit_proof_cost_path(proof_cost), :class => 'btn btn-mini'
+          = link_to "Destroy", proof_cost_path(proof_cost), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_proof_cost_path, :class => 'btn btn-primary'
