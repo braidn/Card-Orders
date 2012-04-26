@@ -1,199 +1,135 @@
-%p#notice= notice
-%p
-  %b Ampmaterial:
-  = @press_standard.ampMaterial
-%p
-  %b Amptime:
-  = @press_standard.ampTime
-%p
-  %b Colormaterial:
-  = @press_standard.colorMaterial
-%p
-  %b Colortime:
-  = @press_standard.colorTime
-%p
-  %b Colorwaste:
-  = @press_standard.colorWaste
-%p
-  %b Diematerial:
-  = @press_standard.dieMaterial
-%p
-  %b Diespeed:
-  = @press_standard.dieSpeed
-%p
-  %b Dietime:
-  = @press_standard.dieTime
-%p
-  %b Diewaste:
-  = @press_standard.dieWaste
-%p
-  %b Foldermaterial:
-  = @press_standard.folderMaterial
-%p
-  %b Folderspeed:
-  = @press_standard.folderSpeed
-%p
-  %b Foldertime:
-  = @press_standard.folderTime
-%p
-  %b Folderwaste:
-  = @press_standard.folderWaste
-%p
-  %b Headmaterial:
-  = @press_standard.headMaterial
-%p
-  %b Headtime:
-  = @press_standard.headTime
-%p
-  %b Hotstampmaterial:
-  = @press_standard.hotStampMaterial
-%p
-  %b Hotstampspeed:
-  = @press_standard.hotStampSpeed
-%p
-  %b Hotstamptime:
-  = @press_standard.hotStampTime
-%p
-  %b Hotstampwaste:
-  = @press_standard.hotStampWaste
-%p
-  %b Inktype:
-  = @press_standard.inkType
-%p
-  %b Inktypesig:
-  = @press_standard.inkTypeSig
-%p
-  %b Inktypevarnish:
-  = @press_standard.inkTypeVarnish
-%p
-  %b Inkmaterial:
-  = @press_standard.inkMaterial
-%p
-  %b Inktime:
-  = @press_standard.inkTime
-%p
-  %b Inlinematerial:
-  = @press_standard.inlineMaterial
-%p
-  %b Inlinespeed:
-  = @press_standard.inlineSpeed
-%p
-  %b Inlinetime:
-  = @press_standard.inlineTime
-%p
-  %b Inlinewaste:
-  = @press_standard.inlineWaste
-%p
-  %b Insertionmaterial:
-  = @press_standard.insertionMaterial
-%p
-  %b Insertionspeed:
-  = @press_standard.insertionSpeed
-%p
-  %b Insertiontime:
-  = @press_standard.insertionTime
-%p
-  %b Laminationmaterial:
-  = @press_standard.laminationMaterial
-%p
-  %b Laminationspeed:
-  = @press_standard.laminationSpeed
-%p
-  %b Laminationtime:
-  = @press_standard.laminationTime
-%p
-  %b Laminationwaste:
-  = @press_standard.laminationWaste
-%p
-  %b Machinename:
-  = @press_standard.machineName
-%p
-  %b Machineid:
-  = @press_standard.machineID
-%p
-  %b Machinelabor:
-  = @press_standard.machineLabor
-%p
-  %b Machineoverhead:
-  = @press_standard.machineOverhead
-%p
-  %b Machinepitch:
-  = @press_standard.machinePitch
-%p
-  %b Machinespeed:
-  = @press_standard.machineSpeed
-%p
-  %b Machinetype:
-  = @press_standard.machineType
-%p
-  %b Machinewidth:
-  = @press_standard.machineWidth
-%p
-  %b Numbermaterial:
-  = @press_standard.numberMaterial
-%p
-  %b Numberspeed:
-  = @press_standard.numberSpeed
-%p
-  %b Numbertime:
-  = @press_standard.numberTime
-%p
-  %b Numberwaste:
-  = @press_standard.numberWaste
-%p
-  %b Platechangewaste:
-  = @press_standard.plateChangeWaste
-%p
-  %b Platechangematerial:
-  = @press_standard.plateChangeMaterial
-%p
-  %b Platechangetime:
-  = @press_standard.plateChangeTime
-%p
-  %b Presssetupmaterial:
-  = @press_standard.pressSetupMaterial
-%p
-  %b Presssetuptime:
-  = @press_standard.pressSetupTime
-%p
-  %b Printstations:
-  = @press_standard.printStations
-%p
-  %b Rollchangematerial:
-  = @press_standard.rollChangeMaterial
-%p
-  %b Rollchangetime:
-  = @press_standard.rollChangeTime
-%p
-  %b Rollchangewaste:
-  = @press_standard.rollChangeWaste
-%p
-  %b Slitmaterial:
-  = @press_standard.slitMaterial
-%p
-  %b Slitspeed:
-  = @press_standard.slitSpeed
-%p
-  %b Slittime:
-  = @press_standard.slitTime
-%p
-  %b Slitwaste:
-  = @press_standard.slitWaste
-%p
-  %b Trim:
-  = @press_standard.trim
-%p
-  %b Turretmaterial:
-  = @press_standard.turretMaterial
-%p
-  %b Turretspeed:
-  = @press_standard.turretSpeed
-%p
-  %b Turrettime:
-  = @press_standard.turretTime
-%p
-  %b Turretwaste:
-  = @press_standard.turretWaste
-= link_to 'Edit', edit_press_standard_path(@press_standard)
-%p |
-= link_to 'Back', press_standards_path
+%label{:class => "label"}= t("activerecord.attributes.press_standard.ampMaterial", :default => t("activerecord.labels.ampMaterial", :default => "Ampmaterial")) + ":"
+%p= @press_standard.ampMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.ampTime", :default => t("activerecord.labels.ampTime", :default => "Amptime")) + ":"
+%p= @press_standard.ampTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.colorMaterial", :default => t("activerecord.labels.colorMaterial", :default => "Colormaterial")) + ":"
+%p= @press_standard.colorMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.colorTime", :default => t("activerecord.labels.colorTime", :default => "Colortime")) + ":"
+%p= @press_standard.colorTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.colorWaste", :default => t("activerecord.labels.colorWaste", :default => "Colorwaste")) + ":"
+%p= @press_standard.colorWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.dieMaterial", :default => t("activerecord.labels.dieMaterial", :default => "Diematerial")) + ":"
+%p= @press_standard.dieMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.dieSpeed", :default => t("activerecord.labels.dieSpeed", :default => "Diespeed")) + ":"
+%p= @press_standard.dieSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.dieTime", :default => t("activerecord.labels.dieTime", :default => "Dietime")) + ":"
+%p= @press_standard.dieTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.dieWaste", :default => t("activerecord.labels.dieWaste", :default => "Diewaste")) + ":"
+%p= @press_standard.dieWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.folderMaterial", :default => t("activerecord.labels.folderMaterial", :default => "Foldermaterial")) + ":"
+%p= @press_standard.folderMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.folderSpeed", :default => t("activerecord.labels.folderSpeed", :default => "Folderspeed")) + ":"
+%p= @press_standard.folderSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.folderTime", :default => t("activerecord.labels.folderTime", :default => "Foldertime")) + ":"
+%p= @press_standard.folderTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.folderWaste", :default => t("activerecord.labels.folderWaste", :default => "Folderwaste")) + ":"
+%p= @press_standard.folderWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.headMaterial", :default => t("activerecord.labels.headMaterial", :default => "Headmaterial")) + ":"
+%p= @press_standard.headMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.headTime", :default => t("activerecord.labels.headTime", :default => "Headtime")) + ":"
+%p= @press_standard.headTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.hotStampMaterial", :default => t("activerecord.labels.hotStampMaterial", :default => "Hotstampmaterial")) + ":"
+%p= @press_standard.hotStampMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.hotStampSpeed", :default => t("activerecord.labels.hotStampSpeed", :default => "Hotstampspeed")) + ":"
+%p= @press_standard.hotStampSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.hotStampTime", :default => t("activerecord.labels.hotStampTime", :default => "Hotstamptime")) + ":"
+%p= @press_standard.hotStampTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.hotStampWaste", :default => t("activerecord.labels.hotStampWaste", :default => "Hotstampwaste")) + ":"
+%p= @press_standard.hotStampWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inkType", :default => t("activerecord.labels.inkType", :default => "Inktype")) + ":"
+%p= @press_standard.inkType
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inkTypeSig", :default => t("activerecord.labels.inkTypeSig", :default => "Inktypesig")) + ":"
+%p= @press_standard.inkTypeSig
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inkTypeVarnish", :default => t("activerecord.labels.inkTypeVarnish", :default => "Inktypevarnish")) + ":"
+%p= @press_standard.inkTypeVarnish
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inkMaterial", :default => t("activerecord.labels.inkMaterial", :default => "Inkmaterial")) + ":"
+%p= @press_standard.inkMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inkTime", :default => t("activerecord.labels.inkTime", :default => "Inktime")) + ":"
+%p= @press_standard.inkTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inlineMaterial", :default => t("activerecord.labels.inlineMaterial", :default => "Inlinematerial")) + ":"
+%p= @press_standard.inlineMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inlineSpeed", :default => t("activerecord.labels.inlineSpeed", :default => "Inlinespeed")) + ":"
+%p= @press_standard.inlineSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inlineTime", :default => t("activerecord.labels.inlineTime", :default => "Inlinetime")) + ":"
+%p= @press_standard.inlineTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.inlineWaste", :default => t("activerecord.labels.inlineWaste", :default => "Inlinewaste")) + ":"
+%p= @press_standard.inlineWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.insertionMaterial", :default => t("activerecord.labels.insertionMaterial", :default => "Insertionmaterial")) + ":"
+%p= @press_standard.insertionMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.insertionSpeed", :default => t("activerecord.labels.insertionSpeed", :default => "Insertionspeed")) + ":"
+%p= @press_standard.insertionSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.insertionTime", :default => t("activerecord.labels.insertionTime", :default => "Insertiontime")) + ":"
+%p= @press_standard.insertionTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.laminationMaterial", :default => t("activerecord.labels.laminationMaterial", :default => "Laminationmaterial")) + ":"
+%p= @press_standard.laminationMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.laminationSpeed", :default => t("activerecord.labels.laminationSpeed", :default => "Laminationspeed")) + ":"
+%p= @press_standard.laminationSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.laminationTime", :default => t("activerecord.labels.laminationTime", :default => "Laminationtime")) + ":"
+%p= @press_standard.laminationTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.laminationWaste", :default => t("activerecord.labels.laminationWaste", :default => "Laminationwaste")) + ":"
+%p= @press_standard.laminationWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineName", :default => t("activerecord.labels.machineName", :default => "Machinename")) + ":"
+%p= @press_standard.machineName
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineID", :default => t("activerecord.labels.machineID", :default => "Machineid")) + ":"
+%p= @press_standard.machineID
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineLabor", :default => t("activerecord.labels.machineLabor", :default => "Machinelabor")) + ":"
+%p= @press_standard.machineLabor
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineOverhead", :default => t("activerecord.labels.machineOverhead", :default => "Machineoverhead")) + ":"
+%p= @press_standard.machineOverhead
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machinePitch", :default => t("activerecord.labels.machinePitch", :default => "Machinepitch")) + ":"
+%p= @press_standard.machinePitch
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineSpeed", :default => t("activerecord.labels.machineSpeed", :default => "Machinespeed")) + ":"
+%p= @press_standard.machineSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineType", :default => t("activerecord.labels.machineType", :default => "Machinetype")) + ":"
+%p= @press_standard.machineType
+%label{:class => "label"}= t("activerecord.attributes.press_standard.machineWidth", :default => t("activerecord.labels.machineWidth", :default => "Machinewidth")) + ":"
+%p= @press_standard.machineWidth
+%label{:class => "label"}= t("activerecord.attributes.press_standard.numberMaterial", :default => t("activerecord.labels.numberMaterial", :default => "Numbermaterial")) + ":"
+%p= @press_standard.numberMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.numberSpeed", :default => t("activerecord.labels.numberSpeed", :default => "Numberspeed")) + ":"
+%p= @press_standard.numberSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.numberTime", :default => t("activerecord.labels.numberTime", :default => "Numbertime")) + ":"
+%p= @press_standard.numberTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.numberWaste", :default => t("activerecord.labels.numberWaste", :default => "Numberwaste")) + ":"
+%p= @press_standard.numberWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.plateChangeWaste", :default => t("activerecord.labels.plateChangeWaste", :default => "Platechangewaste")) + ":"
+%p= @press_standard.plateChangeWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.plateChangeMaterial", :default => t("activerecord.labels.plateChangeMaterial", :default => "Platechangematerial")) + ":"
+%p= @press_standard.plateChangeMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.plateChangeTime", :default => t("activerecord.labels.plateChangeTime", :default => "Platechangetime")) + ":"
+%p= @press_standard.plateChangeTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.pressSetupMaterial", :default => t("activerecord.labels.pressSetupMaterial", :default => "Presssetupmaterial")) + ":"
+%p= @press_standard.pressSetupMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.pressSetupTime", :default => t("activerecord.labels.pressSetupTime", :default => "Presssetuptime")) + ":"
+%p= @press_standard.pressSetupTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.printStations", :default => t("activerecord.labels.printStations", :default => "Printstations")) + ":"
+%p= @press_standard.printStations
+%label{:class => "label"}= t("activerecord.attributes.press_standard.rollChangeMaterial", :default => t("activerecord.labels.rollChangeMaterial", :default => "Rollchangematerial")) + ":"
+%p= @press_standard.rollChangeMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.rollChangeTime", :default => t("activerecord.labels.rollChangeTime", :default => "Rollchangetime")) + ":"
+%p= @press_standard.rollChangeTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.rollChangeWaste", :default => t("activerecord.labels.rollChangeWaste", :default => "Rollchangewaste")) + ":"
+%p= @press_standard.rollChangeWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.slitMaterial", :default => t("activerecord.labels.slitMaterial", :default => "Slitmaterial")) + ":"
+%p= @press_standard.slitMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.slitSpeed", :default => t("activerecord.labels.slitSpeed", :default => "Slitspeed")) + ":"
+%p= @press_standard.slitSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.slitTime", :default => t("activerecord.labels.slitTime", :default => "Slittime")) + ":"
+%p= @press_standard.slitTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.slitWaste", :default => t("activerecord.labels.slitWaste", :default => "Slitwaste")) + ":"
+%p= @press_standard.slitWaste
+%label{:class => "label"}= t("activerecord.attributes.press_standard.trim", :default => t("activerecord.labels.trim", :default => "Trim")) + ":"
+%p= @press_standard.trim
+%label{:class => "label"}= t("activerecord.attributes.press_standard.turretMaterial", :default => t("activerecord.labels.turretMaterial", :default => "Turretmaterial")) + ":"
+%p= @press_standard.turretMaterial
+%label{:class => "label"}= t("activerecord.attributes.press_standard.turretSpeed", :default => t("activerecord.labels.turretSpeed", :default => "Turretspeed")) + ":"
+%p= @press_standard.turretSpeed
+%label{:class => "label"}= t("activerecord.attributes.press_standard.turretTime", :default => t("activerecord.labels.turretTime", :default => "Turrettime")) + ":"
+%p= @press_standard.turretTime
+%label{:class => "label"}= t("activerecord.attributes.press_standard.turretWaste", :default => t("activerecord.labels.turretWaste", :default => "Turretwaste")) + ":"
+%p= @press_standard.turretWaste
+
+.form-actions
+  = link_to "Back", press_standards_path, :class => 'btn'
+  = link_to "Edit", edit_press_standard_path(@press_standard), :class => 'btn'
+  = link_to "Delete", press_standard_path(@press_standard), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

@@ -1,3 +1,2 @@
-%h1 New press_standard
-= render 'form'
-= link_to 'Back', press_standards_path
+= form_for @press_standard, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

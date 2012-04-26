@@ -1,271 +1,267 @@
-= form_for(@press_standard) do |f|
-  - if @press_standard.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@press_standard.errors.count, "error")
-        prohibited this press_standard from being saved:
-      %ul
-        - @press_standard.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :ampMaterial
-    %br/
-    = f.number_field :ampMaterial
-  .field
-    = f.label :ampTime
-    %br/
-    = f.number_field :ampTime
-  .field
-    = f.label :colorMaterial
-    %br/
-    = f.number_field :colorMaterial
-  .field
-    = f.label :colorTime
-    %br/
-    = f.number_field :colorTime
-  .field
-    = f.label :colorWaste
-    %br/
-    = f.number_field :colorWaste
-  .field
-    = f.label :dieMaterial
-    %br/
-    = f.number_field :dieMaterial
-  .field
-    = f.label :dieSpeed
-    %br/
-    = f.number_field :dieSpeed
-  .field
-    = f.label :dieTime
-    %br/
-    = f.number_field :dieTime
-  .field
-    = f.label :dieWaste
-    %br/
-    = f.number_field :dieWaste
-  .field
-    = f.label :folderMaterial
-    %br/
-    = f.number_field :folderMaterial
-  .field
-    = f.label :folderSpeed
-    %br/
-    = f.number_field :folderSpeed
-  .field
-    = f.label :folderTime
-    %br/
-    = f.number_field :folderTime
-  .field
-    = f.label :folderWaste
-    %br/
-    = f.number_field :folderWaste
-  .field
-    = f.label :headMaterial
-    %br/
-    = f.number_field :headMaterial
-  .field
-    = f.label :headTime
-    %br/
-    = f.number_field :headTime
-  .field
-    = f.label :hotStampMaterial
-    %br/
-    = f.number_field :hotStampMaterial
-  .field
-    = f.label :hotStampSpeed
-    %br/
-    = f.number_field :hotStampSpeed
-  .field
-    = f.label :hotStampTime
-    %br/
-    = f.number_field :hotStampTime
-  .field
-    = f.label :hotStampWaste
-    %br/
-    = f.number_field :hotStampWaste
-  .field
-    = f.label :inkType
-    %br/
-    = f.text_field :inkType
-  .field
-    = f.label :inkTypeSig
-    %br/
-    = f.text_field :inkTypeSig
-  .field
-    = f.label :inkTypeVarnish
-    %br/
-    = f.text_field :inkTypeVarnish
-  .field
-    = f.label :inkMaterial
-    %br/
-    = f.number_field :inkMaterial
-  .field
-    = f.label :inkTime
-    %br/
-    = f.number_field :inkTime
-  .field
-    = f.label :inlineMaterial
-    %br/
-    = f.number_field :inlineMaterial
-  .field
-    = f.label :inlineSpeed
-    %br/
-    = f.number_field :inlineSpeed
-  .field
-    = f.label :inlineTime
-    %br/
-    = f.number_field :inlineTime
-  .field
-    = f.label :inlineWaste
-    %br/
-    = f.number_field :inlineWaste
-  .field
-    = f.label :insertionMaterial
-    %br/
-    = f.number_field :insertionMaterial
-  .field
-    = f.label :insertionSpeed
-    %br/
-    = f.number_field :insertionSpeed
-  .field
-    = f.label :insertionTime
-    %br/
-    = f.number_field :insertionTime
-  .field
-    = f.label :laminationMaterial
-    %br/
-    = f.number_field :laminationMaterial
-  .field
-    = f.label :laminationSpeed
-    %br/
-    = f.number_field :laminationSpeed
-  .field
-    = f.label :laminationTime
-    %br/
-    = f.number_field :laminationTime
-  .field
-    = f.label :laminationWaste
-    %br/
-    = f.number_field :laminationWaste
-  .field
-    = f.label :machineName
-    %br/
-    = f.text_field :machineName
-  .field
-    = f.label :machineID
-    %br/
-    = f.number_field :machineID
-  .field
-    = f.label :machineLabor
-    %br/
-    = f.number_field :machineLabor
-  .field
-    = f.label :machineOverhead
-    %br/
-    = f.number_field :machineOverhead
-  .field
-    = f.label :machinePitch
-    %br/
-    = f.number_field :machinePitch
-  .field
-    = f.label :machineSpeed
-    %br/
-    = f.number_field :machineSpeed
-  .field
-    = f.label :machineType
-    %br/
-    = f.text_field :machineType
-  .field
-    = f.label :machineWidth
-    %br/
-    = f.number_field :machineWidth
-  .field
-    = f.label :numberMaterial
-    %br/
-    = f.number_field :numberMaterial
-  .field
-    = f.label :numberSpeed
-    %br/
-    = f.number_field :numberSpeed
-  .field
-    = f.label :numberTime
-    %br/
-    = f.number_field :numberTime
-  .field
-    = f.label :numberWaste
-    %br/
-    = f.number_field :numberWaste
-  .field
-    = f.label :plateChangeWaste
-    %br/
-    = f.number_field :plateChangeWaste
-  .field
-    = f.label :plateChangeMaterial
-    %br/
-    = f.number_field :plateChangeMaterial
-  .field
-    = f.label :plateChangeTime
-    %br/
-    = f.number_field :plateChangeTime
-  .field
-    = f.label :pressSetupMaterial
-    %br/
-    = f.number_field :pressSetupMaterial
-  .field
-    = f.label :pressSetupTime
-    %br/
-    = f.number_field :pressSetupTime
-  .field
-    = f.label :printStations
-    %br/
-    = f.number_field :printStations
-  .field
-    = f.label :rollChangeMaterial
-    %br/
-    = f.number_field :rollChangeMaterial
-  .field
-    = f.label :rollChangeTime
-    %br/
-    = f.number_field :rollChangeTime
-  .field
-    = f.label :rollChangeWaste
-    %br/
-    = f.number_field :rollChangeWaste
-  .field
-    = f.label :slitMaterial
-    %br/
-    = f.number_field :slitMaterial
-  .field
-    = f.label :slitSpeed
-    %br/
-    = f.number_field :slitSpeed
-  .field
-    = f.label :slitTime
-    %br/
-    = f.number_field :slitTime
-  .field
-    = f.label :slitWaste
-    %br/
-    = f.number_field :slitWaste
-  .field
-    = f.label :trim
-    %br/
-    = f.number_field :trim
-  .field
-    = f.label :turretMaterial
-    %br/
-    = f.number_field :turretMaterial
-  .field
-    = f.label :turretSpeed
-    %br/
-    = f.number_field :turretSpeed
-  .field
-    = f.label :turretTime
-    %br/
-    = f.number_field :turretTime
-  .field
-    = f.label :turretWaste
-    %br/
-    = f.number_field :turretWaste
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Press Standard
+  .control-group
+    = f.label :ampMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :ampMaterial, :class => 'number_field'
+  .control-group
+    = f.label :ampTime, :class => 'control-label'
+    .controls
+      = f.number_field :ampTime, :class => 'number_field'
+  .control-group
+    = f.label :colorMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :colorMaterial, :class => 'number_field'
+  .control-group
+    = f.label :colorTime, :class => 'control-label'
+    .controls
+      = f.number_field :colorTime, :class => 'number_field'
+  .control-group
+    = f.label :colorWaste, :class => 'control-label'
+    .controls
+      = f.number_field :colorWaste, :class => 'number_field'
+  .control-group
+    = f.label :dieMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :dieMaterial, :class => 'number_field'
+  .control-group
+    = f.label :dieSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :dieSpeed, :class => 'number_field'
+  .control-group
+    = f.label :dieTime, :class => 'control-label'
+    .controls
+      = f.number_field :dieTime, :class => 'number_field'
+  .control-group
+    = f.label :dieWaste, :class => 'control-label'
+    .controls
+      = f.number_field :dieWaste, :class => 'number_field'
+  .control-group
+    = f.label :folderMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :folderMaterial, :class => 'number_field'
+  .control-group
+    = f.label :folderSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :folderSpeed, :class => 'number_field'
+  .control-group
+    = f.label :folderTime, :class => 'control-label'
+    .controls
+      = f.number_field :folderTime, :class => 'number_field'
+  .control-group
+    = f.label :folderWaste, :class => 'control-label'
+    .controls
+      = f.number_field :folderWaste, :class => 'number_field'
+  .control-group
+    = f.label :headMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :headMaterial, :class => 'number_field'
+  .control-group
+    = f.label :headTime, :class => 'control-label'
+    .controls
+      = f.number_field :headTime, :class => 'number_field'
+  .control-group
+    = f.label :hotStampMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :hotStampMaterial, :class => 'number_field'
+  .control-group
+    = f.label :hotStampSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :hotStampSpeed, :class => 'number_field'
+  .control-group
+    = f.label :hotStampTime, :class => 'control-label'
+    .controls
+      = f.number_field :hotStampTime, :class => 'number_field'
+  .control-group
+    = f.label :hotStampWaste, :class => 'control-label'
+    .controls
+      = f.number_field :hotStampWaste, :class => 'number_field'
+  .control-group
+    = f.label :inkType, :class => 'control-label'
+    .controls
+      = f.text_field :inkType, :class => 'text_field'
+  .control-group
+    = f.label :inkTypeSig, :class => 'control-label'
+    .controls
+      = f.text_field :inkTypeSig, :class => 'text_field'
+  .control-group
+    = f.label :inkTypeVarnish, :class => 'control-label'
+    .controls
+      = f.text_field :inkTypeVarnish, :class => 'text_field'
+  .control-group
+    = f.label :inkMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :inkMaterial, :class => 'number_field'
+  .control-group
+    = f.label :inkTime, :class => 'control-label'
+    .controls
+      = f.number_field :inkTime, :class => 'number_field'
+  .control-group
+    = f.label :inlineMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :inlineMaterial, :class => 'number_field'
+  .control-group
+    = f.label :inlineSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :inlineSpeed, :class => 'number_field'
+  .control-group
+    = f.label :inlineTime, :class => 'control-label'
+    .controls
+      = f.number_field :inlineTime, :class => 'number_field'
+  .control-group
+    = f.label :inlineWaste, :class => 'control-label'
+    .controls
+      = f.number_field :inlineWaste, :class => 'number_field'
+  .control-group
+    = f.label :insertionMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :insertionMaterial, :class => 'number_field'
+  .control-group
+    = f.label :insertionSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :insertionSpeed, :class => 'number_field'
+  .control-group
+    = f.label :insertionTime, :class => 'control-label'
+    .controls
+      = f.number_field :insertionTime, :class => 'number_field'
+  .control-group
+    = f.label :laminationMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :laminationMaterial, :class => 'number_field'
+  .control-group
+    = f.label :laminationSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :laminationSpeed, :class => 'number_field'
+  .control-group
+    = f.label :laminationTime, :class => 'control-label'
+    .controls
+      = f.number_field :laminationTime, :class => 'number_field'
+  .control-group
+    = f.label :laminationWaste, :class => 'control-label'
+    .controls
+      = f.number_field :laminationWaste, :class => 'number_field'
+  .control-group
+    = f.label :machineName, :class => 'control-label'
+    .controls
+      = f.text_field :machineName, :class => 'text_field'
+  .control-group
+    = f.label :machineID, :class => 'control-label'
+    .controls
+      = f.number_field :machineID, :class => 'number_field'
+  .control-group
+    = f.label :machineLabor, :class => 'control-label'
+    .controls
+      = f.number_field :machineLabor, :class => 'number_field'
+  .control-group
+    = f.label :machineOverhead, :class => 'control-label'
+    .controls
+      = f.number_field :machineOverhead, :class => 'number_field'
+  .control-group
+    = f.label :machinePitch, :class => 'control-label'
+    .controls
+      = f.number_field :machinePitch, :class => 'number_field'
+  .control-group
+    = f.label :machineSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :machineSpeed, :class => 'number_field'
+  .control-group
+    = f.label :machineType, :class => 'control-label'
+    .controls
+      = f.text_field :machineType, :class => 'text_field'
+  .control-group
+    = f.label :machineWidth, :class => 'control-label'
+    .controls
+      = f.number_field :machineWidth, :class => 'number_field'
+  .control-group
+    = f.label :numberMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :numberMaterial, :class => 'number_field'
+  .control-group
+    = f.label :numberSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :numberSpeed, :class => 'number_field'
+  .control-group
+    = f.label :numberTime, :class => 'control-label'
+    .controls
+      = f.number_field :numberTime, :class => 'number_field'
+  .control-group
+    = f.label :numberWaste, :class => 'control-label'
+    .controls
+      = f.number_field :numberWaste, :class => 'number_field'
+  .control-group
+    = f.label :plateChangeWaste, :class => 'control-label'
+    .controls
+      = f.number_field :plateChangeWaste, :class => 'number_field'
+  .control-group
+    = f.label :plateChangeMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :plateChangeMaterial, :class => 'number_field'
+  .control-group
+    = f.label :plateChangeTime, :class => 'control-label'
+    .controls
+      = f.number_field :plateChangeTime, :class => 'number_field'
+  .control-group
+    = f.label :pressSetupMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :pressSetupMaterial, :class => 'number_field'
+  .control-group
+    = f.label :pressSetupTime, :class => 'control-label'
+    .controls
+      = f.number_field :pressSetupTime, :class => 'number_field'
+  .control-group
+    = f.label :printStations, :class => 'control-label'
+    .controls
+      = f.number_field :printStations, :class => 'number_field'
+  .control-group
+    = f.label :rollChangeMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :rollChangeMaterial, :class => 'number_field'
+  .control-group
+    = f.label :rollChangeTime, :class => 'control-label'
+    .controls
+      = f.number_field :rollChangeTime, :class => 'number_field'
+  .control-group
+    = f.label :rollChangeWaste, :class => 'control-label'
+    .controls
+      = f.number_field :rollChangeWaste, :class => 'number_field'
+  .control-group
+    = f.label :slitMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :slitMaterial, :class => 'number_field'
+  .control-group
+    = f.label :slitSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :slitSpeed, :class => 'number_field'
+  .control-group
+    = f.label :slitTime, :class => 'control-label'
+    .controls
+      = f.number_field :slitTime, :class => 'number_field'
+  .control-group
+    = f.label :slitWaste, :class => 'control-label'
+    .controls
+      = f.number_field :slitWaste, :class => 'number_field'
+  .control-group
+    = f.label :trim, :class => 'control-label'
+    .controls
+      = f.number_field :trim, :class => 'number_field'
+  .control-group
+    = f.label :turretMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :turretMaterial, :class => 'number_field'
+  .control-group
+    = f.label :turretSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :turretSpeed, :class => 'number_field'
+  .control-group
+    = f.label :turretTime, :class => 'control-label'
+    .controls
+      = f.number_field :turretTime, :class => 'number_field'
+  .control-group
+    = f.label :turretWaste, :class => 'control-label'
+    .controls
+      = f.number_field :turretWaste, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", press_standards_path, :class => 'btn'

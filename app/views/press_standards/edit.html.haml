@@ -1,5 +1,2 @@
-%h1 Editing press_standard
-= render 'form'
-= link_to 'Show', @press_standard
-%p |
-= link_to 'Back', press_standards_path
+= form_for @press_standard, :html => { :class => "edit_press_standard form-horizontal", :id => "edit_press_standard" } do |f|
+  = render :partial => "form", :locals => {:f => f}
