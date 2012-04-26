@@ -1,25 +1,21 @@
-%h1 Listing inkpmscodes
-%table
-  %tr
-    %th Vendorpartnumb
-    %th Vendor
-    %th Magtype
-    %th Inktype
-    %th Inkmsiperpound
-    %th Inkcostperpound
-    %th
-    %th
-    %th
-  - @inkpmscodes.each do |inkpmscode|
+%h1 Inkpmscodes
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= inkpmscode.vendorpartnumb
-      %td= inkpmscode.vendor
-      %td= inkpmscode.magtype
-      %td= inkpmscode.inktype
-      %td= inkpmscode.inkmsiperpound
-      %td= inkpmscode.inkcostperpound
-      %td= link_to 'Show', inkpmscode
-      %td= link_to 'Edit', edit_inkpmscode_path(inkpmscode)
-      %td= link_to 'Destroy', inkpmscode, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Inkpmscode', new_inkpmscode_path
+      %th ID
+      %th
+        = t("activerecord.attributes.inkpmscode.vendorpartnumb", :default => t("activerecord.labels.vendorpartnumb", :default => "Vendorpartnumb"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @inkpmscodes.each do |inkpmscode|
+      %tr
+        %td= inkpmscode.id
+        %td= link_to inkpmscode.vendorpartnumb, inkpmscode_path(inkpmscode)
+        %td= inkpmscode.created_at
+        %td
+          = link_to "Show", inkpmscode_path(inkpmscode), :class => 'btn btn-mini'
+          = link_to "Edit", edit_inkpmscode_path(inkpmscode), :class => 'btn btn-mini'
+          = link_to "Destroy", inkpmscode_path(inkpmscode), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_inkpmscode_path, :class => 'btn btn-primary'

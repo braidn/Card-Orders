@@ -1,22 +1,17 @@
-%p#notice= notice
-%p
-  %b Vendorpartnumb:
-  = @inkpmscode.vendorpartnumb
-%p
-  %b Vendor:
-  = @inkpmscode.vendor
-%p
-  %b Magtype:
-  = @inkpmscode.magtype
-%p
-  %b Inktype:
-  = @inkpmscode.inktype
-%p
-  %b Inkmsiperpound:
-  = @inkpmscode.inkmsiperpound
-%p
-  %b Inkcostperpound:
-  = @inkpmscode.inkcostperpound
-= link_to 'Edit', edit_inkpmscode_path(@inkpmscode)
-%p |
-= link_to 'Back', inkpmscodes_path
+%label{:class => "label"}= t("activerecord.attributes.inkpmscode.vendorpartnumb", :default => t("activerecord.labels.vendorpartnumb", :default => "Vendorpartnumb")) + ":"
+%p= @inkpmscode.vendorpartnumb
+%label{:class => "label"}= t("activerecord.attributes.inkpmscode.vendor", :default => t("activerecord.labels.vendor", :default => "Vendor")) + ":"
+%p= @inkpmscode.vendor
+%label{:class => "label"}= t("activerecord.attributes.inkpmscode.magtype", :default => t("activerecord.labels.magtype", :default => "Magtype")) + ":"
+%p= @inkpmscode.magtype
+%label{:class => "label"}= t("activerecord.attributes.inkpmscode.inktype", :default => t("activerecord.labels.inktype", :default => "Inktype")) + ":"
+%p= @inkpmscode.inktype
+%label{:class => "label"}= t("activerecord.attributes.inkpmscode.inkmsiperpound", :default => t("activerecord.labels.inkmsiperpound", :default => "Inkmsiperpound")) + ":"
+%p= @inkpmscode.inkmsiperpound
+%label{:class => "label"}= t("activerecord.attributes.inkpmscode.inkcostperpound", :default => t("activerecord.labels.inkcostperpound", :default => "Inkcostperpound")) + ":"
+%p= @inkpmscode.inkcostperpound
+
+.form-actions
+  = link_to "Back", inkpmscodes_path, :class => 'btn'
+  = link_to "Edit", edit_inkpmscode_path(@inkpmscode), :class => 'btn'
+  = link_to "Delete", inkpmscode_path(@inkpmscode), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

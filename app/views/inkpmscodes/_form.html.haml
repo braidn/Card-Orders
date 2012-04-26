@@ -1,35 +1,31 @@
-= form_for(@inkpmscode) do |f|
-  - if @inkpmscode.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@inkpmscode.errors.count, "error")
-        prohibited this inkpmscode from being saved:
-      %ul
-        - @inkpmscode.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :vendorpartnumb
-    %br/
-    = f.text_field :vendorpartnumb
-  .field
-    = f.label :vendor
-    %br/
-    = f.text_field :vendor
-  .field
-    = f.label :magtype
-    %br/
-    = f.text_field :magtype
-  .field
-    = f.label :inktype
-    %br/
-    = f.number_field :inktype
-  .field
-    = f.label :inkmsiperpound
-    %br/
-    = f.number_field :inkmsiperpound
-  .field
-    = f.label :inkcostperpound
-    %br/
-    = f.number_field :inkcostperpound
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Inkpmscode
+  .control-group
+    = f.label :vendorpartnumb, :class => 'control-label'
+    .controls
+      = f.text_field :vendorpartnumb, :class => 'text_field'
+  .control-group
+    = f.label :vendor, :class => 'control-label'
+    .controls
+      = f.text_field :vendor, :class => 'text_field'
+  .control-group
+    = f.label :magtype, :class => 'control-label'
+    .controls
+      = f.text_field :magtype, :class => 'text_field'
+  .control-group
+    = f.label :inktype, :class => 'control-label'
+    .controls
+      = f.number_field :inktype, :class => 'number_field'
+  .control-group
+    = f.label :inkmsiperpound, :class => 'control-label'
+    .controls
+      = f.number_field :inkmsiperpound, :class => 'number_field'
+  .control-group
+    = f.label :inkcostperpound, :class => 'control-label'
+    .controls
+      = f.number_field :inkcostperpound, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", inkpmscodes_path, :class => 'btn'

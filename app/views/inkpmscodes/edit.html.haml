@@ -1,5 +1,2 @@
-%h1 Editing inkpmscode
-= render 'form'
-= link_to 'Show', @inkpmscode
-%p |
-= link_to 'Back', inkpmscodes_path
+= form_for @inkpmscode, :html => { :class => "edit_inkpmscode form-horizontal", :id => "edit_inkpmscode" } do |f|
+  = render :partial => "form", :locals => {:f => f}

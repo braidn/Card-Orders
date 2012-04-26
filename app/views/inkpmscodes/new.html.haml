@@ -1,3 +1,2 @@
-%h1 New inkpmscode
-= render 'form'
-= link_to 'Back', inkpmscodes_path
+= form_for @inkpmscode, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}
