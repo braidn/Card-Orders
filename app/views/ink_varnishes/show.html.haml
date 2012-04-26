@@ -1,16 +1,13 @@
-%p#notice= notice
-%p
-  %b Inkcostperpound:
-  = @ink_varnish.inkCostPerPound
-%p
-  %b Inkmsiperpound:
-  = @ink_varnish.inkMsiPerPound
-%p
-  %b Vendor:
-  = @ink_varnish.vendor
-%p
-  %b Vendorpartnumber:
-  = @ink_varnish.vendorPartNumber
-= link_to 'Edit', edit_ink_varnish_path(@ink_varnish)
-%p |
-= link_to 'Back', ink_varnishes_path
+%label{:class => "label"}= t("activerecord.attributes.ink_varnish.inkCostPerPound", :default => t("activerecord.labels.inkCostPerPound", :default => "Inkcostperpound")) + ":"
+%p= @ink_varnish.inkCostPerPound
+%label{:class => "label"}= t("activerecord.attributes.ink_varnish.inkMsiPerPound", :default => t("activerecord.labels.inkMsiPerPound", :default => "Inkmsiperpound")) + ":"
+%p= @ink_varnish.inkMsiPerPound
+%label{:class => "label"}= t("activerecord.attributes.ink_varnish.vendor", :default => t("activerecord.labels.vendor", :default => "Vendor")) + ":"
+%p= @ink_varnish.vendor
+%label{:class => "label"}= t("activerecord.attributes.ink_varnish.vendorPartNumber", :default => t("activerecord.labels.vendorPartNumber", :default => "Vendorpartnumber")) + ":"
+%p= @ink_varnish.vendorPartNumber
+
+.form-actions
+  = link_to "Back", ink_varnishes_path, :class => 'btn'
+  = link_to "Edit", edit_ink_varnish_path(@ink_varnish), :class => 'btn'
+  = link_to "Delete", ink_varnish_path(@ink_varnish), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

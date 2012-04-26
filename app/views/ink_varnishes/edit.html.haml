@@ -1,5 +1,2 @@
-%h1 Editing ink_varnish
-= render 'form'
-= link_to 'Show', @ink_varnish
-%p |
-= link_to 'Back', ink_varnishes_path
+= form_for @ink_varnish, :html => { :class => "edit_ink_varnish form-horizontal", :id => "edit_ink_varnish" } do |f|
+  = render :partial => "form", :locals => {:f => f}

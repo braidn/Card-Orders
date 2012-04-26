@@ -1,27 +1,23 @@
-= form_for(@ink_varnish) do |f|
-  - if @ink_varnish.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@ink_varnish.errors.count, "error")
-        prohibited this ink_varnish from being saved:
-      %ul
-        - @ink_varnish.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :inkCostPerPound
-    %br/
-    = f.number_field :inkCostPerPound
-  .field
-    = f.label :inkMsiPerPound
-    %br/
-    = f.number_field :inkMsiPerPound
-  .field
-    = f.label :vendor
-    %br/
-    = f.text_field :vendor
-  .field
-    = f.label :vendorPartNumber
-    %br/
-    = f.text_field :vendorPartNumber
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Ink Varnish
+  .control-group
+    = f.label :inkCostPerPound, :class => 'control-label'
+    .controls
+      = f.number_field :inkCostPerPound, :class => 'number_field'
+  .control-group
+    = f.label :inkMsiPerPound, :class => 'control-label'
+    .controls
+      = f.number_field :inkMsiPerPound, :class => 'number_field'
+  .control-group
+    = f.label :vendor, :class => 'control-label'
+    .controls
+      = f.text_field :vendor, :class => 'text_field'
+  .control-group
+    = f.label :vendorPartNumber, :class => 'control-label'
+    .controls
+      = f.text_field :vendorPartNumber, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", ink_varnishes_path, :class => 'btn'

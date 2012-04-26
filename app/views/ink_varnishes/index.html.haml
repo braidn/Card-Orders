@@ -1,21 +1,21 @@
-%h1 Listing ink_varnishes
-%table
-  %tr
-    %th Inkcostperpound
-    %th Inkmsiperpound
-    %th Vendor
-    %th Vendorpartnumber
-    %th
-    %th
-    %th
-  - @ink_varnishes.each do |ink_varnish|
+%h1 Ink Varnishs
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= ink_varnish.inkCostPerPound
-      %td= ink_varnish.inkMsiPerPound
-      %td= ink_varnish.vendor
-      %td= ink_varnish.vendorPartNumber
-      %td= link_to 'Show', ink_varnish
-      %td= link_to 'Edit', edit_ink_varnish_path(ink_varnish)
-      %td= link_to 'Destroy', ink_varnish, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Ink varnish', new_ink_varnish_path
+      %th ID
+      %th
+        = t("activerecord.attributes.ink_varnish.inkCostPerPound", :default => t("activerecord.labels.inkCostPerPound", :default => "Inkcostperpound"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @ink_varnishes.each do |ink_varnish|
+      %tr
+        %td= ink_varnish.id
+        %td= link_to ink_varnish.inkCostPerPound, ink_varnish_path(ink_varnish)
+        %td= ink_varnish.created_at
+        %td
+          = link_to "Show", ink_varnish_path(ink_varnish), :class => 'btn btn-mini'
+          = link_to "Edit", edit_ink_varnish_path(ink_varnish), :class => 'btn btn-mini'
+          = link_to "Destroy", ink_varnish_path(ink_varnish), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_ink_varnish_path, :class => 'btn btn-primary'
