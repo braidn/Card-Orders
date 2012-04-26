@@ -1,19 +1,15 @@
-%p#notice= notice
-%p
-  %b Description:
-  = @foil.description
-%p
-  %b Length:
-  = @foil.length
-%p
-  %b Msi:
-  = @foil.msi
-%p
-  %b Type:
-  = @foil.type
-%p
-  %b Width:
-  = @foil.width
-= link_to 'Edit', edit_foil_path(@foil)
-%p |
-= link_to 'Back', foils_path
+%label{:class => "label"}= t("activerecord.attributes.foil.description", :default => t("activerecord.labels.description", :default => "Description")) + ":"
+%p= @foil.description
+%label{:class => "label"}= t("activerecord.attributes.foil.length", :default => t("activerecord.labels.length", :default => "Length")) + ":"
+%p= @foil.length
+%label{:class => "label"}= t("activerecord.attributes.foil.msi", :default => t("activerecord.labels.msi", :default => "Msi")) + ":"
+%p= @foil.msi
+%label{:class => "label"}= t("activerecord.attributes.foil.type", :default => t("activerecord.labels.type", :default => "Type")) + ":"
+%p= @foil.type
+%label{:class => "label"}= t("activerecord.attributes.foil.width", :default => t("activerecord.labels.width", :default => "Width")) + ":"
+%p= @foil.width
+
+.form-actions
+  = link_to "Back", foils_path, :class => 'btn'
+  = link_to "Edit", edit_foil_path(@foil), :class => 'btn'
+  = link_to "Delete", foil_path(@foil), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

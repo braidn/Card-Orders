@@ -1,5 +1,2 @@
-%h1 Editing foil
-= render 'form'
-= link_to 'Show', @foil
-%p |
-= link_to 'Back', foils_path
+= form_for @foil, :html => { :class => "edit_foil form-horizontal", :id => "edit_foil" } do |f|
+  = render :partial => "form", :locals => {:f => f}

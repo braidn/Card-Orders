@@ -1,23 +1,21 @@
-%h1 Listing foils
-%table
-  %tr
-    %th Description
-    %th Length
-    %th Msi
-    %th Type
-    %th Width
-    %th
-    %th
-    %th
-  - @foils.each do |foil|
+%h1 Foils
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= foil.description
-      %td= foil.length
-      %td= foil.msi
-      %td= foil.type
-      %td= foil.width
-      %td= link_to 'Show', foil
-      %td= link_to 'Edit', edit_foil_path(foil)
-      %td= link_to 'Destroy', foil, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Foil', new_foil_path
+      %th ID
+      %th
+        = t("activerecord.attributes.foil.description", :default => t("activerecord.labels.description", :default => "Description"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @foils.each do |foil|
+      %tr
+        %td= foil.id
+        %td= link_to foil.description, foil_path(foil)
+        %td= foil.created_at
+        %td
+          = link_to "Show", foil_path(foil), :class => 'btn btn-mini'
+          = link_to "Edit", edit_foil_path(foil), :class => 'btn btn-mini'
+          = link_to "Destroy", foil_path(foil), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_foil_path, :class => 'btn btn-primary'

@@ -1,31 +1,27 @@
-= form_for(@foil) do |f|
-  - if @foil.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@foil.errors.count, "error")
-        prohibited this foil from being saved:
-      %ul
-        - @foil.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :description
-    %br/
-    = f.text_area :description
-  .field
-    = f.label :length
-    %br/
-    = f.number_field :length
-  .field
-    = f.label :msi
-    %br/
-    = f.number_field :msi
-  .field
-    = f.label :type
-    %br/
-    = f.text_field :type
-  .field
-    = f.label :width
-    %br/
-    = f.number_field :width
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Foil
+  .control-group
+    = f.label :description, :class => 'control-label'
+    .controls
+      = f.text_area :description, :class => 'text_area'
+  .control-group
+    = f.label :length, :class => 'control-label'
+    .controls
+      = f.number_field :length, :class => 'number_field'
+  .control-group
+    = f.label :msi, :class => 'control-label'
+    .controls
+      = f.number_field :msi, :class => 'number_field'
+  .control-group
+    = f.label :type, :class => 'control-label'
+    .controls
+      = f.text_field :type, :class => 'text_field'
+  .control-group
+    = f.label :width, :class => 'control-label'
+    .controls
+      = f.number_field :width, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", foils_path, :class => 'btn'
