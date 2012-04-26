@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Username:
-  = @forgotten_user.username
-%p
-  %b Hash:
-  = @forgotten_user.hash
-= link_to 'Edit', edit_forgotten_user_path(@forgotten_user)
-%p |
-= link_to 'Back', forgotten_users_path
+%label{:class => "label"}= t("activerecord.attributes.forgotten_user.username", :default => t("activerecord.labels.username", :default => "Username")) + ":"
+%p= @forgotten_user.username
+%label{:class => "label"}= t("activerecord.attributes.forgotten_user.hash", :default => t("activerecord.labels.hash", :default => "Hash")) + ":"
+%p= @forgotten_user.hash
+
+.form-actions
+  = link_to "Back", forgotten_users_path, :class => 'btn'
+  = link_to "Edit", edit_forgotten_user_path(@forgotten_user), :class => 'btn'
+  = link_to "Delete", forgotten_user_path(@forgotten_user), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

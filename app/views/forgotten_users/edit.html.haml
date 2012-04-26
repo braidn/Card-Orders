@@ -1,5 +1,2 @@
-%h1 Editing forgotten_user
-= render 'form'
-= link_to 'Show', @forgotten_user
-%p |
-= link_to 'Back', forgotten_users_path
+= form_for @forgotten_user, :html => { :class => "edit_forgotten_user form-horizontal", :id => "edit_forgotten_user" } do |f|
+  = render :partial => "form", :locals => {:f => f}

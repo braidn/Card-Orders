@@ -1,17 +1,21 @@
-%h1 Listing forgotten_users
-%table
-  %tr
-    %th Username
-    %th Hash
-    %th
-    %th
-    %th
-  - @forgotten_users.each do |forgotten_user|
+%h1 Forgotten Users
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= forgotten_user.username
-      %td= forgotten_user.hash
-      %td= link_to 'Show', forgotten_user
-      %td= link_to 'Edit', edit_forgotten_user_path(forgotten_user)
-      %td= link_to 'Destroy', forgotten_user, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Forgotten user', new_forgotten_user_path
+      %th ID
+      %th
+        = t("activerecord.attributes.forgotten_user.username", :default => t("activerecord.labels.username", :default => "Username"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @forgotten_users.each do |forgotten_user|
+      %tr
+        %td= forgotten_user.id
+        %td= link_to forgotten_user.username, forgotten_user_path(forgotten_user)
+        %td= forgotten_user.created_at
+        %td
+          = link_to "Show", forgotten_user_path(forgotten_user), :class => 'btn btn-mini'
+          = link_to "Edit", edit_forgotten_user_path(forgotten_user), :class => 'btn btn-mini'
+          = link_to "Destroy", forgotten_user_path(forgotten_user), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_forgotten_user_path, :class => 'btn btn-primary'
