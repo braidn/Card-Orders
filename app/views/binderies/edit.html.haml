@@ -1,5 +1,2 @@
-%h1 Editing bindery
-= render 'form'
-= link_to 'Show', @bindery
-%p |
-= link_to 'Back', binderies_path
+= form_for @bindery, :html => { :class => "edit_bindery form-horizontal", :id => "edit_bindery" } do |f|
+  = render :partial => "form", :locals => {:f => f}

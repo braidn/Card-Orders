@@ -1,13 +1,11 @@
-%p#notice= notice
-%p
-  %b Opdescription:
-  = @bindery.opdescription
-%p
-  %b Unit:
-  = @bindery.unit
-%p
-  %b Unitcost:
-  = @bindery.unitcost
-= link_to 'Edit', edit_bindery_path(@bindery)
-%p |
-= link_to 'Back', binderies_path
+%label{:class => "label"}= t("activerecord.attributes.bindery.opdescription", :default => t("activerecord.labels.opdescription", :default => "Opdescription")) + ":"
+%p= @bindery.opdescription
+%label{:class => "label"}= t("activerecord.attributes.bindery.unit", :default => t("activerecord.labels.unit", :default => "Unit")) + ":"
+%p= @bindery.unit
+%label{:class => "label"}= t("activerecord.attributes.bindery.unitcost", :default => t("activerecord.labels.unitcost", :default => "Unitcost")) + ":"
+%p= @bindery.unitcost
+
+.form-actions
+  = link_to "Back", binderies_path, :class => 'btn'
+  = link_to "Edit", edit_bindery_path(@bindery), :class => 'btn'
+  = link_to "Delete", bindery_path(@bindery), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

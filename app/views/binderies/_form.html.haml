@@ -1,23 +1,19 @@
-= form_for(@bindery) do |f|
-  - if @bindery.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@bindery.errors.count, "error")
-        prohibited this bindery from being saved:
-      %ul
-        - @bindery.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :opdescription
-    %br/
-    = f.text_field :opdescription
-  .field
-    = f.label :unit
-    %br/
-    = f.text_field :unit
-  .field
-    = f.label :unitcost
-    %br/
-    = f.number_field :unitcost
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Bindery
+  .control-group
+    = f.label :opdescription, :class => 'control-label'
+    .controls
+      = f.text_field :opdescription, :class => 'text_field'
+  .control-group
+    = f.label :unit, :class => 'control-label'
+    .controls
+      = f.text_field :unit, :class => 'text_field'
+  .control-group
+    = f.label :unitcost, :class => 'control-label'
+    .controls
+      = f.number_field :unitcost, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", binderies_path, :class => 'btn'
