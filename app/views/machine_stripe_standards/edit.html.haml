@@ -1,5 +1,2 @@
-%h1 Editing machine_stripe_standard
-= render 'form'
-= link_to 'Show', @machine_stripe_standard
-%p |
-= link_to 'Back', machine_stripe_standards_path
+= form_for @machine_stripe_standard, :html => { :class => "edit_machine_stripe_standard form-horizontal", :id => "edit_machine_stripe_standard" } do |f|
+  = render :partial => "form", :locals => {:f => f}

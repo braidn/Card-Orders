@@ -1,61 +1,21 @@
-%h1 Listing machine_stripe_standards
-%table
-  %tr
-    %th Ampmaterial
-    %th Amptime
-    %th Headmaterial
-    %th Headtime
-    %th Inkmat
-    %th Inktime
-    %th Machinename
-    %th Machineid
-    %th Machinelabor
-    %th Machineoverhead
-    %th Machinespeed
-    %th Machinetype
-    %th Machinewidth
-    %th Rollchangemat
-    %th Rollchangetime
-    %th Slitmat
-    %th Slitspeed
-    %th Slittime
-    %th Slitwaste
-    %th Trim
-    %th Turretmat
-    %th Turretspeed
-    %th Turrettime
-    %th Turretwaste
-    %th
-    %th
-    %th
-  - @machine_stripe_standards.each do |machine_stripe_standard|
+%h1 Machine Stripe Standards
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= machine_stripe_standard.ampMaterial
-      %td= machine_stripe_standard.ampTime
-      %td= machine_stripe_standard.headMaterial
-      %td= machine_stripe_standard.headTime
-      %td= machine_stripe_standard.inkMat
-      %td= machine_stripe_standard.inkTime
-      %td= machine_stripe_standard.machineName
-      %td= machine_stripe_standard.machineId
-      %td= machine_stripe_standard.machineLabor
-      %td= machine_stripe_standard.machineOverhead
-      %td= machine_stripe_standard.machineSpeed
-      %td= machine_stripe_standard.machineType
-      %td= machine_stripe_standard.machineWidth
-      %td= machine_stripe_standard.rollChangeMat
-      %td= machine_stripe_standard.rollChangeTime
-      %td= machine_stripe_standard.slitMat
-      %td= machine_stripe_standard.slitSpeed
-      %td= machine_stripe_standard.slitTime
-      %td= machine_stripe_standard.slitWaste
-      %td= machine_stripe_standard.trim
-      %td= machine_stripe_standard.turretMat
-      %td= machine_stripe_standard.turretSpeed
-      %td= machine_stripe_standard.turretTime
-      %td= machine_stripe_standard.turretWaste
-      %td= link_to 'Show', machine_stripe_standard
-      %td= link_to 'Edit', edit_machine_stripe_standard_path(machine_stripe_standard)
-      %td= link_to 'Destroy', machine_stripe_standard, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Machine stripe standard', new_machine_stripe_standard_path
+      %th ID
+      %th
+        = t("activerecord.attributes.machine_stripe_standard.ampMaterial", :default => t("activerecord.labels.ampMaterial", :default => "Ampmaterial"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @machine_stripe_standards.each do |machine_stripe_standard|
+      %tr
+        %td= machine_stripe_standard.id
+        %td= link_to machine_stripe_standard.ampMaterial, machine_stripe_standard_path(machine_stripe_standard)
+        %td= machine_stripe_standard.created_at
+        %td
+          = link_to "Show", machine_stripe_standard_path(machine_stripe_standard), :class => 'btn btn-mini'
+          = link_to "Edit", edit_machine_stripe_standard_path(machine_stripe_standard), :class => 'btn btn-mini'
+          = link_to "Destroy", machine_stripe_standard_path(machine_stripe_standard), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_machine_stripe_standard_path, :class => 'btn btn-primary'

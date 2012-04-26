@@ -1,107 +1,103 @@
-= form_for(@machine_stripe_standard) do |f|
-  - if @machine_stripe_standard.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@machine_stripe_standard.errors.count, "error")
-        prohibited this machine_stripe_standard from being saved:
-      %ul
-        - @machine_stripe_standard.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :ampMaterial
-    %br/
-    = f.number_field :ampMaterial
-  .field
-    = f.label :ampTime
-    %br/
-    = f.number_field :ampTime
-  .field
-    = f.label :headMaterial
-    %br/
-    = f.number_field :headMaterial
-  .field
-    = f.label :headTime
-    %br/
-    = f.number_field :headTime
-  .field
-    = f.label :inkMat
-    %br/
-    = f.number_field :inkMat
-  .field
-    = f.label :inkTime
-    %br/
-    = f.number_field :inkTime
-  .field
-    = f.label :machineName
-    %br/
-    = f.text_field :machineName
-  .field
-    = f.label :machineId
-    %br/
-    = f.number_field :machineId
-  .field
-    = f.label :machineLabor
-    %br/
-    = f.number_field :machineLabor
-  .field
-    = f.label :machineOverhead
-    %br/
-    = f.number_field :machineOverhead
-  .field
-    = f.label :machineSpeed
-    %br/
-    = f.number_field :machineSpeed
-  .field
-    = f.label :machineType
-    %br/
-    = f.text_field :machineType
-  .field
-    = f.label :machineWidth
-    %br/
-    = f.number_field :machineWidth
-  .field
-    = f.label :rollChangeMat
-    %br/
-    = f.number_field :rollChangeMat
-  .field
-    = f.label :rollChangeTime
-    %br/
-    = f.number_field :rollChangeTime
-  .field
-    = f.label :slitMat
-    %br/
-    = f.number_field :slitMat
-  .field
-    = f.label :slitSpeed
-    %br/
-    = f.number_field :slitSpeed
-  .field
-    = f.label :slitTime
-    %br/
-    = f.number_field :slitTime
-  .field
-    = f.label :slitWaste
-    %br/
-    = f.number_field :slitWaste
-  .field
-    = f.label :trim
-    %br/
-    = f.number_field :trim
-  .field
-    = f.label :turretMat
-    %br/
-    = f.number_field :turretMat
-  .field
-    = f.label :turretSpeed
-    %br/
-    = f.number_field :turretSpeed
-  .field
-    = f.label :turretTime
-    %br/
-    = f.number_field :turretTime
-  .field
-    = f.label :turretWaste
-    %br/
-    = f.number_field :turretWaste
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Machine Stripe Standard
+  .control-group
+    = f.label :ampMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :ampMaterial, :class => 'number_field'
+  .control-group
+    = f.label :ampTime, :class => 'control-label'
+    .controls
+      = f.number_field :ampTime, :class => 'number_field'
+  .control-group
+    = f.label :headMaterial, :class => 'control-label'
+    .controls
+      = f.number_field :headMaterial, :class => 'number_field'
+  .control-group
+    = f.label :headTime, :class => 'control-label'
+    .controls
+      = f.number_field :headTime, :class => 'number_field'
+  .control-group
+    = f.label :inkMat, :class => 'control-label'
+    .controls
+      = f.number_field :inkMat, :class => 'number_field'
+  .control-group
+    = f.label :inkTime, :class => 'control-label'
+    .controls
+      = f.number_field :inkTime, :class => 'number_field'
+  .control-group
+    = f.label :machineName, :class => 'control-label'
+    .controls
+      = f.text_field :machineName, :class => 'text_field'
+  .control-group
+    = f.label :machineId, :class => 'control-label'
+    .controls
+      = f.number_field :machineId, :class => 'number_field'
+  .control-group
+    = f.label :machineLabor, :class => 'control-label'
+    .controls
+      = f.number_field :machineLabor, :class => 'number_field'
+  .control-group
+    = f.label :machineOverhead, :class => 'control-label'
+    .controls
+      = f.number_field :machineOverhead, :class => 'number_field'
+  .control-group
+    = f.label :machineSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :machineSpeed, :class => 'number_field'
+  .control-group
+    = f.label :machineType, :class => 'control-label'
+    .controls
+      = f.text_field :machineType, :class => 'text_field'
+  .control-group
+    = f.label :machineWidth, :class => 'control-label'
+    .controls
+      = f.number_field :machineWidth, :class => 'number_field'
+  .control-group
+    = f.label :rollChangeMat, :class => 'control-label'
+    .controls
+      = f.number_field :rollChangeMat, :class => 'number_field'
+  .control-group
+    = f.label :rollChangeTime, :class => 'control-label'
+    .controls
+      = f.number_field :rollChangeTime, :class => 'number_field'
+  .control-group
+    = f.label :slitMat, :class => 'control-label'
+    .controls
+      = f.number_field :slitMat, :class => 'number_field'
+  .control-group
+    = f.label :slitSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :slitSpeed, :class => 'number_field'
+  .control-group
+    = f.label :slitTime, :class => 'control-label'
+    .controls
+      = f.number_field :slitTime, :class => 'number_field'
+  .control-group
+    = f.label :slitWaste, :class => 'control-label'
+    .controls
+      = f.number_field :slitWaste, :class => 'number_field'
+  .control-group
+    = f.label :trim, :class => 'control-label'
+    .controls
+      = f.number_field :trim, :class => 'number_field'
+  .control-group
+    = f.label :turretMat, :class => 'control-label'
+    .controls
+      = f.number_field :turretMat, :class => 'number_field'
+  .control-group
+    = f.label :turretSpeed, :class => 'control-label'
+    .controls
+      = f.number_field :turretSpeed, :class => 'number_field'
+  .control-group
+    = f.label :turretTime, :class => 'control-label'
+    .controls
+      = f.number_field :turretTime, :class => 'number_field'
+  .control-group
+    = f.label :turretWaste, :class => 'control-label'
+    .controls
+      = f.number_field :turretWaste, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", machine_stripe_standards_path, :class => 'btn'

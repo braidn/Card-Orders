@@ -1,76 +1,53 @@
-%p#notice= notice
-%p
-  %b Ampmaterial:
-  = @machine_stripe_standard.ampMaterial
-%p
-  %b Amptime:
-  = @machine_stripe_standard.ampTime
-%p
-  %b Headmaterial:
-  = @machine_stripe_standard.headMaterial
-%p
-  %b Headtime:
-  = @machine_stripe_standard.headTime
-%p
-  %b Inkmat:
-  = @machine_stripe_standard.inkMat
-%p
-  %b Inktime:
-  = @machine_stripe_standard.inkTime
-%p
-  %b Machinename:
-  = @machine_stripe_standard.machineName
-%p
-  %b Machineid:
-  = @machine_stripe_standard.machineId
-%p
-  %b Machinelabor:
-  = @machine_stripe_standard.machineLabor
-%p
-  %b Machineoverhead:
-  = @machine_stripe_standard.machineOverhead
-%p
-  %b Machinespeed:
-  = @machine_stripe_standard.machineSpeed
-%p
-  %b Machinetype:
-  = @machine_stripe_standard.machineType
-%p
-  %b Machinewidth:
-  = @machine_stripe_standard.machineWidth
-%p
-  %b Rollchangemat:
-  = @machine_stripe_standard.rollChangeMat
-%p
-  %b Rollchangetime:
-  = @machine_stripe_standard.rollChangeTime
-%p
-  %b Slitmat:
-  = @machine_stripe_standard.slitMat
-%p
-  %b Slitspeed:
-  = @machine_stripe_standard.slitSpeed
-%p
-  %b Slittime:
-  = @machine_stripe_standard.slitTime
-%p
-  %b Slitwaste:
-  = @machine_stripe_standard.slitWaste
-%p
-  %b Trim:
-  = @machine_stripe_standard.trim
-%p
-  %b Turretmat:
-  = @machine_stripe_standard.turretMat
-%p
-  %b Turretspeed:
-  = @machine_stripe_standard.turretSpeed
-%p
-  %b Turrettime:
-  = @machine_stripe_standard.turretTime
-%p
-  %b Turretwaste:
-  = @machine_stripe_standard.turretWaste
-= link_to 'Edit', edit_machine_stripe_standard_path(@machine_stripe_standard)
-%p |
-= link_to 'Back', machine_stripe_standards_path
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.ampMaterial", :default => t("activerecord.labels.ampMaterial", :default => "Ampmaterial")) + ":"
+%p= @machine_stripe_standard.ampMaterial
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.ampTime", :default => t("activerecord.labels.ampTime", :default => "Amptime")) + ":"
+%p= @machine_stripe_standard.ampTime
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.headMaterial", :default => t("activerecord.labels.headMaterial", :default => "Headmaterial")) + ":"
+%p= @machine_stripe_standard.headMaterial
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.headTime", :default => t("activerecord.labels.headTime", :default => "Headtime")) + ":"
+%p= @machine_stripe_standard.headTime
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.inkMat", :default => t("activerecord.labels.inkMat", :default => "Inkmat")) + ":"
+%p= @machine_stripe_standard.inkMat
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.inkTime", :default => t("activerecord.labels.inkTime", :default => "Inktime")) + ":"
+%p= @machine_stripe_standard.inkTime
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineName", :default => t("activerecord.labels.machineName", :default => "Machinename")) + ":"
+%p= @machine_stripe_standard.machineName
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineId", :default => t("activerecord.labels.machineId", :default => "Machineid")) + ":"
+%p= @machine_stripe_standard.machineId
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineLabor", :default => t("activerecord.labels.machineLabor", :default => "Machinelabor")) + ":"
+%p= @machine_stripe_standard.machineLabor
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineOverhead", :default => t("activerecord.labels.machineOverhead", :default => "Machineoverhead")) + ":"
+%p= @machine_stripe_standard.machineOverhead
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineSpeed", :default => t("activerecord.labels.machineSpeed", :default => "Machinespeed")) + ":"
+%p= @machine_stripe_standard.machineSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineType", :default => t("activerecord.labels.machineType", :default => "Machinetype")) + ":"
+%p= @machine_stripe_standard.machineType
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.machineWidth", :default => t("activerecord.labels.machineWidth", :default => "Machinewidth")) + ":"
+%p= @machine_stripe_standard.machineWidth
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.rollChangeMat", :default => t("activerecord.labels.rollChangeMat", :default => "Rollchangemat")) + ":"
+%p= @machine_stripe_standard.rollChangeMat
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.rollChangeTime", :default => t("activerecord.labels.rollChangeTime", :default => "Rollchangetime")) + ":"
+%p= @machine_stripe_standard.rollChangeTime
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.slitMat", :default => t("activerecord.labels.slitMat", :default => "Slitmat")) + ":"
+%p= @machine_stripe_standard.slitMat
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.slitSpeed", :default => t("activerecord.labels.slitSpeed", :default => "Slitspeed")) + ":"
+%p= @machine_stripe_standard.slitSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.slitTime", :default => t("activerecord.labels.slitTime", :default => "Slittime")) + ":"
+%p= @machine_stripe_standard.slitTime
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.slitWaste", :default => t("activerecord.labels.slitWaste", :default => "Slitwaste")) + ":"
+%p= @machine_stripe_standard.slitWaste
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.trim", :default => t("activerecord.labels.trim", :default => "Trim")) + ":"
+%p= @machine_stripe_standard.trim
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.turretMat", :default => t("activerecord.labels.turretMat", :default => "Turretmat")) + ":"
+%p= @machine_stripe_standard.turretMat
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.turretSpeed", :default => t("activerecord.labels.turretSpeed", :default => "Turretspeed")) + ":"
+%p= @machine_stripe_standard.turretSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.turretTime", :default => t("activerecord.labels.turretTime", :default => "Turrettime")) + ":"
+%p= @machine_stripe_standard.turretTime
+%label{:class => "label"}= t("activerecord.attributes.machine_stripe_standard.turretWaste", :default => t("activerecord.labels.turretWaste", :default => "Turretwaste")) + ":"
+%p= @machine_stripe_standard.turretWaste
+
+.form-actions
+  = link_to "Back", machine_stripe_standards_path, :class => 'btn'
+  = link_to "Edit", edit_machine_stripe_standard_path(@machine_stripe_standard), :class => 'btn'
+  = link_to "Delete", machine_stripe_standard_path(@machine_stripe_standard), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
