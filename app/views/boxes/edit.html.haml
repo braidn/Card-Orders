@@ -1,5 +1,2 @@
-%h1 Editing box
-= render 'form'
-= link_to 'Show', @box
-%p |
-= link_to 'Back', boxes_path
+= form_for @box, :html => { :class => "edit_box form-horizontal", :id => "edit_box" } do |f|
+  = render :partial => "form", :locals => {:f => f}

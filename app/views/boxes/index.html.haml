@@ -1,51 +1,21 @@
-%h1 Listing boxes
-%table
-  %tr
-    %th Boxtype
-    %th Boxesperskid
-    %th Caliper
-    %th Cardsperskid
-    %th Concatview
-    %th Estimateboxselection
-    %th Height
-    %th Innercost
-    %th Innerouter
-    %th Innerquantity
-    %th Internaldescription
-    %th Length
-    %th Maincustomer
-    %th Outercost
-    %th Outerquantity
-    %th Rowshigh
-    %th Selectskid
-    %th Size
-    %th Width
-    %th
-    %th
-    %th
-  - @boxes.each do |box|
+%h1 Boxs
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= box.boxtype
-      %td= box.boxesperskid
-      %td= box.caliper
-      %td= box.cardsperskid
-      %td= box.concatview
-      %td= box.estimateboxselection
-      %td= box.height
-      %td= box.innercost
-      %td= box.innerouter
-      %td= box.innerquantity
-      %td= box.internaldescription
-      %td= box.length
-      %td= box.maincustomer
-      %td= box.outercost
-      %td= box.outerquantity
-      %td= box.rowshigh
-      %td= box.selectskid
-      %td= box.size
-      %td= box.width
-      %td= link_to 'Show', box
-      %td= link_to 'Edit', edit_box_path(box)
-      %td= link_to 'Destroy', box, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Box', new_box_path
+      %th ID
+      %th
+        = t("activerecord.attributes.box.boxtype", :default => t("activerecord.labels.boxtype", :default => "Boxtype"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @boxes.each do |box|
+      %tr
+        %td= box.id
+        %td= link_to box.boxtype, box_path(box)
+        %td= box.created_at
+        %td
+          = link_to "Show", box_path(box), :class => 'btn btn-mini'
+          = link_to "Edit", edit_box_path(box), :class => 'btn btn-mini'
+          = link_to "Destroy", box_path(box), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_box_path, :class => 'btn btn-primary'

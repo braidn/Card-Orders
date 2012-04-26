@@ -1,61 +1,43 @@
-%p#notice= notice
-%p
-  %b Boxtype:
-  = @box.boxtype
-%p
-  %b Boxesperskid:
-  = @box.boxesperskid
-%p
-  %b Caliper:
-  = @box.caliper
-%p
-  %b Cardsperskid:
-  = @box.cardsperskid
-%p
-  %b Concatview:
-  = @box.concatview
-%p
-  %b Estimateboxselection:
-  = @box.estimateboxselection
-%p
-  %b Height:
-  = @box.height
-%p
-  %b Innercost:
-  = @box.innercost
-%p
-  %b Innerouter:
-  = @box.innerouter
-%p
-  %b Innerquantity:
-  = @box.innerquantity
-%p
-  %b Internaldescription:
-  = @box.internaldescription
-%p
-  %b Length:
-  = @box.length
-%p
-  %b Maincustomer:
-  = @box.maincustomer
-%p
-  %b Outercost:
-  = @box.outercost
-%p
-  %b Outerquantity:
-  = @box.outerquantity
-%p
-  %b Rowshigh:
-  = @box.rowshigh
-%p
-  %b Selectskid:
-  = @box.selectskid
-%p
-  %b Size:
-  = @box.size
-%p
-  %b Width:
-  = @box.width
-= link_to 'Edit', edit_box_path(@box)
-%p |
-= link_to 'Back', boxes_path
+%label{:class => "label"}= t("activerecord.attributes.box.boxtype", :default => t("activerecord.labels.boxtype", :default => "Boxtype")) + ":"
+%p= @box.boxtype
+%label{:class => "label"}= t("activerecord.attributes.box.boxesperskid", :default => t("activerecord.labels.boxesperskid", :default => "Boxesperskid")) + ":"
+%p= @box.boxesperskid
+%label{:class => "label"}= t("activerecord.attributes.box.caliper", :default => t("activerecord.labels.caliper", :default => "Caliper")) + ":"
+%p= @box.caliper
+%label{:class => "label"}= t("activerecord.attributes.box.cardsperskid", :default => t("activerecord.labels.cardsperskid", :default => "Cardsperskid")) + ":"
+%p= @box.cardsperskid
+%label{:class => "label"}= t("activerecord.attributes.box.concatview", :default => t("activerecord.labels.concatview", :default => "Concatview")) + ":"
+%p= @box.concatview
+%label{:class => "label"}= t("activerecord.attributes.box.estimateboxselection", :default => t("activerecord.labels.estimateboxselection", :default => "Estimateboxselection")) + ":"
+%p= @box.estimateboxselection
+%label{:class => "label"}= t("activerecord.attributes.box.height", :default => t("activerecord.labels.height", :default => "Height")) + ":"
+%p= @box.height
+%label{:class => "label"}= t("activerecord.attributes.box.innercost", :default => t("activerecord.labels.innercost", :default => "Innercost")) + ":"
+%p= @box.innercost
+%label{:class => "label"}= t("activerecord.attributes.box.innerouter", :default => t("activerecord.labels.innerouter", :default => "Innerouter")) + ":"
+%p= @box.innerouter
+%label{:class => "label"}= t("activerecord.attributes.box.innerquantity", :default => t("activerecord.labels.innerquantity", :default => "Innerquantity")) + ":"
+%p= @box.innerquantity
+%label{:class => "label"}= t("activerecord.attributes.box.internaldescription", :default => t("activerecord.labels.internaldescription", :default => "Internaldescription")) + ":"
+%p= @box.internaldescription
+%label{:class => "label"}= t("activerecord.attributes.box.length", :default => t("activerecord.labels.length", :default => "Length")) + ":"
+%p= @box.length
+%label{:class => "label"}= t("activerecord.attributes.box.maincustomer", :default => t("activerecord.labels.maincustomer", :default => "Maincustomer")) + ":"
+%p= @box.maincustomer
+%label{:class => "label"}= t("activerecord.attributes.box.outercost", :default => t("activerecord.labels.outercost", :default => "Outercost")) + ":"
+%p= @box.outercost
+%label{:class => "label"}= t("activerecord.attributes.box.outerquantity", :default => t("activerecord.labels.outerquantity", :default => "Outerquantity")) + ":"
+%p= @box.outerquantity
+%label{:class => "label"}= t("activerecord.attributes.box.rowshigh", :default => t("activerecord.labels.rowshigh", :default => "Rowshigh")) + ":"
+%p= @box.rowshigh
+%label{:class => "label"}= t("activerecord.attributes.box.selectskid", :default => t("activerecord.labels.selectskid", :default => "Selectskid")) + ":"
+%p= @box.selectskid
+%label{:class => "label"}= t("activerecord.attributes.box.size", :default => t("activerecord.labels.size", :default => "Size")) + ":"
+%p= @box.size
+%label{:class => "label"}= t("activerecord.attributes.box.width", :default => t("activerecord.labels.width", :default => "Width")) + ":"
+%p= @box.width
+
+.form-actions
+  = link_to "Back", boxes_path, :class => 'btn'
+  = link_to "Edit", edit_box_path(@box), :class => 'btn'
+  = link_to "Delete", box_path(@box), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
