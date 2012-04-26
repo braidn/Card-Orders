@@ -1,5 +1,2 @@
-%h1 Editing machine_id_standard
-= render 'form'
-= link_to 'Show', @machine_id_standard
-%p |
-= link_to 'Back', machine_id_standards_path
+= form_for @machine_id_standard, :html => { :class => "edit_machine_id_standard form-horizontal", :id => "edit_machine_id_standard" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,75 +1,21 @@
-%h1 Listing machine_id_standards
-%table
-  %tr
-    %th Diematerial
-    %th Diespeed
-    %th Dietime
-    %th Diewaste
-    %th Foldermaterial
-    %th Folderspeed
-    %th Foldertime
-    %th Folderwaste
-    %th Insertionmaterial
-    %th Insertionspeed
-    %th Insertiontime
-    %th Machinename
-    %th Machineid
-    %th Machinelabor
-    %th Machineoverhead
-    %th Machinepitch
-    %th Machinespeed
-    %th Machinetype
-    %th Machinewidth
-    %th Nummat
-    %th Numspeed
-    %th Numbtime
-    %th Numwaste
-    %th Rollchangemat
-    %th Rollchangetime
-    %th Rollchangewaste
-    %th Slitmat
-    %th Slitspeed
-    %th Slittime
-    %th Slitwaste
-    %th Trim
-    %th
-    %th
-    %th
-  - @machine_id_standards.each do |machine_id_standard|
+%h1 Machine Id Standards
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= machine_id_standard.dieMaterial
-      %td= machine_id_standard.dieSpeed
-      %td= machine_id_standard.dieTime
-      %td= machine_id_standard.dieWaste
-      %td= machine_id_standard.folderMaterial
-      %td= machine_id_standard.folderSpeed
-      %td= machine_id_standard.folderTime
-      %td= machine_id_standard.folderWaste
-      %td= machine_id_standard.insertionMaterial
-      %td= machine_id_standard.insertionSpeed
-      %td= machine_id_standard.insertionTime
-      %td= machine_id_standard.machineName
-      %td= machine_id_standard.machineId
-      %td= machine_id_standard.machineLabor
-      %td= machine_id_standard.machineOverhead
-      %td= machine_id_standard.machinePitch
-      %td= machine_id_standard.machineSpeed
-      %td= machine_id_standard.machineType
-      %td= machine_id_standard.machineWidth
-      %td= machine_id_standard.numMat
-      %td= machine_id_standard.numSpeed
-      %td= machine_id_standard.numbTime
-      %td= machine_id_standard.numWaste
-      %td= machine_id_standard.rollChangeMat
-      %td= machine_id_standard.rollChangeTime
-      %td= machine_id_standard.rollChangeWaste
-      %td= machine_id_standard.slitMat
-      %td= machine_id_standard.slitSpeed
-      %td= machine_id_standard.slitTime
-      %td= machine_id_standard.slitWaste
-      %td= machine_id_standard.trim
-      %td= link_to 'Show', machine_id_standard
-      %td= link_to 'Edit', edit_machine_id_standard_path(machine_id_standard)
-      %td= link_to 'Destroy', machine_id_standard, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Machine id standard', new_machine_id_standard_path
+      %th ID
+      %th
+        = t("activerecord.attributes.machine_id_standard.dieMaterial", :default => t("activerecord.labels.dieMaterial", :default => "Diematerial"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @machine_id_standards.each do |machine_id_standard|
+      %tr
+        %td= machine_id_standard.id
+        %td= link_to machine_id_standard.dieMaterial, machine_id_standard_path(machine_id_standard)
+        %td= machine_id_standard.created_at
+        %td
+          = link_to "Show", machine_id_standard_path(machine_id_standard), :class => 'btn btn-mini'
+          = link_to "Edit", edit_machine_id_standard_path(machine_id_standard), :class => 'btn btn-mini'
+          = link_to "Destroy", machine_id_standard_path(machine_id_standard), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_machine_id_standard_path, :class => 'btn btn-primary'

@@ -1,97 +1,67 @@
-%p#notice= notice
-%p
-  %b Diematerial:
-  = @machine_id_standard.dieMaterial
-%p
-  %b Diespeed:
-  = @machine_id_standard.dieSpeed
-%p
-  %b Dietime:
-  = @machine_id_standard.dieTime
-%p
-  %b Diewaste:
-  = @machine_id_standard.dieWaste
-%p
-  %b Foldermaterial:
-  = @machine_id_standard.folderMaterial
-%p
-  %b Folderspeed:
-  = @machine_id_standard.folderSpeed
-%p
-  %b Foldertime:
-  = @machine_id_standard.folderTime
-%p
-  %b Folderwaste:
-  = @machine_id_standard.folderWaste
-%p
-  %b Insertionmaterial:
-  = @machine_id_standard.insertionMaterial
-%p
-  %b Insertionspeed:
-  = @machine_id_standard.insertionSpeed
-%p
-  %b Insertiontime:
-  = @machine_id_standard.insertionTime
-%p
-  %b Machinename:
-  = @machine_id_standard.machineName
-%p
-  %b Machineid:
-  = @machine_id_standard.machineId
-%p
-  %b Machinelabor:
-  = @machine_id_standard.machineLabor
-%p
-  %b Machineoverhead:
-  = @machine_id_standard.machineOverhead
-%p
-  %b Machinepitch:
-  = @machine_id_standard.machinePitch
-%p
-  %b Machinespeed:
-  = @machine_id_standard.machineSpeed
-%p
-  %b Machinetype:
-  = @machine_id_standard.machineType
-%p
-  %b Machinewidth:
-  = @machine_id_standard.machineWidth
-%p
-  %b Nummat:
-  = @machine_id_standard.numMat
-%p
-  %b Numspeed:
-  = @machine_id_standard.numSpeed
-%p
-  %b Numbtime:
-  = @machine_id_standard.numbTime
-%p
-  %b Numwaste:
-  = @machine_id_standard.numWaste
-%p
-  %b Rollchangemat:
-  = @machine_id_standard.rollChangeMat
-%p
-  %b Rollchangetime:
-  = @machine_id_standard.rollChangeTime
-%p
-  %b Rollchangewaste:
-  = @machine_id_standard.rollChangeWaste
-%p
-  %b Slitmat:
-  = @machine_id_standard.slitMat
-%p
-  %b Slitspeed:
-  = @machine_id_standard.slitSpeed
-%p
-  %b Slittime:
-  = @machine_id_standard.slitTime
-%p
-  %b Slitwaste:
-  = @machine_id_standard.slitWaste
-%p
-  %b Trim:
-  = @machine_id_standard.trim
-= link_to 'Edit', edit_machine_id_standard_path(@machine_id_standard)
-%p |
-= link_to 'Back', machine_id_standards_path
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.dieMaterial", :default => t("activerecord.labels.dieMaterial", :default => "Diematerial")) + ":"
+%p= @machine_id_standard.dieMaterial
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.dieSpeed", :default => t("activerecord.labels.dieSpeed", :default => "Diespeed")) + ":"
+%p= @machine_id_standard.dieSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.dieTime", :default => t("activerecord.labels.dieTime", :default => "Dietime")) + ":"
+%p= @machine_id_standard.dieTime
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.dieWaste", :default => t("activerecord.labels.dieWaste", :default => "Diewaste")) + ":"
+%p= @machine_id_standard.dieWaste
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.folderMaterial", :default => t("activerecord.labels.folderMaterial", :default => "Foldermaterial")) + ":"
+%p= @machine_id_standard.folderMaterial
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.folderSpeed", :default => t("activerecord.labels.folderSpeed", :default => "Folderspeed")) + ":"
+%p= @machine_id_standard.folderSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.folderTime", :default => t("activerecord.labels.folderTime", :default => "Foldertime")) + ":"
+%p= @machine_id_standard.folderTime
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.folderWaste", :default => t("activerecord.labels.folderWaste", :default => "Folderwaste")) + ":"
+%p= @machine_id_standard.folderWaste
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.insertionMaterial", :default => t("activerecord.labels.insertionMaterial", :default => "Insertionmaterial")) + ":"
+%p= @machine_id_standard.insertionMaterial
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.insertionSpeed", :default => t("activerecord.labels.insertionSpeed", :default => "Insertionspeed")) + ":"
+%p= @machine_id_standard.insertionSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.insertionTime", :default => t("activerecord.labels.insertionTime", :default => "Insertiontime")) + ":"
+%p= @machine_id_standard.insertionTime
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineName", :default => t("activerecord.labels.machineName", :default => "Machinename")) + ":"
+%p= @machine_id_standard.machineName
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineId", :default => t("activerecord.labels.machineId", :default => "Machineid")) + ":"
+%p= @machine_id_standard.machineId
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineLabor", :default => t("activerecord.labels.machineLabor", :default => "Machinelabor")) + ":"
+%p= @machine_id_standard.machineLabor
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineOverhead", :default => t("activerecord.labels.machineOverhead", :default => "Machineoverhead")) + ":"
+%p= @machine_id_standard.machineOverhead
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machinePitch", :default => t("activerecord.labels.machinePitch", :default => "Machinepitch")) + ":"
+%p= @machine_id_standard.machinePitch
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineSpeed", :default => t("activerecord.labels.machineSpeed", :default => "Machinespeed")) + ":"
+%p= @machine_id_standard.machineSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineType", :default => t("activerecord.labels.machineType", :default => "Machinetype")) + ":"
+%p= @machine_id_standard.machineType
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.machineWidth", :default => t("activerecord.labels.machineWidth", :default => "Machinewidth")) + ":"
+%p= @machine_id_standard.machineWidth
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.numMat", :default => t("activerecord.labels.numMat", :default => "Nummat")) + ":"
+%p= @machine_id_standard.numMat
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.numSpeed", :default => t("activerecord.labels.numSpeed", :default => "Numspeed")) + ":"
+%p= @machine_id_standard.numSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.numbTime", :default => t("activerecord.labels.numbTime", :default => "Numbtime")) + ":"
+%p= @machine_id_standard.numbTime
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.numWaste", :default => t("activerecord.labels.numWaste", :default => "Numwaste")) + ":"
+%p= @machine_id_standard.numWaste
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.rollChangeMat", :default => t("activerecord.labels.rollChangeMat", :default => "Rollchangemat")) + ":"
+%p= @machine_id_standard.rollChangeMat
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.rollChangeTime", :default => t("activerecord.labels.rollChangeTime", :default => "Rollchangetime")) + ":"
+%p= @machine_id_standard.rollChangeTime
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.rollChangeWaste", :default => t("activerecord.labels.rollChangeWaste", :default => "Rollchangewaste")) + ":"
+%p= @machine_id_standard.rollChangeWaste
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.slitMat", :default => t("activerecord.labels.slitMat", :default => "Slitmat")) + ":"
+%p= @machine_id_standard.slitMat
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.slitSpeed", :default => t("activerecord.labels.slitSpeed", :default => "Slitspeed")) + ":"
+%p= @machine_id_standard.slitSpeed
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.slitTime", :default => t("activerecord.labels.slitTime", :default => "Slittime")) + ":"
+%p= @machine_id_standard.slitTime
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.slitWaste", :default => t("activerecord.labels.slitWaste", :default => "Slitwaste")) + ":"
+%p= @machine_id_standard.slitWaste
+%label{:class => "label"}= t("activerecord.attributes.machine_id_standard.trim", :default => t("activerecord.labels.trim", :default => "Trim")) + ":"
+%p= @machine_id_standard.trim
+
+.form-actions
+  = link_to "Back", machine_id_standards_path, :class => 'btn'
+  = link_to "Edit", edit_machine_id_standard_path(@machine_id_standard), :class => 'btn'
+  = link_to "Delete", machine_id_standard_path(@machine_id_standard), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

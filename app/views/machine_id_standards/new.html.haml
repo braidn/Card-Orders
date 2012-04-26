@@ -1,3 +1,2 @@
-%h1 New machine_id_standard
-= render 'form'
-= link_to 'Back', machine_id_standards_path
+= form_for @machine_id_standard, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}
