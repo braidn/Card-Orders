@@ -1,22 +1,17 @@
-%p#notice= notice
-%p
-  %b Lamadhesive:
-  = @laminate.lamAdhesive
-%p
-  %b Lamdescription:
-  = @laminate.lamDescription
-%p
-  %b Lamlength:
-  = @laminate.lamLength
-%p
-  %b Lammsi:
-  = @laminate.lamMsi
-%p
-  %b Lamtype:
-  = @laminate.lamType
-%p
-  %b Lamwidth:
-  = @laminate.lamWidth
-= link_to 'Edit', edit_laminate_path(@laminate)
-%p |
-= link_to 'Back', laminates_path
+%label{:class => "label"}= t("activerecord.attributes.laminate.lamAdhesive", :default => t("activerecord.labels.lamAdhesive", :default => "Lamadhesive")) + ":"
+%p= @laminate.lamAdhesive
+%label{:class => "label"}= t("activerecord.attributes.laminate.lamDescription", :default => t("activerecord.labels.lamDescription", :default => "Lamdescription")) + ":"
+%p= @laminate.lamDescription
+%label{:class => "label"}= t("activerecord.attributes.laminate.lamLength", :default => t("activerecord.labels.lamLength", :default => "Lamlength")) + ":"
+%p= @laminate.lamLength
+%label{:class => "label"}= t("activerecord.attributes.laminate.lamMsi", :default => t("activerecord.labels.lamMsi", :default => "Lammsi")) + ":"
+%p= @laminate.lamMsi
+%label{:class => "label"}= t("activerecord.attributes.laminate.lamType", :default => t("activerecord.labels.lamType", :default => "Lamtype")) + ":"
+%p= @laminate.lamType
+%label{:class => "label"}= t("activerecord.attributes.laminate.lamWidth", :default => t("activerecord.labels.lamWidth", :default => "Lamwidth")) + ":"
+%p= @laminate.lamWidth
+
+.form-actions
+  = link_to "Back", laminates_path, :class => 'btn'
+  = link_to "Edit", edit_laminate_path(@laminate), :class => 'btn'
+  = link_to "Delete", laminate_path(@laminate), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

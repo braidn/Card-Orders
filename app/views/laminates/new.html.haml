@@ -1,3 +1,2 @@
-%h1 New laminate
-= render 'form'
-= link_to 'Back', laminates_path
+= form_for @laminate, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

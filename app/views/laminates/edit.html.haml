@@ -1,5 +1,2 @@
-%h1 Editing laminate
-= render 'form'
-= link_to 'Show', @laminate
-%p |
-= link_to 'Back', laminates_path
+= form_for @laminate, :html => { :class => "edit_laminate form-horizontal", :id => "edit_laminate" } do |f|
+  = render :partial => "form", :locals => {:f => f}

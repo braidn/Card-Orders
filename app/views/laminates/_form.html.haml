@@ -1,35 +1,31 @@
-= form_for(@laminate) do |f|
-  - if @laminate.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@laminate.errors.count, "error")
-        prohibited this laminate from being saved:
-      %ul
-        - @laminate.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :lamAdhesive
-    %br/
-    = f.text_field :lamAdhesive
-  .field
-    = f.label :lamDescription
-    %br/
-    = f.text_area :lamDescription
-  .field
-    = f.label :lamLength
-    %br/
-    = f.number_field :lamLength
-  .field
-    = f.label :lamMsi
-    %br/
-    = f.number_field :lamMsi
-  .field
-    = f.label :lamType
-    %br/
-    = f.text_field :lamType
-  .field
-    = f.label :lamWidth
-    %br/
-    = f.number_field :lamWidth
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Laminate
+  .control-group
+    = f.label :lamAdhesive, :class => 'control-label'
+    .controls
+      = f.text_field :lamAdhesive, :class => 'text_field'
+  .control-group
+    = f.label :lamDescription, :class => 'control-label'
+    .controls
+      = f.text_area :lamDescription, :class => 'text_area'
+  .control-group
+    = f.label :lamLength, :class => 'control-label'
+    .controls
+      = f.number_field :lamLength, :class => 'number_field'
+  .control-group
+    = f.label :lamMsi, :class => 'control-label'
+    .controls
+      = f.number_field :lamMsi, :class => 'number_field'
+  .control-group
+    = f.label :lamType, :class => 'control-label'
+    .controls
+      = f.text_field :lamType, :class => 'text_field'
+  .control-group
+    = f.label :lamWidth, :class => 'control-label'
+    .controls
+      = f.number_field :lamWidth, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", laminates_path, :class => 'btn'

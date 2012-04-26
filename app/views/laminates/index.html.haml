@@ -1,25 +1,21 @@
-%h1 Listing laminates
-%table
-  %tr
-    %th Lamadhesive
-    %th Lamdescription
-    %th Lamlength
-    %th Lammsi
-    %th Lamtype
-    %th Lamwidth
-    %th
-    %th
-    %th
-  - @laminates.each do |laminate|
+%h1 Laminates
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= laminate.lamAdhesive
-      %td= laminate.lamDescription
-      %td= laminate.lamLength
-      %td= laminate.lamMsi
-      %td= laminate.lamType
-      %td= laminate.lamWidth
-      %td= link_to 'Show', laminate
-      %td= link_to 'Edit', edit_laminate_path(laminate)
-      %td= link_to 'Destroy', laminate, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Laminate', new_laminate_path
+      %th ID
+      %th
+        = t("activerecord.attributes.laminate.lamAdhesive", :default => t("activerecord.labels.lamAdhesive", :default => "Lamadhesive"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @laminates.each do |laminate|
+      %tr
+        %td= laminate.id
+        %td= link_to laminate.lamAdhesive, laminate_path(laminate)
+        %td= laminate.created_at
+        %td
+          = link_to "Show", laminate_path(laminate), :class => 'btn btn-mini'
+          = link_to "Edit", edit_laminate_path(laminate), :class => 'btn btn-mini'
+          = link_to "Destroy", laminate_path(laminate), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_laminate_path, :class => 'btn btn-primary'
