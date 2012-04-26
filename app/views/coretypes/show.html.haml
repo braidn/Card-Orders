@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Matdescription:
-  = @coretype.matDescription
-%p
-  %b Material:
-  = @coretype.material
-= link_to 'Edit', edit_coretype_path(@coretype)
-%p |
-= link_to 'Back', coretypes_path
+%label{:class => "label"}= t("activerecord.attributes.coretype.matDescription", :default => t("activerecord.labels.matDescription", :default => "Matdescription")) + ":"
+%p= @coretype.matDescription
+%label{:class => "label"}= t("activerecord.attributes.coretype.material", :default => t("activerecord.labels.material", :default => "Material")) + ":"
+%p= @coretype.material
+
+.form-actions
+  = link_to "Back", coretypes_path, :class => 'btn'
+  = link_to "Edit", edit_coretype_path(@coretype), :class => 'btn'
+  = link_to "Delete", coretype_path(@coretype), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

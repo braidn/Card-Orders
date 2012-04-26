@@ -1,19 +1,15 @@
-= form_for(@coretype) do |f|
-  - if @coretype.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@coretype.errors.count, "error")
-        prohibited this coretype from being saved:
-      %ul
-        - @coretype.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :matDescription
-    %br/
-    = f.text_field :matDescription
-  .field
-    = f.label :material
-    %br/
-    = f.text_field :material
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Coretype
+  .control-group
+    = f.label :matDescription, :class => 'control-label'
+    .controls
+      = f.text_field :matDescription, :class => 'text_field'
+  .control-group
+    = f.label :material, :class => 'control-label'
+    .controls
+      = f.text_field :material, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", coretypes_path, :class => 'btn'

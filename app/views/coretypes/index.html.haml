@@ -1,17 +1,21 @@
-%h1 Listing coretypes
-%table
-  %tr
-    %th Matdescription
-    %th Material
-    %th
-    %th
-    %th
-  - @coretypes.each do |coretype|
+%h1 Coretypes
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= coretype.matDescription
-      %td= coretype.material
-      %td= link_to 'Show', coretype
-      %td= link_to 'Edit', edit_coretype_path(coretype)
-      %td= link_to 'Destroy', coretype, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Coretype', new_coretype_path
+      %th ID
+      %th
+        = t("activerecord.attributes.coretype.matDescription", :default => t("activerecord.labels.matDescription", :default => "Matdescription"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @coretypes.each do |coretype|
+      %tr
+        %td= coretype.id
+        %td= link_to coretype.matDescription, coretype_path(coretype)
+        %td= coretype.created_at
+        %td
+          = link_to "Show", coretype_path(coretype), :class => 'btn btn-mini'
+          = link_to "Edit", edit_coretype_path(coretype), :class => 'btn btn-mini'
+          = link_to "Destroy", coretype_path(coretype), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_coretype_path, :class => 'btn btn-primary'

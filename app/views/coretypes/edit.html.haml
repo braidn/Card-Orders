@@ -1,5 +1,2 @@
-%h1 Editing coretype
-= render 'form'
-= link_to 'Show', @coretype
-%p |
-= link_to 'Back', coretypes_path
+= form_for @coretype, :html => { :class => "edit_coretype form-horizontal", :id => "edit_coretype" } do |f|
+  = render :partial => "form", :locals => {:f => f}
