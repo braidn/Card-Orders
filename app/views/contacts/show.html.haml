@@ -1,43 +1,31 @@
-%p#notice= notice
-%p
-  %b Address1:
-  = @contact.address1
-%p
-  %b Address2:
-  = @contact.address2
-%p
-  %b City:
-  = @contact.city
-%p
-  %b Company:
-  = @contact.company
-%p
-  %b Email:
-  = @contact.email
-%p
-  %b Fax:
-  = @contact.fax
-%p
-  %b Firstname:
-  = @contact.firstName
-%p
-  %b Lastname:
-  = @contact.lastName
-%p
-  %b Cell:
-  = @contact.cell
-%p
-  %b Mainphone:
-  = @contact.mainPhone
-%p
-  %b State:
-  = @contact.state
-%p
-  %b Url:
-  = @contact.url
-%p
-  %b Zip:
-  = @contact.zip
-= link_to 'Edit', edit_contact_path(@contact)
-%p |
-= link_to 'Back', contacts_path
+%label{:class => "label"}= t("activerecord.attributes.contact.address1", :default => t("activerecord.labels.address1", :default => "Address1")) + ":"
+%p= @contact.address1
+%label{:class => "label"}= t("activerecord.attributes.contact.address2", :default => t("activerecord.labels.address2", :default => "Address2")) + ":"
+%p= @contact.address2
+%label{:class => "label"}= t("activerecord.attributes.contact.city", :default => t("activerecord.labels.city", :default => "City")) + ":"
+%p= @contact.city
+%label{:class => "label"}= t("activerecord.attributes.contact.company", :default => t("activerecord.labels.company", :default => "Company")) + ":"
+%p= @contact.company
+%label{:class => "label"}= t("activerecord.attributes.contact.email", :default => t("activerecord.labels.email", :default => "Email")) + ":"
+%p= @contact.email
+%label{:class => "label"}= t("activerecord.attributes.contact.fax", :default => t("activerecord.labels.fax", :default => "Fax")) + ":"
+%p= @contact.fax
+%label{:class => "label"}= t("activerecord.attributes.contact.firstName", :default => t("activerecord.labels.firstName", :default => "Firstname")) + ":"
+%p= @contact.firstName
+%label{:class => "label"}= t("activerecord.attributes.contact.lastName", :default => t("activerecord.labels.lastName", :default => "Lastname")) + ":"
+%p= @contact.lastName
+%label{:class => "label"}= t("activerecord.attributes.contact.cell", :default => t("activerecord.labels.cell", :default => "Cell")) + ":"
+%p= @contact.cell
+%label{:class => "label"}= t("activerecord.attributes.contact.mainPhone", :default => t("activerecord.labels.mainPhone", :default => "Mainphone")) + ":"
+%p= @contact.mainPhone
+%label{:class => "label"}= t("activerecord.attributes.contact.state", :default => t("activerecord.labels.state", :default => "State")) + ":"
+%p= @contact.state
+%label{:class => "label"}= t("activerecord.attributes.contact.url", :default => t("activerecord.labels.url", :default => "Url")) + ":"
+%p= @contact.url
+%label{:class => "label"}= t("activerecord.attributes.contact.zip", :default => t("activerecord.labels.zip", :default => "Zip")) + ":"
+%p= @contact.zip
+
+.form-actions
+  = link_to "Back", contacts_path, :class => 'btn'
+  = link_to "Edit", edit_contact_path(@contact), :class => 'btn'
+  = link_to "Delete", contact_path(@contact), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

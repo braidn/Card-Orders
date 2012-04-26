@@ -1,5 +1,2 @@
-%h1 Editing contact
-= render 'form'
-= link_to 'Show', @contact
-%p |
-= link_to 'Back', contacts_path
+= form_for @contact, :html => { :class => "edit_contact form-horizontal", :id => "edit_contact" } do |f|
+  = render :partial => "form", :locals => {:f => f}
