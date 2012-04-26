@@ -1,75 +1,71 @@
-= form_for(@rfid_inlay) do |f|
-  - if @rfid_inlay.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@rfid_inlay.errors.count, "error")
-        prohibited this rfid_inlay from being saved:
-      %ul
-        - @rfid_inlay.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :break1
-    %br/
-    = f.number_field :break1
-  .field
-    = f.label :break1Price
-    %br/
-    = f.number_field :break1Price
-  .field
-    = f.label :break2
-    %br/
-    = f.number_field :break2
-  .field
-    = f.label :break2Price
-    %br/
-    = f.number_field :break2Price
-  .field
-    = f.label :break3
-    %br/
-    = f.number_field :break3
-  .field
-    = f.label :break3Price
-    %br/
-    = f.number_field :break3Price
-  .field
-    = f.label :break4
-    %br/
-    = f.number_field :break4
-  .field
-    = f.label :break4Price
-    %br/
-    = f.number_field :break4Price
-  .field
-    = f.label :break5
-    %br/
-    = f.number_field :break5
-  .field
-    = f.label :break5Price
-    %br/
-    = f.number_field :break5Price
-  .field
-    = f.label :inlayDescription
-    %br/
-    = f.text_field :inlayDescription
-  .field
-    = f.label :inlayId
-    %br/
-    = f.number_field :inlayId
-  .field
-    = f.label :inlayTypeId
-    %br/
-    = f.number_field :inlayTypeId
-  .field
-    = f.label :price
-    %br/
-    = f.number_field :price
-  .field
-    = f.label :vendor
-    %br/
-    = f.text_field :vendor
-  .field
-    = f.label :vendorPartNumb
-    %br/
-    = f.text_field :vendorPartNumb
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Rfid Inlay
+  .control-group
+    = f.label :break1, :class => 'control-label'
+    .controls
+      = f.number_field :break1, :class => 'number_field'
+  .control-group
+    = f.label :break1Price, :class => 'control-label'
+    .controls
+      = f.number_field :break1Price, :class => 'number_field'
+  .control-group
+    = f.label :break2, :class => 'control-label'
+    .controls
+      = f.number_field :break2, :class => 'number_field'
+  .control-group
+    = f.label :break2Price, :class => 'control-label'
+    .controls
+      = f.number_field :break2Price, :class => 'number_field'
+  .control-group
+    = f.label :break3, :class => 'control-label'
+    .controls
+      = f.number_field :break3, :class => 'number_field'
+  .control-group
+    = f.label :break3Price, :class => 'control-label'
+    .controls
+      = f.number_field :break3Price, :class => 'number_field'
+  .control-group
+    = f.label :break4, :class => 'control-label'
+    .controls
+      = f.number_field :break4, :class => 'number_field'
+  .control-group
+    = f.label :break4Price, :class => 'control-label'
+    .controls
+      = f.number_field :break4Price, :class => 'number_field'
+  .control-group
+    = f.label :break5, :class => 'control-label'
+    .controls
+      = f.number_field :break5, :class => 'number_field'
+  .control-group
+    = f.label :break5Price, :class => 'control-label'
+    .controls
+      = f.number_field :break5Price, :class => 'number_field'
+  .control-group
+    = f.label :inlayDescription, :class => 'control-label'
+    .controls
+      = f.text_field :inlayDescription, :class => 'text_field'
+  .control-group
+    = f.label :inlayId, :class => 'control-label'
+    .controls
+      = f.number_field :inlayId, :class => 'number_field'
+  .control-group
+    = f.label :inlayTypeId, :class => 'control-label'
+    .controls
+      = f.number_field :inlayTypeId, :class => 'number_field'
+  .control-group
+    = f.label :price, :class => 'control-label'
+    .controls
+      = f.number_field :price, :class => 'number_field'
+  .control-group
+    = f.label :vendor, :class => 'control-label'
+    .controls
+      = f.text_field :vendor, :class => 'text_field'
+  .control-group
+    = f.label :vendorPartNumb, :class => 'control-label'
+    .controls
+      = f.text_field :vendorPartNumb, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", rfid_inlays_path, :class => 'btn'

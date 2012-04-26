@@ -1,5 +1,2 @@
-%h1 Editing rfid_inlay
-= render 'form'
-= link_to 'Show', @rfid_inlay
-%p |
-= link_to 'Back', rfid_inlays_path
+= form_for @rfid_inlay, :html => { :class => "edit_rfid_inlay form-horizontal", :id => "edit_rfid_inlay" } do |f|
+  = render :partial => "form", :locals => {:f => f}

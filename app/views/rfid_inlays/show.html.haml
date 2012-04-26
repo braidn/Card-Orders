@@ -1,52 +1,37 @@
-%p#notice= notice
-%p
-  %b Break1:
-  = @rfid_inlay.break1
-%p
-  %b Break1price:
-  = @rfid_inlay.break1Price
-%p
-  %b Break2:
-  = @rfid_inlay.break2
-%p
-  %b Break2price:
-  = @rfid_inlay.break2Price
-%p
-  %b Break3:
-  = @rfid_inlay.break3
-%p
-  %b Break3price:
-  = @rfid_inlay.break3Price
-%p
-  %b Break4:
-  = @rfid_inlay.break4
-%p
-  %b Break4price:
-  = @rfid_inlay.break4Price
-%p
-  %b Break5:
-  = @rfid_inlay.break5
-%p
-  %b Break5price:
-  = @rfid_inlay.break5Price
-%p
-  %b Inlaydescription:
-  = @rfid_inlay.inlayDescription
-%p
-  %b Inlayid:
-  = @rfid_inlay.inlayId
-%p
-  %b Inlaytypeid:
-  = @rfid_inlay.inlayTypeId
-%p
-  %b Price:
-  = @rfid_inlay.price
-%p
-  %b Vendor:
-  = @rfid_inlay.vendor
-%p
-  %b Vendorpartnumb:
-  = @rfid_inlay.vendorPartNumb
-= link_to 'Edit', edit_rfid_inlay_path(@rfid_inlay)
-%p |
-= link_to 'Back', rfid_inlays_path
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break1", :default => t("activerecord.labels.break1", :default => "Break1")) + ":"
+%p= @rfid_inlay.break1
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break1Price", :default => t("activerecord.labels.break1Price", :default => "Break1price")) + ":"
+%p= @rfid_inlay.break1Price
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break2", :default => t("activerecord.labels.break2", :default => "Break2")) + ":"
+%p= @rfid_inlay.break2
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break2Price", :default => t("activerecord.labels.break2Price", :default => "Break2price")) + ":"
+%p= @rfid_inlay.break2Price
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break3", :default => t("activerecord.labels.break3", :default => "Break3")) + ":"
+%p= @rfid_inlay.break3
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break3Price", :default => t("activerecord.labels.break3Price", :default => "Break3price")) + ":"
+%p= @rfid_inlay.break3Price
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break4", :default => t("activerecord.labels.break4", :default => "Break4")) + ":"
+%p= @rfid_inlay.break4
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break4Price", :default => t("activerecord.labels.break4Price", :default => "Break4price")) + ":"
+%p= @rfid_inlay.break4Price
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break5", :default => t("activerecord.labels.break5", :default => "Break5")) + ":"
+%p= @rfid_inlay.break5
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.break5Price", :default => t("activerecord.labels.break5Price", :default => "Break5price")) + ":"
+%p= @rfid_inlay.break5Price
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.inlayDescription", :default => t("activerecord.labels.inlayDescription", :default => "Inlaydescription")) + ":"
+%p= @rfid_inlay.inlayDescription
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.inlayId", :default => t("activerecord.labels.inlayId", :default => "Inlayid")) + ":"
+%p= @rfid_inlay.inlayId
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.inlayTypeId", :default => t("activerecord.labels.inlayTypeId", :default => "Inlaytypeid")) + ":"
+%p= @rfid_inlay.inlayTypeId
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.price", :default => t("activerecord.labels.price", :default => "Price")) + ":"
+%p= @rfid_inlay.price
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.vendor", :default => t("activerecord.labels.vendor", :default => "Vendor")) + ":"
+%p= @rfid_inlay.vendor
+%label{:class => "label"}= t("activerecord.attributes.rfid_inlay.vendorPartNumb", :default => t("activerecord.labels.vendorPartNumb", :default => "Vendorpartnumb")) + ":"
+%p= @rfid_inlay.vendorPartNumb
+
+.form-actions
+  = link_to "Back", rfid_inlays_path, :class => 'btn'
+  = link_to "Edit", edit_rfid_inlay_path(@rfid_inlay), :class => 'btn'
+  = link_to "Delete", rfid_inlay_path(@rfid_inlay), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
