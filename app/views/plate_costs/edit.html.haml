@@ -1,5 +1,2 @@
-%h1 Editing plate_cost
-= render 'form'
-= link_to 'Show', @plate_cost
-%p |
-= link_to 'Back', plate_costs_path
+= form_for @plate_cost, :html => { :class => "edit_plate_cost form-horizontal", :id => "edit_plate_cost" } do |f|
+  = render :partial => "form", :locals => {:f => f}

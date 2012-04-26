@@ -1,31 +1,23 @@
-%p#notice= notice
-%p
-  %b Digital:
-  = @plate_cost.digital
-%p
-  %b Filmcost:
-  = @plate_cost.filmcost
-%p
-  %b Filmsquareinch:
-  = @plate_cost.filmSquareInch
-%p
-  %b Laborcost:
-  = @plate_cost.laborCost
-%p
-  %b Machinename:
-  = @plate_cost.machineName
-%p
-  %b Processtime:
-  = @plate_cost.processTime
-%p
-  %b Sheetcost:
-  = @plate_cost.sheetCost
-%p
-  %b Sheetspercycle:
-  = @plate_cost.sheetsPerCycle
-%p
-  %b Squareinchpersheet:
-  = @plate_cost.squareInchPerSheet
-= link_to 'Edit', edit_plate_cost_path(@plate_cost)
-%p |
-= link_to 'Back', plate_costs_path
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.digital", :default => t("activerecord.labels.digital", :default => "Digital")) + ":"
+%p= @plate_cost.digital
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.filmcost", :default => t("activerecord.labels.filmcost", :default => "Filmcost")) + ":"
+%p= @plate_cost.filmcost
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.filmSquareInch", :default => t("activerecord.labels.filmSquareInch", :default => "Filmsquareinch")) + ":"
+%p= @plate_cost.filmSquareInch
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.laborCost", :default => t("activerecord.labels.laborCost", :default => "Laborcost")) + ":"
+%p= @plate_cost.laborCost
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.machineName", :default => t("activerecord.labels.machineName", :default => "Machinename")) + ":"
+%p= @plate_cost.machineName
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.processTime", :default => t("activerecord.labels.processTime", :default => "Processtime")) + ":"
+%p= @plate_cost.processTime
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.sheetCost", :default => t("activerecord.labels.sheetCost", :default => "Sheetcost")) + ":"
+%p= @plate_cost.sheetCost
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.sheetsPerCycle", :default => t("activerecord.labels.sheetsPerCycle", :default => "Sheetspercycle")) + ":"
+%p= @plate_cost.sheetsPerCycle
+%label{:class => "label"}= t("activerecord.attributes.plate_cost.squareInchPerSheet", :default => t("activerecord.labels.squareInchPerSheet", :default => "Squareinchpersheet")) + ":"
+%p= @plate_cost.squareInchPerSheet
+
+.form-actions
+  = link_to "Back", plate_costs_path, :class => 'btn'
+  = link_to "Edit", edit_plate_cost_path(@plate_cost), :class => 'btn'
+  = link_to "Delete", plate_cost_path(@plate_cost), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
