@@ -1,5 +1,2 @@
-%h1 Editing company
-= render 'form'
-= link_to 'Show', @company
-%p |
-= link_to 'Back', companies_path
+= form_for @company, :html => { :class => "edit_company form-horizontal", :id => "edit_company" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,37 +1,21 @@
-%h1 Listing companies
-%table
-  %tr
-    %th Address1
-    %th Address2
-    %th City
-    %th Commissioned
-    %th Name
-    %th Country
-    %th Market
-    %th Phone
-    %th Salesrep
-    %th State
-    %th Url
-    %th Zip
-    %th
-    %th
-    %th
-  - @companies.each do |company|
+%h1 Companys
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= company.address1
-      %td= company.address2
-      %td= company.city
-      %td= company.commissioned
-      %td= company.name
-      %td= company.country
-      %td= company.market
-      %td= company.phone
-      %td= company.salesrep
-      %td= company.state
-      %td= company.url
-      %td= company.zip
-      %td= link_to 'Show', company
-      %td= link_to 'Edit', edit_company_path(company)
-      %td= link_to 'Destroy', company, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Company', new_company_path
+      %th ID
+      %th
+        = t("activerecord.attributes.company.address1", :default => t("activerecord.labels.address1", :default => "Address1"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @companies.each do |company|
+      %tr
+        %td= company.id
+        %td= link_to company.address1, company_path(company)
+        %td= company.created_at
+        %td
+          = link_to "Show", company_path(company), :class => 'btn btn-mini'
+          = link_to "Edit", edit_company_path(company), :class => 'btn btn-mini'
+          = link_to "Destroy", company_path(company), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_company_path, :class => 'btn btn-primary'

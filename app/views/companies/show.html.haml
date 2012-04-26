@@ -1,40 +1,29 @@
-%p#notice= notice
-%p
-  %b Address1:
-  = @company.address1
-%p
-  %b Address2:
-  = @company.address2
-%p
-  %b City:
-  = @company.city
-%p
-  %b Commissioned:
-  = @company.commissioned
-%p
-  %b Name:
-  = @company.name
-%p
-  %b Country:
-  = @company.country
-%p
-  %b Market:
-  = @company.market
-%p
-  %b Phone:
-  = @company.phone
-%p
-  %b Salesrep:
-  = @company.salesrep
-%p
-  %b State:
-  = @company.state
-%p
-  %b Url:
-  = @company.url
-%p
-  %b Zip:
-  = @company.zip
-= link_to 'Edit', edit_company_path(@company)
-%p |
-= link_to 'Back', companies_path
+%label{:class => "label"}= t("activerecord.attributes.company.address1", :default => t("activerecord.labels.address1", :default => "Address1")) + ":"
+%p= @company.address1
+%label{:class => "label"}= t("activerecord.attributes.company.address2", :default => t("activerecord.labels.address2", :default => "Address2")) + ":"
+%p= @company.address2
+%label{:class => "label"}= t("activerecord.attributes.company.city", :default => t("activerecord.labels.city", :default => "City")) + ":"
+%p= @company.city
+%label{:class => "label"}= t("activerecord.attributes.company.commissioned", :default => t("activerecord.labels.commissioned", :default => "Commissioned")) + ":"
+%p= @company.commissioned
+%label{:class => "label"}= t("activerecord.attributes.company.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%p= @company.name
+%label{:class => "label"}= t("activerecord.attributes.company.country", :default => t("activerecord.labels.country", :default => "Country")) + ":"
+%p= @company.country
+%label{:class => "label"}= t("activerecord.attributes.company.market", :default => t("activerecord.labels.market", :default => "Market")) + ":"
+%p= @company.market
+%label{:class => "label"}= t("activerecord.attributes.company.phone", :default => t("activerecord.labels.phone", :default => "Phone")) + ":"
+%p= @company.phone
+%label{:class => "label"}= t("activerecord.attributes.company.salesrep", :default => t("activerecord.labels.salesrep", :default => "Salesrep")) + ":"
+%p= @company.salesrep
+%label{:class => "label"}= t("activerecord.attributes.company.state", :default => t("activerecord.labels.state", :default => "State")) + ":"
+%p= @company.state
+%label{:class => "label"}= t("activerecord.attributes.company.url", :default => t("activerecord.labels.url", :default => "Url")) + ":"
+%p= @company.url
+%label{:class => "label"}= t("activerecord.attributes.company.zip", :default => t("activerecord.labels.zip", :default => "Zip")) + ":"
+%p= @company.zip
+
+.form-actions
+  = link_to "Back", companies_path, :class => 'btn'
+  = link_to "Edit", edit_company_path(@company), :class => 'btn'
+  = link_to "Delete", company_path(@company), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
