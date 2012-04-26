@@ -1,25 +1,21 @@
-%h1 Listing inksignatures
-%table
-  %tr
-    %th Vendorpartnumber
-    %th Vendor
-    %th Magtype
-    %th Inktype
-    %th Inkmsiperpound
-    %th Inkcostperpound
-    %th
-    %th
-    %th
-  - @inksignatures.each do |inksignature|
+%h1 Inksignatures
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= inksignature.vendorpartnumber
-      %td= inksignature.vendor
-      %td= inksignature.magtype
-      %td= inksignature.inktype
-      %td= inksignature.inkmsiperpound
-      %td= inksignature.inkcostperpound
-      %td= link_to 'Show', inksignature
-      %td= link_to 'Edit', edit_inksignature_path(inksignature)
-      %td= link_to 'Destroy', inksignature, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Inksignature', new_inksignature_path
+      %th ID
+      %th
+        = t("activerecord.attributes.inksignature.vendorpartnumber", :default => t("activerecord.labels.vendorpartnumber", :default => "Vendorpartnumber"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @inksignatures.each do |inksignature|
+      %tr
+        %td= inksignature.id
+        %td= link_to inksignature.vendorpartnumber, inksignature_path(inksignature)
+        %td= inksignature.created_at
+        %td
+          = link_to "Show", inksignature_path(inksignature), :class => 'btn btn-mini'
+          = link_to "Edit", edit_inksignature_path(inksignature), :class => 'btn btn-mini'
+          = link_to "Destroy", inksignature_path(inksignature), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_inksignature_path, :class => 'btn btn-primary'

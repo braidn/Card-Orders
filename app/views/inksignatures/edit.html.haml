@@ -1,5 +1,2 @@
-%h1 Editing inksignature
-= render 'form'
-= link_to 'Show', @inksignature
-%p |
-= link_to 'Back', inksignatures_path
+= form_for @inksignature, :html => { :class => "edit_inksignature form-horizontal", :id => "edit_inksignature" } do |f|
+  = render :partial => "form", :locals => {:f => f}
