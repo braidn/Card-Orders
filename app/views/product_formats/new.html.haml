@@ -1,3 +1,2 @@
-%h1 New product_format
-= render 'form'
-= link_to 'Back', product_formats_path
+= form_for @product_format, :html => { :class => 'form-horizontal' } do |f|
+  = render :partial => "form", :locals => {:f => f}

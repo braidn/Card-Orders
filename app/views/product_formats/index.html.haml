@@ -1,17 +1,21 @@
-%h1 Listing product_formats
-%table
-  %tr
-    %th Description
-    %th Formatid
-    %th
-    %th
-    %th
-  - @product_formats.each do |product_format|
+%h1 Product Formats
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= product_format.description
-      %td= product_format.formatId
-      %td= link_to 'Show', product_format
-      %td= link_to 'Edit', edit_product_format_path(product_format)
-      %td= link_to 'Destroy', product_format, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Product format', new_product_format_path
+      %th ID
+      %th
+        = t("activerecord.attributes.product_format.description", :default => t("activerecord.labels.description", :default => "Description"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @product_formats.each do |product_format|
+      %tr
+        %td= product_format.id
+        %td= link_to product_format.description, product_format_path(product_format)
+        %td= product_format.created_at
+        %td
+          = link_to "Show", product_format_path(product_format), :class => 'btn btn-mini'
+          = link_to "Edit", edit_product_format_path(product_format), :class => 'btn btn-mini'
+          = link_to "Destroy", product_format_path(product_format), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_product_format_path, :class => 'btn btn-primary'

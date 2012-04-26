@@ -1,19 +1,15 @@
-= form_for(@product_format) do |f|
-  - if @product_format.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@product_format.errors.count, "error")
-        prohibited this product_format from being saved:
-      %ul
-        - @product_format.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :description
-    %br/
-    = f.text_area :description
-  .field
-    = f.label :formatId
-    %br/
-    = f.text_field :formatId
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Product Format
+  .control-group
+    = f.label :description, :class => 'control-label'
+    .controls
+      = f.text_area :description, :class => 'text_area'
+  .control-group
+    = f.label :formatId, :class => 'control-label'
+    .controls
+      = f.text_field :formatId, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", product_formats_path, :class => 'btn'
