@@ -1,46 +1,33 @@
-%p#notice= notice
-%p
-  %b Changsmaterrecombine:
-  = @security_spec.changsMaterRecombine
-%p
-  %b Coldfoilid:
-  = @security_spec.coldFoilId
-%p
-  %b Coldfoilwidth:
-  = @security_spec.coldFoilWidth
-%p
-  %b Customfoilamortizeqty:
-  = @security_spec.customFoilAmortizeQty
-%p
-  %b Hotcomplextool:
-  = @security_spec.hotComplexTool
-%p
-  %b Hotfoilwidth:
-  = @security_spec.hotFoilWidth
-%p
-  %b Hotmediumtool:
-  = @security_spec.hotMediumTool
-%p
-  %b Hotsimpletool:
-  = @security_spec.hotSimpleTool
-%p
-  %b Hotstampfoilid:
-  = @security_spec.hotStampFoilId
-%p
-  %b Jobnumber:
-  = @security_spec.jobNumber
-%p
-  %b Laminationid:
-  = @security_spec.laminationId
-%p
-  %b Laminationwidth:
-  = @security_spec.laminationWidth
-%p
-  %b Securitycomment:
-  = @security_spec.securityComment
-%p
-  %b Securityspecid:
-  = @security_spec.securitySpecId
-= link_to 'Edit', edit_security_spec_path(@security_spec)
-%p |
-= link_to 'Back', security_specs_path
+%label{:class => "label"}= t("activerecord.attributes.security_spec.changsMaterRecombine", :default => t("activerecord.labels.changsMaterRecombine", :default => "Changsmaterrecombine")) + ":"
+%p= @security_spec.changsMaterRecombine
+%label{:class => "label"}= t("activerecord.attributes.security_spec.coldFoilId", :default => t("activerecord.labels.coldFoilId", :default => "Coldfoilid")) + ":"
+%p= @security_spec.coldFoilId
+%label{:class => "label"}= t("activerecord.attributes.security_spec.coldFoilWidth", :default => t("activerecord.labels.coldFoilWidth", :default => "Coldfoilwidth")) + ":"
+%p= @security_spec.coldFoilWidth
+%label{:class => "label"}= t("activerecord.attributes.security_spec.customFoilAmortizeQty", :default => t("activerecord.labels.customFoilAmortizeQty", :default => "Customfoilamortizeqty")) + ":"
+%p= @security_spec.customFoilAmortizeQty
+%label{:class => "label"}= t("activerecord.attributes.security_spec.hotComplexTool", :default => t("activerecord.labels.hotComplexTool", :default => "Hotcomplextool")) + ":"
+%p= @security_spec.hotComplexTool
+%label{:class => "label"}= t("activerecord.attributes.security_spec.hotFoilWidth", :default => t("activerecord.labels.hotFoilWidth", :default => "Hotfoilwidth")) + ":"
+%p= @security_spec.hotFoilWidth
+%label{:class => "label"}= t("activerecord.attributes.security_spec.hotMediumTool", :default => t("activerecord.labels.hotMediumTool", :default => "Hotmediumtool")) + ":"
+%p= @security_spec.hotMediumTool
+%label{:class => "label"}= t("activerecord.attributes.security_spec.hotSimpleTool", :default => t("activerecord.labels.hotSimpleTool", :default => "Hotsimpletool")) + ":"
+%p= @security_spec.hotSimpleTool
+%label{:class => "label"}= t("activerecord.attributes.security_spec.hotStampFoilId", :default => t("activerecord.labels.hotStampFoilId", :default => "Hotstampfoilid")) + ":"
+%p= @security_spec.hotStampFoilId
+%label{:class => "label"}= t("activerecord.attributes.security_spec.jobNumber", :default => t("activerecord.labels.jobNumber", :default => "Jobnumber")) + ":"
+%p= @security_spec.jobNumber
+%label{:class => "label"}= t("activerecord.attributes.security_spec.laminationId", :default => t("activerecord.labels.laminationId", :default => "Laminationid")) + ":"
+%p= @security_spec.laminationId
+%label{:class => "label"}= t("activerecord.attributes.security_spec.laminationWidth", :default => t("activerecord.labels.laminationWidth", :default => "Laminationwidth")) + ":"
+%p= @security_spec.laminationWidth
+%label{:class => "label"}= t("activerecord.attributes.security_spec.securityComment", :default => t("activerecord.labels.securityComment", :default => "Securitycomment")) + ":"
+%p= @security_spec.securityComment
+%label{:class => "label"}= t("activerecord.attributes.security_spec.securitySpecId", :default => t("activerecord.labels.securitySpecId", :default => "Securityspecid")) + ":"
+%p= @security_spec.securitySpecId
+
+.form-actions
+  = link_to "Back", security_specs_path, :class => 'btn'
+  = link_to "Edit", edit_security_spec_path(@security_spec), :class => 'btn'
+  = link_to "Delete", security_spec_path(@security_spec), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

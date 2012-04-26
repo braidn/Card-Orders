@@ -1,67 +1,63 @@
-= form_for(@security_spec) do |f|
-  - if @security_spec.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@security_spec.errors.count, "error")
-        prohibited this security_spec from being saved:
-      %ul
-        - @security_spec.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :changsMaterRecombine
-    %br/
-    = f.text_field :changsMaterRecombine
-  .field
-    = f.label :coldFoilId
-    %br/
-    = f.number_field :coldFoilId
-  .field
-    = f.label :coldFoilWidth
-    %br/
-    = f.number_field :coldFoilWidth
-  .field
-    = f.label :customFoilAmortizeQty
-    %br/
-    = f.number_field :customFoilAmortizeQty
-  .field
-    = f.label :hotComplexTool
-    %br/
-    = f.number_field :hotComplexTool
-  .field
-    = f.label :hotFoilWidth
-    %br/
-    = f.number_field :hotFoilWidth
-  .field
-    = f.label :hotMediumTool
-    %br/
-    = f.number_field :hotMediumTool
-  .field
-    = f.label :hotSimpleTool
-    %br/
-    = f.number_field :hotSimpleTool
-  .field
-    = f.label :hotStampFoilId
-    %br/
-    = f.number_field :hotStampFoilId
-  .field
-    = f.label :jobNumber
-    %br/
-    = f.text_field :jobNumber
-  .field
-    = f.label :laminationId
-    %br/
-    = f.number_field :laminationId
-  .field
-    = f.label :laminationWidth
-    %br/
-    = f.number_field :laminationWidth
-  .field
-    = f.label :securityComment
-    %br/
-    = f.text_field :securityComment
-  .field
-    = f.label :securitySpecId
-    %br/
-    = f.number_field :securitySpecId
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Security Spec
+  .control-group
+    = f.label :changsMaterRecombine, :class => 'control-label'
+    .controls
+      = f.text_field :changsMaterRecombine, :class => 'text_field'
+  .control-group
+    = f.label :coldFoilId, :class => 'control-label'
+    .controls
+      = f.number_field :coldFoilId, :class => 'number_field'
+  .control-group
+    = f.label :coldFoilWidth, :class => 'control-label'
+    .controls
+      = f.number_field :coldFoilWidth, :class => 'number_field'
+  .control-group
+    = f.label :customFoilAmortizeQty, :class => 'control-label'
+    .controls
+      = f.number_field :customFoilAmortizeQty, :class => 'number_field'
+  .control-group
+    = f.label :hotComplexTool, :class => 'control-label'
+    .controls
+      = f.number_field :hotComplexTool, :class => 'number_field'
+  .control-group
+    = f.label :hotFoilWidth, :class => 'control-label'
+    .controls
+      = f.number_field :hotFoilWidth, :class => 'number_field'
+  .control-group
+    = f.label :hotMediumTool, :class => 'control-label'
+    .controls
+      = f.number_field :hotMediumTool, :class => 'number_field'
+  .control-group
+    = f.label :hotSimpleTool, :class => 'control-label'
+    .controls
+      = f.number_field :hotSimpleTool, :class => 'number_field'
+  .control-group
+    = f.label :hotStampFoilId, :class => 'control-label'
+    .controls
+      = f.number_field :hotStampFoilId, :class => 'number_field'
+  .control-group
+    = f.label :jobNumber, :class => 'control-label'
+    .controls
+      = f.text_field :jobNumber, :class => 'text_field'
+  .control-group
+    = f.label :laminationId, :class => 'control-label'
+    .controls
+      = f.number_field :laminationId, :class => 'number_field'
+  .control-group
+    = f.label :laminationWidth, :class => 'control-label'
+    .controls
+      = f.number_field :laminationWidth, :class => 'number_field'
+  .control-group
+    = f.label :securityComment, :class => 'control-label'
+    .controls
+      = f.text_field :securityComment, :class => 'text_field'
+  .control-group
+    = f.label :securitySpecId, :class => 'control-label'
+    .controls
+      = f.number_field :securitySpecId, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", security_specs_path, :class => 'btn'

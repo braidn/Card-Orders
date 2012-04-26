@@ -1,41 +1,21 @@
-%h1 Listing security_specs
-%table
-  %tr
-    %th Changsmaterrecombine
-    %th Coldfoilid
-    %th Coldfoilwidth
-    %th Customfoilamortizeqty
-    %th Hotcomplextool
-    %th Hotfoilwidth
-    %th Hotmediumtool
-    %th Hotsimpletool
-    %th Hotstampfoilid
-    %th Jobnumber
-    %th Laminationid
-    %th Laminationwidth
-    %th Securitycomment
-    %th Securityspecid
-    %th
-    %th
-    %th
-  - @security_specs.each do |security_spec|
+%h1 Security Specs
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= security_spec.changsMaterRecombine
-      %td= security_spec.coldFoilId
-      %td= security_spec.coldFoilWidth
-      %td= security_spec.customFoilAmortizeQty
-      %td= security_spec.hotComplexTool
-      %td= security_spec.hotFoilWidth
-      %td= security_spec.hotMediumTool
-      %td= security_spec.hotSimpleTool
-      %td= security_spec.hotStampFoilId
-      %td= security_spec.jobNumber
-      %td= security_spec.laminationId
-      %td= security_spec.laminationWidth
-      %td= security_spec.securityComment
-      %td= security_spec.securitySpecId
-      %td= link_to 'Show', security_spec
-      %td= link_to 'Edit', edit_security_spec_path(security_spec)
-      %td= link_to 'Destroy', security_spec, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Security spec', new_security_spec_path
+      %th ID
+      %th
+        = t("activerecord.attributes.security_spec.changsMaterRecombine", :default => t("activerecord.labels.changsMaterRecombine", :default => "Changsmaterrecombine"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @security_specs.each do |security_spec|
+      %tr
+        %td= security_spec.id
+        %td= link_to security_spec.changsMaterRecombine, security_spec_path(security_spec)
+        %td= security_spec.created_at
+        %td
+          = link_to "Show", security_spec_path(security_spec), :class => 'btn btn-mini'
+          = link_to "Edit", edit_security_spec_path(security_spec), :class => 'btn btn-mini'
+          = link_to "Destroy", security_spec_path(security_spec), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_security_spec_path, :class => 'btn btn-primary'

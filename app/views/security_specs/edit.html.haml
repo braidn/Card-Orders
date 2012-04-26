@@ -1,5 +1,2 @@
-%h1 Editing security_spec
-= render 'form'
-= link_to 'Show', @security_spec
-%p |
-= link_to 'Back', security_specs_path
+= form_for @security_spec, :html => { :class => "edit_security_spec form-horizontal", :id => "edit_security_spec" } do |f|
+  = render :partial => "form", :locals => {:f => f}
