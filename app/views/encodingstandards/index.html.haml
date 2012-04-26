@@ -1,37 +1,21 @@
-%h1 Listing encodingstandards
-%table
-  %tr
-    %th Mchdescription
-    %th Bagging
-    %th Barcode
-    %th Hico
-    %th Inchespersecond
-    %th Labor
-    %th Machinename
-    %th Multiplepass
-    %th Overhead
-    %th Runwaste
-    %th Variabledata
-    %th Secondsperhour
-    %th
-    %th
-    %th
-  - @encodingstandards.each do |encodingstandard|
+%h1 Encodingstandards
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= encodingstandard.mchDescription
-      %td= encodingstandard.bagging
-      %td= encodingstandard.barcode
-      %td= encodingstandard.hico
-      %td= encodingstandard.inchespersecond
-      %td= encodingstandard.labor
-      %td= encodingstandard.machineName
-      %td= encodingstandard.multiplepass
-      %td= encodingstandard.overhead
-      %td= encodingstandard.runwaste
-      %td= encodingstandard.variabledata
-      %td= encodingstandard.secondsperhour
-      %td= link_to 'Show', encodingstandard
-      %td= link_to 'Edit', edit_encodingstandard_path(encodingstandard)
-      %td= link_to 'Destroy', encodingstandard, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Encodingstandard', new_encodingstandard_path
+      %th ID
+      %th
+        = t("activerecord.attributes.encodingstandard.mchDescription", :default => t("activerecord.labels.mchDescription", :default => "Mchdescription"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @encodingstandards.each do |encodingstandard|
+      %tr
+        %td= encodingstandard.id
+        %td= link_to encodingstandard.mchDescription, encodingstandard_path(encodingstandard)
+        %td= encodingstandard.created_at
+        %td
+          = link_to "Show", encodingstandard_path(encodingstandard), :class => 'btn btn-mini'
+          = link_to "Edit", edit_encodingstandard_path(encodingstandard), :class => 'btn btn-mini'
+          = link_to "Destroy", encodingstandard_path(encodingstandard), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_encodingstandard_path, :class => 'btn btn-primary'

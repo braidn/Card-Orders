@@ -1,5 +1,2 @@
-%h1 Editing encodingstandard
-= render 'form'
-= link_to 'Show', @encodingstandard
-%p |
-= link_to 'Back', encodingstandards_path
+= form_for @encodingstandard, :html => { :class => "edit_encodingstandard form-horizontal", :id => "edit_encodingstandard" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,59 +1,55 @@
-= form_for(@encodingstandard) do |f|
-  - if @encodingstandard.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@encodingstandard.errors.count, "error")
-        prohibited this encodingstandard from being saved:
-      %ul
-        - @encodingstandard.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :mchDescription
-    %br/
-    = f.text_area :mchDescription
-  .field
-    = f.label :bagging
-    %br/
-    = f.number_field :bagging
-  .field
-    = f.label :barcode
-    %br/
-    = f.number_field :barcode
-  .field
-    = f.label :hico
-    %br/
-    = f.number_field :hico
-  .field
-    = f.label :inchespersecond
-    %br/
-    = f.number_field :inchespersecond
-  .field
-    = f.label :labor
-    %br/
-    = f.number_field :labor
-  .field
-    = f.label :machineName
-    %br/
-    = f.text_field :machineName
-  .field
-    = f.label :multiplepass
-    %br/
-    = f.text_field :multiplepass
-  .field
-    = f.label :overhead
-    %br/
-    = f.number_field :overhead
-  .field
-    = f.label :runwaste
-    %br/
-    = f.number_field :runwaste
-  .field
-    = f.label :variabledata
-    %br/
-    = f.number_field :variabledata
-  .field
-    = f.label :secondsperhour
-    %br/
-    = f.number_field :secondsperhour
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Encodingstandard
+  .control-group
+    = f.label :mchDescription, :class => 'control-label'
+    .controls
+      = f.text_area :mchDescription, :class => 'text_area'
+  .control-group
+    = f.label :bagging, :class => 'control-label'
+    .controls
+      = f.number_field :bagging, :class => 'number_field'
+  .control-group
+    = f.label :barcode, :class => 'control-label'
+    .controls
+      = f.number_field :barcode, :class => 'number_field'
+  .control-group
+    = f.label :hico, :class => 'control-label'
+    .controls
+      = f.number_field :hico, :class => 'number_field'
+  .control-group
+    = f.label :inchespersecond, :class => 'control-label'
+    .controls
+      = f.number_field :inchespersecond, :class => 'number_field'
+  .control-group
+    = f.label :labor, :class => 'control-label'
+    .controls
+      = f.number_field :labor, :class => 'number_field'
+  .control-group
+    = f.label :machineName, :class => 'control-label'
+    .controls
+      = f.text_field :machineName, :class => 'text_field'
+  .control-group
+    = f.label :multiplepass, :class => 'control-label'
+    .controls
+      = f.text_field :multiplepass, :class => 'text_field'
+  .control-group
+    = f.label :overhead, :class => 'control-label'
+    .controls
+      = f.number_field :overhead, :class => 'number_field'
+  .control-group
+    = f.label :runwaste, :class => 'control-label'
+    .controls
+      = f.number_field :runwaste, :class => 'number_field'
+  .control-group
+    = f.label :variabledata, :class => 'control-label'
+    .controls
+      = f.number_field :variabledata, :class => 'number_field'
+  .control-group
+    = f.label :secondsperhour, :class => 'control-label'
+    .controls
+      = f.number_field :secondsperhour, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", encodingstandards_path, :class => 'btn'

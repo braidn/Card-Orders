@@ -1,40 +1,29 @@
-%p#notice= notice
-%p
-  %b Mchdescription:
-  = @encodingstandard.mchDescription
-%p
-  %b Bagging:
-  = @encodingstandard.bagging
-%p
-  %b Barcode:
-  = @encodingstandard.barcode
-%p
-  %b Hico:
-  = @encodingstandard.hico
-%p
-  %b Inchespersecond:
-  = @encodingstandard.inchespersecond
-%p
-  %b Labor:
-  = @encodingstandard.labor
-%p
-  %b Machinename:
-  = @encodingstandard.machineName
-%p
-  %b Multiplepass:
-  = @encodingstandard.multiplepass
-%p
-  %b Overhead:
-  = @encodingstandard.overhead
-%p
-  %b Runwaste:
-  = @encodingstandard.runwaste
-%p
-  %b Variabledata:
-  = @encodingstandard.variabledata
-%p
-  %b Secondsperhour:
-  = @encodingstandard.secondsperhour
-= link_to 'Edit', edit_encodingstandard_path(@encodingstandard)
-%p |
-= link_to 'Back', encodingstandards_path
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.mchDescription", :default => t("activerecord.labels.mchDescription", :default => "Mchdescription")) + ":"
+%p= @encodingstandard.mchDescription
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.bagging", :default => t("activerecord.labels.bagging", :default => "Bagging")) + ":"
+%p= @encodingstandard.bagging
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.barcode", :default => t("activerecord.labels.barcode", :default => "Barcode")) + ":"
+%p= @encodingstandard.barcode
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.hico", :default => t("activerecord.labels.hico", :default => "Hico")) + ":"
+%p= @encodingstandard.hico
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.inchespersecond", :default => t("activerecord.labels.inchespersecond", :default => "Inchespersecond")) + ":"
+%p= @encodingstandard.inchespersecond
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.labor", :default => t("activerecord.labels.labor", :default => "Labor")) + ":"
+%p= @encodingstandard.labor
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.machineName", :default => t("activerecord.labels.machineName", :default => "Machinename")) + ":"
+%p= @encodingstandard.machineName
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.multiplepass", :default => t("activerecord.labels.multiplepass", :default => "Multiplepass")) + ":"
+%p= @encodingstandard.multiplepass
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.overhead", :default => t("activerecord.labels.overhead", :default => "Overhead")) + ":"
+%p= @encodingstandard.overhead
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.runwaste", :default => t("activerecord.labels.runwaste", :default => "Runwaste")) + ":"
+%p= @encodingstandard.runwaste
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.variabledata", :default => t("activerecord.labels.variabledata", :default => "Variabledata")) + ":"
+%p= @encodingstandard.variabledata
+%label{:class => "label"}= t("activerecord.attributes.encodingstandard.secondsperhour", :default => t("activerecord.labels.secondsperhour", :default => "Secondsperhour")) + ":"
+%p= @encodingstandard.secondsperhour
+
+.form-actions
+  = link_to "Back", encodingstandards_path, :class => 'btn'
+  = link_to "Edit", edit_encodingstandard_path(@encodingstandard), :class => 'btn'
+  = link_to "Delete", encodingstandard_path(@encodingstandard), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
