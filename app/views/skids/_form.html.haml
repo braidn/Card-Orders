@@ -1,47 +1,43 @@
-= form_for(@skid) do |f|
-  - if @skid.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@skid.errors.count, "error")
-        prohibited this skid from being saved:
-      %ul
-        - @skid.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :quantityPerSkid
-    %br/
-    = f.number_field :quantityPerSkid
-  .field
-    = f.label :skidCost
-    %br/
-    = f.number_field :skidCost
-  .field
-    = f.label :skidDescription
-    %br/
-    = f.text_field :skidDescription
-  .field
-    = f.label :skidEntryPoints
-    %br/
-    = f.text_field :skidEntryPoints
-  .field
-    = f.label :skidHeight
-    %br/
-    = f.number_field :skidHeight
-  .field
-    = f.label :skidId
-    %br/
-    = f.number_field :skidId
-  .field
-    = f.label :skidLength
-    %br/
-    = f.number_field :skidLength
-  .field
-    = f.label :skidMat
-    %br/
-    = f.text_field :skidMat
-  .field
-    = f.label :skidWidth
-    %br/
-    = f.number_field :skidWidth
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Skid
+  .control-group
+    = f.label :quantityPerSkid, :class => 'control-label'
+    .controls
+      = f.number_field :quantityPerSkid, :class => 'number_field'
+  .control-group
+    = f.label :skidCost, :class => 'control-label'
+    .controls
+      = f.number_field :skidCost, :class => 'number_field'
+  .control-group
+    = f.label :skidDescription, :class => 'control-label'
+    .controls
+      = f.text_field :skidDescription, :class => 'text_field'
+  .control-group
+    = f.label :skidEntryPoints, :class => 'control-label'
+    .controls
+      = f.text_field :skidEntryPoints, :class => 'text_field'
+  .control-group
+    = f.label :skidHeight, :class => 'control-label'
+    .controls
+      = f.number_field :skidHeight, :class => 'number_field'
+  .control-group
+    = f.label :skidId, :class => 'control-label'
+    .controls
+      = f.number_field :skidId, :class => 'number_field'
+  .control-group
+    = f.label :skidLength, :class => 'control-label'
+    .controls
+      = f.number_field :skidLength, :class => 'number_field'
+  .control-group
+    = f.label :skidMat, :class => 'control-label'
+    .controls
+      = f.text_field :skidMat, :class => 'text_field'
+  .control-group
+    = f.label :skidWidth, :class => 'control-label'
+    .controls
+      = f.number_field :skidWidth, :class => 'number_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", skids_path, :class => 'btn'

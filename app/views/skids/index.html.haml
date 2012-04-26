@@ -1,31 +1,21 @@
-%h1 Listing skids
-%table
-  %tr
-    %th Quantityperskid
-    %th Skidcost
-    %th Skiddescription
-    %th Skidentrypoints
-    %th Skidheight
-    %th Skidid
-    %th Skidlength
-    %th Skidmat
-    %th Skidwidth
-    %th
-    %th
-    %th
-  - @skids.each do |skid|
+%h1 Skids
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= skid.quantityPerSkid
-      %td= skid.skidCost
-      %td= skid.skidDescription
-      %td= skid.skidEntryPoints
-      %td= skid.skidHeight
-      %td= skid.skidId
-      %td= skid.skidLength
-      %td= skid.skidMat
-      %td= skid.skidWidth
-      %td= link_to 'Show', skid
-      %td= link_to 'Edit', edit_skid_path(skid)
-      %td= link_to 'Destroy', skid, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Skid', new_skid_path
+      %th ID
+      %th
+        = t("activerecord.attributes.skid.quantityPerSkid", :default => t("activerecord.labels.quantityPerSkid", :default => "Quantityperskid"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @skids.each do |skid|
+      %tr
+        %td= skid.id
+        %td= link_to skid.quantityPerSkid, skid_path(skid)
+        %td= skid.created_at
+        %td
+          = link_to "Show", skid_path(skid), :class => 'btn btn-mini'
+          = link_to "Edit", edit_skid_path(skid), :class => 'btn btn-mini'
+          = link_to "Destroy", skid_path(skid), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_skid_path, :class => 'btn btn-primary'

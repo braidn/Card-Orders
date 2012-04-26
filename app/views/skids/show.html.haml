@@ -1,31 +1,23 @@
-%p#notice= notice
-%p
-  %b Quantityperskid:
-  = @skid.quantityPerSkid
-%p
-  %b Skidcost:
-  = @skid.skidCost
-%p
-  %b Skiddescription:
-  = @skid.skidDescription
-%p
-  %b Skidentrypoints:
-  = @skid.skidEntryPoints
-%p
-  %b Skidheight:
-  = @skid.skidHeight
-%p
-  %b Skidid:
-  = @skid.skidId
-%p
-  %b Skidlength:
-  = @skid.skidLength
-%p
-  %b Skidmat:
-  = @skid.skidMat
-%p
-  %b Skidwidth:
-  = @skid.skidWidth
-= link_to 'Edit', edit_skid_path(@skid)
-%p |
-= link_to 'Back', skids_path
+%label{:class => "label"}= t("activerecord.attributes.skid.quantityPerSkid", :default => t("activerecord.labels.quantityPerSkid", :default => "Quantityperskid")) + ":"
+%p= @skid.quantityPerSkid
+%label{:class => "label"}= t("activerecord.attributes.skid.skidCost", :default => t("activerecord.labels.skidCost", :default => "Skidcost")) + ":"
+%p= @skid.skidCost
+%label{:class => "label"}= t("activerecord.attributes.skid.skidDescription", :default => t("activerecord.labels.skidDescription", :default => "Skiddescription")) + ":"
+%p= @skid.skidDescription
+%label{:class => "label"}= t("activerecord.attributes.skid.skidEntryPoints", :default => t("activerecord.labels.skidEntryPoints", :default => "Skidentrypoints")) + ":"
+%p= @skid.skidEntryPoints
+%label{:class => "label"}= t("activerecord.attributes.skid.skidHeight", :default => t("activerecord.labels.skidHeight", :default => "Skidheight")) + ":"
+%p= @skid.skidHeight
+%label{:class => "label"}= t("activerecord.attributes.skid.skidId", :default => t("activerecord.labels.skidId", :default => "Skidid")) + ":"
+%p= @skid.skidId
+%label{:class => "label"}= t("activerecord.attributes.skid.skidLength", :default => t("activerecord.labels.skidLength", :default => "Skidlength")) + ":"
+%p= @skid.skidLength
+%label{:class => "label"}= t("activerecord.attributes.skid.skidMat", :default => t("activerecord.labels.skidMat", :default => "Skidmat")) + ":"
+%p= @skid.skidMat
+%label{:class => "label"}= t("activerecord.attributes.skid.skidWidth", :default => t("activerecord.labels.skidWidth", :default => "Skidwidth")) + ":"
+%p= @skid.skidWidth
+
+.form-actions
+  = link_to "Back", skids_path, :class => 'btn'
+  = link_to "Edit", edit_skid_path(@skid), :class => 'btn'
+  = link_to "Delete", skid_path(@skid), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

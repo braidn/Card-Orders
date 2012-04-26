@@ -1,5 +1,2 @@
-%h1 Editing skid
-= render 'form'
-= link_to 'Show', @skid
-%p |
-= link_to 'Back', skids_path
+= form_for @skid, :html => { :class => "edit_skid form-horizontal", :id => "edit_skid" } do |f|
+  = render :partial => "form", :locals => {:f => f}
