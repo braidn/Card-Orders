@@ -1,5 +1,2 @@
-%h1 Editing mag_ink_type
-= render 'form'
-= link_to 'Show', @mag_ink_type
-%p |
-= link_to 'Back', mag_ink_types_path
+= form_for @mag_ink_type, :html => { :class => "edit_mag_ink_type form-horizontal", :id => "edit_mag_ink_type" } do |f|
+  = render :partial => "form", :locals => {:f => f}

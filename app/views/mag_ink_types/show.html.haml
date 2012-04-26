@@ -1,13 +1,11 @@
-%p#notice= notice
-%p
-  %b Galloncost:
-  = @mag_ink_type.gallonCost
-%p
-  %b Inktype:
-  = @mag_ink_type.inkType
-%p
-  %b Inktypeid:
-  = @mag_ink_type.inkTypeId
-= link_to 'Edit', edit_mag_ink_type_path(@mag_ink_type)
-%p |
-= link_to 'Back', mag_ink_types_path
+%label{:class => "label"}= t("activerecord.attributes.mag_ink_type.gallonCost", :default => t("activerecord.labels.gallonCost", :default => "Galloncost")) + ":"
+%p= @mag_ink_type.gallonCost
+%label{:class => "label"}= t("activerecord.attributes.mag_ink_type.inkType", :default => t("activerecord.labels.inkType", :default => "Inktype")) + ":"
+%p= @mag_ink_type.inkType
+%label{:class => "label"}= t("activerecord.attributes.mag_ink_type.inkTypeId", :default => t("activerecord.labels.inkTypeId", :default => "Inktypeid")) + ":"
+%p= @mag_ink_type.inkTypeId
+
+.form-actions
+  = link_to "Back", mag_ink_types_path, :class => 'btn'
+  = link_to "Edit", edit_mag_ink_type_path(@mag_ink_type), :class => 'btn'
+  = link_to "Delete", mag_ink_type_path(@mag_ink_type), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
