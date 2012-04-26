@@ -1,5 +1,2 @@
-%h1 Editing foiltype
-= render 'form'
-= link_to 'Show', @foiltype
-%p |
-= link_to 'Back', foiltypes_path
+= form_for @foiltype, :html => { :class => "edit_foiltype form-horizontal", :id => "edit_foiltype" } do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,7 +1,7 @@
-%p#notice= notice
-%p
-  %b Type:
-  = @foiltype.type
-= link_to 'Edit', edit_foiltype_path(@foiltype)
-%p |
-= link_to 'Back', foiltypes_path
+%label{:class => "label"}= t("activerecord.attributes.foiltype.type", :default => t("activerecord.labels.type", :default => "Type")) + ":"
+%p= @foiltype.type
+
+.form-actions
+  = link_to "Back", foiltypes_path, :class => 'btn'
+  = link_to "Edit", edit_foiltype_path(@foiltype), :class => 'btn'
+  = link_to "Delete", foiltype_path(@foiltype), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

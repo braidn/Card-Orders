@@ -1,15 +1,21 @@
-%h1 Listing foiltypes
-%table
-  %tr
-    %th Type
-    %th
-    %th
-    %th
-  - @foiltypes.each do |foiltype|
+%h1 Foiltypes
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= foiltype.type
-      %td= link_to 'Show', foiltype
-      %td= link_to 'Edit', edit_foiltype_path(foiltype)
-      %td= link_to 'Destroy', foiltype, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Foiltype', new_foiltype_path
+      %th ID
+      %th
+        = t("activerecord.attributes.foiltype.type", :default => t("activerecord.labels.type", :default => "Type"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @foiltypes.each do |foiltype|
+      %tr
+        %td= foiltype.id
+        %td= link_to foiltype.type, foiltype_path(foiltype)
+        %td= foiltype.created_at
+        %td
+          = link_to "Show", foiltype_path(foiltype), :class => 'btn btn-mini'
+          = link_to "Edit", edit_foiltype_path(foiltype), :class => 'btn btn-mini'
+          = link_to "Destroy", foiltype_path(foiltype), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_foiltype_path, :class => 'btn btn-primary'

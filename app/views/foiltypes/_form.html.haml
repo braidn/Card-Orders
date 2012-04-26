@@ -1,15 +1,11 @@
-= form_for(@foiltype) do |f|
-  - if @foiltype.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@foiltype.errors.count, "error")
-        prohibited this foiltype from being saved:
-      %ul
-        - @foiltype.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :type
-    %br/
-    = f.text_field :type
-  .actions
-    = f.submit
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    /Foiltype
+  .control-group
+    = f.label :type, :class => 'control-label'
+    .controls
+      = f.text_field :type, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", foiltypes_path, :class => 'btn'
