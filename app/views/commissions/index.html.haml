@@ -1,17 +1,21 @@
-%h1 Listing commissions
-%table
-  %tr
-    %th Commrate
-    %th Profitrate
-    %th
-    %th
-    %th
-  - @commissions.each do |commission|
+%h1 Commissions
+%table{:class => "table table-striped"}
+  %thead
     %tr
-      %td= commission.commrate
-      %td= commission.profitrate
-      %td= link_to 'Show', commission
-      %td= link_to 'Edit', edit_commission_path(commission)
-      %td= link_to 'Destroy', commission, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Commission', new_commission_path
+      %th ID
+      %th
+        = t("activerecord.attributes.commission.commrate", :default => t("activerecord.labels.commrate", :default => "Commrate"))
+      %th Created at
+      %th Actions
+  %tbody
+    - @commissions.each do |commission|
+      %tr
+        %td= commission.id
+        %td= link_to commission.commrate, commission_path(commission)
+        %td= commission.created_at
+        %td
+          = link_to "Show", commission_path(commission), :class => 'btn btn-mini'
+          = link_to "Edit", edit_commission_path(commission), :class => 'btn btn-mini'
+          = link_to "Destroy", commission_path(commission), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New", new_commission_path, :class => 'btn btn-primary'

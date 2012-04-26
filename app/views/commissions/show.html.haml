@@ -1,10 +1,9 @@
-%p#notice= notice
-%p
-  %b Commrate:
-  = @commission.commrate
-%p
-  %b Profitrate:
-  = @commission.profitrate
-= link_to 'Edit', edit_commission_path(@commission)
-%p |
-= link_to 'Back', commissions_path
+%label{:class => "label"}= t("activerecord.attributes.commission.commrate", :default => t("activerecord.labels.commrate", :default => "Commrate")) + ":"
+%p= @commission.commrate
+%label{:class => "label"}= t("activerecord.attributes.commission.profitrate", :default => t("activerecord.labels.profitrate", :default => "Profitrate")) + ":"
+%p= @commission.profitrate
+
+.form-actions
+  = link_to "Back", commissions_path, :class => 'btn'
+  = link_to "Edit", edit_commission_path(@commission), :class => 'btn'
+  = link_to "Delete", commission_path(@commission), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'

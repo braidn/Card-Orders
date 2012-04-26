@@ -1,5 +1,2 @@
-%h1 Editing commission
-= render 'form'
-= link_to 'Show', @commission
-%p |
-= link_to 'Back', commissions_path
+= form_for @commission, :html => { :class => "edit_commission form-horizontal", :id => "edit_commission" } do |f|
+  = render :partial => "form", :locals => {:f => f}
