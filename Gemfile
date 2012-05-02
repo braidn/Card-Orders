@@ -10,6 +10,7 @@ gem 'ruby_parser'
 gem 'hpricot'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
 
 
 # Gems used only for assets and not required
