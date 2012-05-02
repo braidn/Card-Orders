@@ -5,3 +5,8 @@ completed.
 
 ###Getting it going
 rake db:migrate --> all good.
+
+###For Testing Purposes
+
+rake db:test:prepare --> all good
+
