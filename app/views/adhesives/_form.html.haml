@@ -8,23 +8,23 @@
         - @adhesive.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :adhesivedescription
+    = f.label :adhesivedescription, 'Adhesive Description'
     %br/
     = f.text_field :adhesivedescription
   .field
-    = f.label :costperlb
+    = f.label :costperlb, 'Cost Per Pound'
     %br/
     = f.number_field :costperlb
   .field
-    = f.label :msiperlb
+    = f.label :msiperlb, 'MSI Per Pound'
     %br/
     = f.number_field :msiperlb
   .field
-    = f.label :partnumber
+    = f.label :partnumber, 'Part Number'
     %br/
     = f.text_field :partnumber
   .field
-    = f.label :primaryuse
+    = f.label :primaryuse, 'Primary Use'
     %br/
     = f.text_field :primaryuse
   .actions
