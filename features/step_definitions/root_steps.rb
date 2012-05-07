@@ -9,3 +9,7 @@ end
 Then /^a "([^"]*)" field$/ do |password|
   find_field(password)
 end
+
+Then /^a link to "([^"]*)"$/ do |link|
+  find_link(link).visible?
+end
