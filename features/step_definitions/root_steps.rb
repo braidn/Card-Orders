@@ -1,4 +1,4 @@
-Given /^I am on the root_path$/ do
+Given /^I am on the root_path and not logged in$/ do
   visit('/')
 end
 

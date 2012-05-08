@@ -4,7 +4,7 @@ Feature: Root Page
   I need to log in when at the home url
 
   Background:
-    Given I am on the root_path
+    Given I am on the root_path and not logged in
 
   Scenario: I will be greeted with a simple login window
     Then I should see a "Email" login field
