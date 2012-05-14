@@ -9,8 +9,14 @@ Feature: Root Page
   Scenario: I will be greeted with a simple login window
     Then I should see a "Email" login field
     And a "Password" field
-    And a link to "New Estimate"
-    And a link to "Estimates List"
-    And a link to "New Order"
-    And a link to "Orders List"
-    And a link to "Find Order"
+
+  Scenario Outline: I will see some helpful links
+    Then a link to "<links>"
+
+  Scenarios: Home page links
+      |links|
+      |New Estimate|
+      |Estimates List|
+      |New Order|
+      |Orders List|
+      |Find Order|
