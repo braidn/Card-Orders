@@ -37,6 +37,7 @@ gem 'jquery-rails'
 
 
 group :test, :development do
+  gem 'guard-cucumber'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
