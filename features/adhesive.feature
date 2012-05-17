@@ -7,5 +7,6 @@ Feature: Basic CRUD for the adhesive section of the DB
   Scenario: Adding an item to the DB successfully
     When I click "New Adhesive"
     And I fill in the form correctly
-    And Click "Submit"
-    Then the new item is saved successfully
+    And I click "Create Adhesive"
+    Then I am presented with the new item
+    And I am cheerfully greeted with a success message that reads "Adhesive was successfully created"
