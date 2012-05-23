@@ -1,23 +1,17 @@
 %h1 Adhesives List
-%table
+%table{:class => "table table-striped table-bordered"}
   %tr
-    %th Adhesive Description &#124
-    %th Cost Per Pound &#124
-    %th MSI Per Pound &#124
-    %th Part Number &#124
+    %th Adhesive Description
+    %th Cost Per Pound
+    %th MSI Per Pound
+    %th Part Number
     %th Primary Use
-    %th
-    %th
-    %th
   - @adhesives.each do |adhesive|
     %tr
-      %td= adhesive.adhesivedescription
+      %td= link_to adhesive.adhesivedescription, adhesive, :class => "btn"
       %td= adhesive.costperlb
       %td= adhesive.msiperlb
       %td= adhesive.partnumber
       %td= adhesive.primaryuse
-      %td= link_to 'Show', adhesive
-      %td= link_to 'Edit', edit_adhesive_path(adhesive)
-      %td= link_to 'Destroy', adhesive, confirm: 'Are you sure?', method: :delete
 %br/
-= link_to 'New Adhesive', new_adhesive_path
+= link_to 'New Adhesive', new_adhesive_path, :class => "btn btn-success"

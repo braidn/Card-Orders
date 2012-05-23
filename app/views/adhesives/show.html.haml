@@ -17,3 +17,5 @@
 = link_to 'Edit', edit_adhesive_path(@adhesive)
 %br/
 = link_to 'Back', adhesives_path
+%br/
+= link_to 'Destroy', @adhesive, confirm: 'Are you sure?', method: :delete

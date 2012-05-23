@@ -5,5 +5,6 @@ class Adhesive < ActiveRecord::Base
   #t.string :partnumber
   #t.string :primaryuse
 
-  validates :adhesivedescription, :costperlb, :msiperlb, :partnumber, :primaryuse, :presence => true
+  validates :adhesivedescription, :costperlb, :msiperlb, :presence => true
+  validates :costperlb, :msiperlb, :numericality => {:only_integer => true}
 end

@@ -1,8 +1,8 @@
 Given /^I am at the list of adhesives$/ do
-  visit('/adhesives/')
+  visit(adhesives_path)
 end
-When /^I click "([^"]*)"$/ do |new|
-  click_on(new)
+When /^I click "([^"]*)"$/ do |button|
+  click_on(button)
 end
 
 When /^I fill in the form correctly$/ do
@@ -15,9 +15,29 @@ When /^I fill in the form correctly$/ do
 end
 
 Then /^I am presented with the new item$/ do
-  current_path.should == adhesive_path(@adhesive)
+  page.should have_content(@adhesive.costperlb)
 end
 
-Then /^I am cheerfully greeted with a success message that reads "([^"]*)"$/ do |message|
-  pending # express the regexp above with the code you wish you had
+Then /^I am greeted with a message that reads "([^"]*)"$/ do |message|
+  page.should have_content(message)
+end
+
+When /^I fill in the form incorrectly$/ do
+  fill_in("Adhesive Description", :with => '')
+  fill_in("Cost Per Pound", :with => 'No Numbers')
+  fill_in('MSI Per Pound', :with => 'No Numbers')
+end
+
+Then /^the errors are highlighted$/ do
+  page.should have_css('.field_with_errors')
+end
+
+Given /^there is an adhesive with description "([^"]*)"$/ do |adhesiveDescription|
+  @stuffAdhesive = create(:adhesive, :adhesivedescription => adhesiveDescription)
+  page.should have_css('table td .btn')
+end
+
+Then /^I should see specific details about the selected adhesive$/ do
+  page.should have_content("Adhesive Description")
+  page.should have_content(@stuffAdhesive.adhesivedescription)
 end
