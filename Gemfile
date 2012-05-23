@@ -43,6 +43,7 @@ group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'devise'
+  gem 'sextant'
 end
 
 group :test do
