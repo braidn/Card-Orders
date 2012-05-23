@@ -14,8 +14,6 @@
 %p
   %b Primary Use:
   = @adhesive.primaryuse
-= link_to 'Edit', edit_adhesive_path(@adhesive)
-%br/
-= link_to 'Back', adhesives_path
-%br/
-= link_to 'Destroy', @adhesive, confirm: 'Are you sure?', method: :delete
+= link_to 'Edit', edit_adhesive_path(@adhesive), :class => "btn btn-success"
+= link_to 'Back', adhesives_path, :class => "btn btn-info"
+= link_to 'Destroy', @adhesive, confirm: 'Are you sure?', method: :delete, :class => "btn btn-danger"
