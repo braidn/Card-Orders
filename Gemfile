@@ -36,16 +36,16 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 
-group :test, :development do
+group :development, :test do
   gem 'guard-cucumber'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'capybara'
-  gem 'database_cleaner'
   gem 'devise'
   gem 'sextant'
 end
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'capybara'
+  gem 'database_cleaner'
 end
