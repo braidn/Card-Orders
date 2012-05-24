@@ -11,6 +11,7 @@ gem 'hpricot'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
+gem 'devise'
 
 
 # Gems used only for assets and not required
@@ -35,16 +36,15 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'guard-cucumber'
   gem 'rspec-rails'
-  gem 'devise'
   gem 'sextant'
 end
 
 group :test do
-  gem 'factory_girl_rails'
+  gem 'launchy'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'database_cleaner'

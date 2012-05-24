@@ -6,7 +6,7 @@ When /^I click "([^"]*)"$/ do |button|
 end
 
 When /^I fill in the form correctly$/ do
-  @adhesive = Factory(:adhesive)
+  @adhesive = FactoryGirl.create(:adhesive)
   fill_in("Adhesive Description", :with => @adhesive.adhesivedescription)
   fill_in("Cost Per Pound", :with => @adhesive.costperlb)
   fill_in("MSI Per Pound", :with => @adhesive.msiperlb)
@@ -33,7 +33,7 @@ Then /^the errors are highlighted$/ do
 end
 
 Given /^there is an adhesive with description "([^"]*)"$/ do |adhesiveDescription|
-  @stuffAdhesive = create(:adhesive, :adhesivedescription => adhesiveDescription)
+  @stuffAdhesive = FactoryGirl.create(:adhesive, :adhesivedescription => adhesiveDescription)
   page.should have_css('table td .btn')
 end
 
