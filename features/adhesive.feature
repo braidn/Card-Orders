@@ -2,7 +2,8 @@ Feature: Basic CRUD for the adhesive section of the DB
   Basic CRUD functions
 
   Background:
-    Given I am at the list of adhesives
+    Given there is an adhesive with description "Stuff"
+    And I am at the list of adhesives
 
   Scenario: Adding an item to the DB successfully
     When I click "New Adhesive"
@@ -18,6 +19,5 @@ Feature: Basic CRUD for the adhesive section of the DB
     Then the errors are highlighted
 
   Scenario: Clicking on an item in the list of adhesives brings up detailed information of the specific adhesive
-    And there is an adhesive with description "Stuff"
     When I click "Stuff"
     Then I should see specific details about the selected adhesive

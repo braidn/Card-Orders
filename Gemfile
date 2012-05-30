@@ -7,8 +7,8 @@ gem 'rails', '3.2.0'
 
 gem 'sqlite3'
 gem 'ruby_parser'
+gem 'haml'
 gem 'hpricot'
-gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'devise'
@@ -36,15 +36,17 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :development, :test do
-  gem 'factory_girl_rails'
+group :development do
+  gem 'haml-rails'
   gem 'guard-cucumber'
-  gem 'rspec-rails'
   gem 'sextant'
+  gem 'pry-rails'
 end
 
 group :test do
   gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'database_cleaner'

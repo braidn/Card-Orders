@@ -1,5 +1,10 @@
+Given /^there is an adhesive with description "([^"]*)"$/ do |adhesiveDescription|
+  @stuffAdhesive = FactoryGirl.create(:adhesive, :adhesivedescription => adhesiveDescription)
+end
+
 Given /^I am at the list of adhesives$/ do
   visit(adhesives_path)
+  page.should have_css('table td .btn')
 end
 When /^I click "([^"]*)"$/ do |button|
   click_on(button)
@@ -30,11 +35,6 @@ end
 
 Then /^the errors are highlighted$/ do
   page.should have_css('.field_with_errors')
-end
-
-Given /^there is an adhesive with description "([^"]*)"$/ do |adhesiveDescription|
-  @stuffAdhesive = FactoryGirl.create(:adhesive, :adhesivedescription => adhesiveDescription)
-  page.should have_css('table td .btn')
 end
 
 Then /^I should see specific details about the selected adhesive$/ do
