@@ -1,5 +1,5 @@
 Given /^there is an adhesive with description "([^"]*)"$/ do |adhesiveDescription|
-  @stuffAdhesive = FactoryGirl.create(:adhesive, :adhesivedescription => adhesiveDescription)
+  @stuffAdhesive = Fabricate(:adhesive, :adhesivedescription => adhesiveDescription)
 end
 
 Given /^I am at the list of adhesives$/ do
@@ -11,7 +11,7 @@ When /^I click "([^"]*)"$/ do |button|
 end
 
 When /^I fill in the form correctly$/ do
-  @adhesive = FactoryGirl.create(:adhesive)
+  @adhesive = Fabricate(:adhesive)
   fill_in("Adhesive Description", :with => @adhesive.adhesivedescription)
   fill_in("Cost Per Pound", :with => @adhesive.costperlb)
   fill_in("MSI Per Pound", :with => @adhesive.msiperlb)

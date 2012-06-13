@@ -45,7 +45,7 @@ end
 
 group :test do
   gem 'launchy'
-  gem 'factory_girl_rails'
+  gem 'fabrication'
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'capybara'

@@ -69,11 +69,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    factory_girl (3.3.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (3.3.0)
-      factory_girl (~> 3.3.0)
-      railties (>= 3.0.0)
+    fabrication (2.0.2)
     ffi (1.0.11)
     gherkin (2.10.0)
       json (>= 1.4.6)
@@ -215,7 +211,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
-  factory_girl_rails
+  fabrication
   guard-cucumber
   haml
   haml-rails
