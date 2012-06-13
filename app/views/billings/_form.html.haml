@@ -1,9 +1,9 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Billing
+    Billing
   .control-group
-    = f.label :addressType, :class => 'control-label'
+    = f.label :addressType, "Address Type", :class => 'control-label'
     .controls
       = f.text_field :addressType, :class => 'text_field'
   .control-group
@@ -15,11 +15,11 @@
     .controls
       = f.text_field :country, :class => 'text_field'
   .control-group
-    = f.label :customerId, :class => 'control-label'
+    = f.label :customerId, "Customer ID", :class => 'control-label'
     .controls
       = f.number_field :customerId, :class => 'number_field'
   .control-group
-    = f.label :postalCode, :class => 'control-label'
+    = f.label :postalCode, "Postal Code", :class => 'control-label'
     .controls
       = f.text_field :postalCode, :class => 'text_field'
   .control-group
@@ -43,5 +43,5 @@
     .controls
       = f.text_field :street2a, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn'
+    = f.submit "Create Billing", :class => 'btn'
     = link_to "Cancel", billings_path, :class => 'btn btn-danger'
