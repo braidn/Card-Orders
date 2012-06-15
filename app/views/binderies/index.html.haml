@@ -2,20 +2,18 @@
 %table{:class => "table table-striped"}
   %thead
     %tr
-      %th ID
-      %th
-        = t("activerecord.attributes.bindery.opdescription", :default => t("activerecord.labels.opdescription", :default => "Opdescription"))
-      %th Created at
-      %th Actions
+      %th Description
+      %th Unit
+      %th Unit Cost
   %tbody
     - @binderies.each do |bindery|
       %tr
-        %td= bindery.id
-        %td= link_to bindery.opdescription, bindery_path(bindery)
-        %td= bindery.created_at
+        %td= bindery.opdescription
+        %td= bindery.unit
+        %td= bindery.unitcost
         %td
           = link_to "Show", bindery_path(bindery), :class => 'btn btn-mini'
           = link_to "Edit", edit_bindery_path(bindery), :class => 'btn btn-mini'
           = link_to "Destroy", bindery_path(bindery), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
 
-= link_to "New", new_bindery_path, :class => 'btn btn-primary'
+= link_to "New Bindery", new_bindery_path, :class => 'btn btn-primary'

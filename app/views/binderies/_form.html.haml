@@ -1,19 +1,19 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Bindery
+    Bindery
   .control-group
-    = f.label :opdescription, :class => 'control-label'
+    = f.label :opdescription, "Description", :class => 'control-label'
     .controls
       = f.text_field :opdescription, :class => 'text_field'
   .control-group
-    = f.label :unit, :class => 'control-label'
+    = f.label :unit, "Unit", :class => 'control-label'
     .controls
       = f.text_field :unit, :class => 'text_field'
   .control-group
-    = f.label :unitcost, :class => 'control-label'
+    = f.label :unitcost, "Unit Cost", :class => 'control-label'
     .controls
       = f.number_field :unitcost, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit "Create Bindery", :class => 'btn btn-primary'
     = link_to "Cancel", binderies_path, :class => 'btn'
