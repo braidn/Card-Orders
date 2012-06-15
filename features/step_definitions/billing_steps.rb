@@ -4,6 +4,11 @@ end
 
 Given /^I am at the list of billings$/ do
   visit(billings_path)
+  page.has_content?("Customer ID")
+  page.has_content?("Address Type")
+  page.has_content?("City")
+  page.has_content?("State")
+  page.has_content?("Postal Code")
 end
 
 When /^I fill in the billing form correctly$/ do

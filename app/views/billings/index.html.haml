@@ -2,17 +2,19 @@
 %table{:class => "table table-striped"}
   %thead
     %tr
-      %th ID
-      %th
-        = t("activerecord.attributes.billing.addressType", :default => t("activerecord.labels.addressType", :default => "Addresstype"))
-      %th Created at
-      %th Actions
+      %th Customer ID
+      %th Address Type
+      %th City
+      %th State
+      %th Postal Code
   %tbody
     - @billings.each do |billing|
       %tr
-        %td= billing.id
-        %td= link_to billing.addressType, billing_path(billing)
-        %td= billing.created_at
+        %td= billing.customerId
+        %td= billing.addressType
+        %td= billing.city
+        %td= billing.state
+        %td= billing.postalCode
         %td
           = link_to "Show", billing_path(billing), :class => 'btn btn-mini'
           = link_to "Edit", edit_billing_path(billing), :class => 'btn btn-mini'
