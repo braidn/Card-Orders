@@ -1,51 +1,51 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Binderyspec
+    Binderyspec
   .control-group
-    = f.label :cardsperunit, :class => 'control-label'
+    = f.label :cardsperunit, 'Cards Per Unit', :class => 'control-label'
     .controls
       = f.number_field :cardsperunit, :class => 'number_field'
   .control-group
-    = f.label :comment, :class => 'control-label'
+    = f.label :comment, 'Comment', :class => 'control-label'
     .controls
       = f.text_area :comment, :class => 'text_area'
   .control-group
-    = f.label :numberofpersons, :class => 'control-label'
+    = f.label :numberofpersons, 'Number of Persons', :class => 'control-label'
     .controls
       = f.number_field :numberofpersons, :class => 'number_field'
   .control-group
-    = f.label :quantityperhour, :class => 'control-label'
+    = f.label :quantityperhour, 'Quantity Per Hour', :class => 'control-label'
     .controls
       = f.number_field :quantityperhour, :class => 'number_field'
   .control-group
-    = f.label :unitmaterialcost, :class => 'control-label'
+    = f.label :unitmaterialcost, 'Unit Material Cost', :class => 'control-label'
     .controls
       = f.number_field :unitmaterialcost, :class => 'number_field'
   .control-group
-    = f.label :jobnumber, :class => 'control-label'
+    = f.label :jobnumber, 'Job Number', :class => 'control-label'
     .controls
       = f.text_field :jobnumber, :class => 'text_field'
   .control-group
-    = f.label :newboxrequired, :class => 'control-label'
+    = f.label :newboxrequired, 'New Box Required', :class => 'control-label'
     .controls
       = f.text_field :newboxrequired, :class => 'text_field'
   .control-group
-    = f.label :packageamoritizequantity, :class => 'control-label'
+    = f.label :packageamoritizequantity, 'Package Amoritize Quantity', :class => 'control-label'
     .controls
       = f.number_field :packageamoritizequantity, :class => 'number_field'
   .control-group
-    = f.label :packagecomment, :class => 'control-label'
+    = f.label :packagecomment, 'Package Comment', :class => 'control-label'
     .controls
       = f.text_area :packagecomment, :class => 'text_area'
   .control-group
-    = f.label :packageinnerboxid, :class => 'control-label'
+    = f.label :packageinnerboxid, 'Package Inner Box Id', :class => 'control-label'
     .controls
       = f.text_field :packageinnerboxid, :class => 'text_field'
   .control-group
-    = f.label :packageouterboxid, :class => 'control-label'
+    = f.label :packageouterboxid, 'Package Outer Box Id', :class => 'control-label'
     .controls
       = f.text_field :packageouterboxid, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create BinderySpec', :class => 'btn btn-primary'
     = link_to "Cancel", binderyspecs_path, :class => 'btn'
