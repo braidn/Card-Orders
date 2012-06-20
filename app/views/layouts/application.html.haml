@@ -46,10 +46,12 @@
               %li= link_to "Orders List", "/path3"
               %li= link_to "Find Order", "/path3"
         .span10
-          %p{:id => 'notice', :class => 'alert alert-info'}
-            = notice
-          %p{:id => 'alert', :class => 'alert alert-error'}
-            = alert
+          - if notice
+            %p{:id => 'notice', :class => 'alert alert-info'}
+              = notice
+          - elsif alert
+            %p{:id => 'alert', :class => 'alert alert-error'}
+              = alert
           = yield
     
       %footer
