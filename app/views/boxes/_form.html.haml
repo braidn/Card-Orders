@@ -1,13 +1,13 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Box
+    Box
   .control-group
-    = f.label :boxtype, :class => 'control-label'
+    = f.label :boxtype, 'Box Type', :class => 'control-label'
     .controls
       = f.text_field :boxtype, :class => 'text_field'
   .control-group
-    = f.label :boxesperskid, :class => 'control-label'
+    = f.label :boxesperskid, 'Boxes Per Skid', :class => 'control-label'
     .controls
       = f.number_field :boxesperskid, :class => 'number_field'
   .control-group
@@ -15,15 +15,11 @@
     .controls
       = f.text_field :caliper, :class => 'text_field'
   .control-group
-    = f.label :cardsperskid, :class => 'control-label'
+    = f.label :cardsperskid, 'Cards Per Skid', :class => 'control-label'
     .controls
       = f.number_field :cardsperskid, :class => 'number_field'
   .control-group
-    = f.label :concatview, :class => 'control-label'
-    .controls
-      = f.text_field :concatview, :class => 'text_field'
-  .control-group
-    = f.label :estimateboxselection, :class => 'control-label'
+    = f.label :estimateboxselection, 'Estimate Box Selection', :class => 'control-label'
     .controls
       = f.number_field :estimateboxselection, :class => 'number_field'
   .control-group
@@ -31,19 +27,19 @@
     .controls
       = f.number_field :height, :class => 'number_field'
   .control-group
-    = f.label :innercost, :class => 'control-label'
+    = f.label :innercost, 'Inner Cost', :class => 'control-label'
     .controls
       = f.number_field :innercost, :class => 'number_field'
   .control-group
-    = f.label :innerouter, :class => 'control-label'
+    = f.label :innerouter, 'Inner Outer', :class => 'control-label'
     .controls
       = f.text_field :innerouter, :class => 'text_field'
   .control-group
-    = f.label :innerquantity, :class => 'control-label'
+    = f.label :innerquantity, 'Inner Qty', :class => 'control-label'
     .controls
       = f.number_field :innerquantity, :class => 'number_field'
   .control-group
-    = f.label :internaldescription, :class => 'control-label'
+    = f.label :internaldescription, 'Internal Description', :class => 'control-label'
     .controls
       = f.text_area :internaldescription, :class => 'text_area'
   .control-group
@@ -51,23 +47,23 @@
     .controls
       = f.number_field :length, :class => 'number_field'
   .control-group
-    = f.label :maincustomer, :class => 'control-label'
+    = f.label :maincustomer, 'Main Customer', :class => 'control-label'
     .controls
       = f.text_field :maincustomer, :class => 'text_field'
   .control-group
-    = f.label :outercost, :class => 'control-label'
+    = f.label :outercost, 'Outer Cost', :class => 'control-label'
     .controls
       = f.number_field :outercost, :class => 'number_field'
   .control-group
-    = f.label :outerquantity, :class => 'control-label'
+    = f.label :outerquantity, 'Outer Qty', :class => 'control-label'
     .controls
       = f.number_field :outerquantity, :class => 'number_field'
   .control-group
-    = f.label :rowshigh, :class => 'control-label'
+    = f.label :rowshigh, 'Rows High', :class => 'control-label'
     .controls
       = f.number_field :rowshigh, :class => 'number_field'
   .control-group
-    = f.label :selectskid, :class => 'control-label'
+    = f.label :selectskid, 'Select Skid', :class => 'control-label'
     .controls
       = f.text_field :selectskid, :class => 'text_field'
   .control-group
