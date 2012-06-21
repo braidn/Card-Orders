@@ -3,11 +3,11 @@
     = controller.action_name.capitalize
     /Commission
   .control-group
-    = f.label :commrate, :class => 'control-label'
+    = f.label :commrate, 'Commission Rate', :class => 'control-label'
     .controls
       = f.number_field :commrate, :class => 'number_field'
   .control-group
-    = f.label :profitrate, :class => 'control-label'
+    = f.label :profitrate, 'Profit Rate', :class => 'control-label'
     .controls
       = f.number_field :profitrate, :class => 'number_field'
   .form-actions
