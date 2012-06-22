@@ -1,9 +1,9 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Core
+    Core
   .control-group
-    = f.label :generalName, :class => 'control-label'
+    = f.label :generalName, "General Name", :class => 'control-label'
     .controls
       = f.text_field :generalName, :class => 'text_field'
   .control-group
@@ -11,19 +11,19 @@
     .controls
       = f.number_field :cost, :class => 'number_field'
   .control-group
-    = f.label :innerDiameter, :class => 'control-label'
+    = f.label :innerDiameter, "Inner Diameter", :class => 'control-label'
     .controls
       = f.number_field :innerDiameter, :class => 'number_field'
   .control-group
-    = f.label :outerDiameter, :class => 'control-label'
+    = f.label :outerDiameter, "Outer Diameter", :class => 'control-label'
     .controls
       = f.number_field :outerDiameter, :class => 'number_field'
   .control-group
-    = f.label :type, :class => 'control-label'
+    = f.label :core_type, "Core Type", :class => 'control-label'
     .controls
-      = f.number_field :type, :class => 'number_field'
+      = f.number_field :core_type, :class => 'number_field'
   .control-group
-    = f.label :wallThickness, :class => 'control-label'
+    = f.label :wallThickness, "Wall Thickness", :class => 'control-label'
     .controls
       = f.number_field :wallThickness, :class => 'number_field'
   .control-group
@@ -31,7 +31,7 @@
     .controls
       = f.number_field :width, :class => 'number_field'
   .control-group
-    = f.label :internalName, :class => 'control-label'
+    = f.label :internalName, "Internal Name", :class => 'control-label'
     .controls
       = f.text_field :internalName, :class => 'text_field'
   .form-actions
