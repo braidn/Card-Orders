@@ -1,28 +1,43 @@
 %p#notice= notice
 %p
-  %b Diecatagory:
-  = @dy.dieCatagory
+  %b Die Category:
+  = @die.dieCatagory
 %p
-  %b Costpercard:
-  = @dy.costpercard
+  %b Cost Per Card:
+  = @die.costpercard
 %p
-  %b Costspertooth:
-  = @dy.costspertooth
+  %b Cost Per Tooth:
+  = @die.costspertooth
 %p
   %b Description:
-  = @dy.description
+  = @die.description
 %p
-  %b Initialcost:
-  = @dy.initialCost
+  %b Initial Cost:
+  = @die.initialCost
 %p
-  %b Initiallife:
-  = @dy.initialLife
+  %b Initial Life:
+  = @die.initialLife
 %p
-  %b Retoolcost:
-  = @dy.retoolCost
+  %b Retool Cost:
+  = @die.retoolCost
 %p
-  %b Retoollife:
-  = @dy.retoolLife
-= link_to 'Edit', edit_dy_path(@dy)
+  %b Retool Life:
+  = @die.retoolLife
+%p
+  %b Retool Times:
+  = @die.retoolTimes
+%p
+  %b Total Cards:
+  = @die.totalCards
+%p
+  %b Total Cost:
+  = @die.totalCost
+%p
+  %b Die Type:
+  = @die.die_type
+%p
+  %b Vendor ID number:
+  = @die.vendorIDNumb
+= link_to 'Edit', edit_die_path(@die)
 %p |
 = link_to 'Back', dies_path

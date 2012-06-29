@@ -13,42 +13,42 @@ class DiesController < ApplicationController
   # GET /dies/1
   # GET /dies/1.json
   def show
-    @dy = Die.find(params[:id])
+    @die = Die.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @dy }
+      format.json { render json: @die }
     end
   end
 
   # GET /dies/new
   # GET /dies/new.json
   def new
-    @dy = Die.new
+    @die = Die.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @dy }
+      format.json { render json: @die }
     end
   end
 
   # GET /dies/1/edit
   def edit
-    @dy = Die.find(params[:id])
+    @die = Die.find(params[:id])
   end
 
   # POST /dies
   # POST /dies.json
   def create
-    @dy = Die.new(params[:dy])
+    @die = Die.new(params[:die])
 
     respond_to do |format|
-      if @dy.save
-        format.html { redirect_to @dy, notice: 'Die was successfully created.' }
-        format.json { render json: @dy, status: :created, location: @dy }
+      if @die.save
+        format.html { redirect_to @die, notice: 'Die was successfully created.' }
+        format.json { render json: @die, status: :created, location: @die }
       else
         format.html { render action: "new" }
-        format.json { render json: @dy.errors, status: :unprocessable_entity }
+        format.json { render json: @die.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,15 +56,15 @@ class DiesController < ApplicationController
   # PUT /dies/1
   # PUT /dies/1.json
   def update
-    @dy = Die.find(params[:id])
+    @die = Die.find(params[:id])
 
     respond_to do |format|
-      if @dy.update_attributes(params[:dy])
-        format.html { redirect_to @dy, notice: 'Die was successfully updated.' }
+      if @die.update_attributes(params[:die])
+        format.html { redirect_to @die, notice: 'Die was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
-        format.json { render json: @dy.errors, status: :unprocessable_entity }
+        format.json { render json: @die.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -72,8 +72,8 @@ class DiesController < ApplicationController
   # DELETE /dies/1
   # DELETE /dies/1.json
   def destroy
-    @dy = Die.find(params[:id])
-    @dy.destroy
+    @die = Die.find(params[:id])
+    @die.destroy
 
     respond_to do |format|
       format.html { redirect_to dies_url }

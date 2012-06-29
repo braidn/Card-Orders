@@ -1,43 +1,63 @@
-= form_for(@dy) do |f|
-  - if @dy.errors.any?
+= form_for(@die) do |f|
+  - if @die.errors.any?
     #error_explanation
       %h2
-        = pluralize(@dy.errors.count, "error")
-        prohibited this dy from being saved:
+        = pluralize(@die.errors.count, "error")
+        prohibited this die from being saved:
       %ul
-        - @dy.errors.full_messages.each do |msg|
+        - @die.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :dieCatagory
+    = f.label :dieCatagory, "Die Category"
     %br/
     = f.text_field :dieCatagory
   .field
-    = f.label :costpercard
+    = f.label :costpercard, "Cost Per Card"
     %br/
     = f.number_field :costpercard
   .field
-    = f.label :costspertooth
+    = f.label :costspertooth, "Cost Per Tooth"
     %br/
     = f.number_field :costspertooth
   .field
-    = f.label :description
+    = f.label :description, "Description"
     %br/
     = f.text_area :description
   .field
-    = f.label :initialCost
+    = f.label :initialCost, "Initial Cost"
     %br/
     = f.number_field :initialCost
   .field
-    = f.label :initialLife
+    = f.label :initialLife, "Initial Life"
     %br/
     = f.number_field :initialLife
   .field
-    = f.label :retoolCost
+    = f.label :retoolCost, "Retool Cost"
     %br/
     = f.number_field :retoolCost
   .field
-    = f.label :retoolLife
+    = f.label :retoolLife, "Retool Life"
     %br/
     = f.number_field :retoolLife
+  .field
+    = f.label :retoolTimes, "Retool Times"
+    %br/
+    = f.number_field :retoolTimes
+  .field
+    = f.label :totalCards, "Total Cards"
+    %br/
+    = f.number_field :totalCards
+  .field
+    = f.label :totalCost, "Total Cost"
+    %br/
+    = f.number_field :totalCost
+  .field
+    = f.label :die_type, "Die Type"
+    %br/
+    = f.number_field :die_type
+  .field
+    = f.label :vendorIDNumb, "Vendor ID Number"
+    %br/
+    = f.number_field :vendorIDNumb
   .actions
     = f.submit
