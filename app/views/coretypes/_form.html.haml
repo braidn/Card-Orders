@@ -3,13 +3,13 @@
     = controller.action_name.capitalize
     /Coretype
   .control-group
-    = f.label :matDescription, :class => 'control-label'
+    = f.label :matDescription, 'Material Description', :class => 'control-label'
     .controls
       = f.text_field :matDescription, :class => 'text_field'
   .control-group
-    = f.label :material, :class => 'control-label'
+    = f.label :material, 'Material', :class => 'control-label'
     .controls
       = f.text_field :material, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit "Create CoreType", :class => 'btn btn-primary'
     = link_to "Cancel", coretypes_path, :class => 'btn'
