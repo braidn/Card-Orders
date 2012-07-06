@@ -3,9 +3,9 @@
     = controller.action_name.capitalize
     /Dietype
   .control-group
-    = f.label :dieDescription, :class => 'control-label'
+    = f.label :dieDescription, "Die Description", :class => 'control-label'
     .controls
       = f.text_area :dieDescription, :class => 'text_area'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit "Create DieType", :class => 'btn btn-primary'
     = link_to "Cancel", dietypes_path, :class => 'btn'
