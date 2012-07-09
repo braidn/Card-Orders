@@ -3,7 +3,7 @@
     = controller.action_name.capitalize
     /Encodingstandard
   .control-group
-    = f.label :mchDescription, :class => 'control-label'
+    = f.label :mchDescription, "Machine Description", :class => 'control-label'
     .controls
       = f.text_area :mchDescription, :class => 'text_area'
   .control-group
@@ -19,7 +19,7 @@
     .controls
       = f.number_field :hico, :class => 'number_field'
   .control-group
-    = f.label :inchespersecond, :class => 'control-label'
+    = f.label :inchespersecond, "Inches Per Second", :class => 'control-label'
     .controls
       = f.number_field :inchespersecond, :class => 'number_field'
   .control-group
@@ -27,11 +27,11 @@
     .controls
       = f.number_field :labor, :class => 'number_field'
   .control-group
-    = f.label :machineName, :class => 'control-label'
+    = f.label :machineName, "Machine Name", :class => 'control-label'
     .controls
       = f.text_field :machineName, :class => 'text_field'
   .control-group
-    = f.label :multiplepass, :class => 'control-label'
+    = f.label :multiplepass, "Multiple Pass" ,:class => 'control-label'
     .controls
       = f.text_field :multiplepass, :class => 'text_field'
   .control-group
@@ -39,17 +39,17 @@
     .controls
       = f.number_field :overhead, :class => 'number_field'
   .control-group
-    = f.label :runwaste, :class => 'control-label'
+    = f.label :runwaste, "Run Waste", :class => 'control-label'
     .controls
       = f.number_field :runwaste, :class => 'number_field'
   .control-group
-    = f.label :variabledata, :class => 'control-label'
+    = f.label :variabledata, "Variable Data", :class => 'control-label'
     .controls
       = f.number_field :variabledata, :class => 'number_field'
   .control-group
-    = f.label :secondsperhour, :class => 'control-label'
+    = f.label :secondsperhour, "Seconds Per Hour", :class => 'control-label'
     .controls
       = f.number_field :secondsperhour, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit "Create Encoding Standard", :class => 'btn btn-primary'
     = link_to "Cancel", encodingstandards_path, :class => 'btn'

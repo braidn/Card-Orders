@@ -44,7 +44,7 @@ class EncodingstandardsController < ApplicationController
 
     respond_to do |format|
       if @encodingstandard.save
-        format.html { redirect_to @encodingstandard, notice: 'Encodingstandard was successfully created.' }
+        format.html { redirect_to @encodingstandard, notice: 'Encoding Standard was successfully created' }
         format.json { render json: @encodingstandard, status: :created, location: @encodingstandard }
       else
         format.html { render action: "new" }
