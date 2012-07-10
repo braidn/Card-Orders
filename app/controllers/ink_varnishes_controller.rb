@@ -44,7 +44,7 @@ class InkVarnishesController < ApplicationController
 
     respond_to do |format|
       if @ink_varnish.save
-        format.html { redirect_to @ink_varnish, notice: 'Ink varnish was successfully created.' }
+        format.html { redirect_to @ink_varnish, notice: 'Ink Varnish was successfully created.' }
         format.json { render json: @ink_varnish, status: :created, location: @ink_varnish }
       else
         format.html { render action: "new" }

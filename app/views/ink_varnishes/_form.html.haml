@@ -1,13 +1,13 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Ink Varnish
+    Ink Varnish
   .control-group
-    = f.label :inkCostPerPound, :class => 'control-label'
+    = f.label :inkCostPerPound, "Ink Cost Per Pound", :class => 'control-label'
     .controls
       = f.number_field :inkCostPerPound, :class => 'number_field'
   .control-group
-    = f.label :inkMsiPerPound, :class => 'control-label'
+    = f.label :inkMsiPerPound, "Ink MSI Per Pound", :class => 'control-label'
     .controls
       = f.number_field :inkMsiPerPound, :class => 'number_field'
   .control-group
@@ -15,9 +15,9 @@
     .controls
       = f.text_field :vendor, :class => 'text_field'
   .control-group
-    = f.label :vendorPartNumber, :class => 'control-label'
+    = f.label :vendorPartNumber, "Vendor Part Number", :class => 'control-label'
     .controls
       = f.text_field :vendorPartNumber, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Ink Varnish', :class => 'btn btn-primary'
     = link_to "Cancel", ink_varnishes_path, :class => 'btn'
