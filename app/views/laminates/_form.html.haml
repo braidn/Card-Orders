@@ -1,31 +1,31 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Laminate
+    Laminate
   .control-group
-    = f.label :lamAdhesive, :class => 'control-label'
+    = f.label :lamAdhesive, 'Adhesive', :class => 'control-label'
     .controls
       = f.text_field :lamAdhesive, :class => 'text_field'
   .control-group
-    = f.label :lamDescription, :class => 'control-label'
+    = f.label :lamDescription, 'Description', :class => 'control-label'
     .controls
       = f.text_area :lamDescription, :class => 'text_area'
   .control-group
-    = f.label :lamLength, :class => 'control-label'
+    = f.label :lamLength, 'Length', :class => 'control-label'
     .controls
       = f.number_field :lamLength, :class => 'number_field'
   .control-group
-    = f.label :lamMsi, :class => 'control-label'
+    = f.label :lamMsi, 'MSI', :class => 'control-label'
     .controls
       = f.number_field :lamMsi, :class => 'number_field'
   .control-group
-    = f.label :lamType, :class => 'control-label'
+    = f.label :lamType, 'Type', :class => 'control-label'
     .controls
       = f.text_field :lamType, :class => 'text_field'
   .control-group
-    = f.label :lamWidth, :class => 'control-label'
+    = f.label :lamWidth, 'Width', :class => 'control-label'
     .controls
       = f.number_field :lamWidth, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Laminate', :class => 'btn btn-primary'
     = link_to "Cancel", laminates_path, :class => 'btn'
