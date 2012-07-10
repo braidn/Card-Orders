@@ -44,7 +44,7 @@ class InksignaturesController < ApplicationController
 
     respond_to do |format|
       if @inksignature.save
-        format.html { redirect_to @inksignature, notice: 'Inksignature was successfully created.' }
+        format.html { redirect_to @inksignature, notice: 'Ink Signature was successfully created.' }
         format.json { render json: @inksignature, status: :created, location: @inksignature }
       else
         format.html { render action: "new" }
