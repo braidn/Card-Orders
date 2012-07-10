@@ -11,11 +11,11 @@
     - @foiltypes.each do |foiltype|
       %tr
         %td= foiltype.id
-        %td= link_to foiltype.type, foiltype_path(foiltype)
+        %td= link_to foiltype.foiltype_type, foiltype_path(foiltype)
         %td= foiltype.created_at
         %td
           = link_to "Show", foiltype_path(foiltype), :class => 'btn btn-mini'
           = link_to "Edit", edit_foiltype_path(foiltype), :class => 'btn btn-mini'
           = link_to "Destroy", foiltype_path(foiltype), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
 
-= link_to "New", new_foiltype_path, :class => 'btn btn-primary'
+= link_to "New Foil Type", new_foiltype_path, :class => 'btn btn-primary'
