@@ -44,7 +44,7 @@ class PressStandardsController < ApplicationController
 
     respond_to do |format|
       if @press_standard.save
-        format.html { redirect_to @press_standard, notice: 'Press standard was successfully created.' }
+        format.html { redirect_to @press_standard, notice: 'Press Standard was successfully created.' }
         format.json { render json: @press_standard, status: :created, location: @press_standard }
       else
         format.html { render action: "new" }
