@@ -3,9 +3,9 @@
     = controller.action_name.capitalize
     /Foiltype
   .control-group
-    = f.label :type, :class => 'control-label'
+    = f.label :foiltype_type, "Foil Type", :class => 'control-label'
     .controls
-      = f.text_field :type, :class => 'text_field'
+      = f.text_field :foiltype_type, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit "Create Foil Type", :class => 'btn btn-primary'
     = link_to "Cancel", foiltypes_path, :class => 'btn'

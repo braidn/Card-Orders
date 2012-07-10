@@ -44,7 +44,7 @@ class FoiltypesController < ApplicationController
 
     respond_to do |format|
       if @foiltype.save
-        format.html { redirect_to @foiltype, notice: 'Foiltype was successfully created.' }
+        format.html { redirect_to @foiltype, notice: 'Foil Type was successfully created.' }
         format.json { render json: @foiltype, status: :created, location: @foiltype }
       else
         format.html { render action: "new" }
