@@ -1,11 +1,11 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Inkcatagory
+    Inkcatagory
   .control-group
     = f.label :description, :class => 'control-label'
     .controls
       = f.text_area :description, :class => 'text_area'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Ink Category', :class => 'btn btn-primary'
     = link_to "Cancel", inkcatagories_path, :class => 'btn'

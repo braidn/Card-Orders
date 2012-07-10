@@ -44,7 +44,7 @@ class InkcatagoriesController < ApplicationController
 
     respond_to do |format|
       if @inkcatagory.save
-        format.html { redirect_to @inkcatagory, notice: 'Inkcatagory was successfully created.' }
+        format.html { redirect_to @inkcatagory, notice: 'Ink Category was successfully created.' }
         format.json { render json: @inkcatagory, status: :created, location: @inkcatagory }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class InkcatagoriesController < ApplicationController
 
     respond_to do |format|
       if @inkcatagory.update_attributes(params[:inkcatagory])
-        format.html { redirect_to @inkcatagory, notice: 'Inkcatagory was successfully updated.' }
+        format.html { redirect_to @inkcatagory, notice: 'Ink Category was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
