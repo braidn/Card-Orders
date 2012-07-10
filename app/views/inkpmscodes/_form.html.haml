@@ -1,9 +1,9 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Inkpmscode
+    Inkpmscode
   .control-group
-    = f.label :vendorpartnumb, :class => 'control-label'
+    = f.label :vendorpartnumb, 'Vendor Part Number', :class => 'control-label'
     .controls
       = f.text_field :vendorpartnumb, :class => 'text_field'
   .control-group
@@ -11,21 +11,21 @@
     .controls
       = f.text_field :vendor, :class => 'text_field'
   .control-group
-    = f.label :magtype, :class => 'control-label'
+    = f.label :magtype, 'Mag Type', :class => 'control-label'
     .controls
       = f.text_field :magtype, :class => 'text_field'
   .control-group
-    = f.label :inktype, :class => 'control-label'
+    = f.label :inktype, 'Ink Type', :class => 'control-label'
     .controls
       = f.number_field :inktype, :class => 'number_field'
   .control-group
-    = f.label :inkmsiperpound, :class => 'control-label'
+    = f.label :inkmsiperpound, 'Ink MSI Per Pound', :class => 'control-label'
     .controls
       = f.number_field :inkmsiperpound, :class => 'number_field'
   .control-group
-    = f.label :inkcostperpound, :class => 'control-label'
+    = f.label :inkcostperpound, 'InkCost Per Pound', :class => 'control-label'
     .controls
       = f.number_field :inkcostperpound, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Ink PMS Code', :class => 'btn btn-primary'
     = link_to "Cancel", inkpmscodes_path, :class => 'btn'

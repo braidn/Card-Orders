@@ -44,7 +44,7 @@ class InkpmscodesController < ApplicationController
 
     respond_to do |format|
       if @inkpmscode.save
-        format.html { redirect_to @inkpmscode, notice: 'Inkpmscode was successfully created.' }
+        format.html { redirect_to @inkpmscode, notice: 'Ink PMS Code was successfully created.' }
         format.json { render json: @inkpmscode, status: :created, location: @inkpmscode }
       else
         format.html { render action: "new" }
