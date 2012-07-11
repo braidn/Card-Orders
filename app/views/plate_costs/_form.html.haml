@@ -1,43 +1,43 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Plate Cost
+    Plate Cost
   .control-group
     = f.label :digital, :class => 'control-label'
     .controls
       = f.number_field :digital, :class => 'number_field'
   .control-group
-    = f.label :filmcost, :class => 'control-label'
+    = f.label :filmcost, 'Film Cost', :class => 'control-label'
     .controls
       = f.number_field :filmcost, :class => 'number_field'
   .control-group
-    = f.label :filmSquareInch, :class => 'control-label'
+    = f.label :filmSquareInch, 'Film Square Inch', :class => 'control-label'
     .controls
       = f.number_field :filmSquareInch, :class => 'number_field'
   .control-group
-    = f.label :laborCost, :class => 'control-label'
+    = f.label :laborCost, 'Labor Cost', :class => 'control-label'
     .controls
       = f.number_field :laborCost, :class => 'number_field'
   .control-group
-    = f.label :machineName, :class => 'control-label'
+    = f.label :machineName, 'Machine Name', :class => 'control-label'
     .controls
       = f.number_field :machineName, :class => 'number_field'
   .control-group
-    = f.label :processTime, :class => 'control-label'
+    = f.label :processTime, 'Process Time', :class => 'control-label'
     .controls
       = f.text_field :processTime, :class => 'text_field'
   .control-group
-    = f.label :sheetCost, :class => 'control-label'
+    = f.label :sheetCost, 'Sheet Cost', :class => 'control-label'
     .controls
       = f.number_field :sheetCost, :class => 'number_field'
   .control-group
-    = f.label :sheetsPerCycle, :class => 'control-label'
+    = f.label :sheetsPerCycle, 'Sheets Per Cycle', :class => 'control-label'
     .controls
       = f.number_field :sheetsPerCycle, :class => 'number_field'
   .control-group
-    = f.label :squareInchPerSheet, :class => 'control-label'
+    = f.label :squareInchPerSheet, 'Square Inch Per Sheet', :class => 'control-label'
     .controls
       = f.number_field :squareInchPerSheet, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Plate Cost', :class => 'btn btn-primary'
     = link_to "Cancel", plate_costs_path, :class => 'btn'

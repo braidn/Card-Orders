@@ -44,7 +44,7 @@ class PlateCostsController < ApplicationController
 
     respond_to do |format|
       if @plate_cost.save
-        format.html { redirect_to @plate_cost, notice: 'Plate cost was successfully created.' }
+        format.html { redirect_to @plate_cost, notice: 'Plate Cost was successfully created.' }
         format.json { render json: @plate_cost, status: :created, location: @plate_cost }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class PlateCostsController < ApplicationController
 
     respond_to do |format|
       if @plate_cost.update_attributes(params[:plate_cost])
-        format.html { redirect_to @plate_cost, notice: 'Plate cost was successfully updated.' }
+        format.html { redirect_to @plate_cost, notice: 'Plate Cost was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
