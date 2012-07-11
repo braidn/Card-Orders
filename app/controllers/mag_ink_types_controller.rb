@@ -44,7 +44,7 @@ class MagInkTypesController < ApplicationController
 
     respond_to do |format|
       if @mag_ink_type.save
-        format.html { redirect_to @mag_ink_type, notice: 'Mag ink type was successfully created.' }
+        format.html { redirect_to @mag_ink_type, notice: 'Mag Ink Type was successfully created.' }
         format.json { render json: @mag_ink_type, status: :created, location: @mag_ink_type }
       else
         format.html { render action: "new" }

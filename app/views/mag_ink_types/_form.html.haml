@@ -1,19 +1,19 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Mag Ink Type
+    Mag Ink Type
   .control-group
-    = f.label :gallonCost, :class => 'control-label'
+    = f.label :gallonCost, 'Gallon Cost', :class => 'control-label'
     .controls
       = f.number_field :gallonCost, :class => 'number_field'
   .control-group
-    = f.label :inkType, :class => 'control-label'
+    = f.label :inkType, 'Ink Type', :class => 'control-label'
     .controls
       = f.text_field :inkType, :class => 'text_field'
   .control-group
-    = f.label :inkTypeId, :class => 'control-label'
+    = f.label :inkTypeId, 'Ink Type Id', :class => 'control-label'
     .controls
       = f.number_field :inkTypeId, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Mag Ink Type', :class => 'btn btn-primary'
     = link_to "Cancel", mag_ink_types_path, :class => 'btn'
