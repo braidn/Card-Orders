@@ -1,39 +1,39 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Mag Tape
+    Mag Tape
   .control-group
-    = f.label :costPerMsi, :class => 'control-label'
+    = f.label :costPerMsi, 'Cost Per MSI', :class => 'control-label'
     .controls
       = f.number_field :costPerMsi, :class => 'number_field'
   .control-group
-    = f.label :costPerRoll, :class => 'control-label'
+    = f.label :costPerRoll, 'Cost Per Roll', :class => 'control-label'
     .controls
       = f.number_field :costPerRoll, :class => 'number_field'
   .control-group
-    = f.label :typeCate, :class => 'control-label'
+    = f.label :typeCate, 'Type Cate', :class => 'control-label'
     .controls
       = f.number_field :typeCate, :class => 'number_field'
   .control-group
-    = f.label :tapeDescription, :class => 'control-label'
+    = f.label :tapeDescription, 'Tape Description', :class => 'control-label'
     .controls
       = f.text_field :tapeDescription, :class => 'text_field'
   .control-group
-    = f.label :tapeId, :class => 'control-label'
+    = f.label :tapeId, 'Tape Id', :class => 'control-label'
     .controls
       = f.number_field :tapeId, :class => 'number_field'
   .control-group
-    = f.label :tapeLength, :class => 'control-label'
+    = f.label :tapeLength, 'Tape Length', :class => 'control-label'
     .controls
       = f.number_field :tapeLength, :class => 'number_field'
   .control-group
-    = f.label :tapeType, :class => 'control-label'
+    = f.label :tapeType, 'Tape Type', :class => 'control-label'
     .controls
       = f.text_field :tapeType, :class => 'text_field'
   .control-group
-    = f.label :tapeWidth, :class => 'control-label'
+    = f.label :tapeWidth, 'Tape Width', :class => 'control-label'
     .controls
       = f.number_field :tapeWidth, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Mag Tape', :class => 'btn btn-primary'
     = link_to "Cancel", mag_tapes_path, :class => 'btn'

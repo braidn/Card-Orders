@@ -44,7 +44,7 @@ class MagTapesController < ApplicationController
 
     respond_to do |format|
       if @mag_tape.save
-        format.html { redirect_to @mag_tape, notice: 'Mag tape was successfully created.' }
+        format.html { redirect_to @mag_tape, notice: 'Mag Tape was successfully created.' }
         format.json { render json: @mag_tape, status: :created, location: @mag_tape }
       else
         format.html { render action: "new" }
