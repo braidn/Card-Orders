@@ -44,7 +44,7 @@ class MatCategoriesController < ApplicationController
 
     respond_to do |format|
       if @mat_category.save
-        format.html { redirect_to @mat_category, notice: 'Mat category was successfully created.' }
+        format.html { redirect_to @mat_category, notice: 'Material Category was successfully created.' }
         format.json { render json: @mat_category, status: :created, location: @mat_category }
       else
         format.html { render action: "new" }

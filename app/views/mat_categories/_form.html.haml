@@ -1,15 +1,15 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Mat Category
+    Mat Category
   .control-group
-    = f.label :matCatDescription, :class => 'control-label'
+    = f.label :matCatDescription, 'Material Category Description', :class => 'control-label'
     .controls
       = f.text_field :matCatDescription, :class => 'text_field'
   .control-group
-    = f.label :matCategory, :class => 'control-label'
+    = f.label :matCategory, 'Mat Category', :class => 'control-label'
     .controls
       = f.text_field :matCategory, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Material Category', :class => 'btn btn-primary'
     = link_to "Cancel", mat_categories_path, :class => 'btn'
