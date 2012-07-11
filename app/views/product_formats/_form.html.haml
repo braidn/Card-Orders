@@ -7,9 +7,9 @@
     .controls
       = f.text_area :description, :class => 'text_area'
   .control-group
-    = f.label :formatId, :class => 'control-label'
+    = f.label :formatId, 'Format Id', :class => 'control-label'
     .controls
       = f.text_field :formatId, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Product Format', :class => 'btn btn-primary'
     = link_to "Cancel", product_formats_path, :class => 'btn'

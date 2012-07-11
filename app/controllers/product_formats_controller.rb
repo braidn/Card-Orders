@@ -44,7 +44,7 @@ class ProductFormatsController < ApplicationController
 
     respond_to do |format|
       if @product_format.save
-        format.html { redirect_to @product_format, notice: 'Product format was successfully created.' }
+        format.html { redirect_to @product_format, notice: 'Product Format was successfully created.' }
         format.json { render json: @product_format, status: :created, location: @product_format }
       else
         format.html { render action: "new" }
