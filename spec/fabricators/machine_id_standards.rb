@@ -1,0 +1,33 @@
+Fabricator(:machine_id_standard) do
+  dieMaterial 1
+  dieSpeed 1
+  dieTime 1
+  dieWaste 1
+  folderMaterial 1
+  folderSpeed 1
+  folderTime 1
+  folderWaste 1
+  insertionMaterial 1
+  insertionSpeed 1
+  insertionTime 1
+  machineName 'stuff'
+  machineId 1
+  machineLabor 1
+  machineOverhead 1
+  machinePitch 1
+  machineSpeed 1
+  machineType 'stuff'
+  machineWidth 1
+  numMat 1
+  numSpeed 1
+  numbTime 1
+  numWaste 1
+  rollChangeMat 1
+  rollChangeTime 1
+  rollChangeWaste 1
+  slitMat 1
+  slitSpeed 1
+  slitTime 1
+  slitWaste 1
+  trim 1
+end

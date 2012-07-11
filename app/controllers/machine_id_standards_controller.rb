@@ -44,7 +44,7 @@ class MachineIdStandardsController < ApplicationController
 
     respond_to do |format|
       if @machine_id_standard.save
-        format.html { redirect_to @machine_id_standard, notice: 'Machine id standard was successfully created.' }
+        format.html { redirect_to @machine_id_standard, notice: 'Machine ID Standard was successfully created.' }
         format.json { render json: @machine_id_standard, status: :created, location: @machine_id_standard }
       else
         format.html { render action: "new" }
