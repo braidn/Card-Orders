@@ -1,53 +1,53 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Material
+    Material
   .control-group
-    = f.label :materialCatId, :class => 'control-label'
+    = f.label :materialCatId, 'Material Category Id', :class => 'control-label'
     .controls
       = f.number_field :materialCatId, :class => 'number_field'
   .control-group
-    = f.label :blueFeetPerMinute, :class => 'control-label'
+    = f.label :blueFeetPerMinute, 'Blue Feet Per Minute', :class => 'control-label'
     .controls
       = f.number_field :blueFeetPerMinute, :class => 'number_field'
   .control-group
-    = f.label :blueLength, :class => 'control-label'
+    = f.label :blueLength, 'Blue Length', :class => 'control-label'
     .controls
       = f.number_field :blueLength, :class => 'number_field'
   .control-group
-    = f.label :coredOd, :class => 'control-label'
+    = f.label :coredOd, 'Cored OD', :class => 'control-label'
     .controls
       = f.number_field :coredOd, :class => 'number_field'
   .control-group
-    = f.label :eganFeetPerMinute, :class => 'control-label'
+    = f.label :eganFeetPerMinute, 'Egan Feet Per Minute', :class => 'control-label'
     .controls
       = f.number_field :eganFeetPerMinute, :class => 'number_field'
   .control-group
-    = f.label :eganLength, :class => 'control-label'
+    = f.label :eganLength, 'Egan Length', :class => 'control-label'
     .controls
       = f.number_field :eganLength, :class => 'number_field'
   .control-group
-    = f.label :materialDescription, :class => 'control-label'
+    = f.label :materialDescription, 'Material Description', :class => 'control-label'
     .controls
       = f.text_field :materialDescription, :class => 'text_field'
   .control-group
-    = f.label :materialMsiCost, :class => 'control-label'
+    = f.label :materialMsiCost, 'Material MSI Cost', :class => 'control-label'
     .controls
       = f.number_field :materialMsiCost, :class => 'number_field'
   .control-group
-    = f.label :materialPreStripe, :class => 'control-label'
+    = f.label :materialPreStripe, 'Material Pre-Stripe', :class => 'control-label'
     .controls
       = f.text_field :materialPreStripe, :class => 'text_field'
   .control-group
-    = f.label :materialRollLengthMaster, :class => 'control-label'
+    = f.label :materialRollLengthMaster, 'Material Roll Length Master', :class => 'control-label'
     .controls
       = f.number_field :materialRollLengthMaster, :class => 'number_field'
   .control-group
-    = f.label :materialRollWidth, :class => 'control-label'
+    = f.label :materialRollWidth, 'Material Roll Width', :class => 'control-label'
     .controls
       = f.number_field :materialRollWidth, :class => 'number_field'
   .control-group
-    = f.label :materialThickness, :class => 'control-label'
+    = f.label :materialThickness, 'Material Thickness', :class => 'control-label'
     .controls
       = f.number_field :materialThickness, :class => 'number_field'
   .control-group
@@ -55,7 +55,7 @@
     .controls
       = f.text_field :vendor, :class => 'text_field'
   .control-group
-    = f.label :vendorPartNum, :class => 'control-label'
+    = f.label :vendorPartNum, 'Vendor Part Number', :class => 'control-label'
     .controls
       = f.text_field :vendorPartNum, :class => 'text_field'
   .form-actions
