@@ -1,0 +1,26 @@
+Fabricator(:machine_stripe_standard) do
+  ampMaterial 1
+  ampTime 1
+  headMaterial 1
+  headTime 1
+  inkMat 1
+  inkTime 1
+  machineName 'name'
+  machineId 1
+  machineLabor 1
+  machineOverhead 1
+  machineSpeed 1
+  machineType 1
+  machineWidth 1
+  rollChangeMat 1
+  rollChangeTime 1
+  slitMat 1
+  slitSpeed 1
+  slitTime 1
+  slitWaste 1
+  trim 1
+  turretMat 1
+  turretSpeed 1
+  turretTime 1
+  turretWaste 1
+end

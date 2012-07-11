@@ -44,7 +44,7 @@ class MachineStripeStandardsController < ApplicationController
 
     respond_to do |format|
       if @machine_stripe_standard.save
-        format.html { redirect_to @machine_stripe_standard, notice: 'Machine stripe standard was successfully created.' }
+        format.html { redirect_to @machine_stripe_standard, notice: 'Machine Stripe Standard was successfully created.' }
         format.json { render json: @machine_stripe_standard, status: :created, location: @machine_stripe_standard }
       else
         format.html { render action: "new" }

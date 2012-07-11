@@ -1,81 +1,81 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Machine Stripe Standard
+    Machine Stripe Standard
   .control-group
-    = f.label :ampMaterial, :class => 'control-label'
+    = f.label :ampMaterial, 'Amp Material', :class => 'control-label'
     .controls
       = f.number_field :ampMaterial, :class => 'number_field'
   .control-group
-    = f.label :ampTime, :class => 'control-label'
+    = f.label :ampTime, 'Amp Time', :class => 'control-label'
     .controls
       = f.number_field :ampTime, :class => 'number_field'
   .control-group
-    = f.label :headMaterial, :class => 'control-label'
+    = f.label :headMaterial, 'Head Material', :class => 'control-label'
     .controls
       = f.number_field :headMaterial, :class => 'number_field'
   .control-group
-    = f.label :headTime, :class => 'control-label'
+    = f.label :headTime, 'Head Time', :class => 'control-label'
     .controls
       = f.number_field :headTime, :class => 'number_field'
   .control-group
-    = f.label :inkMat, :class => 'control-label'
+    = f.label :inkMat, 'Ink Material', :class => 'control-label'
     .controls
       = f.number_field :inkMat, :class => 'number_field'
   .control-group
-    = f.label :inkTime, :class => 'control-label'
+    = f.label :inkTime, 'Ink Time', :class => 'control-label'
     .controls
       = f.number_field :inkTime, :class => 'number_field'
   .control-group
-    = f.label :machineName, :class => 'control-label'
+    = f.label :machineName, 'Machine Name', :class => 'control-label'
     .controls
       = f.text_field :machineName, :class => 'text_field'
   .control-group
-    = f.label :machineId, :class => 'control-label'
+    = f.label :machineId, 'Machine Id', :class => 'control-label'
     .controls
       = f.number_field :machineId, :class => 'number_field'
   .control-group
-    = f.label :machineLabor, :class => 'control-label'
+    = f.label :machineLabor, 'Machine Labor', :class => 'control-label'
     .controls
       = f.number_field :machineLabor, :class => 'number_field'
   .control-group
-    = f.label :machineOverhead, :class => 'control-label'
+    = f.label :machineOverhead, 'Machine Overhead', :class => 'control-label'
     .controls
       = f.number_field :machineOverhead, :class => 'number_field'
   .control-group
-    = f.label :machineSpeed, :class => 'control-label'
+    = f.label :machineSpeed, 'Machine Speed', :class => 'control-label'
     .controls
       = f.number_field :machineSpeed, :class => 'number_field'
   .control-group
-    = f.label :machineType, :class => 'control-label'
+    = f.label :machineType, 'Machine Type', :class => 'control-label'
     .controls
       = f.text_field :machineType, :class => 'text_field'
   .control-group
-    = f.label :machineWidth, :class => 'control-label'
+    = f.label :machineWidth, 'Machine Width', :class => 'control-label'
     .controls
       = f.number_field :machineWidth, :class => 'number_field'
   .control-group
-    = f.label :rollChangeMat, :class => 'control-label'
+    = f.label :rollChangeMat, 'Roll Change Material', :class => 'control-label'
     .controls
       = f.number_field :rollChangeMat, :class => 'number_field'
   .control-group
-    = f.label :rollChangeTime, :class => 'control-label'
+    = f.label :rollChangeTime, 'Roll Change Time', :class => 'control-label'
     .controls
       = f.number_field :rollChangeTime, :class => 'number_field'
   .control-group
-    = f.label :slitMat, :class => 'control-label'
+    = f.label :slitMat, 'Slit Material', :class => 'control-label'
     .controls
       = f.number_field :slitMat, :class => 'number_field'
   .control-group
-    = f.label :slitSpeed, :class => 'control-label'
+    = f.label :slitSpeed, 'Slit Speed', :class => 'control-label'
     .controls
       = f.number_field :slitSpeed, :class => 'number_field'
   .control-group
-    = f.label :slitTime, :class => 'control-label'
+    = f.label :slitTime, 'Slit Time', :class => 'control-label'
     .controls
       = f.number_field :slitTime, :class => 'number_field'
   .control-group
-    = f.label :slitWaste, :class => 'control-label'
+    = f.label :slitWaste, 'Slit Waste', :class => 'control-label'
     .controls
       = f.number_field :slitWaste, :class => 'number_field'
   .control-group
@@ -83,21 +83,21 @@
     .controls
       = f.number_field :trim, :class => 'number_field'
   .control-group
-    = f.label :turretMat, :class => 'control-label'
+    = f.label :turretMat, 'Turret Material', :class => 'control-label'
     .controls
       = f.number_field :turretMat, :class => 'number_field'
   .control-group
-    = f.label :turretSpeed, :class => 'control-label'
+    = f.label :turretSpeed, 'Turret Speed', :class => 'control-label'
     .controls
       = f.number_field :turretSpeed, :class => 'number_field'
   .control-group
-    = f.label :turretTime, :class => 'control-label'
+    = f.label :turretTime, 'Turret Time', :class => 'control-label'
     .controls
       = f.number_field :turretTime, :class => 'number_field'
   .control-group
-    = f.label :turretWaste, :class => 'control-label'
+    = f.label :turretWaste, 'Turret Waste', :class => 'control-label'
     .controls
       = f.number_field :turretWaste, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Machine Stripe Standard', :class => 'btn btn-primary'
     = link_to "Cancel", machine_stripe_standards_path, :class => 'btn'
