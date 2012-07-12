@@ -1,27 +1,27 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Sales Term
+    Sales Term
   .control-group
-    = f.label :discountDays, :class => 'control-label'
+    = f.label :discountDays, 'Discount Days', :class => 'control-label'
     .controls
       = f.text_field :discountDays, :class => 'text_field'
   .control-group
-    = f.label :discountRate, :class => 'control-label'
+    = f.label :discountRate, 'Discount Rate', :class => 'control-label'
     .controls
       = f.number_field :discountRate, :class => 'number_field'
   .control-group
-    = f.label :payDays, :class => 'control-label'
+    = f.label :payDays, 'Pay Days', :class => 'control-label'
     .controls
       = f.text_field :payDays, :class => 'text_field'
   .control-group
-    = f.label :salesTermDescription, :class => 'control-label'
+    = f.label :salesTermDescription, 'Sales Term Description', :class => 'control-label'
     .controls
       = f.text_field :salesTermDescription, :class => 'text_field'
   .control-group
-    = f.label :salesTermId, :class => 'control-label'
+    = f.label :salesTermId, 'Sales Term ID', :class => 'control-label'
     .controls
       = f.number_field :salesTermId, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Sales Term', :class => 'btn btn-primary'
     = link_to "Cancel", sales_terms_path, :class => 'btn'

@@ -44,7 +44,7 @@ class SalesTermsController < ApplicationController
 
     respond_to do |format|
       if @sales_term.save
-        format.html { redirect_to @sales_term, notice: 'Sales term was successfully created.' }
+        format.html { redirect_to @sales_term, notice: 'Sales Term was successfully created.' }
         format.json { render json: @sales_term, status: :created, location: @sales_term }
       else
         format.html { render action: "new" }
