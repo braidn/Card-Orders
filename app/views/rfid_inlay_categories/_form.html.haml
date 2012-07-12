@@ -1,11 +1,11 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Rfid Inlay Category
+    Rfid Inlay Category
   .control-group
-    = f.label :inlayType, :class => 'control-label'
+    = f.label :inlayType, 'Type', :class => 'control-label'
     .controls
       = f.text_field :inlayType, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create RFID Inlay Category', :class => 'btn btn-primary'
     = link_to "Cancel", rfid_inlay_categories_path, :class => 'btn'

@@ -44,7 +44,7 @@ class RfidInlayCategoriesController < ApplicationController
 
     respond_to do |format|
       if @rfid_inlay_category.save
-        format.html { redirect_to @rfid_inlay_category, notice: 'Rfid inlay category was successfully created.' }
+        format.html { redirect_to @rfid_inlay_category, notice: 'RFID Inlay Category was successfully created.' }
         format.json { render json: @rfid_inlay_category, status: :created, location: @rfid_inlay_category }
       else
         format.html { render action: "new" }
