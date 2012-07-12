@@ -1,57 +1,57 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Rfid Inlay
+    Rfid Inlay
   .control-group
-    = f.label :break1, :class => 'control-label'
+    = f.label :break1, 'Break 1', :class => 'control-label'
     .controls
       = f.number_field :break1, :class => 'number_field'
   .control-group
-    = f.label :break1Price, :class => 'control-label'
+    = f.label :break1Price, 'Break 1 Price', :class => 'control-label'
     .controls
       = f.number_field :break1Price, :class => 'number_field'
   .control-group
-    = f.label :break2, :class => 'control-label'
+    = f.label :break2, 'Break 2', :class => 'control-label'
     .controls
       = f.number_field :break2, :class => 'number_field'
   .control-group
-    = f.label :break2Price, :class => 'control-label'
+    = f.label :break2Price, 'Break 2 Price', :class => 'control-label'
     .controls
       = f.number_field :break2Price, :class => 'number_field'
   .control-group
-    = f.label :break3, :class => 'control-label'
+    = f.label :break3, 'Break 3', :class => 'control-label'
     .controls
       = f.number_field :break3, :class => 'number_field'
   .control-group
-    = f.label :break3Price, :class => 'control-label'
+    = f.label :break3Price, 'Break 3 Price', :class => 'control-label'
     .controls
       = f.number_field :break3Price, :class => 'number_field'
   .control-group
-    = f.label :break4, :class => 'control-label'
+    = f.label :break4, 'Break 4', :class => 'control-label'
     .controls
       = f.number_field :break4, :class => 'number_field'
   .control-group
-    = f.label :break4Price, :class => 'control-label'
+    = f.label :break4Price, 'Break 4 Price', :class => 'control-label'
     .controls
       = f.number_field :break4Price, :class => 'number_field'
   .control-group
-    = f.label :break5, :class => 'control-label'
+    = f.label :break5, 'Break 5', :class => 'control-label'
     .controls
       = f.number_field :break5, :class => 'number_field'
   .control-group
-    = f.label :break5Price, :class => 'control-label'
+    = f.label :break5Price, 'Break 5 Price', :class => 'control-label'
     .controls
       = f.number_field :break5Price, :class => 'number_field'
   .control-group
-    = f.label :inlayDescription, :class => 'control-label'
+    = f.label :inlayDescription, 'Description', :class => 'control-label'
     .controls
       = f.text_field :inlayDescription, :class => 'text_field'
   .control-group
-    = f.label :inlayId, :class => 'control-label'
+    = f.label :inlayId, 'ID', :class => 'control-label'
     .controls
       = f.number_field :inlayId, :class => 'number_field'
   .control-group
-    = f.label :inlayTypeId, :class => 'control-label'
+    = f.label :inlayTypeId, 'Type ID', :class => 'control-label'
     .controls
       = f.number_field :inlayTypeId, :class => 'number_field'
   .control-group
@@ -63,9 +63,9 @@
     .controls
       = f.text_field :vendor, :class => 'text_field'
   .control-group
-    = f.label :vendorPartNumb, :class => 'control-label'
+    = f.label :vendorPartNumb, 'Vendor Part Number', :class => 'control-label'
     .controls
       = f.text_field :vendorPartNumb, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create RFID Inlay', :class => 'btn btn-primary'
     = link_to "Cancel", rfid_inlays_path, :class => 'btn'
