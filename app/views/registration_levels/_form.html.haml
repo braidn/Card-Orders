@@ -1,23 +1,23 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Registration Level
+    Registration Level
   .control-group
-    = f.label :registrationDescription, :class => 'control-label'
+    = f.label :registrationDescription, 'Description', :class => 'control-label'
     .controls
       = f.text_area :registrationDescription, :class => 'text_area'
   .control-group
-    = f.label :registrationLevelId, :class => 'control-label'
+    = f.label :registrationLevelId, 'Level ID', :class => 'control-label'
     .controls
       = f.number_field :registrationLevelId, :class => 'number_field'
   .control-group
-    = f.label :registrationSpeed, :class => 'control-label'
+    = f.label :registrationSpeed, 'Speed', :class => 'control-label'
     .controls
       = f.number_field :registrationSpeed, :class => 'number_field'
   .control-group
-    = f.label :registrationWaste, :class => 'control-label'
+    = f.label :registrationWaste, 'Waste', :class => 'control-label'
     .controls
       = f.number_field :registrationWaste, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Registration Level', :class => 'btn btn-primary'
     = link_to "Cancel", registration_levels_path, :class => 'btn'

@@ -44,7 +44,7 @@ class RegistrationLevelsController < ApplicationController
 
     respond_to do |format|
       if @registration_level.save
-        format.html { redirect_to @registration_level, notice: 'Registration level was successfully created.' }
+        format.html { redirect_to @registration_level, notice: 'Registration Level was successfully created.' }
         format.json { render json: @registration_level, status: :created, location: @registration_level }
       else
         format.html { render action: "new" }
