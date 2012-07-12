@@ -44,7 +44,7 @@ class ProofCostsController < ApplicationController
 
     respond_to do |format|
       if @proof_cost.save
-        format.html { redirect_to @proof_cost, notice: 'Proof cost was successfully created.' }
+        format.html { redirect_to @proof_cost, notice: 'Proof Cost was successfully created.' }
         format.json { render json: @proof_cost, status: :created, location: @proof_cost }
       else
         format.html { render action: "new" }
