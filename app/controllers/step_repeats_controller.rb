@@ -44,7 +44,7 @@ class StepRepeatsController < ApplicationController
 
     respond_to do |format|
       if @step_repeat.save
-        format.html { redirect_to @step_repeat, notice: 'Step repeat was successfully created.' }
+        format.html { redirect_to @step_repeat, notice: 'Step Repeat was successfully created.' }
         format.json { render json: @step_repeat, status: :created, location: @step_repeat }
       else
         format.html { render action: "new" }
