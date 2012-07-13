@@ -1,59 +1,59 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Tooling Specification
+    Tooling Specification
   .control-group
-    = f.label :addAmortizeQuantity, :class => 'control-label'
+    = f.label :addAmortizeQuantity, 'Add Amortize Quantity', :class => 'control-label'
     .controls
       = f.number_field :addAmortizeQuantity, :class => 'number_field'
   .control-group
-    = f.label :addToolingCost, :class => 'control-label'
+    = f.label :addToolingCost, 'Add Tooling Cost', :class => 'control-label'
     .controls
       = f.number_field :addToolingCost, :class => 'number_field'
   .control-group
-    = f.label :designBy, :class => 'control-label'
+    = f.label :designBy, 'Design By', :class => 'control-label'
     .controls
       = f.text_field :designBy, :class => 'text_field'
   .control-group
-    = f.label :designRevDate, :class => 'control-label'
+    = f.label :designRevDate, 'Design Revision Date', :class => 'control-label'
     .controls
-      = f.datetime_select :designRevDate, :class => 'datetime_select'
+      = f.number_field :designRevDate, :class => 'datetime_select'
   .control-group
-    = f.label :dieAround, :class => 'control-label'
+    = f.label :dieAround, 'Die Around', :class => 'control-label'
     .controls
       = f.number_field :dieAround, :class => 'number_field'
   .control-group
-    = f.label :dieId, :class => 'control-label'
+    = f.label :dieId, 'Die ID', :class => 'control-label'
     .controls
       = f.number_field :dieId, :class => 'number_field'
   .control-group
-    = f.label :dieSc, :class => 'control-label'
+    = f.label :dieSc, 'Die Sc', :class => 'control-label'
     .controls
       = f.text_field :dieSc, :class => 'text_field'
   .control-group
-    = f.label :imageFile, :class => 'control-label'
+    = f.label :imageFile, 'Image File', :class => 'control-label'
     .controls
       = f.text_field :imageFile, :class => 'text_field'
   .control-group
-    = f.label :jobNumber, :class => 'control-label'
+    = f.label :jobNumber, 'Job Number', :class => 'control-label'
     .controls
       = f.number_field :jobNumber, :class => 'number_field'
   .control-group
-    = f.label :newDieRequired, :class => 'control-label'
+    = f.label :newDieRequired, 'New Die Required', :class => 'control-label'
     .controls
       = f.text_field :newDieRequired, :class => 'text_field'
   .control-group
-    = f.label :toolingComment, :class => 'control-label'
+    = f.label :toolingComment, 'Tooling Comment', :class => 'control-label'
     .controls
       = f.text_area :toolingComment, :class => 'text_area'
   .control-group
-    = f.label :toolSc, :class => 'control-label'
+    = f.label :toolSc, 'Tool Sc', :class => 'control-label'
     .controls
       = f.text_field :toolSc, :class => 'text_field'
   .control-group
-    = f.label :toolSpecificationId, :class => 'control-label'
+    = f.label :toolSpecificationId, 'Tool Specification ID', :class => 'control-label'
     .controls
       = f.text_field :toolSpecificationId, :class => 'text_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Tooling Spec', :class => 'btn btn-primary'
     = link_to "Cancel", tooling_specifications_path, :class => 'btn'

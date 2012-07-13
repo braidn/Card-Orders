@@ -44,7 +44,7 @@ class ToolingSpecificationsController < ApplicationController
 
     respond_to do |format|
       if @tooling_specification.save
-        format.html { redirect_to @tooling_specification, notice: 'Tooling specification was successfully created.' }
+        format.html { redirect_to @tooling_specification, notice: 'Tooling Spec was successfully created.' }
         format.json { render json: @tooling_specification, status: :created, location: @tooling_specification }
       else
         format.html { render action: "new" }
