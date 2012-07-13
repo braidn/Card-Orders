@@ -1,41 +1,41 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Skid
+    Skid
   .control-group
-    = f.label :quantityPerSkid, :class => 'control-label'
+    = f.label :quantityPerSkid, 'Quantity Per Skid', :class => 'control-label'
     .controls
       = f.number_field :quantityPerSkid, :class => 'number_field'
   .control-group
-    = f.label :skidCost, :class => 'control-label'
+    = f.label :skidCost, 'Cost', :class => 'control-label'
     .controls
       = f.number_field :skidCost, :class => 'number_field'
   .control-group
-    = f.label :skidDescription, :class => 'control-label'
+    = f.label :skidDescription, 'Description', :class => 'control-label'
     .controls
       = f.text_field :skidDescription, :class => 'text_field'
   .control-group
-    = f.label :skidEntryPoints, :class => 'control-label'
+    = f.label :skidEntryPoints, 'Entry Points', :class => 'control-label'
     .controls
       = f.text_field :skidEntryPoints, :class => 'text_field'
   .control-group
-    = f.label :skidHeight, :class => 'control-label'
+    = f.label :skidHeight, 'Height', :class => 'control-label'
     .controls
       = f.number_field :skidHeight, :class => 'number_field'
   .control-group
-    = f.label :skidId, :class => 'control-label'
+    = f.label :skidId, 'ID', :class => 'control-label'
     .controls
       = f.number_field :skidId, :class => 'number_field'
   .control-group
-    = f.label :skidLength, :class => 'control-label'
+    = f.label :skidLength, 'Length', :class => 'control-label'
     .controls
       = f.number_field :skidLength, :class => 'number_field'
   .control-group
-    = f.label :skidMat, :class => 'control-label'
+    = f.label :skidMat, 'Mat', :class => 'control-label'
     .controls
       = f.text_field :skidMat, :class => 'text_field'
   .control-group
-    = f.label :skidWidth, :class => 'control-label'
+    = f.label :skidWidth, 'Width', :class => 'control-label'
     .controls
       = f.number_field :skidWidth, :class => 'number_field'
   .form-actions
