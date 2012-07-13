@@ -1,103 +1,103 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Stripe Specification
+    Stripe Specification
   .control-group
-    = f.label :designBy, :class => 'control-label'
+    = f.label :designBy, 'Design By', :class => 'control-label'
     .controls
       = f.number_field :designBy, :class => 'number_field'
   .control-group
-    = f.label :designRevDate, :class => 'control-label'
+    = f.label :designRevDate, 'Design Revision Date', :class => 'control-label'
     .controls
       = f.number_field :designRevDate, :class => 'number_field'
   .control-group
-    = f.label :htMagTypeId, :class => 'control-label'
+    = f.label :htMagTypeId, 'HT Mag Type ID', :class => 'control-label'
     .controls
       = f.number_field :htMagTypeId, :class => 'number_field'
   .control-group
-    = f.label :imageFile, :class => 'control-label'
+    = f.label :imageFile, 'Image File', :class => 'control-label'
     .controls
       = f.text_field :imageFile, :class => 'text_field'
   .control-group
-    = f.label :jobNumber, :class => 'control-label'
+    = f.label :jobNumber, 'Job Number', :class => 'control-label'
     .controls
       = f.text_field :jobNumber, :class => 'text_field'
   .control-group
-    = f.label :magneticStripeComment, :class => 'control-label'
+    = f.label :magneticStripeComment, 'Magnetic Stripe Comment', :class => 'control-label'
     .controls
       = f.text_field :magneticStripeComment, :class => 'text_field'
   .control-group
-    = f.label :magneticStripeId, :class => 'control-label'
+    = f.label :magneticStripeId, 'Magnetic Stripe ID', :class => 'control-label'
     .controls
       = f.number_field :magneticStripeId, :class => 'number_field'
   .control-group
-    = f.label :sideToStripe, :class => 'control-label'
+    = f.label :sideToStripe, 'Side To Stripe', :class => 'control-label'
     .controls
       = f.text_field :sideToStripe, :class => 'text_field'
   .control-group
-    = f.label :signalISO, :class => 'control-label'
+    = f.label :signalISO, 'Signal ISO', :class => 'control-label'
     .controls
       = f.text_field :signalISO, :class => 'text_field'
   .control-group
-    = f.label :signalMax, :class => 'control-label'
+    = f.label :signalMax, 'Signal Max', :class => 'control-label'
     .controls
       = f.number_field :signalMax, :class => 'number_field'
   .control-group
-    = f.label :signalMin, :class => 'control-label'
+    = f.label :signalMin, 'Signal Min', :class => 'control-label'
     .controls
       = f.number_field :signalMin, :class => 'number_field'
   .control-group
-    = f.label :specNumber, :class => 'control-label'
+    = f.label :specNumber, 'Spec Number', :class => 'control-label'
     .controls
       = f.text_field :specNumber, :class => 'text_field'
   .control-group
-    = f.label :stripeAcross, :class => 'control-label'
+    = f.label :stripeAcross, 'Stripe Across', :class => 'control-label'
     .controls
       = f.number_field :stripeAcross, :class => 'number_field'
   .control-group
-    = f.label :stripeMachineId, :class => 'control-label'
+    = f.label :stripeMachineId, 'Stripe Machine ID', :class => 'control-label'
     .controls
       = f.number_field :stripeMachineId, :class => 'number_field'
   .control-group
-    = f.label :stripePosition, :class => 'control-label'
+    = f.label :stripePosition, 'Stripe Positon', :class => 'control-label'
     .controls
       = f.number_field :stripePosition, :class => 'number_field'
   .control-group
-    = f.label :stripePositionMax, :class => 'control-label'
+    = f.label :stripePositionMax, 'Stripe Position Max', :class => 'control-label'
     .controls
       = f.number_field :stripePositionMax, :class => 'number_field'
   .control-group
-    = f.label :stripePositionMin, :class => 'control-label'
+    = f.label :stripePositionMin, 'Stripe Position Min', :class => 'control-label'
     .controls
       = f.number_field :stripePositionMin, :class => 'number_field'
   .control-group
-    = f.label :stripeSpecificationId, :class => 'control-label'
+    = f.label :stripeSpecificationId, 'Stripe Specification ID', :class => 'control-label'
     .controls
       = f.number_field :stripeSpecificationId, :class => 'number_field'
   .control-group
-    = f.label :stripeSpeed, :class => 'control-label'
+    = f.label :stripeSpeed, 'Stripe Speed', :class => 'control-label'
     .controls
       = f.number_field :stripeSpeed, :class => 'number_field'
   .control-group
-    = f.label :stripeTypeMin, :class => 'control-label'
+    = f.label :stripeTypeMin, 'Stripe Type Min', :class => 'control-label'
     .controls
       = f.number_field :stripeTypeMin, :class => 'number_field'
   .control-group
-    = f.label :stripeTypeMax, :class => 'control-label'
+    = f.label :stripeTypeMax, 'Stripe Type Max', :class => 'control-label'
     .controls
       = f.number_field :stripeTypeMax, :class => 'number_field'
   .control-group
-    = f.label :stripeWidth, :class => 'control-label'
+    = f.label :stripeWidth, 'Stripe Width', :class => 'control-label'
     .controls
       = f.number_field :stripeWidth, :class => 'number_field'
   .control-group
-    = f.label :stripeWidthMin, :class => 'control-label'
+    = f.label :stripeWidthMin, 'Stripe Width Min', :class => 'control-label'
     .controls
       = f.number_field :stripeWidthMin, :class => 'number_field'
   .control-group
-    = f.label :stripeWidthMax, :class => 'control-label'
+    = f.label :stripeWidthMax, 'Stripe Width Max', :class => 'control-label'
     .controls
       = f.number_field :stripeWidthMax, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Stripe Spec', :class => 'btn btn-primary'
     = link_to "Cancel", stripe_specifications_path, :class => 'btn'

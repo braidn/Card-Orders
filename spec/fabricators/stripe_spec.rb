@@ -1,0 +1,26 @@
+Fabricator(:stripe_specification) do
+  designBy 1
+  designRevDate 1
+  htMagTypeId 1
+  imageFile 'stuff'
+  jobNumber 'stuff'
+  magneticStripeComment 'stuff'
+  magneticStripeId 1
+  sideToStripe 'stuff'
+  signalISO 'stuff'
+  signalMax 1
+  signalMin 1
+  specNumber 'stuff'
+  stripeAcross 1
+  stripeMachineId 1
+  stripePosition 1
+  stripePositionMax 1
+  stripePositionMin 1
+  stripeSpecificationId 1
+  stripeSpeed 1
+  stripeTypeMin 1
+  stripeTypeMax 1
+  stripeWidth 1
+  stripeWidthMin 1
+  stripeWidthMax 1
+end

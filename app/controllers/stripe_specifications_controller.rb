@@ -44,7 +44,7 @@ class StripeSpecificationsController < ApplicationController
 
     respond_to do |format|
       if @stripe_specification.save
-        format.html { redirect_to @stripe_specification, notice: 'Stripe specification was successfully created.' }
+        format.html { redirect_to @stripe_specification, notice: 'Stripe Spec was successfully created.' }
         format.json { render json: @stripe_specification, status: :created, location: @stripe_specification }
       else
         format.html { render action: "new" }
