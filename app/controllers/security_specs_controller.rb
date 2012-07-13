@@ -44,7 +44,7 @@ class SecuritySpecsController < ApplicationController
 
     respond_to do |format|
       if @security_spec.save
-        format.html { redirect_to @security_spec, notice: 'Security spec was successfully created.' }
+        format.html { redirect_to @security_spec, notice: 'Security Spec was successfully created.' }
         format.json { render json: @security_spec, status: :created, location: @security_spec }
       else
         format.html { render action: "new" }

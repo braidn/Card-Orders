@@ -1,63 +1,63 @@
 %fieldset
   %legend
     = controller.action_name.capitalize
-    /Security Spec
+    Security Spec
   .control-group
-    = f.label :changsMaterRecombine, :class => 'control-label'
+    = f.label :changsMaterRecombine, 'Change Master Recombine', :class => 'control-label'
     .controls
       = f.text_field :changsMaterRecombine, :class => 'text_field'
   .control-group
-    = f.label :coldFoilId, :class => 'control-label'
+    = f.label :coldFoilId, 'Cold Foil ID', :class => 'control-label'
     .controls
       = f.number_field :coldFoilId, :class => 'number_field'
   .control-group
-    = f.label :coldFoilWidth, :class => 'control-label'
+    = f.label :coldFoilWidth, 'Cold Foil Width', :class => 'control-label'
     .controls
       = f.number_field :coldFoilWidth, :class => 'number_field'
   .control-group
-    = f.label :customFoilAmortizeQty, :class => 'control-label'
+    = f.label :customFoilAmortizeQty, 'Custom Foil Amortize Qty', :class => 'control-label'
     .controls
       = f.number_field :customFoilAmortizeQty, :class => 'number_field'
   .control-group
-    = f.label :hotComplexTool, :class => 'control-label'
+    = f.label :hotComplexTool, 'Hot Complex Tool', :class => 'control-label'
     .controls
       = f.number_field :hotComplexTool, :class => 'number_field'
   .control-group
-    = f.label :hotFoilWidth, :class => 'control-label'
+    = f.label :hotFoilWidth, 'Hot Foil Width', :class => 'control-label'
     .controls
       = f.number_field :hotFoilWidth, :class => 'number_field'
   .control-group
-    = f.label :hotMediumTool, :class => 'control-label'
+    = f.label :hotMediumTool, 'Hot Medium Tool', :class => 'control-label'
     .controls
       = f.number_field :hotMediumTool, :class => 'number_field'
   .control-group
-    = f.label :hotSimpleTool, :class => 'control-label'
+    = f.label :hotSimpleTool, 'Hot Simple Tool', :class => 'control-label'
     .controls
       = f.number_field :hotSimpleTool, :class => 'number_field'
   .control-group
-    = f.label :hotStampFoilId, :class => 'control-label'
+    = f.label :hotStampFoilId, 'Hot Stamp Foil ID', :class => 'control-label'
     .controls
       = f.number_field :hotStampFoilId, :class => 'number_field'
   .control-group
-    = f.label :jobNumber, :class => 'control-label'
+    = f.label :jobNumber, 'Job Number', :class => 'control-label'
     .controls
       = f.text_field :jobNumber, :class => 'text_field'
   .control-group
-    = f.label :laminationId, :class => 'control-label'
+    = f.label :laminationId, 'Lamination ID', :class => 'control-label'
     .controls
       = f.number_field :laminationId, :class => 'number_field'
   .control-group
-    = f.label :laminationWidth, :class => 'control-label'
+    = f.label :laminationWidth, 'Lamination Width', :class => 'control-label'
     .controls
       = f.number_field :laminationWidth, :class => 'number_field'
   .control-group
-    = f.label :securityComment, :class => 'control-label'
+    = f.label :securityComment, 'Security Comment', :class => 'control-label'
     .controls
       = f.text_field :securityComment, :class => 'text_field'
   .control-group
-    = f.label :securitySpecId, :class => 'control-label'
+    = f.label :securitySpecId, 'Security Spec ID', :class => 'control-label'
     .controls
       = f.number_field :securitySpecId, :class => 'number_field'
   .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+    = f.submit 'Create Security Spec', :class => 'btn btn-primary'
     = link_to "Cancel", security_specs_path, :class => 'btn'
