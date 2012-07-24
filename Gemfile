@@ -12,6 +12,7 @@ gem 'hpricot'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'devise'
+gem 'money-rails'
 
 
 # Gems used only for assets and not required
