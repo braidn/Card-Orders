@@ -1,0 +1,20 @@
+%h1 Totals
+%table{:class => "table table-striped"}
+  %thead
+    %tr
+      %th ID
+      %th Quantity
+      %th Product ID
+      %th Actions
+  %tbody
+    - @totals.each do |total|
+      %tr
+        %td= total.id
+        %td= total.quantity
+        %td= total.product_id
+        %td
+          = link_to "Show", total_path(total), :class => 'btn btn-mini'
+          = link_to "Edit", edit_total_path(total), :class => 'btn btn-mini'
+          = link_to "Destroy", total_path(total), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-mini btn-danger' 
+
+= link_to "New Total", new_total_path, :class => 'btn btn-primary'

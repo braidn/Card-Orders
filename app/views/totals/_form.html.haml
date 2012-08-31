@@ -1,0 +1,35 @@
+= form_for @total, :html => {:class => "form-horizontal" } do |f|
+  %fieldset
+    %legend
+      Totals
+    .control-group
+      = f.label :freight_cost, 'Freight Cost', :class => 'control-label'
+      .controls
+        = f.number_field :freight_cost, :class => 'number_field'
+    .control-group
+      = f.label :quantity, 'Quantity', :class => 'control-label'
+      .controls
+        = f.number_field :quantity, :class => 'number_field'
+    .control-group
+      = f.label :separate_freight, 'Separate Freight?', :class => 'control-label'
+      .controls
+        = f.check_box :separate_freight, :class => 'checkbox'
+    .control-group
+      = f.label :margin, 'Margin', :class => 'control-label'
+      .controls
+        = f.number_field :margin, :class => 'number_field'
+    .control-group
+      = f.label :desired_m, 'Desired Per M', :class => 'control-label'
+      .controls
+        = f.number_field :desired_m, :class => 'number_field'
+    .control-group
+      = f.label :selected, 'Selected?', :class => 'control-label'
+      .controls
+        = f.check_box :selected, :class => 'checkbox'
+    .control-group
+      = f.label :product_id, 'Product ID', :class => 'control-label'
+      .controls
+        = f.number_field :product_id, :class => 'number_field'
+    .form-actions
+      = f.submit 'Create Total', :class => 'btn btn-primary'
+      = link_to "Cancel", totals_path, :class => 'btn btn-danger'
