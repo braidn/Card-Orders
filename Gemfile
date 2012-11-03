@@ -12,7 +12,6 @@ gem 'hpricot'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'devise'
-gem 'heroku'
 gem 'money-rails'
 
 
