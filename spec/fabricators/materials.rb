@@ -1,5 +1,4 @@
 Fabricator(:material) do
-  materialCatId 1
   blueFeetPerMinute 1
   blueLength 1
   coredOd 1

@@ -10,8 +10,7 @@
   %tbody
     - @materials.each do |material|
       %tr
-        %td= material.id
-        %td= link_to material.materialCatId, material_path(material)
+        %td= link_to material.matCategory_id, material_path(material)
         %td= material.created_at
         %td
           = link_to "Show", material_path(material), :class => 'btn btn-mini'

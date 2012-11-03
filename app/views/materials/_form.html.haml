@@ -3,9 +3,9 @@
     = controller.action_name.capitalize
     Material
   .control-group
-    = f.label :materialCatId, 'Material Category Id', :class => 'control-label'
+    = f.label :matCategory_id, 'Material Category', :class => 'control-label'
     .controls
-      = f.number_field :materialCatId, :class => 'number_field'
+      = f.collection_select(:matCategory_id, MatCategory.all, :id, :matCategory, :include_blank => true)
   .control-group
     = f.label :blueFeetPerMinute, 'Blue Feet Per Minute', :class => 'control-label'
     .controls

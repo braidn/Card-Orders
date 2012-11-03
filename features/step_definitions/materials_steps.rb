@@ -4,7 +4,7 @@ Given /^there is a material with "(.*?)" "(.*?)"$/ do |field, value|
 end
 
 When /^I fill in the material form correctly$/ do
-  fill_in("Material Category Id", :with => @mat.materialCatId)
+  material_cat_1 = Fabricate(:mat_category, :matCategory => "Mat_Cat 1")
   fill_in("Blue Feet Per Minute", :with => @mat.blueFeetPerMinute)
   fill_in("Blue Length", :with => @mat.blueLength)
   fill_in("Cored OD", :with => @mat.coredOd)
@@ -18,6 +18,7 @@ When /^I fill in the material form correctly$/ do
   fill_in("Material Thickness", :with => @mat.materialThickness)
   fill_in("Vendor", :with => @mat.vendor)
   fill_in("Vendor Part Number", :with => @mat.vendorPartNum)
+  select(material_cat_1, :from => 'Material Category')
 end
 
 Then /^I am presented with the new material$/ do
